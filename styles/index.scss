@@ -1504,11 +1504,11 @@ html {
 
                     .hot-auction-flex-container {
                         .hot-auction-flex-items {
-                            width: 200px;
+                            width: 240px;
                             padding: 10px;
 
                             .hot-section-img {
-                                width: 180px;
+                                width: 220px;
                             }
 
                             .collection-name {
@@ -1561,6 +1561,37 @@ html {
                                     p {
                                         font-size: 12rem;
                                     }
+                                }
+                            }
+                            .hot-auction-hover-item-bid {
+                                position: absolute;
+                                top: 10px;
+                                display: none;
+                                background-color: rgba(0, 0, 0, 0.644);
+                                backdrop-filter: blur(1px);
+                                height: 253px;
+                                width: 220px;
+                                border-radius: 20px;
+    
+                                a {
+                                    display: inline-block;
+                                    text-decoration: none;
+                                    padding: 10px;
+                                    background-color: #b5d5ff;
+                                    border: 0;
+                                    border-radius: 10px;
+                                    position: relative;
+                                    top: 190px;
+                                    left: 28%;
+                                }
+    
+                                i {
+                                    // display: inline-block;
+                                    float: right;
+                                    color: white;
+                                    padding: 10px 16px;
+                                    border-radius: 50%;
+                                    background-color: #7d7c80be;
                                 }
                             }
                         }
@@ -2910,6 +2941,10 @@ html {
                                     }
                                 }
                             }
+                            
+                        }
+                        .hot-auction-flex-items:hover .hot-auction-hover-item-bid {
+                            display: none;
                         }
                     }
                 }
