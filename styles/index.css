@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -12,10 +13,10 @@ html body {
   margin: 0 auto;
   font-size: 16rem;
   color: white;
-  font-family: "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: poppins, "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 html body header {
-  background-color: #21204A;
+  background-color: #21204a;
   padding: 0 100px;
   display: flex;
   justify-content: space-between;
@@ -38,21 +39,65 @@ html body header nav {
   justify-content: space-between;
   align-items: center;
 }
+html body header nav div {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
 html body header nav .nav-link {
   text-decoration: none;
   color: #a6b8cf;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+html body header nav .nav-link:hover {
+  background-color: rgba(71, 98, 133, 0.7411764706);
+  border: 1px solid #8897ac;
+}
+html body header nav .toggle-dot {
+  text-decoration: none;
+  color: #a6b8cf;
+  height: 30px;
+  font-size: 30rem;
+  padding-bottom: 60px;
+}
+html body header nav .fa-magnifying-glass {
+  padding: 5px 10px;
+}
+html body header nav #search-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  height: 1200px;
+  width: 1345px;
+  background-color: rgba(0, 0, 0, 0.4235294118);
+}
+html body header nav #search-menu div #search-bar {
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  height: 50px;
+  width: 1150px;
+  border-radius: 10px;
+  border: 0;
 }
 html body header nav .connect-wallet-btn {
   border: 2px solid white;
   border-radius: 10px;
   padding: 10px;
+  text-decoration: none;
+  color: #a6b8cf;
+}
+html body header nav .fa-bars {
+  display: none;
 }
 html body main {
-  color: #21204A;
+  color: #21204a;
   background-color: #e0e9f0;
+  padding-bottom: 100px;
 }
 html body main .hero-section {
-  background-color: #21204A;
+  background-color: #21204a;
   height: 570px;
   padding: 0 100px;
   display: flex;
@@ -75,7 +120,7 @@ html body main .hero-section .hero-left .hero-btn {
   color: white;
   padding: 10px 5px 10px 15px;
   border-radius: 10px;
-  background-image: linear-gradient(to right, #F53DF5, #0698F9);
+  background-image: linear-gradient(to right, #f53df5, #0698f9);
 }
 html body main .hero-section .hero-left .hero-btn .fa-arrow-right {
   padding: 9px;
@@ -100,8 +145,13 @@ html body main .hero-section .hero-right .hero-stickers-3 {
   right: 0;
   bottom: -70px;
 }
+html body main .hero-section .hero-right .hero-right-img {
+  position: relative;
+  display: block;
+  height: 100%;
+}
 html body main .hero-section .hero-right .hero-right-img .collection-name {
-  bottom: 130px;
+  bottom: 120px;
   left: 70px;
   z-index: 2;
   position: absolute;
@@ -135,7 +185,7 @@ html body main .hot-auction .hot-auction-title-row .hot-auction-title-left {
   width: 50%;
 }
 html body main .hot-auction .hot-auction-title-row .hot-auction-title-left h1 {
-  background-image: linear-gradient(to right, #F53DF5, #0698F9);
+  background-image: linear-gradient(to right, #f53df5, #0698f9);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -179,6 +229,7 @@ html body main .hot-auction .hot-auction-flex-container {
   justify-content: space-between;
 }
 html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items {
+  position: relative;
   padding: 10px;
   background-color: #f9f9fa;
   border-radius: 20px;
@@ -214,8 +265,8 @@ html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items 
   display: flex;
   justify-content: space-between;
   border-top: 2px solid;
-  -o-border-image: linear-gradient(to right, #3918FF, #DB00FF);
-     border-image: linear-gradient(to right, #3918FF, #DB00FF);
+  -o-border-image: linear-gradient(to right, #3918ff, #db00ff);
+     border-image: linear-gradient(to right, #3918ff, #db00ff);
   border-image-slice: 1;
   padding: 10px 0;
 }
@@ -233,7 +284,7 @@ html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items 
 }
 html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .profile-avatar .profile-avatar-right i {
   font-size: 25rem;
-  background-image: linear-gradient(to right, #F53DF5, #0698F9);
+  background-image: linear-gradient(to right, #f53df5, #0698f9);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -243,6 +294,38 @@ html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items 
   font-size: 14rem;
   color: #a6b8cf;
   margin-left: 5px;
+}
+html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .hot-auction-hover-item-bid {
+  position: absolute;
+  top: 10px;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.644);
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  height: 288px;
+  width: 250px;
+  border-radius: 20px;
+}
+html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .hot-auction-hover-item-bid a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #b5d5ff;
+  border: 0;
+  border-radius: 10px;
+  position: relative;
+  top: 220px;
+  left: 70px;
+}
+html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .hot-auction-hover-item-bid i {
+  float: right;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 50%;
+  background-color: rgba(125, 124, 128, 0.7450980392);
+}
+html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items:hover .hot-auction-hover-item-bid {
+  display: block;
 }
 html body main .popular-collection {
   padding: 0 100px;
@@ -305,7 +388,7 @@ html body main .popular-collection .popular-collection-title-row .title-row-righ
 html body main .popular-collection .popular-collection-flex-container {
   display: flex;
   justify-content: space-between;
-  padding: 50px 0;
+  padding: 50px 0 0;
 }
 html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items {
   padding: 10px;
@@ -357,7 +440,7 @@ html body main .popular-collection .popular-collection-flex-container .popular-c
   font-size: 15rem;
 }
 html body main .top-artist-collection {
-  padding: 0 100px;
+  padding: 100px 100px 0;
 }
 html body main .top-artist-collection .top-artist-title-row {
   display: flex;
@@ -419,8 +502,7 @@ html body main .top-artist-collection .top-artist-container {
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto;
   row-gap: 30px;
-  -moz-column-gap: 26px;
-       column-gap: 26px;
+  justify-content: space-between;
 }
 html body main .top-artist-collection .top-artist-container .top-artist-items {
   padding-left: 10px;
@@ -442,7 +524,7 @@ html body main .top-artist-collection .top-artist-container .top-artist-items .p
   border: 3px solid white;
 }
 html body main .top-artist-collection .top-artist-container .top-artist-items .profile-pics .profile-verified .fa-circle-check {
-  color: #FED144;
+  color: #fed144;
   background-color: black;
   border-radius: 50%;
   border: 0;
@@ -484,8 +566,7 @@ html body main .top-artist-collection .top-artist-container .top-artist-items .f
   width: 120px;
 }
 html body main .trending-nft {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  padding: 70px 0 100px;
 }
 html body main .trending-nft .trending-nft-title-row {
   display: flex;
@@ -612,7 +693,7 @@ html body main .art-list .art-list-flex-item1 .info p {
   color: #a6b8cf;
 }
 html body main .art-list .art-list-flex-item1 .info i {
-  color: #FED144;
+  color: #fed144;
   background-color: black;
   border-radius: 50%;
 }
@@ -630,7 +711,7 @@ html body main .art-list .art-list-flex-item2 .info p {
   color: #a6b8cf;
 }
 html body main .art-list .art-list-flex-item2 .info i {
-  color: #FED144;
+  color: #fed144;
   background-color: black;
   border-radius: 50%;
 }
@@ -655,7 +736,7 @@ html body main .art-list .art-list-right span .artist-btn1 {
   margin-right: 20px;
   text-decoration: none;
   color: white;
-  background-image: linear-gradient(to right, #F53DF5, #0698F9);
+  background-image: linear-gradient(to right, #f53df5, #0698f9);
 }
 html body main .art-list .art-list-right span .artist-btn2 {
   position: relative;
@@ -663,13 +744,13 @@ html body main .art-list .art-list-right span .artist-btn2 {
   padding: 10px 20px;
   text-decoration: none;
   color: white;
-  background-image: linear-gradient(to right, #F53DF5, #0698F9);
+  background-image: linear-gradient(to right, #f53df5, #0698f9);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
   border: 3px solid;
-  -o-border-image: linear-gradient(to right, #3918FF, #DB00FF);
-     border-image: linear-gradient(to right, #3918FF, #DB00FF);
+  -o-border-image: linear-gradient(to right, #3918ff, #db00ff);
+     border-image: linear-gradient(to right, #3918ff, #db00ff);
   border-image-slice: 1;
   border-radius: 10px;
 }
@@ -752,7 +833,7 @@ html body main .premier-marketplace .premier-marketplace-left {
   width: 50%;
 }
 html body main .premier-marketplace .premier-marketplace-left p {
-  color: #11315B;
+  color: #11315b;
   margin: 28px 0;
 }
 html body main .premier-marketplace .premier-marketplace-left .learn-more-btn {
@@ -760,7 +841,7 @@ html body main .premier-marketplace .premier-marketplace-left .learn-more-btn {
   padding: 5px 20px;
   border-radius: 10px;
   text-decoration: none;
-  color: #11315B;
+  color: #11315b;
   margin-right: 30px;
 }
 html body main .premier-marketplace .premier-marketplace-right {
@@ -795,12 +876,12 @@ html body main .why-nft {
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 20px;
-  width: 1150px;
+  width: 85%;
   height: 417px;
 }
 html body main .why-nft .darkbackground {
   position: absolute;
-  width: 1150px;
+  width: 100%;
   height: 417px;
   left: 0;
   border-radius: 20px;
@@ -825,7 +906,7 @@ html body main .why-nft .why-nft-left .marketplace-btn {
   color: white;
   padding: 10px 5px 10px 15px;
   border-radius: 10px;
-  background-image: linear-gradient(to right, #F53DF5, #0698F9);
+  background-image: linear-gradient(to right, #f53df5, #0698f9);
 }
 html body main .why-nft .why-nft-left .marketplace-btn .fa-arrow-right {
   color: white;
@@ -838,6 +919,7 @@ html body main .why-nft .why-nft-right {
   position: relative;
   z-index: 2;
   background-image: url("../images/index/why-nft-youtube-big-image.png");
+  background-repeat: no-repeat;
 }
 html body main .why-nft .why-nft-right .fa-youtube-big {
   color: red;
@@ -888,8 +970,88 @@ html body main .why-nft .why-nft-right div .about-vid-info {
   margin-right: 10px;
   color: white;
 }
+html body main .sell-nft {
+  padding: 132px 100px 80px;
+}
+html body main .sell-nft h1 {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+html body main .sell-nft .sell-nft-flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+html body main .sell-nft .sell-nft-flex-container .sell-nft-flex-items {
+  width: 278px;
+  height: 190px;
+}
+html body main .sell-nft .sell-nft-flex-container .sell-nft-flex-items img {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+html body main .sell-nft .sell-nft-flex-container .sell-nft-flex-items a {
+  text-decoration: none;
+  color: #21204a;
+  font-size: 20rem;
+  font-weight: bold;
+  display: block;
+  margin: 24px 0 12px;
+}
+html body main .sell-nft .sell-nft-flex-container .sell-nft-flex-items p {
+  font-size: 14rem;
+}
+html body main .app-download {
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 1150px;
+  height: 267px;
+  padding: 25px 40px 0;
+  background-color: #476285;
+}
+html body main .app-download .download-info {
+  width: 36%;
+}
+html body main .app-download .download-info p {
+  color: white;
+  margin-bottom: 30px;
+}
+html body main .app-download .download-info span {
+  display: flex;
+}
+html body main .app-download .download-info span a {
+  color: #476285;
+  text-decoration: none;
+  margin-right: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #cde2fe;
+}
+html body main .app-download .download-info span a i {
+  margin-right: 10px;
+}
+html body main .app-download .download-display {
+  display: block;
+}
+html body main .app-download .qr-code-group {
+  display: flex;
+}
+html body main .app-download .qr-code-group span {
+  color: white;
+  margin-left: 30px;
+}
+html body main .app-download .qr-code-group span i {
+  margin: 15px 0 25px;
+}
+html body main .app-download .qr-code-group span p {
+  width: 120px;
+}
 html body footer {
-  background-color: #21204A;
+  background-color: #21204a;
   padding: 50px 100px;
   display: flex;
   height: 373px;
@@ -943,15 +1105,24 @@ html body footer .footer-right .newsletter-section form input {
   height: 44px;
   border-radius: 10px;
   border: 0px solid;
-  background-color: #7d7c80;
+  background-color: #666666;
   color: white;
   padding: 0 10px;
+  font-family: poppins, sans-serif;
 }
 html body footer .footer-right .newsletter-section form input::-moz-placeholder {
-  color: white;
+  color: #a6b8cf;
+  background-image: url("../images/index/footer-email-image.png");
+  background-repeat: no-repeat;
+  padding-left: 25px;
+  font-family: poppins, sans-serif;
 }
 html body footer .footer-right .newsletter-section form input::placeholder {
-  color: white;
+  color: #a6b8cf;
+  background-image: url("../images/index/footer-email-image.png");
+  background-repeat: no-repeat;
+  padding-left: 25px;
+  font-family: poppins, sans-serif;
 }
 html body footer .footer-right .newsletter-section form .subscribe-btn {
   position: absolute;
@@ -962,7 +1133,7 @@ html body footer .footer-right .newsletter-section form .subscribe-btn {
   height: 38px;
   padding: 0 30px;
   font-size: 18rem;
-  background-color: #CDE2FE;
+  background-color: #cde2fe;
 }
 html body footer .footer-right .newsletter-section span h3 {
   margin-bottom: 30px;
@@ -970,4 +1141,1605 @@ html body footer .footer-right .newsletter-section span h3 {
 html body footer .footer-right .newsletter-section span i {
   margin: 0 8px 0 0;
   font-size: 25px;
+}
+
+@media screen and (min-width: 996px) and (max-width: 1200px) {
+  html {
+    font-size: 1px;
+  }
+  html body {
+    max-width: 1024x;
+    font-size: 15rem;
+  }
+  html body header {
+    padding: 0 50px;
+    height: 80px;
+  }
+  html body header nav {
+    width: 700px;
+  }
+  html body header nav div {
+    width: 400px;
+  }
+  html body header nav .connect-wallet-btn {
+    padding: 8px;
+  }
+  html body main {
+    padding-bottom: 100px;
+  }
+  html body main .hero-section {
+    height: 410px;
+    padding: 0 50px;
+  }
+  html body main .hero-section .hero-left {
+    width: 45%;
+    padding: 50px 0;
+  }
+  html body main .hero-section .hero-left h1 {
+    font-size: 40rem;
+    line-height: 40px;
+  }
+  html body main .hero-section .hero-left p {
+    font-size: 14rem;
+    margin: 30px 0 40px;
+  }
+  html body main .hero-section .hero-right {
+    width: 55%;
+    position: relative;
+  }
+  html body main .hero-section .hero-right .hero-stickers-1 {
+    left: -30px;
+  }
+  html body main .hero-section .hero-right .hero-stickers-2 {
+    width: 130px;
+  }
+  html body main .hero-section .hero-right .hero-stickers-3 {
+    width: 100px;
+    bottom: -50px;
+  }
+  html body main .hero-section .hero-right .hero-right-img .collection-name {
+    bottom: 90px;
+    left: 50px;
+    z-index: 2;
+    position: absolute;
+    transform: rotate(34deg);
+    color: white;
+  }
+  html body main .hero-section .hero-right .hero-right-img .collection-name p {
+    transform: skewX(-19deg);
+  }
+  html body main .hero-section .hero-right .hero-right-img .hero-img {
+    width: 500px;
+    top: 60px;
+  }
+  html body main .hero-section .hero-right .hero-right-img .hero-price {
+    bottom: -60px;
+    left: -10px;
+  }
+  html body main .hot-auction {
+    color: black;
+    padding: 50px;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items {
+    width: 200px;
+    padding: 10px;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .hot-section-img {
+    width: 180px;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .collection-name p {
+    font-size: 12rem;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .collection-name h3 {
+    font-size: 14rem;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .current-bid {
+    margin: 15px 0;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .current-bid .current-bid-timer {
+    text-align: right;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .current-bid p {
+    color: #a6b8cf;
+    font-size: 12rem;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .current-bid h4 {
+    font-size: 12rem;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .current-bid h5 {
+    color: #a6b8cf;
+    font-size: 12rem;
+    font-weight: 200;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .profile-avatar .profile-avatar-left p {
+    color: #a6b8cf;
+    margin-left: 10px;
+    font-size: 14rem;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .profile-avatar .profile-avatar-right i {
+    font-size: 20rem;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .profile-avatar .profile-avatar-right p {
+    font-size: 12rem;
+  }
+  html body main .popular-collection {
+    padding: 0 50px;
+  }
+  html body main .popular-collection .popular-collection-title-row .title-row-left h1 {
+    margin-right: 20px;
+  }
+  html body main .popular-collection .popular-collection-title-row .title-row-left .title-row-days {
+    margin-left: 10px;
+  }
+  html body main .popular-collection .popular-collection-title-row .title-row-right {
+    width: 20%;
+  }
+  html body main .popular-collection .popular-collection-title-row .title-row-right .auction-see-all-link {
+    padding: 5px 5px;
+    margin-right: 10px;
+  }
+  html body main .popular-collection .popular-collection-title-row .title-row-right button {
+    margin-left: 5px;
+  }
+  html body main .popular-collection .popular-collection-flex-container {
+    padding: 50px 0 0;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items {
+    width: 290px;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items img {
+    border-radius: 10px;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section {
+    display: flex;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section .img-section-left {
+    margin-right: 10px;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section .img-section-left .img-section-big-img {
+    width: 140px;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section .img-section-right .img-section-small-img {
+    width: 120px;
+    grid-column: 1/4;
+    grid-row: 1/4;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section .img-section-right .img-section-smaller-img {
+    width: 55px;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .info-section h2 {
+    font-size: 14rem;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .info-section p {
+    font-size: 13rem;
+  }
+  html body main .top-artist-collection {
+    padding: 70px 50px 0;
+  }
+  html body main .top-artist-collection .top-artist-container {
+    padding: 30px 0;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items {
+    padding-left: 0px;
+    width: 265px;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items .profile-pics .profile-verified {
+    margin: 0 5px;
+    position: relative;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items .profile-pics .profile-verified img {
+    width: 40px;
+    height: 40px;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items .profile-name h3 {
+    font-size: 14rem;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items .profile-name p {
+    font-size: 13rem;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items .followers {
+    font-size: 11rem;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items .followers p {
+    width: 90px;
+  }
+  html body main .trending-nft {
+    padding: 50px 0 50px;
+  }
+  html body main .trending-nft .trending-nft-title-row {
+    padding: 0 50px;
+  }
+  html body main .trending-nft .trending-nft-title-row .title-row-left {
+    display: flex;
+  }
+  html body main .trending-nft .trending-nft-title-row .title-row-left h1 {
+    margin-right: 20px;
+  }
+  html body main .trending-nft .trending-nft-title-row .title-row-left .title-row-days {
+    margin-left: 50px;
+  }
+  html body main .trending-nft .trending-nft-title-row .title-row-right {
+    width: 20%;
+  }
+  html body main .trending-nft .trending-nft-title-row .title-row-right .auction-see-all-link {
+    padding: 5px 10px;
+    margin-right: 10px;
+  }
+  html body main .trending-nft .trending-nft-title-row .title-row-right button {
+    margin-left: 5px;
+  }
+  html body main .art-list {
+    padding: 0 50px;
+  }
+  html body main .art-list .art-list-flex-item1 .info .art-list-img {
+    width: 200px;
+  }
+  html body main .art-list .art-list-flex-item2 .info .art-list-img {
+    width: 200px;
+  }
+  html body main .art-list .art-list-right {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  html body main .art-list .art-list-right h1 {
+    font-size: 35rem;
+  }
+  html body main .art-list .art-list-right p {
+    margin: 20px 0;
+  }
+  html body main .art-list .art-list-right span {
+    display: flex;
+  }
+  html body main .art-list .art-list-right span .artist-btn1 {
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    background-image: linear-gradient(to right, #f53df5, #0698f9);
+  }
+  html body main .art-list .art-list-right span .artist-btn2 {
+    position: relative;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-image: linear-gradient(to right, #f53df5, #0698f9);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 3px solid;
+    -o-border-image: linear-gradient(to right, #3918ff, #db00ff);
+       border-image: linear-gradient(to right, #3918ff, #db00ff);
+    border-image-slice: 1;
+    border-radius: 10px;
+  }
+  html body main .browse-category {
+    padding: 0 50px;
+  }
+  html body main .browse-category h1 {
+    font-size: 30rem;
+    margin-bottom: 30px;
+  }
+  html body main .browse-category .browse-flex-container {
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  html body main .browse-category .browse-flex-container .browse-flex-item {
+    width: 222px;
+    height: 242px;
+  }
+  html body main .browse-category .browse-flex-container .browse-flex-item .img-stack {
+    width: 204px;
+    height: 220px;
+  }
+  html body main .browse-category .browse-flex-container .browse-flex-item .img-stack .browse-category-item1-img1 {
+    width: 180px;
+    height: 190px;
+  }
+  html body main .browse-category .browse-flex-container .browse-flex-item .img-stack .floating-text {
+    left: 2px;
+    z-index: 4;
+    width: 200px;
+  }
+  html body main .premier-marketplace {
+    padding: 132px 50px;
+  }
+  html body main .premier-marketplace .premier-marketplace-left {
+    width: 40%;
+  }
+  html body main .premier-marketplace .premier-marketplace-left p {
+    color: #11315b;
+    margin: 28px 0;
+  }
+  html body main .premier-marketplace .premier-marketplace-left .learn-more-btn {
+    border: 3px solid #a6b8cf;
+    padding: 5px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #11315b;
+    margin-right: 30px;
+  }
+  html body main .premier-marketplace .premier-marketplace-right {
+    width: 60%;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  html body main .why-nft {
+    margin: 0 50px;
+    padding: 50px;
+    width: 90%;
+  }
+  html body main .why-nft .darkbackground {
+    width: 100%;
+  }
+  html body main .sell-nft {
+    padding: 100px 50px 80px;
+  }
+  html body main .sell-nft h1 {
+    font-size: 30px;
+  }
+  html body main .sell-nft .sell-nft-flex-container .sell-nft-flex-items {
+    width: 218px;
+  }
+  html body main .sell-nft .sell-nft-flex-container .sell-nft-flex-items img {
+    padding: 10px;
+    border-radius: 10px;
+  }
+  html body main .sell-nft .sell-nft-flex-container .sell-nft-flex-items a {
+    font-size: 19rem;
+    margin: 14px 0 12px;
+  }
+  html body main .sell-nft .sell-nft-flex-container .sell-nft-flex-items p {
+    font-size: 13rem;
+  }
+  html body main .app-download {
+    width: 920px;
+    height: 267px;
+    padding: 25px 30px 0;
+  }
+  html body main .app-download .download-info {
+    width: 36%;
+  }
+  html body main .app-download .download-info span a {
+    color: #476285;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px 10px;
+  }
+  html body main .app-download .download-info span a i {
+    margin-right: 5px;
+  }
+  html body main .app-download .download-display {
+    display: block;
+  }
+  html body main .app-download .qr-code-group {
+    display: flex;
+    margin-left: 10px;
+  }
+  html body main .app-download .qr-code-group span {
+    color: white;
+    margin-left: 20px;
+  }
+  html body main .app-download .qr-code-group span i {
+    margin: 15px 0 25px;
+  }
+  html body main .app-download .qr-code-group span p {
+    width: 100px;
+  }
+  html body footer {
+    padding: 50px;
+    display: flex;
+  }
+  html body footer .footer-left {
+    width: 35%;
+  }
+  html body footer .footer-left p {
+    padding: 0 30px 0 0;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #a6b8cf;
+  }
+  html body footer .footer-right {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+  }
+  html body footer .footer-right ul {
+    list-style: none;
+  }
+  html body footer .footer-right ul li {
+    padding: 10px 0;
+  }
+  html body footer .footer-right ul li .footer-nav-links {
+    color: #a6b8cf;
+    text-decoration: none;
+  }
+  html body footer .footer-right .newsletter-section form {
+    position: relative;
+    height: 44px;
+    width: 356px;
+    margin: 30px 0 60px;
+  }
+  html body footer .footer-right .newsletter-section form input {
+    position: absolute;
+    width: 356px;
+    height: 44px;
+    border-radius: 10px;
+    border: 0px solid;
+    background-color: #7d7c80;
+    color: white;
+    padding: 0 10px;
+  }
+  html body footer .footer-right .newsletter-section form input::-moz-placeholder {
+    color: white;
+  }
+  html body footer .footer-right .newsletter-section form input::placeholder {
+    color: white;
+  }
+  html body footer .footer-right .newsletter-section form .subscribe-btn {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    border-radius: 10px;
+    border: 0;
+    height: 38px;
+    padding: 0 30px;
+    font-size: 18rem;
+    background-color: #cde2fe;
+  }
+  html body footer .footer-right .newsletter-section span h3 {
+    margin-bottom: 30px;
+  }
+  html body footer .footer-right .newsletter-section span i {
+    margin: 0 8px 0 0;
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 995px) {
+  html {
+    font-size: 1px;
+  }
+  html body {
+    overflow: none;
+    max-width: 995px;
+    font-size: 15rem;
+  }
+  html body header {
+    padding: 0 30px;
+    height: 80px;
+  }
+  html body header nav {
+    width: 250px;
+  }
+  html body header nav div {
+    display: none;
+  }
+  html body header nav .connect-wallet-btn {
+    padding: 8px;
+  }
+  html body header nav .fa-bars {
+    display: block;
+  }
+  html body main {
+    padding-bottom: 100px;
+  }
+  html body main .hero-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-height: 500px;
+    padding: 0 50px;
+  }
+  html body main .hero-section .hero-left {
+    width: 100%;
+    padding: 50px 0;
+    position: relative;
+    z-index: 3;
+  }
+  html body main .hero-section .hero-left p {
+    margin: 30px 0 30px;
+  }
+  html body main .hero-section .hero-right {
+    width: 100%;
+    position: relative;
+  }
+  html body main .hero-section .hero-right .hero-stickers-1 {
+    left: -90px;
+    top: -380px;
+  }
+  html body main .hero-section .hero-right .hero-stickers-2 {
+    top: -380px;
+    right: 0px;
+    width: 130px;
+  }
+  html body main .hero-section .hero-right .hero-stickers-3 {
+    width: 100px;
+    bottom: -50px;
+    left: 0;
+  }
+  html body main .hero-section .hero-right .hero-right-img .collection-name {
+    display: none;
+  }
+  html body main .hero-section .hero-right .hero-right-img .hero-img {
+    width: 500px;
+    top: -250px;
+    z-index: 0;
+  }
+  html body main .hero-section .hero-right .hero-right-img .hero-price {
+    bottom: 60px;
+    right: 10px;
+    border: 1px solid white;
+    display: none;
+  }
+  html body main .hot-auction {
+    color: black;
+    padding: 50px 30px;
+  }
+  html body main .hot-auction .hot-auction-flex-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items {
+    width: 270px;
+    padding: 10px;
+    margin: 20px;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .hot-section-img {
+    width: 250px;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .collection-name p {
+    font-size: 12rem;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .collection-name h3 {
+    font-size: 14rem;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .current-bid {
+    margin: 15px 0;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .current-bid .current-bid-timer {
+    text-align: right;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .current-bid p {
+    color: #a6b8cf;
+    font-size: 12rem;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .current-bid h4 {
+    font-size: 12rem;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .current-bid h5 {
+    color: #a6b8cf;
+    font-size: 12rem;
+    font-weight: 200;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .profile-avatar .profile-avatar-left p {
+    color: #a6b8cf;
+    margin-left: 10px;
+    font-size: 14rem;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .profile-avatar .profile-avatar-right i {
+    font-size: 20rem;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .profile-avatar .profile-avatar-right p {
+    font-size: 12rem;
+  }
+  html body main .popular-collection {
+    padding: 0 30px;
+  }
+  html body main .popular-collection .popular-collection-title-row .title-row-left h1 {
+    margin-right: 10px;
+    font-size: 20rem;
+  }
+  html body main .popular-collection .popular-collection-title-row .title-row-left .title-row-days {
+    margin-left: 10px;
+    height: 40px;
+  }
+  html body main .popular-collection .popular-collection-title-row .title-row-left .title-row-days p {
+    font-size: 14rem;
+  }
+  html body main .popular-collection .popular-collection-title-row .title-row-left select {
+    padding: 5px;
+    height: 40px;
+  }
+  html body main .popular-collection .popular-collection-title-row .title-row-right {
+    width: 20%;
+  }
+  html body main .popular-collection .popular-collection-title-row .title-row-right .auction-see-all-link {
+    padding: 5px 5px;
+    margin-right: 5px;
+  }
+  html body main .popular-collection .popular-collection-title-row .title-row-right button {
+    margin-left: 2px;
+  }
+  html body main .popular-collection .popular-collection-flex-container {
+    padding: 50px 0 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items {
+    width: 290px;
+    margin: 10px 20px;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items img {
+    border-radius: 10px;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section {
+    display: flex;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section .img-section-left {
+    margin-right: 10px;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section .img-section-left .img-section-big-img {
+    width: 140px;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section .img-section-right .img-section-small-img {
+    width: 120px;
+    grid-column: 1/4;
+    grid-row: 1/4;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section .img-section-right .img-section-smaller-img {
+    width: 55px;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .info-section h2 {
+    font-size: 14rem;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .info-section p {
+    font-size: 13rem;
+  }
+  html body main .top-artist-collection {
+    padding: 50px 30px 0;
+  }
+  html body main .top-artist-collection .top-artist-container {
+    padding: 30px 0;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    justify-content: space-evenly;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items {
+    padding-left: 0;
+    width: 305px;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items .profile-pics .profile-verified {
+    margin: 0 10px;
+    position: relative;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items .profile-pics .profile-verified img {
+    width: 50px;
+    height: 50px;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items .profile-name h3 {
+    font-size: 14rem;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items .profile-name p {
+    font-size: 13rem;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items .followers {
+    font-size: 11rem;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items .followers p {
+    width: 120px;
+  }
+  html body main .trending-nft {
+    padding: 50px 0 50px;
+  }
+  html body main .trending-nft .trending-nft-title-row {
+    padding: 0 30px;
+  }
+  html body main .trending-nft .trending-nft-title-row .title-row-left h1 {
+    margin-right: 10px;
+    font-size: 20rem;
+  }
+  html body main .trending-nft .trending-nft-title-row .title-row-left .title-row-days {
+    margin-left: 10px;
+    height: 40px;
+  }
+  html body main .trending-nft .trending-nft-title-row .title-row-left .title-row-days p {
+    font-size: 14rem;
+  }
+  html body main .trending-nft .trending-nft-title-row .title-row-left select {
+    padding: 5px;
+    height: 40px;
+  }
+  html body main .trending-nft .trending-nft-title-row .title-row-right {
+    width: 20%;
+  }
+  html body main .trending-nft .trending-nft-title-row .title-row-right .auction-see-all-link {
+    padding: 5px 5px;
+    margin-right: 5px;
+  }
+  html body main .trending-nft .trending-nft-title-row .title-row-right button {
+    margin-left: 2px;
+  }
+  html body main .trending-nft .trending-nft-flex-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    padding-left: 30px;
+  }
+  html body main .art-list {
+    padding: 0 30px;
+  }
+  html body main .art-list .art-list-flex-item1 .info .art-list-img {
+    width: 200px;
+  }
+  html body main .art-list .art-list-flex-item2 .info .art-list-img {
+    width: 200px;
+  }
+  html body main .art-list .art-list-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+  }
+  html body main .art-list .art-list-right h1 {
+    font-size: 30rem;
+  }
+  html body main .art-list .art-list-right p {
+    margin: 20px 0;
+  }
+  html body main .art-list .art-list-right span {
+    display: flex;
+  }
+  html body main .art-list .art-list-right span .artist-btn1 {
+    font-weight: bold;
+    padding: 5px 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: white;
+    background-image: linear-gradient(to right, #f53df5, #0698f9);
+  }
+  html body main .art-list .art-list-right span .artist-btn2 {
+    position: relative;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-image: linear-gradient(to right, #f53df5, #0698f9);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 3px solid;
+    -o-border-image: linear-gradient(to right, #3918ff, #db00ff);
+       border-image: linear-gradient(to right, #3918ff, #db00ff);
+    border-image-slice: 1;
+    border-radius: 10px;
+  }
+  html body main .browse-category {
+    padding: 0 30px;
+  }
+  html body main .browse-category h1 {
+    font-size: 30rem;
+    margin-bottom: 30px;
+  }
+  html body main .browse-category .browse-flex-container {
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  html body main .browse-category .browse-flex-container .browse-flex-item {
+    position: relative;
+    width: 272px;
+    height: 242px;
+    padding: 10px;
+    display: inline-block;
+    background-color: #f9f9fa;
+    border-radius: 20px;
+  }
+  html body main .browse-category .browse-flex-container .browse-flex-item .img-stack {
+    position: relative;
+    width: 250px;
+    height: 220px;
+    display: inline-block;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #cc74cc, #51a2d8);
+  }
+  html body main .premier-marketplace {
+    padding: 100px 30px;
+  }
+  html body main .premier-marketplace .premier-marketplace-left {
+    width: 35%;
+  }
+  html body main .premier-marketplace .premier-marketplace-left p {
+    color: #11315b;
+    margin: 28px 0;
+    font-size: 14rem;
+  }
+  html body main .premier-marketplace .premier-marketplace-left .learn-more-btn {
+    border: 3px solid #a6b8cf;
+    padding: 5px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #11315b;
+    margin-right: 30px;
+  }
+  html body main .premier-marketplace .premier-marketplace-right {
+    width: 65%;
+    padding-left: 10px;
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+  }
+  html body main .premier-marketplace .premier-marketplace-right .premier-marketplace-big-img {
+    width: 310px;
+  }
+  html body main .premier-marketplace .premier-marketplace-right .premier-marketplace-small-img {
+    width: 160px;
+  }
+  html body main .why-nft {
+    margin: 0 auto;
+    padding: 50px;
+    width: 90%;
+    flex-direction: column-reverse;
+  }
+  html body main .why-nft .darkbackground {
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+  html body main .why-nft .why-nft-left {
+    width: 100%;
+  }
+  html body main .why-nft .why-nft-right {
+    width: 100%;
+  }
+  html body main .sell-nft {
+    padding: 100px 30px 80px;
+  }
+  html body main .sell-nft h1 {
+    font-size: 30px;
+  }
+  html body main .sell-nft .sell-nft-flex-container .sell-nft-flex-items {
+    width: 218px;
+  }
+  html body main .sell-nft .sell-nft-flex-container .sell-nft-flex-items img {
+    padding: 10px;
+    border-radius: 10px;
+  }
+  html body main .sell-nft .sell-nft-flex-container .sell-nft-flex-items a {
+    font-size: 19rem;
+    margin: 14px 0 12px;
+  }
+  html body main .sell-nft .sell-nft-flex-container .sell-nft-flex-items p {
+    font-size: 13rem;
+  }
+  html body main .app-download {
+    width: 90%;
+    height: 247px;
+    padding: 20px 30px 0;
+  }
+  html body main .app-download .download-info {
+    width: 30%;
+  }
+  html body main .app-download .download-info span a {
+    color: #476285;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px 10px;
+  }
+  html body main .app-download .download-info span a i {
+    margin-right: 5px;
+  }
+  html body main .app-download .download-display {
+    display: block;
+  }
+  html body main .app-download .download-display img {
+    width: 200px;
+  }
+  html body main .app-download .qr-code-group {
+    display: flex;
+    margin-left: 10px;
+  }
+  html body main .app-download .qr-code-group img {
+    width: 100px;
+    height: 100px;
+  }
+  html body main .app-download .qr-code-group span {
+    color: white;
+    margin-left: 20px;
+  }
+  html body main .app-download .qr-code-group span i {
+    margin: 15px 0 25px;
+  }
+  html body main .app-download .qr-code-group span p {
+    width: 100px;
+  }
+  html body footer {
+    padding: 30px;
+    display: flex;
+  }
+  html body footer .footer-left {
+    width: 30%;
+  }
+  html body footer .footer-left div span {
+    margin-right: 10px;
+  }
+  html body footer .footer-left div a {
+    font-size: 20rem;
+  }
+  html body footer .footer-left p {
+    padding: 0 30px 0 0;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #a6b8cf;
+  }
+  html body footer .footer-right {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+  }
+  html body footer .footer-right ul {
+    list-style: none;
+  }
+  html body footer .footer-right ul li {
+    padding: 10px 0;
+  }
+  html body footer .footer-right ul li .footer-nav-links {
+    color: #a6b8cf;
+    text-decoration: none;
+  }
+  html body footer .footer-right .newsletter-section form {
+    position: relative;
+    height: 44px;
+    width: 256px;
+    margin: 30px 0 60px;
+  }
+  html body footer .footer-right .newsletter-section form input {
+    position: absolute;
+    width: 256px;
+    height: 44px;
+    border-radius: 10px;
+    border: 0px solid;
+    background-color: #7d7c80;
+    color: white;
+    padding: 0 10px;
+  }
+  html body footer .footer-right .newsletter-section form .subscribe-btn {
+    right: 3px;
+    top: 3px;
+    padding: 0 20px;
+  }
+  html body footer .footer-right .newsletter-section span h3 {
+    margin-bottom: 30px;
+  }
+  html body footer .footer-right .newsletter-section span i {
+    margin: 0 8px 0 0;
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 591px) and (max-width: 767px) {
+  html {
+    font-size: 1px;
+  }
+  html body {
+    overflow: none;
+    max-width: 995px;
+    font-size: 15rem;
+  }
+  html body header {
+    padding: 0 20px;
+    height: 80px;
+  }
+  html body header nav {
+    width: 250px;
+  }
+  html body header nav div {
+    display: none;
+  }
+  html body header nav .connect-wallet-btn {
+    padding: 8px;
+  }
+  html body header nav .fa-bars {
+    display: block;
+  }
+  html body main {
+    padding-bottom: 50px;
+  }
+  html body main .hero-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-height: 400px;
+    padding: 0 50px;
+  }
+  html body main .hero-section .hero-left {
+    width: 100%;
+    padding: 50px 0;
+    position: relative;
+    z-index: 3;
+  }
+  html body main .hero-section .hero-left p {
+    margin: 30px 0 30px;
+  }
+  html body main .hero-section .hero-right {
+    width: 100%;
+    position: relative;
+  }
+  html body main .hero-section .hero-right .hero-stickers-1 {
+    left: -90px;
+    top: -380px;
+  }
+  html body main .hero-section .hero-right .hero-stickers-2 {
+    top: -380px;
+    right: 0px;
+    width: 130px;
+  }
+  html body main .hero-section .hero-right .hero-stickers-3 {
+    width: 100px;
+    bottom: -50px;
+    left: 0;
+  }
+  html body main .hero-section .hero-right .hero-right-img .collection-name {
+    display: none;
+  }
+  html body main .hero-section .hero-right .hero-right-img .hero-img {
+    width: 300px;
+    top: -190px;
+    z-index: 0;
+  }
+  html body main .hero-section .hero-right .hero-right-img .hero-price {
+    bottom: 60px;
+    right: 10px;
+    border: 1px solid white;
+    display: none;
+  }
+  html body main .hot-auction {
+    color: black;
+    padding: 50px 20px;
+  }
+  html body main .hot-auction .hot-auction-title-row .hot-auction-title-left h1 {
+    margin-right: 10px;
+  }
+  html body main .hot-auction .hot-auction-title-row .hot-auction-title-left select {
+    padding: 0 0px;
+    height: 30px;
+  }
+  html body main .hot-auction .hot-auction-title-row .hot-auction-title-right .auction-see-all-link {
+    margin-right: 10px;
+    padding: 2px 10px;
+  }
+  html body main .hot-auction .hot-auction-title-row .hot-auction-title-right button {
+    border-radius: 8px;
+    padding: 5px;
+    margin-left: 5px;
+  }
+  html body main .hot-auction .hot-auction-flex-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items {
+    width: 240px;
+    padding: 10px;
+    margin: 20px;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .hot-section-img {
+    width: 220px;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .collection-name p {
+    font-size: 12rem;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .collection-name h3 {
+    font-size: 14rem;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .current-bid {
+    margin: 15px 0;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .current-bid .current-bid-timer {
+    text-align: right;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .current-bid p {
+    color: #a6b8cf;
+    font-size: 12rem;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .current-bid h4 {
+    font-size: 12rem;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .current-bid h5 {
+    color: #a6b8cf;
+    font-size: 12rem;
+    font-weight: 200;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .profile-avatar .profile-avatar-left p {
+    color: #a6b8cf;
+    margin-left: 10px;
+    font-size: 14rem;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .profile-avatar .profile-avatar-right i {
+    font-size: 20rem;
+  }
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .profile-avatar .profile-avatar-right p {
+    font-size: 12rem;
+  }
+  html body main .popular-collection {
+    padding: 0 20px;
+  }
+  html body main .popular-collection .popular-collection-title-row .title-row-left {
+    align-items: center;
+  }
+  html body main .popular-collection .popular-collection-title-row .title-row-left h1 {
+    background-image: linear-gradient(to right, #F53DF5, #0698F9);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 10px;
+    font-size: 20rem;
+    width: 100px;
+  }
+  html body main .popular-collection .popular-collection-title-row .title-row-left .title-row-days {
+    margin-left: 0px;
+    height: 30px;
+    padding: 5px;
+  }
+  html body main .popular-collection .popular-collection-title-row .title-row-left .title-row-days p {
+    font-size: 12rem;
+  }
+  html body main .popular-collection .popular-collection-title-row .title-row-left select {
+    padding: 0px;
+    height: 30px;
+  }
+  html body main .popular-collection .popular-collection-title-row .title-row-right {
+    width: 25%;
+  }
+  html body main .popular-collection .popular-collection-title-row .title-row-right .auction-see-all-link {
+    margin-right: 5px;
+    padding: 2px 5px;
+  }
+  html body main .popular-collection .popular-collection-title-row .title-row-right button {
+    border-radius: 8px;
+    padding: 5px;
+    margin-left: 5px;
+  }
+  html body main .popular-collection .popular-collection-flex-container {
+    padding: 20px 0 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items {
+    width: 290px;
+    margin: 10px 20px;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items img {
+    border-radius: 10px;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section {
+    display: flex;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section .img-section-left {
+    margin-right: 10px;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section .img-section-left .img-section-big-img {
+    width: 140px;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section .img-section-right .img-section-small-img {
+    width: 120px;
+    grid-column: 1/4;
+    grid-row: 1/4;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section .img-section-right .img-section-smaller-img {
+    width: 55px;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .info-section h2 {
+    font-size: 14rem;
+  }
+  html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .info-section p {
+    font-size: 13rem;
+  }
+  html body main .top-artist-collection {
+    padding: 50px 20px 0;
+  }
+  html body main .top-artist-collection .top-artist-container {
+    padding: 20px 0;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    justify-content: space-evenly;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items {
+    padding-left: 0;
+    width: 275px;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items .profile-pics .profile-verified {
+    margin: 0 10px;
+    position: relative;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items .profile-pics .profile-verified img {
+    width: 50px;
+    height: 50px;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items .profile-name h3 {
+    font-size: 14rem;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items .profile-name p {
+    font-size: 13rem;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items .followers {
+    font-size: 11rem;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items .followers p {
+    width: 120px;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items2 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items3 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items4 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items5 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+  html body main .top-artist-collection .top-artist-container .top-artist-items6 {
+    grid-column: 2/3;
+    grid-row: 6/7;
+  }
+  html body main .trending-nft {
+    padding: 50px 0 50px;
+  }
+  html body main .trending-nft .trending-nft-title-row {
+    padding: 0 20px;
+  }
+  html body main .trending-nft .trending-nft-title-row .title-row-left {
+    align-items: center;
+  }
+  html body main .trending-nft .trending-nft-title-row .title-row-left h1 {
+    background-image: linear-gradient(to right, #F53DF5, #0698F9);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 10px;
+    font-size: 20rem;
+    width: 100px;
+  }
+  html body main .trending-nft .trending-nft-title-row .title-row-left .title-row-days {
+    margin-left: 0px;
+    height: 30px;
+    padding: 5px;
+  }
+  html body main .trending-nft .trending-nft-title-row .title-row-left .title-row-days p {
+    font-size: 12rem;
+  }
+  html body main .trending-nft .trending-nft-title-row .title-row-left select {
+    padding: 0px;
+    height: 30px;
+  }
+  html body main .trending-nft .trending-nft-title-row .title-row-right {
+    width: 25%;
+  }
+  html body main .trending-nft .trending-nft-title-row .title-row-right .auction-see-all-link {
+    margin-right: 5px;
+    padding: 2px 5px;
+  }
+  html body main .trending-nft .trending-nft-title-row .title-row-right button {
+    border-radius: 8px;
+    padding: 5px;
+    margin-left: 5px;
+  }
+  html body main .trending-nft .trending-nft-flex-container {
+    margin-top: 30px;
+    padding-left: 20px;
+  }
+  html body main .trending-nft .trending-nft-flex-container .trending-nft-flex-items {
+    padding: 10px;
+    background-color: #f9f9fa;
+    border-radius: 20px;
+    margin-right: 30px;
+  }
+  html body main .trending-nft .trending-nft-flex-container .trending-nft-flex-items .trending-nft-img {
+    width: 204px;
+    height: 254px;
+    border-radius: 20px;
+  }
+  html body main .art-list {
+    height: 520px;
+    padding: 0 20px;
+    position: relative;
+  }
+  html body main .art-list .art-list-flex-item1 {
+    position: absolute;
+    bottom: 0;
+  }
+  html body main .art-list .art-list-flex-item1 .info {
+    padding: 10px;
+  }
+  html body main .art-list .art-list-flex-item1 .info h3 {
+    font-size: 15rem;
+  }
+  html body main .art-list .art-list-flex-item1 .info .art-list-img {
+    width: 180px;
+  }
+  html body main .art-list .art-list-flex-item1 .info p {
+    font-size: 13rem;
+  }
+  html body main .art-list .art-list-flex-item2 {
+    position: relative;
+    width: 30%;
+  }
+  html body main .art-list .art-list-flex-item2 .info {
+    padding: 10px;
+  }
+  html body main .art-list .art-list-flex-item2 .info h3 {
+    font-size: 14rem;
+  }
+  html body main .art-list .art-list-flex-item2 .info .art-list-img {
+    width: 180px;
+  }
+  html body main .art-list .art-list-flex-item2 .info p {
+    font-size: 13rem;
+  }
+  html body main .art-list .art-list-right {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+  }
+  html body main .art-list .art-list-right h1 {
+    font-size: 30rem;
+  }
+  html body main .art-list .art-list-right p {
+    margin: 20px 0;
+  }
+  html body main .art-list .art-list-right span {
+    display: flex;
+  }
+  html body main .art-list .art-list-right span .artist-btn1 {
+    font-weight: bold;
+    padding: 5px 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: white;
+    background-image: linear-gradient(to right, #f53df5, #0698f9);
+  }
+  html body main .art-list .art-list-right span .artist-btn2 {
+    position: relative;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-image: linear-gradient(to right, #f53df5, #0698f9);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 3px solid;
+    -o-border-image: linear-gradient(to right, #3918ff, #db00ff);
+       border-image: linear-gradient(to right, #3918ff, #db00ff);
+    border-image-slice: 1;
+    border-radius: 10px;
+  }
+  html body main .browse-category {
+    padding: 0 20px;
+  }
+  html body main .browse-category h1 {
+    font-size: 28rem;
+    margin-bottom: 30px;
+  }
+  html body main .browse-category .browse-flex-container {
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  html body main .browse-category .browse-flex-container .browse-flex-item {
+    width: 222px;
+    height: 242px;
+  }
+  html body main .browse-category .browse-flex-container .browse-flex-item .img-stack {
+    width: 204px;
+    height: 220px;
+  }
+  html body main .browse-category .browse-flex-container .browse-flex-item .img-stack .browse-category-item1-img1 {
+    width: 180px;
+    height: 190px;
+  }
+  html body main .browse-category .browse-flex-container .browse-flex-item .img-stack .floating-text {
+    left: 2px;
+    z-index: 4;
+    width: 200px;
+  }
+  html body main .premier-marketplace {
+    padding: 100px 20px;
+  }
+  html body main .premier-marketplace .premier-marketplace-left {
+    width: 50%;
+  }
+  html body main .premier-marketplace .premier-marketplace-left p {
+    color: #11315b;
+    margin: 28px 0;
+    font-size: 14rem;
+  }
+  html body main .premier-marketplace .premier-marketplace-left .learn-more-btn {
+    border: 3px solid #a6b8cf;
+    padding: 5px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #11315b;
+    margin-right: 30px;
+  }
+  html body main .premier-marketplace .premier-marketplace-right {
+    width: 50%;
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+  }
+  html body main .premier-marketplace .premier-marketplace-right .premier-marketplace-big-img {
+    width: 100%;
+  }
+  html body main .premier-marketplace .premier-marketplace-right .premier-marketplace-small-img {
+    display: none;
+  }
+  html body main .premier-marketplace .premier-marketplace-right .premier-marketplace-smaller-img {
+    display: none;
+  }
+  html body main .why-nft {
+    margin: 0 auto;
+    padding: 30px 20px;
+    width: 90%;
+    flex-direction: column-reverse;
+  }
+  html body main .why-nft .darkbackground {
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+  html body main .why-nft .why-nft-left {
+    width: 100%;
+  }
+  html body main .why-nft .why-nft-right {
+    width: 100%;
+  }
+  html body main .sell-nft {
+    padding: 80px 20px 50px;
+  }
+  html body main .sell-nft h1 {
+    font-size: 30px;
+  }
+  html body main .sell-nft .sell-nft-flex-container {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  html body main .sell-nft .sell-nft-flex-container .sell-nft-flex-items {
+    width: 218px;
+    margin-bottom: 20px;
+  }
+  html body main .sell-nft .sell-nft-flex-container .sell-nft-flex-items img {
+    padding: 10px;
+    border-radius: 10px;
+  }
+  html body main .sell-nft .sell-nft-flex-container .sell-nft-flex-items a {
+    font-size: 19rem;
+    margin: 14px 0 12px;
+  }
+  html body main .sell-nft .sell-nft-flex-container .sell-nft-flex-items p {
+    font-size: 13rem;
+  }
+  html body main .app-download {
+    width: 570px;
+    height: 207px;
+    padding: 20px 20px 0;
+  }
+  html body main .app-download .download-info {
+    width: 30%;
+  }
+  html body main .app-download .download-info p {
+    font-size: 11rem;
+  }
+  html body main .app-download .download-info span a {
+    color: #476285;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px 10px;
+    font-size: 10rem;
+  }
+  html body main .app-download .download-info span a i {
+    margin-right: 5px;
+  }
+  html body main .app-download .download-display {
+    display: block;
+  }
+  html body main .app-download .download-display img {
+    width: 200px;
+  }
+  html body main .app-download .qr-code-group {
+    display: flex;
+    margin-left: 10px;
+  }
+  html body main .app-download .qr-code-group img {
+    width: 100px;
+    height: 100px;
+  }
+  html body main .app-download .qr-code-group span {
+    color: white;
+    margin-left: 20px;
+  }
+  html body main .app-download .qr-code-group span i {
+    margin: 15px 0 25px;
+  }
+  html body main .app-download .qr-code-group span p {
+    width: 100px;
+    font-size: 13rem;
+  }
+  html body footer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 890px;
+  }
+  html body footer .footer-left {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  html body footer .footer-left div span {
+    margin-right: 10px;
+  }
+  html body footer .footer-left div a {
+    font-size: 20rem;
+  }
+  html body footer .footer-left p {
+    padding: 0 30px 0 0;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #a6b8cf;
+  }
+  html body footer .footer-right {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  html body footer .footer-right ul {
+    list-style: none;
+  }
+  html body footer .footer-right ul li {
+    padding: 10px 0;
+  }
+  html body footer .footer-right ul li .footer-nav-links {
+    color: #a6b8cf;
+    text-decoration: none;
+  }
+  html body footer .footer-right .newsletter-section form {
+    position: relative;
+    height: 44px;
+    width: 256px;
+    margin: 30px 0;
+    left: 27%;
+  }
+  html body footer .footer-right .newsletter-section form input {
+    position: absolute;
+    left: 0;
+    width: 256px;
+    height: 44px;
+    border-radius: 10px;
+    border: 0px solid;
+    background-color: #7d7c80;
+    color: white;
+    padding: 0 10px;
+  }
+  html body footer .footer-right .newsletter-section form .subscribe-btn {
+    right: 0;
+    top: 3px;
+    padding: 0 20px;
+    font-size: 14rem;
+  }
+  html body footer .footer-right .newsletter-section span h3 {
+    margin-bottom: 30px;
+  }
+  html body footer .footer-right .newsletter-section span i {
+    margin: 0 8px 0 0;
+    font-size: 25px;
+  }
 }/*# sourceMappingURL=index.css.map */

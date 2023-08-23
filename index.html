@@ -15,13 +15,19 @@
     <header>
         <span class="logo">M</span>
         <nav>
-            <a href="./index.html" class="nav-link">Home</a>
-            <a href="./pages/collection.html" class="nav-link">Market Place</a>
-            <a href="./pages/" class="nav-link">All NFTs</a>
-            <a href="./pages/Activities.html" class="nav-link">Activities</a>
-            <a href="" class="nav-link">...</a>
-            <a href="" class="nav-link"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <a href="./pages/connectWallet.html" class="nav-link connect-wallet-btn">Connect wallet</a>
+            <div>
+                <a href="./index.html" class="nav-link">Home</a>
+                <a href="./pages/collection.html" class="nav-link">Market Place</a>
+                <a href="./pages/" class="nav-link">All NFTs</a>
+                <a href="./pages/Activities.html" class="nav-link">Activities</a>
+            </div>
+            <a href="" class="toggle-dot">...</a>
+                <i class="fa-solid fa-magnifying-glass" onclick="hideNavBar()"></i>
+                <form action="" id="search-menu">
+                    <div><input type="search" name=""  placeholder="Input text" id="search-bar"></div>
+                </form>
+            <a href="./pages/connectWallet.html" class="connect-wallet-btn">Connect wallet</a>
+            <i class="fa-solid fa-bars"></i>
         </nav>
     </header>
     <main>
@@ -98,6 +104,7 @@
                             <p>12121</p>
                         </span>
                     </div>
+                    <span class="hot-auction-hover-item-bid"> <i class="fa-solid fa-ellipsis-vertical"></i><a href="">Place a bid</a></span>
                 </div>
                 <div class="hot-auction-flex-items">
                     <img src="./images/index/hot-auction-img2.png" alt="" class="hot-section-img">
@@ -127,6 +134,7 @@
                             <p>12121</p>
                         </span>
                     </div>
+                    <span class="hot-auction-hover-item-bid"> <i class="fa-solid fa-ellipsis-vertical"></i><a href="">Place a bid</a></span>
                 </div>
                 <div class="hot-auction-flex-items">
                     <img src="./images/index/hot-auction-img3.png" alt="" class="hot-section-img">
@@ -156,6 +164,7 @@
                             <p>12121</p>
                         </span>
                     </div>
+                    <span class="hot-auction-hover-item-bid"> <i class="fa-solid fa-ellipsis-vertical"></i><a href="">Place a bid</a></span>
                 </div>
                 <div class="hot-auction-flex-items">
                     <img src="./images/index/hot-auction-img4.png" alt="" class="hot-section-img">
@@ -185,6 +194,7 @@
                             <p>12121</p>
                         </span>
                     </div>
+                    <span class="hot-auction-hover-item-bid"> <i class="fa-solid fa-ellipsis-vertical"></i><a href="">Place a bid</a></span>
                 </div>
             </div>
         </section>
@@ -326,7 +336,7 @@
                 </div>
             </div>
             <div class="top-artist-container">
-                <div class="top-artist-items">
+                <div class="top-artist-items top-artist-items1">
                     <span class="profile-pics">
                         <h1>1</h1>
                         <div class="profile-verified">
@@ -349,7 +359,7 @@
                         <p>Followed by mikain and 2,129 users</p>
                     </span>
                 </div>
-                <div class="top-artist-items">
+                <div class="top-artist-items top-artist-items2">
                     <span class="profile-pics">
                         <h1>2</h1>
                         <div class="profile-verified">
@@ -372,7 +382,7 @@
                         <p>Followed by mikain and 2,129 users</p>
                     </span>
                 </div>
-                <div class="top-artist-items">
+                <div class="top-artist-items top-artist-items3">
                     <span class="profile-pics">
                         <h1>3</h1>
                         <div class="profile-verified">
@@ -395,7 +405,7 @@
                         <p>Followed by mikain and 2,129 users</p>
                     </span>
                 </div>
-                <div class="top-artist-items">
+                <div class="top-artist-items top-artist-items4">
                     <span class="profile-pics">
                         <h1>4</h1>
                         <div class="profile-verified">
@@ -418,7 +428,7 @@
                         <p>Followed by mikain and 2,129 users</p>
                     </span>
                 </div>
-                <div class="top-artist-items">
+                <div class="top-artist-items top-artist-items5">
                     <span class="profile-pics">
                         <h1>5</h1>
                         <div class="profile-verified">
@@ -441,7 +451,7 @@
                         <p>Followed by mikain and 2,129 users</p>
                     </span>
                 </div>
-                <div class="top-artist-items">
+                <div class="top-artist-items top-artist-items6">
                     <span class="profile-pics">
                         <h1>6</h1>
                         <div class="profile-verified">
@@ -824,10 +834,11 @@
                 <a href="https://youtu.be/YQ_xWvX1n9g"><i class="fa-brands fa-youtube fa-5x fa-youtube-big"></i></a>
                 <span class="watch-info">
                     <a href="https://youtu.be/YQ_xWvX1n9g">
-                        Watch it on  
-                        <i class="fa-brands fa-youtube fa-2x"></i> <h2>YouTube</h2>
+                        Watch it on
+                        <i class="fa-brands fa-youtube fa-2x"></i>
+                        <h2>YouTube</h2>
                     </a>
-                    
+
                 </span>
                 <div>
                     <span class="about-vid-info">M</span>
@@ -837,7 +848,52 @@
             </div>
         </section>
         <section class="sell-nft">
-            hi
+            <h1>Create and Sell your NFTs</h1>
+            <div class="sell-nft-flex-container">
+                <div class="sell-nft-flex-items">
+                    <img src="./images/index/Wallet.png" alt="">
+                    <a href="">Set up your wallet</a>
+                    <p>Choose between auctions, fixed-price listings, and declining-price listings. We will help to sell
+                        your NFTs!</p>
+                </div>
+                <div class="sell-nft-flex-items">
+                    <img src="./images/index/collection-icon.png" alt="">
+                    <a href="">Create your collection</a>
+                    <p>Set up your collection. Add social links, a description, profile & banner images, and set a
+                        secondary sales fee.</p>
+                </div>
+                <div class="sell-nft-flex-items">
+                    <img src="./images/index/gallery-icon.png" alt="">
+                    <a href="">Add your NFTs</a>
+                    <p>Upload your work (image, video, audio, or 3D art), add a title and description, properties, and
+                        unlockable content.</p>
+                </div>
+                <div class="sell-nft-flex-items">
+                    <img src="./images/index/Send-paper-plane.png" alt="">
+                    <a href="">List them for sale</a>
+                    <p>Choose between auctions, fixed-price listings, and declining-price listings. We will help to sell
+                        your NFTs!</p>
+                </div>
+            </div>
+        </section>
+        <section class="app-download">
+            <div class="download-info">
+                <p><b>Download MyNFTs app</b> to track your NFT portfolio and discover drops</p>
+                <span>
+                    <a href=""><i class="fa-brands fa-apple"></i>App Store</a>
+                    <a href=""><i class="fa-brands fa-google"></i>Play Store</a>
+                </span>
+            </div>
+            <div class="download-display">
+                <img src="./images/index/app-download-img.png" alt="" class="download-display-img">
+            </div>
+            <div class="qr-code-group">
+                <img src="./images/index/Qr-code.png" alt="">
+                <span>
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <p>Scan to download MyNFT app</p>
+                </span>
+            </div>
         </section>
     </main>
     <footer>
@@ -865,7 +921,7 @@
             <div class="newsletter-section">
                 <h3>Get our latest updates</h3>
                 <form action="">
-                    <input type="email" name="" id="" placeholder="Your email">
+                    <input type="email" name="" id="" placeholder="Your email" maxlength="19">
                     <button class="subscribe-btn">Subscribe</button>
                 </form>
                 <span>
@@ -879,6 +935,8 @@
             </div>
         </section>
     </footer>
+
+    <style src="./index.js"></style>
 </body>
 
 </html>
