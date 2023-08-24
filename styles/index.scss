@@ -54,21 +54,61 @@ html {
                 justify-content: space-between;
                 align-items: center;
 
-                div {
+                .nav-list {
+                    list-style-type: none;
                     width: 500px;
                     display: flex;
                     justify-content: space-between;
+
+                    .dropdown {
+
+                        .dropdown-content {
+                            position: absolute;
+                            top: 100px;
+                            list-style-type: none;
+                            display: none;
+                            border: 1px solid $font-color2;
+                            border-radius: 15px;
+                            background-color: #000000bd;
+                            padding: 5px;
+
+
+                            li {
+                                padding: 10px 20px;
+
+                                a {
+                                    text-decoration: none;
+                                    color: $font-color2;
+                                }
+
+                                i {
+                                    margin-right: 10px;
+                                }
+
+                            }
+
+                            .li-bottom {
+                                border-bottom: 1px solid $font-color2;
+
+                            }
+                        }
+
+                        &:hover .dropdown-content {
+                            display: block;
+                        }
+                    }
                 }
 
                 .nav-link {
                     text-decoration: none;
                     color: $font-color2;
                     border-radius: 10px;
-                    padding: 5px 10px;
+                    padding: 5px 20px;
+                    // position: relative;
 
                     &:hover {
                         background-color: #476285bd;
-                        border: 1px solid #8897ac;
+                        // border: 1px solid #8897ac;
                     }
                 }
 
@@ -88,24 +128,22 @@ html {
                 // Need to do work on this later on
                 #search-menu {
                     display: none;
-                    position: absolute;
+                    position: relative;
                     left: 0;
                     height: 1200px;
                     width: 1345px;
                     // display: block;
                     background-color: #0000006c;
 
-                    div {
-                        #search-bar {
-                            position: absolute;
-                            left: 100px;
-                            top: 100px;
-                            // z-index: 20;
-                            height: 50px;
-                            width: 1150px;
-                            border-radius: 10px;
-                            border: 0;
-                        }
+                    #search-bar {
+                        position: absolute;
+                        left: 100px;
+                        top: 100px;
+                        // z-index: 20;
+                        height: 50px;
+                        width: 1150px;
+                        border-radius: 10px;
+                        border: 0;
                     }
                 }
 
@@ -1564,6 +1602,7 @@ html {
                                     }
                                 }
                             }
+
                             .hot-auction-hover-item-bid {
                                 position: absolute;
                                 top: 10px;
@@ -1573,7 +1612,7 @@ html {
                                 height: 253px;
                                 width: 220px;
                                 border-radius: 20px;
-    
+
                                 a {
                                     display: inline-block;
                                     text-decoration: none;
@@ -1585,7 +1624,7 @@ html {
                                     top: 190px;
                                     left: 28%;
                                 }
-    
+
                                 i {
                                     // display: inline-block;
                                     float: right;
@@ -2068,7 +2107,7 @@ html {
                     // border: 1px solid white;
                     width: 250px;
 
-                    div {
+                    .nav-list {
                         display: none;
                     }
 
@@ -2766,7 +2805,7 @@ html {
                     // border: 1px solid white;
                     width: 250px;
 
-                    div {
+                    .nav-list {
                         display: none;
                     }
 
@@ -2942,8 +2981,9 @@ html {
                                     }
                                 }
                             }
-                            
+
                         }
+
                         .hot-auction-flex-items:hover .hot-auction-hover-item-bid {
                             display: none;
                         }
@@ -3210,6 +3250,7 @@ html {
 
                         .info {
                             padding: 10px;
+
                             h3 {
                                 font-size: 15rem;
                             }
@@ -3230,6 +3271,7 @@ html {
 
                         .info {
                             padding: 10px;
+
                             h3 {
                                 font-size: 14rem;
                             }
@@ -3362,6 +3404,7 @@ html {
                         .premier-marketplace-small-img {
                             display: none;
                         }
+
                         .premier-marketplace-smaller-img {
                             display: none;
                         }
@@ -3391,7 +3434,7 @@ html {
                 }
 
                 .sell-nft {
-                    padding: 80px 20px  50px;
+                    padding: 80px 20px 50px;
                     // margin-bottom: 48px;
 
                     h1 {
@@ -3401,6 +3444,7 @@ html {
                     .sell-nft-flex-container {
                         flex-wrap: wrap;
                         justify-content: space-evenly;
+
                         .sell-nft-flex-items {
                             width: 218px;
                             margin-bottom: 20px;
@@ -3429,7 +3473,8 @@ html {
 
                     .download-info {
                         width: 30%;
-                        p{
+
+                        p {
                             font-size: 11rem;
                         }
 
@@ -3597,7 +3642,7 @@ html {
                     // border: 1px solid white;
                     width: 100px;
 
-                    div {
+                    .nav-list {
                         display: none;
                     }
 
@@ -3635,9 +3680,10 @@ html {
                             margin: 10px 0 30px;
                         }
 
-                        h1{
+                        h1 {
                             font-size: 30rem;
-                            line-height: normal;                        }
+                            line-height: normal;
+                        }
                     }
 
                     .hero-right {
@@ -3783,8 +3829,9 @@ html {
                                     }
                                 }
                             }
-                            
+
                         }
+
                         .hot-auction-flex-items:hover .hot-auction-hover-item-bid {
                             display: none;
                         }
@@ -3803,7 +3850,7 @@ html {
                                 background-image: linear-gradient(to right, #F53DF5, #0698F9);
                                 background-clip: text;
                                 -webkit-text-fill-color: transparent;
-                                margin-right: 00px;
+                                margin-right: 10px;
                                 font-size: 20rem;
                                 // border: 1px solid red;
                                 width: 100px;
@@ -3897,20 +3944,20 @@ html {
                 .top-artist-collection {
                     padding: 50px 10px 0;
 
-                    .top-artist-title-row{
+                    .top-artist-title-row {
 
-                        .top-artist-left{
-                            h1{
+                        .top-artist-left {
+                            h1 {
                                 margin-right: 5px;
                             }
                         }
 
-                        .top-artist-right{
+                        .top-artist-right {
                             width: 30%;
                         }
-    
+
                     }
-                    
+
                     .top-artist-container {
                         padding: 20px 0;
                         grid-template-columns: auto;
@@ -4032,7 +4079,7 @@ html {
                     height: 450px;
                     padding: 0 10px;
                     position: relative;
-                    flex-direction:column-reverse;
+                    flex-direction: column-reverse;
 
                     .art-list-flex-item1 {
                         position: absolute;
@@ -4041,6 +4088,7 @@ html {
 
                         .info {
                             padding: 10px;
+
                             h3 {
                                 font-size: 12rem;
                             }
@@ -4063,6 +4111,7 @@ html {
 
                         .info {
                             padding: 10px;
+
                             h3 {
                                 font-size: 11rem;
                             }
@@ -4166,10 +4215,11 @@ html {
                         flex-direction: column;
                         justify-content: center;
                         align-items: flex-start;
-                        backdrop-filter: blur(2px);;
+                        backdrop-filter: blur(2px);
+                        ;
                         padding: 10px;
 
-                        h1{
+                        h1 {
                             color: white;
                         }
 
@@ -4202,6 +4252,7 @@ html {
                         .premier-marketplace-small-img {
                             display: none;
                         }
+
                         .premier-marketplace-smaller-img {
                             display: none;
                         }
@@ -4225,10 +4276,11 @@ html {
                         width: 100%;
                         padding-right: 0;
 
-                        h1{
+                        h1 {
                             font-size: 25rem;
                         }
-                        p{
+
+                        p {
                             margin: 10px 0 20px;
                         }
                     }
@@ -4239,7 +4291,7 @@ html {
                 }
 
                 .sell-nft {
-                    padding:  20px 10px ;
+                    padding: 20px 10px;
                     // margin-bottom: 48px;
 
                     h1 {
@@ -4249,6 +4301,7 @@ html {
                     .sell-nft-flex-container {
                         flex-wrap: wrap;
                         justify-content: space-evenly;
+
                         .sell-nft-flex-items {
                             width: 318px;
                             margin-bottom: 30px;
@@ -4277,7 +4330,8 @@ html {
 
                     .download-info {
                         width: 50%;
-                        p{
+
+                        p {
                             font-size: 11rem;
                         }
 

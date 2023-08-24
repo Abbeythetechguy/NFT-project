@@ -38,20 +38,50 @@ html body header nav {
   align-items: center;
 }
 html body header nav div {
-  width: 150px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  width: 170px;
+}
+html body header nav .nav-list {
+  list-style-type: none;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+html body header nav .nav-list .dropdown .dropdown-content {
+  position: absolute;
+  top: 100px;
+  list-style-type: none;
+  display: none;
+  border: 1px solid #a6b8cf;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.7411764706);
+  padding: 5px;
+}
+html body header nav .nav-list .dropdown .dropdown-content li {
+  padding: 10px 20px;
+}
+html body header nav .nav-list .dropdown .dropdown-content li a {
+  text-decoration: none;
+  color: #a6b8cf;
+}
+html body header nav .nav-list .dropdown .dropdown-content li i {
+  margin-right: 10px;
+}
+html body header nav .nav-list .dropdown .dropdown-content .li-bottom {
+  border-bottom: 1px solid #a6b8cf;
+}
+html body header nav .nav-list .dropdown:hover .dropdown-content {
+  display: block;
 }
 html body header nav .nav-link {
   text-decoration: none;
   color: #a6b8cf;
   border-radius: 10px;
-  padding: 5px 10px;
+  padding: 5px 20px;
 }
 html body header nav .nav-link:hover {
   background-color: rgba(71, 98, 133, 0.7411764706);
-  border: 1px solid #8897ac;
 }
 html body header nav .toggle-dot {
   text-decoration: none;
@@ -65,7 +95,7 @@ html body header nav .fa-magnifying-glass {
 }
 html body header nav #search-menu {
   display: none;
-  position: absolute;
+  position: relative;
   left: 0;
   height: 1200px;
   width: 1345px;
@@ -88,32 +118,27 @@ html body header nav .connect-wallet-btn {
   color: #a6b8cf;
 }
 html body header nav .fa-bars {
-  display: none;
   font-size: 30rem;
+  display: none;
+}
+html body body {
+  max-width: 1024x;
+  font-size: 15rem;
+}
+html body body header {
+  padding: 0 50px;
+  height: 80px;
+}
+html body body header nav {
+  width: 700px;
+}
+html body body header nav div {
+  width: 150px;
+}
+html body body header nav .connect-wallet-btn {
+  padding: 8px;
 }
 
-@media screen and (min-width: 996px) and (max-width: 1200px) {
-  html {
-    font-size: 1px;
-  }
-  html body {
-    max-width: 1024x;
-    font-size: 15rem;
-  }
-  html body header {
-    padding: 0 50px;
-    height: 80px;
-  }
-  html body header nav {
-    width: 700px;
-  }
-  html body header nav div {
-    width: 150px;
-  }
-  html body header nav .connect-wallet-btn {
-    padding: 8px;
-  }
-}
 @media screen and (min-width: 768px) and (max-width: 995px) {
   html {
     font-size: 1px;
