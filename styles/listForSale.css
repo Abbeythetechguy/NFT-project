@@ -71,7 +71,7 @@ html body header nav #search-menu {
   width: 1345px;
   background-color: rgba(0, 0, 0, 0.4235294118);
 }
-html body header nav #search-menu div #search-bar {
+html body header nav #search-menu #search-bar {
   position: absolute;
   left: 100px;
   top: 100px;
@@ -108,7 +108,7 @@ html body header nav .fa-bars {
     width: 700px;
   }
   html body header nav div {
-    width: 400px;
+    width: 150px;
   }
   html body header nav .connect-wallet-btn {
     padding: 8px;
@@ -128,10 +128,40 @@ html body header nav .fa-bars {
     height: 80px;
   }
   html body header nav {
+    width: 300px;
+  }
+  html body header nav .nav-link {
+    display: none;
+  }
+  html body header nav div {
+    width: 200px;
+  }
+  html body header nav .connect-wallet-btn {
+    padding: 8px;
+  }
+  html body header nav .fa-bars {
+    display: block;
+    margin-left: 10px;
+  }
+}
+@media screen and (min-width: 591px) and (max-width: 767px) {
+  html {
+    font-size: 1px;
+  }
+  html body {
+    overflow: none;
+    max-width: 995px;
+    font-size: 15rem;
+  }
+  html body header {
+    padding: 0 20px;
+    height: 80px;
+  }
+  html body header nav {
     width: 250px;
   }
   html body header nav div {
-    display: none;
+    width: 130px;
   }
   html body header nav .connect-wallet-btn {
     padding: 8px;
@@ -154,42 +184,19 @@ html body header nav .fa-bars {
     height: 80px;
   }
   html body header nav {
-    width: 100px;
+    width: 300px;
+  }
+  html body header nav .nav-link {
+    display: none;
   }
   html body header nav div {
-    display: none;
-  }
-  html body header nav .connect-wallet-btn {
-    padding: 8px;
-    display: none;
-  }
-  html body header nav .fa-bars {
-    display: block;
-  }
-}
-@media screen and (min-width: 591px) and (max-width: 767px) {
-  html {
-    font-size: 1px;
-  }
-  html body {
-    overflow: none;
-    max-width: 995px;
-    font-size: 15rem;
-  }
-  html body header {
-    padding: 0 20px;
-    height: 80px;
-  }
-  html body header nav {
-    width: 250px;
-  }
-  html body header nav div {
-    display: none;
+    width: 200px;
   }
   html body header nav .connect-wallet-btn {
     padding: 8px;
   }
   html body header nav .fa-bars {
     display: block;
+    margin-left: 10px;
   }
 }/*# sourceMappingURL=listForSale.css.map */
