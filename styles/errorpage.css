@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -10,7 +11,7 @@ html {
 html body {
   font-size: 16rem;
   color: white;
-  font-family: "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: poppins, "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 html body header {
   background-color: #21204A;
@@ -19,6 +20,9 @@ html body header {
   justify-content: space-between;
   align-items: center;
   height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 11;
 }
 html body header span {
   font-size: 28rem;
@@ -33,14 +37,57 @@ html body header nav {
   justify-content: space-between;
   align-items: center;
 }
+html body header nav div {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
 html body header nav .nav-link {
   text-decoration: none;
   color: #a6b8cf;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+html body header nav .nav-link:hover {
+  background-color: rgba(71, 98, 133, 0.7411764706);
+  border: 1px solid #8897ac;
+}
+html body header nav .toggle-dot {
+  text-decoration: none;
+  color: #a6b8cf;
+  height: 30px;
+  font-size: 30rem;
+  padding-bottom: 60px;
+}
+html body header nav .fa-magnifying-glass {
+  padding: 5px 10px;
+}
+html body header nav #search-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  height: 1200px;
+  width: 1345px;
+  background-color: rgba(0, 0, 0, 0.4235294118);
+}
+html body header nav #search-menu div #search-bar {
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  height: 50px;
+  width: 1150px;
+  border-radius: 10px;
+  border: 0;
 }
 html body header nav .connect-wallet-btn {
   border: 2px solid white;
   border-radius: 10px;
   padding: 10px;
+  text-decoration: none;
+  color: #a6b8cf;
+}
+html body header nav .fa-bars {
+  display: none;
 }
 html body main {
   height: calc(100vh - 80px);
@@ -140,15 +187,24 @@ html body footer .footer-right .newsletter-section form input {
   height: 44px;
   border-radius: 10px;
   border: 0px solid;
-  background-color: #7d7c80;
+  background-color: #666666;
   color: white;
   padding: 0 10px;
+  font-family: poppins, sans-serif;
 }
 html body footer .footer-right .newsletter-section form input::-moz-placeholder {
-  color: white;
+  color: #a6b8cf;
+  background-image: url("../images/index/footer-email-image.png");
+  background-repeat: no-repeat;
+  padding-left: 25px;
+  font-family: poppins, sans-serif;
 }
 html body footer .footer-right .newsletter-section form input::placeholder {
-  color: white;
+  color: #a6b8cf;
+  background-image: url("../images/index/footer-email-image.png");
+  background-repeat: no-repeat;
+  padding-left: 25px;
+  font-family: poppins, sans-serif;
 }
 html body footer .footer-right .newsletter-section form .subscribe-btn {
   position: absolute;
@@ -159,7 +215,7 @@ html body footer .footer-right .newsletter-section form .subscribe-btn {
   height: 38px;
   padding: 0 30px;
   font-size: 18rem;
-  background-color: #CDE2FE;
+  background-color: #cde2fe;
 }
 html body footer .footer-right .newsletter-section span h3 {
   margin-bottom: 30px;
@@ -167,4 +223,336 @@ html body footer .footer-right .newsletter-section span h3 {
 html body footer .footer-right .newsletter-section span i {
   margin: 0 8px 0 0;
   font-size: 25px;
+}
+
+@media screen and (min-width: 996px) and (max-width: 1200px) {
+  html {
+    font-size: 1px;
+  }
+  html body {
+    max-width: 1024x;
+    font-size: 15rem;
+  }
+  html body header {
+    padding: 0 50px;
+    height: 80px;
+  }
+  html body header nav {
+    width: 700px;
+  }
+  html body header nav div {
+    width: 400px;
+  }
+  html body header nav .connect-wallet-btn {
+    padding: 8px;
+  }
+  html body footer {
+    padding: 50px;
+    display: flex;
+  }
+  html body footer .footer-left {
+    width: 35%;
+  }
+  html body footer .footer-left p {
+    padding: 0 30px 0 0;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #a6b8cf;
+  }
+  html body footer .footer-right {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+  }
+  html body footer .footer-right ul {
+    list-style: none;
+  }
+  html body footer .footer-right ul li {
+    padding: 10px 0;
+  }
+  html body footer .footer-right ul li .footer-nav-links {
+    color: #a6b8cf;
+    text-decoration: none;
+  }
+  html body footer .footer-right .newsletter-section form {
+    position: relative;
+    height: 44px;
+    width: 356px;
+    margin: 30px 0 60px;
+  }
+  html body footer .footer-right .newsletter-section form input {
+    position: absolute;
+    width: 356px;
+    height: 44px;
+    border-radius: 10px;
+    border: 0px solid;
+    background-color: #7d7c80;
+    color: white;
+    padding: 0 10px;
+  }
+  html body footer .footer-right .newsletter-section form input::-moz-placeholder {
+    color: white;
+  }
+  html body footer .footer-right .newsletter-section form input::placeholder {
+    color: white;
+  }
+  html body footer .footer-right .newsletter-section form .subscribe-btn {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    border-radius: 10px;
+    border: 0;
+    height: 38px;
+    padding: 0 30px;
+    font-size: 18rem;
+    background-color: #cde2fe;
+  }
+  html body footer .footer-right .newsletter-section span h3 {
+    margin-bottom: 30px;
+  }
+  html body footer .footer-right .newsletter-section span i {
+    margin: 0 8px 0 0;
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 995px) {
+  html {
+    font-size: 1px;
+  }
+  html body {
+    overflow: none;
+    max-width: 995px;
+    font-size: 15rem;
+  }
+  html body header {
+    padding: 0 30px;
+    height: 80px;
+  }
+  html body header nav {
+    width: 250px;
+  }
+  html body header nav div {
+    display: none;
+  }
+  html body header nav .connect-wallet-btn {
+    padding: 8px;
+  }
+  html body header nav .fa-bars {
+    display: block;
+  }
+  html body footer {
+    padding: 30px;
+    display: flex;
+  }
+  html body footer .footer-left {
+    width: 30%;
+  }
+  html body footer .footer-left div span {
+    margin-right: 10px;
+  }
+  html body footer .footer-left div a {
+    font-size: 20rem;
+  }
+  html body footer .footer-left p {
+    padding: 0 30px 0 0;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #a6b8cf;
+  }
+  html body footer .footer-right {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+  }
+  html body footer .footer-right ul {
+    list-style: none;
+  }
+  html body footer .footer-right ul li {
+    padding: 10px 0;
+  }
+  html body footer .footer-right ul li .footer-nav-links {
+    color: #a6b8cf;
+    text-decoration: none;
+  }
+  html body footer .footer-right .newsletter-section form {
+    position: relative;
+    height: 44px;
+    width: 256px;
+    margin: 30px 0 60px;
+  }
+  html body footer .footer-right .newsletter-section form input {
+    position: absolute;
+    width: 256px;
+    height: 44px;
+    border-radius: 10px;
+    border: 0px solid;
+    background-color: #7d7c80;
+    color: white;
+    padding: 0 10px;
+  }
+  html body footer .footer-right .newsletter-section form .subscribe-btn {
+    right: 3px;
+    top: 3px;
+    padding: 0 20px;
+  }
+  html body footer .footer-right .newsletter-section span h3 {
+    margin-bottom: 30px;
+  }
+  html body footer .footer-right .newsletter-section span i {
+    margin: 0 8px 0 0;
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 591px) and (max-width: 767px) {
+  html {
+    font-size: 1px;
+  }
+  html body {
+    overflow: none;
+    max-width: 995px;
+    font-size: 15rem;
+  }
+  html body header {
+    padding: 0 20px;
+    height: 80px;
+  }
+  html body header nav {
+    width: 250px;
+  }
+  html body header nav div {
+    display: none;
+  }
+  html body header nav .connect-wallet-btn {
+    padding: 8px;
+  }
+  html body header nav .fa-bars {
+    display: block;
+  }
+  html body main {
+    height: calc(100vh - 80px);
+    padding: 48px 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  html body main .left {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  html body main .left .darkbackground {
+    position: absolute;
+    width: 100%;
+    height: 417px;
+    left: 0;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.493), black);
+    height: 465px;
+  }
+  html body main .left img {
+    width: 100%;
+    height: 465px;
+  }
+  html body main .right {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  html body main .right h1 {
+    background-image: linear-gradient(to right, rgba(245, 61, 245, 0.9176470588), #0a41f7);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+    font-size: 100rem;
+  }
+  html body main .right h2 {
+    color: #a115cc;
+  }
+  html body main .right p {
+    color: #6E84AB;
+    text-align: center;
+    margin: 30px 0;
+  }
+  html body main .right .navigate-btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, rgba(245, 61, 245, 0.9176470588), #0a41f7);
+    text-decoration: none;
+    color: white;
+  }
+  html body footer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 890px;
+  }
+  html body footer .footer-left {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  html body footer .footer-left div span {
+    margin-right: 10px;
+  }
+  html body footer .footer-left div a {
+    font-size: 20rem;
+  }
+  html body footer .footer-left p {
+    padding: 0 30px 0 0;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #a6b8cf;
+  }
+  html body footer .footer-right {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  html body footer .footer-right ul {
+    list-style: none;
+  }
+  html body footer .footer-right ul li {
+    padding: 10px 0;
+  }
+  html body footer .footer-right ul li .footer-nav-links {
+    color: #a6b8cf;
+    text-decoration: none;
+  }
+  html body footer .footer-right .newsletter-section form {
+    position: relative;
+    height: 44px;
+    width: 256px;
+    margin: 30px 0;
+    left: 27%;
+  }
+  html body footer .footer-right .newsletter-section form input {
+    position: absolute;
+    left: 0;
+    width: 256px;
+    height: 44px;
+    border-radius: 10px;
+    border: 0px solid;
+    background-color: #7d7c80;
+    color: white;
+    padding: 0 10px;
+  }
+  html body footer .footer-right .newsletter-section form .subscribe-btn {
+    right: 0;
+    top: 3px;
+    padding: 0 20px;
+    font-size: 14rem;
+  }
+  html body footer .footer-right .newsletter-section span h3 {
+    margin-bottom: 30px;
+  }
+  html body footer .footer-right .newsletter-section span i {
+    margin: 0 8px 0 0;
+    font-size: 25px;
+  }
 }/*# sourceMappingURL=errorpage.css.map */

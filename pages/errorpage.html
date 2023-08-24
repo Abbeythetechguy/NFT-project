@@ -11,24 +11,31 @@
     <header>
         <span class="logo">M</span>
         <nav>
-            <a href="./index.html" class="nav-link">Home</a>
-            <a href="./pages/collection.html" class="nav-link">Market Place</a>
-            <a href="./pages/" class="nav-link">All NFTs</a>
-            <a href="./pages/Activities.html" class="nav-link">Activities</a>
-            <a href="" class="nav-link">...</a>
-            <a href="" class="nav-link"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <a href="./pages/connectWallet.html" class="nav-link connect-wallet-btn">Connect wallet</a>
+            <div>
+                <a href="./index.html" class="nav-link">Home</a>
+                <a href="./pages/collection.html" class="nav-link">Market Place</a>
+                <a href="./pages/" class="nav-link">All NFTs</a>
+                <a href="./pages/Activities.html" class="nav-link">Activities</a>
+            </div>
+            <a href="" class="toggle-dot">...</a>
+                <i class="fa-solid fa-magnifying-glass" onclick="hideNavBar()"></i>
+                <form action="" id="search-menu">
+                    <div><input type="search" name=""  placeholder="Input text" id="search-bar"></div>
+                </form>
+            <a href="./pages/connectWallet.html" class="connect-wallet-btn">Connect wallet</a>
+            <i class="fa-solid fa-bars"></i>
         </nav>
     </header>
     <main>
         <section class="left">
+            <div class="darkbackground"></div>
             <img src="../images/index/error404-img.png" alt="">
         </section>
         <section class="right">
             <h1>404</h1>
             <h2>This page is lost</h2>
             <p>We've explored deep and wide,<br> but we can't find the page you're looking for</p>
-            <a href="../index.html" class="navigate-btn">Navigate back home</a>wd
+            <a href="../index.html" class="navigate-btn">Navigate back home</a>
         </section>
     </main>
     <footer>
