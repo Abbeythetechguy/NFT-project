@@ -45,28 +45,70 @@ html {
             }
 
             nav {
-                // border: 1px solid white;
                 width: 900px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-
-                div {
-                    width: 150px;
+                
+                div{
                     display: flex;
                     justify-content: space-between;
-                    align-items: center;
+                    width: 170px;
+                }
+
+                .nav-list{
+                    list-style-type: none;
+                    width: 500px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .dropdown{
+    
+                        .dropdown-content{
+                            position: absolute;
+                            top: 100px;
+                            list-style-type: none;
+                            display: none;
+                            border: 1px solid $font-color2;
+                            border-radius: 15px;
+                            background-color: #000000bd;
+                            padding: 5px;
+                            
+    
+                            li{
+                                padding: 10px 20px;
+
+                                a{
+                                    text-decoration: none;
+                                    color: $font-color2;
+                                }
+
+                                i {
+                                    margin-right: 10px;
+                                }
+                            }
+                            .li-bottom{
+                                border-bottom: 1px solid $font-color2;
+
+                            }
+                        }
+    
+                        &:hover .dropdown-content{
+                            display: block;
+                        }
+                    }
                 }
 
                 .nav-link {
                     text-decoration: none;
                     color: $font-color2;
                     border-radius: 10px;
-                    padding: 5px 10px;
+                    padding: 5px 20px;
+                    // position: relative;
 
                     &:hover {
                         background-color: #476285bd;
-                        border: 1px solid #8897ac;
+                        // border: 1px solid #8897ac;
                     }
                 }
 
@@ -86,23 +128,23 @@ html {
                 // Need to do work on this later on
                 #search-menu {
                     display: none;
-                    position: absolute;
+                    position: relative;
                     left: 0;
                     height: 1200px;
                     width: 1345px;
                     // display: block;
                     background-color: #0000006c;
 
-                    #search-bar {
-                        position: absolute;
-                        left: 100px;
-                        top: 100px;
-                        // z-index: 20;
-                        height: 50px;
-                        width: 1150px;
-                        border-radius: 10px;
-                        border: 0;
-                    }
+                        #search-bar {
+                            position: absolute;
+                            left: 100px;
+                            top: 100px;
+                            // z-index: 20;
+                            height: 50px;
+                            width: 1150px;
+                            border-radius: 10px;
+                            border: 0;
+                        }
                 }
 
                 .connect-wallet-btn {
@@ -114,8 +156,8 @@ html {
                 }
 
                 .fa-bars {
-                    display: none;
                     font-size: 30rem;
+                    display: none;
                 }
             }
         }
@@ -127,7 +169,6 @@ html {
         font-size: 1px;
 
         body {
-            max-width: 1024x;
             font-size: 15rem;
 
             header {
@@ -135,11 +176,12 @@ html {
                 height: 80px;
 
                 nav {
+                    width: 800px;
                     // border: 1px solid white;
-                    width: 700px;
 
                     div {
                         width: 150px;
+                        // border: 1px solid white;
                     }
 
                     .connect-wallet-btn {
@@ -165,14 +207,15 @@ html {
                 height: 80px;
 
                 nav {
-                    width: 300px;
+                    width: 600px;
 
                     .nav-link {
                         display: none;
                     }
 
                     div {
-                        width: 200px;
+                        width: 400px;
+                        align-items: center;
                     }
 
                     .connect-wallet-btn {
@@ -182,6 +225,9 @@ html {
                     .fa-bars {
                         display: block;
                         margin-left: 10px;
+                    }
+                    .fa-magnifying-glass{
+                        margin:0 30px;
                     }
                 }
             }
@@ -203,12 +249,15 @@ html {
                 height: 80px;
 
                 nav {
-                    // border: 1px solid white;
-                    width: 250px;
+                    width: 600px;
+
+                    .nav-link {
+                        display: none;
+                    }
 
                     div {
-                        // display: none;
-                        width: 130px;
+                        width: 500px;
+                        align-items: center;
                     }
 
                     .connect-wallet-btn {
@@ -217,6 +266,10 @@ html {
 
                     .fa-bars {
                         display: block;
+                        margin-left: 10px;
+                    }
+                    .fa-magnifying-glass{
+                        margin:0 30px;
                     }
                 }
             }
