@@ -5,6 +5,9 @@
     box-sizing: border-box;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+
 //variables
 $bg-color: #21204A;
 $font-color: white;
@@ -19,43 +22,235 @@ html {
     body {
         font-size: 16rem;
         color: $font-color;
-        font-family: $font-type;
+        font-family: poppins, "Lucida Sans Regular", "Lucida Grande",
+            "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 
         header {
-            background-color: $bg-color;
-            padding: 0 100px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-
-            span {
-                font-size: 28rem;
-                font-weight: bold;
-                border: 3px solid white;
-                border-radius: 10px;
-                padding: 0 10px;
-            }
-
-            nav {
-                // border: 1px solid white;
-                width: 900px;
+                background-color: $bg-color;
+                padding: 0 100px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-
-                .nav-link {
-                    text-decoration: none;
-                    color: $font-color2;
-                }
-
-                .connect-wallet-btn {
-                    border: 2px solid white;
+                height: 80px;
+                position: sticky;
+                top: 0;
+                z-index: 11;
+    
+                span {
+                    font-size: 28rem;
+                    font-weight: bold;
+                    border: 3px solid white;
                     border-radius: 10px;
-                    padding: 10px;
+                    padding: 0 10px;
+                }
+    
+                nav {
+                    // border: 1px solid white;
+                    width: 900px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+    
+                    div {
+                        width:150px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+    
+                    .nav-link {
+                        text-decoration: none;
+                        color: $font-color2;
+                        border-radius: 10px;
+                        padding: 5px 10px;
+    
+                        &:hover {
+                            background-color: #476285bd;
+                            border: 1px solid #8897ac;
+                        }
+                    }
+    
+                    .toggle-dot {
+                        text-decoration: none;
+                        color: $font-color2;
+                        height: 30px;
+                        font-size: 30rem;
+                        padding-bottom: 60px;
+                        // border: 1px solid white;
+                    }
+    
+                    .fa-magnifying-glass {
+                        padding: 5px 10px;
+                    }
+    
+                    // Need to do work on this later on
+                    #search-menu {
+                        display: none;
+                        position: absolute;
+                        left: 0;
+                        height: 1200px;
+                        width: 1345px;
+                        // display: block;
+                        background-color: #0000006c;
+    
+                        div {
+                            #search-bar {
+                                position: absolute;
+                                left: 100px;
+                                top: 100px;
+                                // z-index: 20;
+                                height: 50px;
+                                width: 1150px;
+                                border-radius: 10px;
+                                border: 0;
+                            }
+                        }
+                    }
+    
+                    .connect-wallet-btn {
+                        border: 2px solid white;
+                        border-radius: 10px;
+                        padding: 10px;
+                        text-decoration: none;
+                        color: $font-color2;
+                    }
+    
+                    .fa-bars {
+                        display: none;
+                        font-size: 30rem;
+                    }
+                }
+        }
+    }
+}
+
+@media screen and (min-width: 996px) and (max-width: 1200px) {
+    html {
+        font-size: 1px;
+
+        body {
+            max-width: 1024x;
+            font-size: 15rem;
+
+            header {
+                padding: 0 50px;
+                height: 80px;
+
+                nav {
+                    // border: 1px solid white;
+                    width: 700px;
+
+                    div {
+                        width: 400px;
+                    }
+
+                    .connect-wallet-btn {
+                        padding: 8px;
+                    }
                 }
             }
         }
-        
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 995px) {
+    html {
+        font-size: 1px;
+
+        body {
+            overflow: none;
+            max-width: 995px;
+            font-size: 15rem;
+
+            header {
+                padding: 0 30px;
+                height: 80px;
+
+                nav {
+                    // border: 1px solid white;
+                    width: 250px;
+
+                    div {
+                        display: none;
+                    }
+
+                    .connect-wallet-btn {
+                        padding: 8px;
+                    }
+
+                    .fa-bars {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 180px) and (max-width: 768px) {
+    html {
+        font-size: 1px;
+
+        body {
+            overflow: none;
+            max-width: 995px;
+            font-size: 15rem;
+
+            header {
+                padding: 0 20px;
+                height: 80px;
+
+                nav {
+                    // border: 1px solid white;
+                    width: 100px;
+
+                    div {
+                        display: none;
+                    }
+
+                    .connect-wallet-btn {
+                        padding: 8px;
+                        display: none;
+                    }
+
+                    .fa-bars {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 591px) and (max-width: 767px) {
+    html {
+        font-size: 1px;
+
+        body {
+            overflow: none;
+            max-width: 995px;
+            font-size: 15rem;
+
+            header {
+                padding: 0 20px;
+                height: 80px;
+
+                nav {
+                    // border: 1px solid white;
+                    width: 250px;
+
+                    div {
+                        display: none;
+                    }
+
+                    .connect-wallet-btn {
+                        padding: 8px;
+                    }
+
+                    .fa-bars {
+                        display: block;
+                    }
+                }
+            }
+        }
     }
 }
