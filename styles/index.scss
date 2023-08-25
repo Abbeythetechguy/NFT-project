@@ -28,6 +28,48 @@ html {
         font-family: poppins, "Lucida Sans Regular", "Lucida Grande",
             "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 
+        #overlay {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 15;
+            height: 100vh;
+            width: 98.7vw;
+            background-color: #00000093;
+            padding: 0 100px;
+
+            form {
+                position: relative;
+                top: 100px;
+
+                #search-bar {
+                    position: absolute;
+                    top: 40px;
+                    height: 50px;
+                    width: 1100px;
+                    border-radius: 10px;
+                    border: 0;
+                    padding: 0 50px;
+                    display: block;
+                    outline: none;
+                }
+
+                span {
+                    position: relative;
+                    font-size: 20px;
+                    left: 1000px;
+                    top: 0;
+                    cursor: pointer;
+
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+
         header {
             background-color: $bg-color;
             padding: 0 100px;
@@ -39,7 +81,7 @@ html {
             top: 0;
             z-index: 11;
 
-            span {
+            .logo {
                 font-size: 28rem;
                 font-weight: bold;
                 border: 3px solid white;
@@ -48,6 +90,7 @@ html {
             }
 
             nav {
+                // position: relative;
                 // border: 1px solid white;
                 width: 900px;
                 display: flex;
@@ -61,6 +104,10 @@ html {
                     justify-content: space-between;
 
                     .dropdown {
+
+                        #marketplace-dropdown {
+                            cursor: pointer;
+                        }
 
                         .dropdown-content {
                             position: absolute;
@@ -93,9 +140,10 @@ html {
                             }
                         }
 
-                        &:hover .dropdown-content {
+                        .showmarket-dropdown {
                             display: block;
                         }
+
                     }
                 }
 
@@ -104,11 +152,14 @@ html {
                     color: $font-color2;
                     border-radius: 10px;
                     padding: 5px 20px;
-                    // position: relative;
 
                     &:hover {
                         background-color: #476285bd;
                         // border: 1px solid #8897ac;
+                    }
+
+                    &:active {
+                        color: white;
                     }
                 }
 
@@ -123,28 +174,7 @@ html {
 
                 .fa-magnifying-glass {
                     padding: 5px 10px;
-                }
-
-                // Need to do work on this later on
-                #search-menu {
-                    display: none;
-                    position: relative;
-                    left: 0;
-                    height: 1200px;
-                    width: 1345px;
-                    // display: block;
-                    background-color: #0000006c;
-
-                    #search-bar {
-                        position: absolute;
-                        left: 100px;
-                        top: 100px;
-                        // z-index: 20;
-                        height: 50px;
-                        width: 1150px;
-                        border-radius: 10px;
-                        border: 0;
-                    }
+                    cursor: pointer;
                 }
 
                 .connect-wallet-btn {
@@ -158,6 +188,7 @@ html {
                 .fa-bars {
                     font-size: 30rem;
                     display: none;
+                    cursor: pointer;
                 }
             }
         }
@@ -2099,6 +2130,56 @@ html {
             max-width: 995px;
             font-size: 15rem;
 
+            #mobile-menu {
+                height: 100vh;
+                width: 300px;
+                background-color:$main-bg-color;
+                position: fixed ;
+                z-index: 29;
+                right: 0;
+                display: none;
+    
+                #close-btn{
+                    font-size: 20rem;
+                    color: red;
+                    position: absolute;
+                    right: 0;
+                    cursor: pointer;
+    
+                    .fa-close{
+                        margin-right: 5px;
+                    }
+                }
+    
+                .mobile-menu-content {
+                    padding-top: 30px ;
+    
+                    .mobile-menu-links {
+                        font-size: 20rem;
+                        text-decoration: none;
+                        color: $font-color3;
+                        width: 100%;
+                        height: 70px;
+                        // border-radius: 10px;
+                        padding: 5px 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        &:hover {
+                            background-color: #476285bd;
+                            color: white;
+                        }
+    
+                        &:active {
+                            color: white;
+                        }
+    
+                    }
+    
+                }
+            }
+
             header {
                 padding: 0 30px;
                 height: 80px;
@@ -2796,6 +2877,56 @@ html {
             overflow: none;
             max-width: 767px;
             font-size: 15rem;
+
+            #mobile-menu {
+                height: 100vh;
+                width: 300px;
+                background-color:$main-bg-color;
+                position: fixed ;
+                z-index: 29;
+                right: 0;
+                display: none;
+    
+                #close-btn{
+                    font-size: 20rem;
+                    color: red;
+                    position: absolute;
+                    right: 0;
+                    cursor: pointer;
+    
+                    .fa-close{
+                        margin-right: 5px;
+                    }
+                }
+    
+                .mobile-menu-content {
+                    padding-top: 30px ;
+    
+                    .mobile-menu-links {
+                        font-size: 20rem;
+                        text-decoration: none;
+                        color: $font-color3;
+                        width: 100%;
+                        height: 70px;
+                        // border-radius: 10px;
+                        padding: 5px 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        &:hover {
+                            background-color: #476285bd;
+                            color: white;
+                        }
+    
+                        &:active {
+                            color: white;
+                        }
+    
+                    }
+    
+                }
+            }
 
             header {
                 padding: 0 20px;
@@ -3634,6 +3765,56 @@ html {
             max-width: 590px;
             font-size: 14rem;
 
+            #mobile-menu {
+                height: 100vh;
+                width: 300px;
+                background-color:$main-bg-color;
+                position: fixed ;
+                z-index: 29;
+                right: 0;
+                display: none;
+    
+                #close-btn{
+                    font-size: 20rem;
+                    color: red;
+                    position: absolute;
+                    right: 0;
+                    cursor: pointer;
+    
+                    .fa-close{
+                        margin-right: 5px;
+                    }
+                }
+    
+                .mobile-menu-content {
+                    padding-top: 30px ;
+    
+                    .mobile-menu-links {
+                        font-size: 20rem;
+                        text-decoration: none;
+                        color: $font-color3;
+                        width: 100%;
+                        height: 70px;
+                        // border-radius: 10px;
+                        padding: 5px 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        &:hover {
+                            background-color: #476285bd;
+                            color: white;
+                        }
+    
+                        &:active {
+                            color: white;
+                        }
+    
+                    }
+    
+                }
+            }
+
             header {
                 padding: 0 10px;
                 height: 80px;
@@ -3644,6 +3825,7 @@ html {
 
                     .nav-list {
                         display: none;
+
                     }
 
                     .connect-wallet-btn {

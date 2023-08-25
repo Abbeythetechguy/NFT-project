@@ -12,15 +12,39 @@
 </head>
 
 <body>
+    <!-- This is for the overlay search bar -->
+    <div id="overlay">
+        <form action="">
+            <span id="close-btn">
+                <i class="fa-solid fa-close "></i>Close
+            </span>
+            <input type="search" name="" placeholder="Input text" id="search-bar">
+        </form>
+    </div>
+
+    <!-- This is for the mobile menu -->
+    <section id="mobile-menu">
+        <span id="close-btn" onclick="closeSideNavBar()">
+            <i class="fa-solid fa-close "></i>Close
+        </span>
+        <div class="mobile-menu-content">
+            <a href="./index.html" class="mobile-menu-links">Home</a>
+            <a href="" class="mobile-menu-links">Market Place</a>
+            <a href="./pages/" class="mobile-menu-links">All NFTs</a>
+            <a href="./pages/Activities.html" class="mobile-menu-links">Activities</a>
+            <a href="" class="mobile-menu-links">Sign Up</a>
+        </div>
+    </section>
     <header>
         <span class="logo">M</span>
         <nav>
             <ul class="nav-list">
                 <li><a href="./index.html" class="nav-link">Home</a></li>
                 <li class="dropdown">
-                    <a href="./pages/collection.html" class="nav-link">Market Place</a>
-                    <ul class="dropdown-content">
-                        <li class="li-bottom"><a href="./pages/collection.html"><i class="fa-solid fa-layer-group"></i> Collections</a></li>
+                    <span class="nav-link" id="marketplace-dropdown" onclick="showMarketPlaceMenu()">Market Place</span>
+                    <ul class="dropdown-content" id="marketplace-dropdown-content">
+                        <li class="li-bottom"><a href="./pages/collection.html"><i class="fa-solid fa-layer-group"></i>
+                                Collections</a></li>
                         <li><a href="./pages/artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
                     </ul>
                 </li>
@@ -29,12 +53,9 @@
 
             </ul>
             <a href="" class="toggle-dot">...</a>
-            <i class="fa-solid fa-magnifying-glass" onclick="hideNavBar()"></i>
-            <form action="" id="search-menu">
-                <input type="search" name="" placeholder="Input text" id="search-bar">
-            </form>
+            <i class="fa-solid fa-magnifying-glass" id="fa-magnifying-glass"></i>
             <a href="./pages/connectWallet.html" class="connect-wallet-btn">Connect wallet</a>
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars" onclick="showSideNav()"></i>
         </nav>
     </header>
     <main>
@@ -947,7 +968,7 @@
         </section>
     </footer>
 
-    <style src="./index.js"></style>
+    <script src="index.js"></script>
 </body>
 
 </html>

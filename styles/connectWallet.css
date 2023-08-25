@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1px;
+}
+html body {
+  font-family: poppins, "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #e0e9f0;
+  color: #21204A;
+  font-size: 16rem;
+}
+html body aside {
+  position: fixed;
+}
+html body main {
+  height: 100vh;
+  width: 1092px;
+  float: right;
+}
+html body main section {
+  display: grid;
+  place-items: center;
+  padding: 50px;
+}
+html body main section article {
+  width: 488px;
+}
+html body main section article .connect-wallet-heading {
+  margin-bottom: 48px;
+}
+html body main section article .connect-wallet-heading h1 {
+  font-size: 30rem;
+}
+html body main section article .connect-wallet-main .main-crypto-title-btn {
+  border-bottom: 2px solid #a6b8cf;
+}
+html body main section article .connect-wallet-main .main-crypto-title-btn button {
+  background-color: transparent;
+  border: 0;
+  font-family: poppins, sans-serif;
+  padding: 5px 20px 5px 0;
+  font-size: 18rem;
+}
+html body main section article .connect-wallet-main .crypto-group div {
+  width: 488px;
+  height: 48px;
+  border: 1px solid #a6b8cf;
+  border-radius: 10px;
+  margin: 12px 0;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+html body main section article .connect-wallet-main .crypto-group div img {
+  margin-right: 10px;
+}
+html body main section article .connect-wallet-main span {
+  display: inline-block;
+  width: 488px;
+  height: 48px;
+  border: 1px solid #a6b8cf;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  margin-top: 24px;
+}/*# sourceMappingURL=connectWallet.css.map */
