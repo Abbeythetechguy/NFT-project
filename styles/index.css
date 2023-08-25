@@ -22,7 +22,7 @@ html body #overlay {
   top: 0;
   z-index: 15;
   height: 100vh;
-  width: 98.7vw;
+  width: 100vw;
   background-color: rgba(0, 0, 0, 0.5764705882);
   padding: 0 100px;
 }
@@ -34,7 +34,7 @@ html body #overlay form #search-bar {
   position: absolute;
   top: 40px;
   height: 50px;
-  width: 1100px;
+  width: 100%;
   border-radius: 10px;
   border: 0;
   padding: 0 50px;
@@ -42,9 +42,10 @@ html body #overlay form #search-bar {
   outline: none;
 }
 html body #overlay form span {
-  position: relative;
+  position: absolute;
   font-size: 20px;
-  left: 1000px;
+  z-index: 20;
+  right: 0;
   top: 0;
   cursor: pointer;
 }
@@ -1207,7 +1208,19 @@ html body footer .footer-right .newsletter-section span i {
   }
   html body {
     max-width: 1024x;
-    font-size: 15rem;
+    font-size: 16rem;
+  }
+  html body #overlay {
+    height: 100vh;
+    width: 100vw;
+    padding: 0 80px;
+  }
+  html body #overlay form {
+    position: relative;
+    top: 100px;
+  }
+  html body #overlay form #search-bar {
+    width: 100%;
   }
   html body header {
     padding: 0 50px;
@@ -1733,6 +1746,13 @@ html body footer .footer-right .newsletter-section span i {
   }
   html body #mobile-menu .mobile-menu-content .mobile-menu-links:active {
     color: white;
+  }
+  html body #overlay form {
+    position: relative;
+    top: 100px;
+  }
+  html body #overlay form #search-bar {
+    width: 100%;
   }
   html body header {
     padding: 0 30px;
@@ -2286,6 +2306,13 @@ html body footer .footer-right .newsletter-section span i {
   }
   html body #mobile-menu .mobile-menu-content .mobile-menu-links:active {
     color: white;
+  }
+  html body #overlay {
+    padding: 0 6%;
+  }
+  html body #overlay form #search-bar {
+    width: 100%;
+    padding: 0 30px;
   }
   html body header {
     padding: 0 20px;
@@ -2960,6 +2987,18 @@ html body footer .footer-right .newsletter-section span i {
   }
   html body #mobile-menu .mobile-menu-content .mobile-menu-links:active {
     color: white;
+  }
+  html body #overlay {
+    padding: 0 10px;
+  }
+  html body #overlay form {
+    display: flex;
+    justify-content: center;
+  }
+  html body #overlay form #search-bar {
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
   }
   html body header {
     padding: 0 10px;
