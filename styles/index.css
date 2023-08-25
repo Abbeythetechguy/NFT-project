@@ -15,6 +15,42 @@ html body {
   color: white;
   font-family: poppins, "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
+html body #overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 15;
+  height: 100vh;
+  width: 98.7vw;
+  background-color: rgba(0, 0, 0, 0.5764705882);
+  padding: 0 100px;
+}
+html body #overlay form {
+  position: relative;
+  top: 100px;
+}
+html body #overlay form #search-bar {
+  position: absolute;
+  top: 40px;
+  height: 50px;
+  width: 1100px;
+  border-radius: 10px;
+  border: 0;
+  padding: 0 50px;
+  display: block;
+  outline: none;
+}
+html body #overlay form span {
+  position: relative;
+  font-size: 20px;
+  left: 1000px;
+  top: 0;
+  cursor: pointer;
+}
+html body #overlay form span i {
+  margin-right: 10px;
+}
 html body header {
   background-color: #21204a;
   padding: 0 100px;
@@ -26,7 +62,7 @@ html body header {
   top: 0;
   z-index: 11;
 }
-html body header span {
+html body header .logo {
   font-size: 28rem;
   font-weight: bold;
   border: 3px solid white;
@@ -44,6 +80,9 @@ html body header nav .nav-list {
   width: 500px;
   display: flex;
   justify-content: space-between;
+}
+html body header nav .nav-list .dropdown #marketplace-dropdown {
+  cursor: pointer;
 }
 html body header nav .nav-list .dropdown .dropdown-content {
   position: absolute;
@@ -68,7 +107,7 @@ html body header nav .nav-list .dropdown .dropdown-content li i {
 html body header nav .nav-list .dropdown .dropdown-content .li-bottom {
   border-bottom: 1px solid #a6b8cf;
 }
-html body header nav .nav-list .dropdown:hover .dropdown-content {
+html body header nav .nav-list .dropdown .showmarket-dropdown {
   display: block;
 }
 html body header nav .nav-link {
@@ -80,6 +119,9 @@ html body header nav .nav-link {
 html body header nav .nav-link:hover {
   background-color: rgba(71, 98, 133, 0.7411764706);
 }
+html body header nav .nav-link:active {
+  color: white;
+}
 html body header nav .toggle-dot {
   text-decoration: none;
   color: #a6b8cf;
@@ -89,23 +131,7 @@ html body header nav .toggle-dot {
 }
 html body header nav .fa-magnifying-glass {
   padding: 5px 10px;
-}
-html body header nav #search-menu {
-  display: none;
-  position: relative;
-  left: 0;
-  height: 1200px;
-  width: 1345px;
-  background-color: rgba(0, 0, 0, 0.4235294118);
-}
-html body header nav #search-menu #search-bar {
-  position: absolute;
-  left: 100px;
-  top: 100px;
-  height: 50px;
-  width: 1150px;
-  border-radius: 10px;
-  border: 0;
+  cursor: pointer;
 }
 html body header nav .connect-wallet-btn {
   border: 2px solid white;
@@ -117,6 +143,7 @@ html body header nav .connect-wallet-btn {
 html body header nav .fa-bars {
   font-size: 30rem;
   display: none;
+  cursor: pointer;
 }
 html body main {
   color: #21204a;
@@ -1667,6 +1694,46 @@ html body footer .footer-right .newsletter-section span i {
     max-width: 995px;
     font-size: 15rem;
   }
+  html body #mobile-menu {
+    height: 100vh;
+    width: 300px;
+    background-color: #e0e9f0;
+    position: fixed;
+    z-index: 29;
+    right: 0;
+    display: none;
+  }
+  html body #mobile-menu #close-btn {
+    font-size: 20rem;
+    color: red;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+  html body #mobile-menu #close-btn .fa-close {
+    margin-right: 5px;
+  }
+  html body #mobile-menu .mobile-menu-content {
+    padding-top: 30px;
+  }
+  html body #mobile-menu .mobile-menu-content .mobile-menu-links {
+    font-size: 20rem;
+    text-decoration: none;
+    color: #21204a;
+    width: 100%;
+    height: 70px;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  html body #mobile-menu .mobile-menu-content .mobile-menu-links:hover {
+    background-color: rgba(71, 98, 133, 0.7411764706);
+    color: white;
+  }
+  html body #mobile-menu .mobile-menu-content .mobile-menu-links:active {
+    color: white;
+  }
   html body header {
     padding: 0 30px;
     height: 80px;
@@ -2179,6 +2246,46 @@ html body footer .footer-right .newsletter-section span i {
     overflow: none;
     max-width: 767px;
     font-size: 15rem;
+  }
+  html body #mobile-menu {
+    height: 100vh;
+    width: 300px;
+    background-color: #e0e9f0;
+    position: fixed;
+    z-index: 29;
+    right: 0;
+    display: none;
+  }
+  html body #mobile-menu #close-btn {
+    font-size: 20rem;
+    color: red;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+  html body #mobile-menu #close-btn .fa-close {
+    margin-right: 5px;
+  }
+  html body #mobile-menu .mobile-menu-content {
+    padding-top: 30px;
+  }
+  html body #mobile-menu .mobile-menu-content .mobile-menu-links {
+    font-size: 20rem;
+    text-decoration: none;
+    color: #21204a;
+    width: 100%;
+    height: 70px;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  html body #mobile-menu .mobile-menu-content .mobile-menu-links:hover {
+    background-color: rgba(71, 98, 133, 0.7411764706);
+    color: white;
+  }
+  html body #mobile-menu .mobile-menu-content .mobile-menu-links:active {
+    color: white;
   }
   html body header {
     padding: 0 20px;
@@ -2813,6 +2920,46 @@ html body footer .footer-right .newsletter-section span i {
     overflow: none;
     max-width: 590px;
     font-size: 14rem;
+  }
+  html body #mobile-menu {
+    height: 100vh;
+    width: 300px;
+    background-color: #e0e9f0;
+    position: fixed;
+    z-index: 29;
+    right: 0;
+    display: none;
+  }
+  html body #mobile-menu #close-btn {
+    font-size: 20rem;
+    color: red;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+  html body #mobile-menu #close-btn .fa-close {
+    margin-right: 5px;
+  }
+  html body #mobile-menu .mobile-menu-content {
+    padding-top: 30px;
+  }
+  html body #mobile-menu .mobile-menu-content .mobile-menu-links {
+    font-size: 20rem;
+    text-decoration: none;
+    color: #21204a;
+    width: 100%;
+    height: 70px;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  html body #mobile-menu .mobile-menu-content .mobile-menu-links:hover {
+    background-color: rgba(71, 98, 133, 0.7411764706);
+    color: white;
+  }
+  html body #mobile-menu .mobile-menu-content .mobile-menu-links:active {
+    color: white;
   }
   html body header {
     padding: 0 10px;
