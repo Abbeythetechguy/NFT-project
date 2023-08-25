@@ -2400,6 +2400,7 @@ html body footer .footer-right .newsletter-section span i {
     border-radius: 8px;
     padding: 5px;
     margin-left: 5px;
+    display: none;
   }
   html body main .hot-auction .hot-auction-flex-container {
     flex-wrap: wrap;
@@ -2489,6 +2490,7 @@ html body footer .footer-right .newsletter-section span i {
     border-radius: 8px;
     padding: 5px;
     margin-left: 5px;
+    display: none;
   }
   html body main .popular-collection .popular-collection-flex-container {
     padding: 20px 0 0;
@@ -2623,6 +2625,7 @@ html body footer .footer-right .newsletter-section span i {
     border-radius: 8px;
     padding: 5px;
     margin-left: 5px;
+    display: none;
   }
   html body main .trending-nft .trending-nft-flex-container {
     margin-top: 30px;
@@ -3097,6 +3100,7 @@ html body footer .footer-right .newsletter-section span i {
     border-radius: 8px;
     padding: 5px;
     margin-left: 0px;
+    display: none;
   }
   html body main .hot-auction .hot-auction-flex-container {
     flex-wrap: wrap;
@@ -3188,6 +3192,7 @@ html body footer .footer-right .newsletter-section span i {
     border-radius: 8px;
     padding: 5px;
     margin-left: 0;
+    display: none;
   }
   html body main .popular-collection .popular-collection-flex-container {
     padding: 10px 0 0;
@@ -3306,6 +3311,7 @@ html body footer .footer-right .newsletter-section span i {
     border-radius: 8px;
     padding: 5px;
     margin-left: 0px;
+    display: none;
   }
   html body main .trending-nft .trending-nft-flex-container {
     margin-top: 30px;
