@@ -71,7 +71,9 @@ html {
                 }
             }
         }
-
+        #mobile-menu{
+            display: none;
+        }
 
         header {
             background-color: $bg-color;
@@ -127,8 +129,13 @@ html {
                                 padding: 10px 20px;
 
                                 a {
+                                    font-size: 15rem;
                                     text-decoration: none;
                                     color: $font-color2;
+
+                                    &:hover{
+                                        color: white;
+                                    }
                                 }
 
                                 i {
@@ -3087,6 +3094,7 @@ html {
                                 border-radius: 8px;
                                 padding: 5px;
                                 margin-left: 5px;
+                                display: none;
                             }
                         }
                     }
@@ -3212,6 +3220,7 @@ html {
                                 border-radius: 8px;
                                 padding: 5px;
                                 margin-left: 5px;
+                                display: none;
                             }
                         }
                     }
@@ -3391,6 +3400,7 @@ html {
                                 border-radius: 8px;
                                 padding: 5px;
                                 margin-left: 5px;
+                                display: none;
                             }
                         }
                     }
@@ -3880,7 +3890,7 @@ html {
 
                 nav {
                     // border: 1px solid white;
-                    width: 100px;
+                    width: 250px;
 
                     .nav-list {
                         display: none;
@@ -3889,7 +3899,6 @@ html {
 
                     .connect-wallet-btn {
                         padding: 8px;
-                        display: none;
                     }
 
                     .fa-bars {
@@ -4000,6 +4009,7 @@ html {
                                 border-radius: 8px;
                                 padding: 5px;
                                 margin-left: 0px;
+                                display: none;
                             }
                         }
                     }
@@ -4128,6 +4138,7 @@ html {
                                 border-radius: 8px;
                                 padding: 5px;
                                 margin-left: 0;
+                                display: none;
                             }
                         }
                     }
@@ -4293,6 +4304,7 @@ html {
                                 border-radius: 8px;
                                 padding: 5px;
                                 margin-left: 0px;
+                                display: none;
                             }
                         }
                     }

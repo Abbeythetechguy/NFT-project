@@ -39,3 +39,5 @@ function closeSideNavBar(){
     let hideSearchbar = document.getElementById("mobile-menu");
     hideSearchbar.style.display = "none";
 }
+
+

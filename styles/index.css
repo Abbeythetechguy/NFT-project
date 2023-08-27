@@ -52,6 +52,9 @@ html body #overlay form span {
 html body #overlay form span i {
   margin-right: 10px;
 }
+html body #mobile-menu {
+  display: none;
+}
 html body header {
   background-color: #21204a;
   padding: 0 100px;
@@ -99,8 +102,12 @@ html body header nav .nav-list .dropdown .dropdown-content li {
   padding: 10px 20px;
 }
 html body header nav .nav-list .dropdown .dropdown-content li a {
+  font-size: 15rem;
   text-decoration: none;
   color: #a6b8cf;
+}
+html body header nav .nav-list .dropdown .dropdown-content li a:hover {
+  color: white;
 }
 html body header nav .nav-list .dropdown .dropdown-content li i {
   margin-right: 10px;
@@ -2400,6 +2407,7 @@ html body footer .footer-right .newsletter-section span i {
     border-radius: 8px;
     padding: 5px;
     margin-left: 5px;
+    display: none;
   }
   html body main .hot-auction .hot-auction-flex-container {
     flex-wrap: wrap;
@@ -2489,6 +2497,7 @@ html body footer .footer-right .newsletter-section span i {
     border-radius: 8px;
     padding: 5px;
     margin-left: 5px;
+    display: none;
   }
   html body main .popular-collection .popular-collection-flex-container {
     padding: 20px 0 0;
@@ -2623,6 +2632,7 @@ html body footer .footer-right .newsletter-section span i {
     border-radius: 8px;
     padding: 5px;
     margin-left: 5px;
+    display: none;
   }
   html body main .trending-nft .trending-nft-flex-container {
     margin-top: 30px;
@@ -3005,14 +3015,13 @@ html body footer .footer-right .newsletter-section span i {
     height: 80px;
   }
   html body header nav {
-    width: 100px;
+    width: 250px;
   }
   html body header nav .nav-list {
     display: none;
   }
   html body header nav .connect-wallet-btn {
     padding: 8px;
-    display: none;
   }
   html body header nav .fa-bars {
     display: block;
@@ -3097,6 +3106,7 @@ html body footer .footer-right .newsletter-section span i {
     border-radius: 8px;
     padding: 5px;
     margin-left: 0px;
+    display: none;
   }
   html body main .hot-auction .hot-auction-flex-container {
     flex-wrap: wrap;
@@ -3188,6 +3198,7 @@ html body footer .footer-right .newsletter-section span i {
     border-radius: 8px;
     padding: 5px;
     margin-left: 0;
+    display: none;
   }
   html body main .popular-collection .popular-collection-flex-container {
     padding: 10px 0 0;
@@ -3306,6 +3317,7 @@ html body footer .footer-right .newsletter-section span i {
     border-radius: 8px;
     padding: 5px;
     margin-left: 0px;
+    display: none;
   }
   html body main .trending-nft .trending-nft-flex-container {
     margin-top: 30px;
