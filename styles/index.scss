@@ -102,6 +102,10 @@ html {
                 justify-content: space-between;
                 align-items: center;
 
+                .active-tab{
+                    background-color: #476285bd;
+                }
+
                 .nav-list {
                     list-style-type: none;
                     width: 500px;
@@ -169,7 +173,7 @@ html {
                     }
 
                     &:active {
-                        color: white;
+                        background-color: #476285bd;
                     }
                 }
 
@@ -2180,6 +2184,7 @@ html {
     
                 .mobile-menu-content {
                     padding-top: 30px ;
+                    list-style-type: none;
     
                     .mobile-menu-links {
                         font-size: 20rem;
@@ -2198,12 +2203,36 @@ html {
                             color: white;
                         }
     
-                        &:active {
-                            color: white;
-                        }
-    
                     }
-    
+                    .dropdown{
+                        cursor: pointer;
+
+                        .dropdown-content{
+                            display: none;
+
+                            a{
+                                text-decoration: none;
+                                padding: 10px 0;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                color: $font-color3;
+                                width: 100%;
+
+                                i{
+                                    margin-right: 15px;
+                                }
+
+                                &:hover {
+                                    background-color: #476285bd;
+                                    color: white;
+                                }
+                            }
+                        }
+                        .showMobmarket-dropdown{
+                            display: block;
+                        }
+                    }
                 }
             }
 
@@ -2963,7 +2992,35 @@ html {
                         }
     
                     }
-    
+                    .dropdown{
+                        cursor: pointer;
+
+                        .dropdown-content{
+                            display: none;
+
+                            a{
+                                text-decoration: none;
+                                padding: 10px 0;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                color: $font-color3;
+                                width: 100%;
+
+                                i{
+                                    margin-right: 15px;
+                                }
+
+                                &:hover {
+                                    background-color: #476285bd;
+                                    color: white;
+                                }
+                            }
+                        }
+                        .showMobmarket-dropdown{
+                            display: block;
+                        }
+                    }
                 }
             }
 
@@ -3865,7 +3922,35 @@ html {
                         }
     
                     }
-    
+                    .dropdown{
+                        cursor: pointer;
+
+                        .dropdown-content{
+                            display: none;
+
+                            a{
+                                text-decoration: none;
+                                padding: 10px 0;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                color: $font-color3;
+                                width: 100%;
+
+                                i{
+                                    margin-right: 15px;
+                                }
+
+                                &:hover {
+                                    background-color: #476285bd;
+                                    color: white;
+                                }
+                            }
+                        }
+                        .showMobmarket-dropdown{
+                            display: block;
+                        }
+                    }
                 }
             }
 
