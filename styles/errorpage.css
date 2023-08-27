@@ -13,6 +13,9 @@ html body {
   color: white;
   font-family: poppins, "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
+html body #mobile-menu {
+  display: none;
+}
 html body header {
   background-color: #21204A;
   padding: 0 100px;
@@ -24,7 +27,7 @@ html body header {
   top: 0;
   z-index: 11;
 }
-html body header span {
+html body header .logo {
   font-size: 28rem;
   font-weight: bold;
   border: 3px solid white;
@@ -42,6 +45,9 @@ html body header nav .nav-list {
   width: 500px;
   display: flex;
   justify-content: space-between;
+}
+html body header nav .nav-list .dropdown #marketplace-dropdown {
+  cursor: pointer;
 }
 html body header nav .nav-list .dropdown .dropdown-content {
   position: absolute;
@@ -65,9 +71,6 @@ html body header nav .nav-list .dropdown .dropdown-content li i {
 }
 html body header nav .nav-list .dropdown .dropdown-content .li-bottom {
   border-bottom: 1px solid #a6b8cf;
-}
-html body header nav .nav-list .dropdown:hover .dropdown-content {
-  display: block;
 }
 html body header nav .nav-link {
   text-decoration: none;
@@ -358,7 +361,7 @@ html body footer .footer-right .newsletter-section span i {
   html body header nav {
     width: 250px;
   }
-  html body header nav div {
+  html body header nav .nav-list {
     display: none;
   }
   html body header nav .connect-wallet-btn {
@@ -430,7 +433,7 @@ html body footer .footer-right .newsletter-section span i {
     font-size: 25px;
   }
 }
-@media screen and (min-width: 180px) and (max-width: 768px) {
+@media screen and (min-width: 591px) and (max-width: 767px) {
   html {
     font-size: 1px;
   }
@@ -444,14 +447,13 @@ html body footer .footer-right .newsletter-section span i {
     height: 80px;
   }
   html body header nav {
-    width: 100px;
+    width: 250px;
   }
-  html body header nav div {
+  html body header nav .nav-list {
     display: none;
   }
   html body header nav .connect-wallet-btn {
     padding: 8px;
-    display: none;
   }
   html body header nav .fa-bars {
     display: block;
@@ -584,7 +586,7 @@ html body footer .footer-right .newsletter-section span i {
     font-size: 25px;
   }
 }
-@media screen and (min-width: 591px) and (max-width: 767px) {
+@media screen and (min-width: 180px) and (max-width: 590px) {
   html {
     font-size: 1px;
   }
@@ -594,17 +596,18 @@ html body footer .footer-right .newsletter-section span i {
     font-size: 15rem;
   }
   html body header {
-    padding: 0 20px;
+    padding: 0 10px;
     height: 80px;
   }
   html body header nav {
-    width: 250px;
+    width: 100px;
   }
-  html body header nav div {
+  html body header nav .nav-list {
     display: none;
   }
   html body header nav .connect-wallet-btn {
     padding: 8px;
+    display: none;
   }
   html body header nav .fa-bars {
     display: block;

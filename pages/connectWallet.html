@@ -11,7 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body onload="openWalletRequiredPopUp()">
     <aside>
         <img src="../images/index/connect-walletimg.png" alt="" class="side-img">
     </aside>
@@ -31,16 +31,74 @@
                         <button>Polygon</button>
                     </div>
                     <div class="crypto-group">
-                        <div><img src="../images/index/connect-wallet-fox-img.png" alt="">MetaMask</div>
-                        <div><img src="../images/index/connect-wallet-coinbase-img.png" alt="">Coinbase Wallet</div>
-                        <div><img src="../images/index/wallet-connect.png" alt="">WalletConnect</div>
-                        <div><img src="../images/index/connect-wallet-phantom-img.png" alt="">Phantom</div>
+                        <div onclick="openSignUpOverlay()"><img src="../images/index/connect-wallet-fox-img.png"
+                                alt="">MetaMask</div>
+                        <div onclick="openSignUpOverlay()"><img src="../images/index/connect-wallet-coinbase-img.png"
+                                alt="">Coinbase Wallet</div>
+                        <div onclick="openSignUpOverlay()"><img src="../images/index/wallet-connect.png"
+                                alt="">WalletConnect</div>
+                        <div onclick="openSignUpOverlay()"><img src="../images/index/connect-wallet-phantom-img.png"
+                                alt="">Phantom</div>
                     </div>
-                    <span>Show more</span>
+                    <a href="" class="show-more-btn">Show more</a>
                 </div>
             </article>
         </section>
     </main>
+    <div id="wallet-required">
+        <section>
+            <i class="fa-solid fa-close" onclick="closeWalletRequiredPopUp()"></i>
+            <h3>Wallet required!</h3>
+            <img src="../images/index/ethereum-logo.png" alt="">
+            <p>Get started with your Ethereum wallet to sign messages and send transactions to Ethereum blockchain</p>
+            <button id="sign-in-btn" onclick="openSignUpOverlay()">Sign in with wallet</button>
+        </section>
+    </div>
+    <div id="sign-up-overlay">
+        <form action="" method="post">
+            <h3>You're almost there!</h3>
+            <p class="fill-info">Choose a display name and enter your email address to receive updates when your NFTs
+                sell or receive offers</p>
+            <input type="text" name="" id="login-input" placeholder="Display name" required onclick="fillInfo()">
+            <input type="email" name="" id="login-input" placeholder="Your email" required onclick="fillInfo()">
+            <span>
+                <input type="checkbox" name="" id="">
+                <p>I have read and accept the Term of service and confirm that I am at least 13 years old</p>
+            </span>
+            <button id="finish-signup-btn">Finish sign-up</button>
+            <button href="connectWallet.html" class="disconnect-btn" onclick="closeSignUpOverlay()">Disconnect</button>
+        </form>
+    </div>
+
+
+    <script>
+        // This is for the signup overlay
+        function openSignUpOverlay() {
+            let signUpElem = document.getElementById("sign-up-overlay");
+            signUpElem.style.display = "block";
+        }
+        function closeSignUpOverlay() {
+            let signUpElem = document.getElementById("sign-up-overlay");
+            signUpElem.style.display = "none";
+        }
+
+        // To make sure the user has input some thing before click on enter
+        function fillInfo() {
+            let finishSignUpElem = document.getElementById("finish-signup-btn");
+            finishSignUpElem.style.backgroundImage = `linear-gradient(to right, #F906F9,#0698F9)`;
+
+        }
+
+        function closeWalletRequiredPopUp() {
+            let hideSearchbar = document.getElementById("wallet-required");
+            hideSearchbar.style.display = "none";
+        }
+        function openWalletRequiredPopUp() {
+            let hideSearchbar = document.getElementById("wallet-required");
+            hideSearchbar.style.display = "block";
+        }
+
+    </script>
 </body>
 
 </html>

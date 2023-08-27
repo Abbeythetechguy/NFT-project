@@ -44,26 +44,26 @@ html {
                 display: grid;
                 place-items: center;
                 // align-items: center;
-                padding: 50px;  
+                padding: 50px;
                 // border: 1px solid red;
 
-                article{
+                article {
                     width: 488px;
 
                     .connect-wallet-heading {
                         margin-bottom: 48px;
-    
+
                         h1 {
                             font-size: 30rem;
                         }
                     }
-    
+
                     .connect-wallet-main {
-    
+
                         .main-crypto-title-btn {
                             border-bottom: 2px solid $font-color2;
-                            
-    
+
+
                             button {
                                 background-color: transparent;
                                 border: 0;
@@ -72,9 +72,9 @@ html {
                                 font-size: 18rem;
                             }
                         }
-    
+
                         .crypto-group {
-    
+
                             div {
                                 width: 488px;
                                 height: 48px;
@@ -85,14 +85,16 @@ html {
                                 display: flex;
                                 // flex-direction: column;
                                 align-items: center;
-    
+
                                 img {
                                     margin-right: 10px;
                                 }
                             }
                         }
-    
-                        span {
+
+                        .show-more-btn {
+                            color: #11315B;
+                            text-decoration: none;
                             display: inline-block;
                             width: 488px;
                             height: 48px;
@@ -104,6 +106,449 @@ html {
                             margin-top: 24px;
                         }
                     }
+                }
+            }
+        }
+
+        #sign-up-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            display: none;
+            background-color: rgba(0, 0, 0, 0.548);
+
+            form {
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: white;
+                border-radius: 20px;
+                width: 480px;
+                height: 494px;
+                margin: 90px auto;
+
+                .fill-info {
+                    text-align: center;
+                    margin: 24px;
+                    font-size: 15rem;
+                    color: #476285;
+                }
+
+                #login-input {
+                    width: 100%;
+                    height: 48px;
+                    border-radius: 10px;
+                    border: 1px solid $font-color2;
+                    margin: 8px 0;
+                    padding: 0 15px;
+
+                }
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 24px;
+
+                    input {
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 15px;
+                    }
+
+                    p {
+                        color: #6E84AB;
+                        font-size: 14rem;
+                    }
+                }
+
+                button {
+                    width: 100%;
+                    height: 48px;
+                    background-color: #BDCADB;
+                    border: 0;
+                    border-radius: 10px;
+                    font-size: 18rem;
+                    color: white;
+                }
+
+                .disconnect-btn {
+                    width: 100%;
+                    height: 48px;
+                    text-decoration: none;
+                    color: #11315B;
+                    border: 1px solid #BDCADB;
+                    border-radius: 10px;
+                    font-weight: 600;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 18rem;
+                    margin-top: 16px;
+                }
+            }
+        }
+
+        #wallet-required {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            display: none;
+            background-color: rgba(0, 0, 0, 0.548);
+
+            section {
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: white;
+                border-radius: 20px;
+                width: 480px;
+                height: 394px;
+                margin: 90px auto;
+                position: relative;
+
+                .fa-close{
+                    position: absolute;
+                    right: 20px;
+                    font-size: 25rem;
+                    color: #476285;
+                }
+
+                img{
+                    margin: 32px 0 20px 0;
+                }
+
+                p {
+                    text-align: center;
+                    margin: 24px;
+                    font-size: 15rem;
+                    color: #476285;
+                }
+
+                #sign-in-btn {
+                    width: 100%;
+                    width: 100%;
+                    height: 48px;
+                    text-decoration: none;
+                    color: white;
+                    border-radius: 10px;
+                    background-image: linear-gradient(to right, #F906F9, #0698F9);
+                    font-weight: 600;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 18rem;
+                    margin-top: 16px;
+                    border: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 996px) and (max-width: 1200px) {
+    html {
+        font-size: 1px;
+
+        body {
+            font-family: poppins, "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            max-width: 1440px;
+            margin: 0 auto;
+            background-color: $main-bg-color;
+            color: $bg-color;
+            font-size: 16rem;
+
+            aside {
+                position: fixed;
+                // left: 0;
+                // top: 0;
+            }
+
+            main {
+                height: 100vh;
+                width: 50%;
+                // float: none;
+                margin-right: 100px;
+
+                section {
+                    display: grid;
+                    place-items: center;
+                    padding: 50px 0 0 0;
+
+                    article {
+                        width: 488px;
+
+                        .connect-wallet-heading {
+                            margin-bottom: 48px;
+
+                            h1 {
+                                font-size: 30rem;
+                            }
+                        }
+
+                        .connect-wallet-main {
+
+                            .main-crypto-title-btn {
+                                border-bottom: 2px solid $font-color2;
+
+
+                                button {
+                                    background-color: transparent;
+                                    border: 0;
+                                    font-family: poppins, sans-serif;
+                                    padding: 5px 20px 5px 0;
+                                    font-size: 18rem;
+                                }
+                            }
+
+                            .crypto-group {
+
+                                div {
+                                    width: 488px;
+                                    height: 48px;
+                                    border: 1px solid $font-color2;
+                                    border-radius: 10px;
+                                    margin: 12px 0;
+                                    padding: 0 20px;
+                                    display: flex;
+                                    // flex-direction: column;
+                                    align-items: center;
+
+                                    img {
+                                        margin-right: 10px;
+                                    }
+                                }
+                            }
+
+                            .show-more-btn {
+                                color: #11315B;
+                                text-decoration: none;
+                                display: inline-block;
+                                width: 488px;
+                                height: 48px;
+                                border: 1px solid $font-color2;
+                                border-radius: 10px;
+                                display: grid;
+                                place-items: center;
+                                font-weight: 800;
+                                margin-top: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 995px) {
+    html {
+
+        body {
+
+            aside {
+                width: 100%;
+                position: absolute;
+                z-index: -1;
+                height: 100px;
+
+                img {
+                    width: 100%;
+                    height: 100vh;
+                }
+            }
+
+            main {
+                height: 100vh;
+                width: 100%;
+                float: right;
+                color: white;
+                backdrop-filter: blur(3px);
+
+                section{
+
+                    article{
+                       
+                        .connect-wallet-main{
+                            .main-crypto-title-btn {
+                                border-bottom: 2px solid $font-color2;
+            
+            
+                                button {
+                                    background-color: transparent;
+                                    border: 0;
+                                    font-family: poppins, sans-serif;
+                                    padding: 5px 5px 5px 0;
+                                    font-size: 14rem;
+                                    color: white;
+                                }
+                            }
+                            .show-more-btn {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 591px) and (max-width: 767px) {
+    html {
+
+        body {
+
+            aside {
+                width: 100%;
+                position: absolute;
+                z-index: -1;
+                height: 100px;
+
+                img {
+                    width: 100%;
+                    height: 100vh;
+                }
+            }
+
+            main {
+                height: 100vh;
+                width: 100%;
+                float: right;
+                color: white;
+                backdrop-filter: blur(2px);
+
+                section{
+
+                    article{
+                       
+                        .connect-wallet-main{
+                            .main-crypto-title-btn {
+                                border-bottom: 2px solid $font-color2;
+            
+            
+                                button {
+                                    background-color: transparent;
+                                    border: 0;
+                                    font-family: poppins, sans-serif;
+                                    padding: 5px 5px 5px 0;
+                                    font-size: 14rem;
+                                    color: white;
+                                }
+                            }
+                            .show-more-btn {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 180px) and (max-width: 590px) {
+    html {
+
+        body {
+
+            aside {
+                width: 100%;
+                position: absolute;
+                z-index: -1;
+                height: 100px;
+
+                img {
+                    width: 100%;
+                    height: 100vh;
+                }
+            }
+
+            main {
+                height: 100vh;
+                width: 100%;
+                float: right;
+                color: white;
+                backdrop-filter: blur(2px);
+
+                section {
+                    display: grid;
+                    place-items: center;
+                    // align-items: center;
+                    padding: 30px;
+                    // border: 1px solid red;
+
+                    article {
+                        width: 100%;
+
+                        .connect-wallet-heading {
+                            margin-bottom: 28px;
+                        }
+
+                        .connect-wallet-main {
+
+                            .main-crypto-title-btn {
+                                border-bottom: 2px solid $font-color2;
+
+
+                                button {
+                                    background-color: transparent;
+                                    border: 0;
+                                    font-family: poppins, sans-serif;
+                                    padding: 5px 5px 5px 0;
+                                    font-size: 14rem;
+                                    color: white;
+                                }
+                            }
+
+                            .crypto-group {
+
+                                div {
+                                    width: 100%;
+                                    height: 48px;
+                                    border: 1px solid $font-color2;
+                                    border-radius: 10px;
+                                    margin: 12px 0;
+                                    padding: 0 20px;
+                                    display: flex;
+                                    // flex-direction: column;
+                                    align-items: center;
+
+                                    img {
+                                        margin-right: 10px;
+                                    }
+                                }
+                            }
+
+                            .show-more-btn {
+                                display: inline-block;
+                                text-decoration: none;
+                                color: white;
+                                width: 100%;
+                                height: 48px;
+                                border: 1px solid $font-color2;
+                                border-radius: 10px;
+                                display: grid;
+                                place-items: center;
+                                font-weight: 800;
+                                margin-top: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #sign-up-overlay {
+
+                form {
+                    width: 380px;
+                }
+            }
+            #wallet-required {
+    
+                section {
+                    width: 380px;
                 }
             }
         }
