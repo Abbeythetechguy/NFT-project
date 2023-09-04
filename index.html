@@ -21,7 +21,6 @@
             <input type="search" name="" placeholder="Input text" id="search-bar">
         </form>
     </div>
-
     <!-- This is for the mobile menu -->
     <section id="mobile-menu">
         <span id="close-btn" onclick="closeSideNavBar()">
@@ -30,10 +29,9 @@
         <ul class="mobile-menu-content">
             <li><a href="./index.html" class="mobile-menu-links">Home</a></li>
             <li class="dropdown">
-                <span class="mobile-menu-links" id="marketplace-dropdown" onclick="showMobileMarketDropdown()">Market Place</span>
-                <ul class="dropdown-content" id="mobile-marketplace-dropdown-content">
-                    <li class="li-bottom"><a href="./pages/collection.html"><i class="fa-solid fa-layer-group"></i>
-                            Collections</a></li>
+                <span class="mobile-menu-links" id="marketplace-dropdown2" onclick="showMobileMarketDropdown()">Market Place</span>
+                <ul class="dropdown-content" id="mobile-marketplace-dropdown-content2">
+                    <li class="li-bottom"><a href="./pages/collection.html"><i class="fa-solid fa-layer-group"></i> Collections</a></li>
                     <li><a href="./pages/artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
                 </ul>
             </li>
@@ -42,23 +40,20 @@
             <li><a href="" class="mobile-menu-links">Sign Up</a></li>
         </ul>
     </section>
+
     <header>
         <span class="logo">M</span>
         <nav>
-            <!-- This is for the active tab-->
-            <div class="active-tab"></div>
-
             <ul class="nav-list">
-                <li><a href="./index.html" class="nav-link home" onclick="activeTab()">Home</a></li>
+                <li><a href="./index.html" class="nav-link home">Home</a></li>
                 <li class="dropdown">
                     <span class="nav-link" id="marketplace-dropdown" onclick="showMarketPlaceMenu()">Market Place</span>
                     <ul class="dropdown-content" id="marketplace-dropdown-content">
-                        <li class="li-bottom"><a href="./pages/collection.html"><i class="fa-solid fa-layer-group"></i>
-                                Collections</a></li>
+                        <li class="li-bottom"><a href="./pages/collection.html"><i class="fa-solid fa-layer-group"></i> Collections</a></li>
                         <li><a href="./pages/artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
                     </ul>
                 </li>
-                <li><a href="./pages/nftList1.html" class="nav-link all-nfts"  onclick="activeTab()">All NFTs</a></li>
+                <li><a href="./pages/nftList1.html" class="nav-link all-nfts">All NFTs</a></li>
                 <li><a href="./pages/Activities.html" class="nav-link">Activities</a></li>
 
             </ul>
@@ -74,7 +69,7 @@
                 <h1>Discover, collect, and sell extraordinary NFTs</h1>
                 <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
                     duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                <a href="" class="hero-btn">Explore now <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="./pages/nftList1.html" class="hero-btn">Explore now <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="hero-right">
                 <img src="./images/index/09 Gear NFT.png" alt="" class="hero-stickers-1">
@@ -105,10 +100,10 @@
                 </div>
                 <div class="hot-auction-title-right">
                     <a href="" class="auction-see-all-link">See all</a>
-                    <button>
+                    <button onclick="plusSlides(-1)">
                         <i class="fa-solid fa-arrow-left"></i>
                     </button>
-                    <button>
+                    <button onclick="plusSlides(1)">
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
@@ -116,127 +111,135 @@
             <div class="hot-auction-flex-container">
                 <div class="hot-auction-flex-items">
                     <img src="./images/index/hot-auction-img1.png" alt="" class="hot-section-img">
-                    <div class="collection-name">
-                        <p>Collection name</p>
-                        <h3>NFT name Ex Shiba...</h3>
-                    </div>
-                    <div class="current-bid">
-                        <div class="current-bid-price">
-                            <p>Current bid</p>
-                            <h4>300 ETH</h4>
-                            <h5>$130,729.12</h5>
+                    <a href="./pages/nftDetails.html">
+                        <div class="collection-name">
+                            <p>Collection name</p>
+                            <h3>NFT name Ex Shiba...</h3>
                         </div>
-                        <div class="current-bid-timer">
-                            <p>Current bid</p>
-                            <h4>03d : 25h : 05m</h4>
-                            <h5>Bids: 25</h5>
+                        <div class="current-bid">
+                            <div class="current-bid-price">
+                                <p>Current bid</p>
+                                <h4>300 ETH</h4>
+                                <h5>$130,729.12</h5>
+                            </div>
+                            <div class="current-bid-timer">
+                                <p>Current bid</p>
+                                <h4>03d : 25h : 05m</h4>
+                                <h5>Bids: 25</h5>
+                            </div>
                         </div>
-                    </div>
-                    <div class="profile-avatar">
-                        <span class="profile-avatar-left">
-                            <img src="./images/index/Avatar.png" alt="">
-                            <p>Artist name</p>
-                        </span>
-                        <span class="profile-avatar-right">
-                            <i class="fa-solid fa-heart"></i>
-                            <p>12121</p>
-                        </span>
-                    </div>
+                        <div class="profile-avatar">
+                            <span class="profile-avatar-left">
+                                <img src="./images/index/Avatar.png" alt="">
+                                <p>Artist name</p>
+                            </span>
+                            <span class="profile-avatar-right">
+                                <i class="fa-solid fa-heart"></i>
+                                <p>12121</p>
+                            </span>
+                        </div>
+                    </a>
                     <span class="hot-auction-hover-item-bid"> <i class="fa-solid fa-ellipsis-vertical"></i><a
-                            href="">Place a bid</a></span>
+                            href="./pages/nftDetails.html">Place a bid</a></span>
                 </div>
                 <div class="hot-auction-flex-items">
                     <img src="./images/index/hot-auction-img2.png" alt="" class="hot-section-img">
-                    <div class="collection-name">
-                        <p>Collection name</p>
-                        <h3>NFT name Ex Shiba...</h3>
-                    </div>
-                    <div class="current-bid">
-                        <div class="current-bid-price">
-                            <p>Current bid</p>
-                            <h4>300 ETH</h4>
-                            <h5>$130,729.12</h5>
+                    <a href="./pages/nftDetails.html">
+                        <div class="collection-name">
+                            <p>Collection name</p>
+                            <h3>NFT name Ex Shiba...</h3>
                         </div>
-                        <div class="current-bid-timer">
-                            <p>Current bid</p>
-                            <h4>03d : 25h : 05m</h4>
-                            <h5>Bids: 25</h5>
+                        <div class="current-bid">
+                            <div class="current-bid-price">
+                                <p>Current bid</p>
+                                <h4>300 ETH</h4>
+                                <h5>$130,729.12</h5>
+                            </div>
+                            <div class="current-bid-timer">
+                                <p>Current bid</p>
+                                <h4>03d : 25h : 05m</h4>
+                                <h5>Bids: 25</h5>
+                            </div>
                         </div>
-                    </div>
-                    <div class="profile-avatar">
-                        <span class="profile-avatar-left">
-                            <img src="./images/index/Avatar.png" alt="">
-                            <p>Artist name</p>
-                        </span>
-                        <span class="profile-avatar-right">
-                            <i class="fa-solid fa-heart"></i>
-                            <p>12121</p>
-                        </span>
-                    </div>
+                        <div class="profile-avatar">
+                            <span class="profile-avatar-left">
+                                <img src="./images/index/Avatar.png" alt="">
+                                <p>Artist name</p>
+                            </span>
+                            <span class="profile-avatar-right">
+                                <i class="fa-solid fa-heart"></i>
+                                <p>12121</p>
+                            </span>
+                        </div>
+                    </a>
                     <span class="hot-auction-hover-item-bid"> <i class="fa-solid fa-ellipsis-vertical"></i><a
-                            href="">Place a bid</a></span>
+                            href="./pages/nftDetails.html">Place a bid</a></span>
                 </div>
                 <div class="hot-auction-flex-items">
                     <img src="./images/index/hot-auction-img3.png" alt="" class="hot-section-img">
-                    <div class="collection-name">
-                        <p>Collection name</p>
-                        <h3>NFT name Ex Shiba...</h3>
-                    </div>
-                    <div class="current-bid">
-                        <div class="current-bid-price">
-                            <p>Current bid</p>
-                            <h4>300 ETH</h4>
-                            <h5>$130,729.12</h5>
+                    <a href="./pages/nftDetails.html">
+                        <div class="collection-name">
+                            <p>Collection name</p>
+                            <h3>NFT name Ex Shiba...</h3>
                         </div>
-                        <div class="current-bid-timer">
-                            <p>Current bid</p>
-                            <h4>03d : 25h : 05m</h4>
-                            <h5>Bids: 25</h5>
+                        <div class="current-bid">
+                            <div class="current-bid-price">
+                                <p>Current bid</p>
+                                <h4>300 ETH</h4>
+                                <h5>$130,729.12</h5>
+                            </div>
+                            <div class="current-bid-timer">
+                                <p>Current bid</p>
+                                <h4>03d : 25h : 05m</h4>
+                                <h5>Bids: 25</h5>
+                            </div>
                         </div>
-                    </div>
-                    <div class="profile-avatar">
-                        <span class="profile-avatar-left">
-                            <img src="./images/index/Avatar.png" alt="">
-                            <p>Artist name</p>
-                        </span>
-                        <span class="profile-avatar-right">
-                            <i class="fa-solid fa-heart"></i>
-                            <p>12121</p>
-                        </span>
-                    </div>
+                        <div class="profile-avatar">
+                            <span class="profile-avatar-left">
+                                <img src="./images/index/Avatar.png" alt="">
+                                <p>Artist name</p>
+                            </span>
+                            <span class="profile-avatar-right">
+                                <i class="fa-solid fa-heart"></i>
+                                <p>12121</p>
+                            </span>
+                        </div>
+                    </a>
                     <span class="hot-auction-hover-item-bid"> <i class="fa-solid fa-ellipsis-vertical"></i><a
-                            href="">Place a bid</a></span>
+                            href="./pages/nftDetails.html">Place a bid</a></span>
                 </div>
                 <div class="hot-auction-flex-items">
                     <img src="./images/index/hot-auction-img4.png" alt="" class="hot-section-img">
-                    <div class="collection-name">
-                        <p>Collection name</p>
-                        <h3>NFT name Ex Shiba...</h3>
-                    </div>
-                    <div class="current-bid">
-                        <div class="current-bid-price">
-                            <p>Current bid</p>
-                            <h4>300 ETH</h4>
-                            <h5>$130,729.12</h5>
+                    <a href="./pages/nftDetails.html">
+                        <div class="collection-name">
+                            <p>Collection name</p>
+                            <h3>NFT name Ex Shiba...</h3>
                         </div>
-                        <div class="current-bid-timer">
-                            <p>Current bid</p>
-                            <h4>03d : 25h : 05m</h4>
-                            <h5>Bids: 25</h5>
+                        <div class="current-bid">
+                            <div class="current-bid-price">
+                                <p>Current bid</p>
+                                <h4>300 ETH</h4>
+                                <h5>$130,729.12</h5>
+                            </div>
+                            <div class="current-bid-timer">
+                                <p>Current bid</p>
+                                <h4>03d : 25h : 05m</h4>
+                                <h5>Bids: 25</h5>
+                            </div>
                         </div>
-                    </div>
-                    <div class="profile-avatar">
-                        <span class="profile-avatar-left">
-                            <img src="./images/index/Avatar.png" alt="">
-                            <p>Artist name</p>
-                        </span>
-                        <span class="profile-avatar-right">
-                            <i class="fa-solid fa-heart"></i>
-                            <p>12121</p>
-                        </span>
-                    </div>
+                        <div class="profile-avatar">
+                            <span class="profile-avatar-left">
+                                <img src="./images/index/Avatar.png" alt="">
+                                <p>Artist name</p>
+                            </span>
+                            <span class="profile-avatar-right">
+                                <i class="fa-solid fa-heart"></i>
+                                <p>12121</p>
+                            </span>
+                        </div>
+                    </a>
                     <span class="hot-auction-hover-item-bid"> <i class="fa-solid fa-ellipsis-vertical"></i><a
-                            href="">Place a bid</a></span>
+                            href="./pages/nftDetails.html">Place a bid</a></span>
                 </div>
             </div>
         </section>
@@ -269,6 +272,7 @@
             </div>
             <div class="popular-collection-flex-container">
                 <div class="popular-collection-flex-items">
+                    <a href="./pages/collectionDetail.html">
                     <div class="img-section">
                         <div class="img-section-left">
                             <img src="./images/index/popular-collection-flex-item1-img1.png" alt=""
@@ -297,8 +301,10 @@
                             <p>-29%</p>
                         </span>
                     </div>
+                    </a>
                 </div>
                 <div class="popular-collection-flex-items">
+                    <a href="./pages/collectionDetail.html">
                     <div class="img-section">
                         <div class="img-section-left">
                             <img src="./images/index/popular-collection-flex-item2-img1.png" alt=""
@@ -327,8 +333,10 @@
                             <p>-29%</p>
                         </span>
                     </div>
+                    </a>
                 </div>
                 <div class="popular-collection-flex-items">
+                    <a href="./pages/collectionDetail.html">
                     <div class="img-section">
                         <div class="img-section-left">
                             <img src="./images/index/popular-collection-flex-item3-img1.png" alt=""
@@ -357,6 +365,7 @@
                             <p>-29%</p>
                         </span>
                     </div>
+                    </a>
                 </div>
             </div>
         </section>

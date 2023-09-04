@@ -1,38 +1,405 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../styles/userPage.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
+    <!-- This is for the overlay search bar -->
+    <div id="overlay">
+        <form action="">
+            <span id="close-btn1">
+                <i class="fa-solid fa-close "></i>Close
+            </span>
+            <input type="search" name="" placeholder="Input text" id="search-bar">
+        </form>
+    </div>
+    <!-- This is for the mobile menu -->
+    <section id="mobile-menu2">
+        <span id="close-btn" onclick="closeSideNavBar()">
+            <i class="fa-solid fa-close "></i>Close
+        </span>
+        <ul class="mobile-menu-content">
+            <li><a href="../index.html" class="mobile-menu-links">Home</a></li>
+            <li class="dropdown">
+                <span class="mobile-menu-links" id="marketplace-dropdown2" onclick="showMobileMarketDropdown()">Market
+                    Place</span>
+                <ul class="dropdown-content" id="mobile-marketplace-dropdown-content2">
+                    <li class="li-bottom"><a href="./collection.html"><i class="fa-solid fa-layer-group"></i>
+                            Collections</a></li>
+                    <li><a href="./artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
+                </ul>
+            </li>
+            <li><a href="./nftList1.html" class="mobile-menu-links">All NFTs</a></li>
+            <li><a href="./Activities.html" class="mobile-menu-links">Activities</a></li>
+            <li><a href="" class="mobile-menu-links">Sign Up</a></li>
+        </ul>
+    </section>
+
     <header>
-        <span class="logo">M</span>
+        <div class="logo">M</div>
         <nav>
             <ul class="nav-list">
-                <li><a href="./index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html" class="nav-link">Home</a></li>
                 <li class="dropdown">
-                    <a href="./pages/collection.html" class="nav-link">Market Place</a>
-                    <ul class="dropdown-content">
-                        <li class="li-bottom"><a href="./pages/collection.html"><i class="fa-solid fa-layer-group"></i> Collections</a></li>
-                        <li><a href="./pages/artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
+                    <span class="nav-link" id="marketplace-dropdown" onclick="showMarketPlaceMenu()">Market Place</span>
+                    <ul class="dropdown-content" id="marketplace-dropdown-content">
+                        <li class="li-bottom"><a href="./collection.html"><i class="fa-solid fa-layer-group"></i> Collections</a></li>
+                        <li><a href="./artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
                     </ul>
                 </li>
-                <li><a href="./pages/" class="nav-link">All NFTs</a></li>
-                <li><a href="./pages/Activities.html" class="nav-link">Activities</a></li>
+                <li><a href="./nftList1.html" class="nav-link">All NFTs</a></li>
+                <li><a href="./Activities.html" class="nav-link">Activities</a></li>
 
             </ul>
             <a href="" class="toggle-dot">...</a>
-            <i class="fa-solid fa-magnifying-glass" onclick="hideNavBar()"></i>
-            <form action="" id="search-menu">
-                <input type="search" name="" placeholder="Input text" id="search-bar">
-            </form>
-            <a href="./pages/connectWallet.html" class="connect-wallet-btn">Connect wallet</a>
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-magnifying-glass" onclick="showSearchBar()"></i>
+            <a href="./connectWallet.html" class="connect-wallet-btn">Connect wallet</a>
+            <i class="fa-solid fa-bars" onclick="showSideNav()"></i>
         </nav>
     </header>
-    
+    <main>
+        <section class="display-photo-section">
+            <img src="../images/index/cover-photo.png" alt="" class="cover-photo">
+            <div class="profile-img-info">
+                <div class="profile-left">
+                    <img src="../images/index/artist-ava.png" alt="">
+                    <span>
+                        <h1>A$AP Rocky</h1>
+                        <p>@0xogpassby0xstudio</p>
+                    </span>
+                </div>
+                <div class="profile-right">
+                    <p>twitter: ascac</p>
+                    <p>insta: @agsastda</p>
+                    <p>address: 0xogpassby0xstudio</p>
+                </div>
+            </div>
+            <div class="black-background"></div>
+        </section>
+        <section class="followed">
+            <button><i class="fa-solid fa-check"></i>Followed</button>
+            <button><i class="fa-regular fa-envelope"></i>Message</button>
+            <button><i class="fa-solid fa-ellipsis"></i></button>
+            <button><i class="fa-solid fa-paper-plane"></i></button>
+        </section>
+        <section class="display-items">
+            <div class="onsale-group">
+                <button>Onsale</button>
+                <button>Owned</button>
+                <button>Sold</button>
+                <button>Liked</button>
+                <button>Activites</button>
+                <button>Followers</button>
+                <button>Following</button>
+            </div>
+            <div class="sort-group">
+                <button><i class="fa-solid fa-sliders fa-rotate-270"></i> Filter</button>
+                <button class="f5-btn">F5</button>
+                <form action="">
+                    <input type="search" name="" id="">
+                    <select name="" id="outside-select">
+                        <option value="">Price: Low to high</option>
+                        <option value="">Price: High to low</option>
+                        <option value="">Best rating</option>
+                    </select>
+                    <div class="recent-sort">
+                        <p><i class="fa-solid fa-chart-simple"></i> Sort by</p>
+                        <select name="" id="">
+                            <option value="">Recent</option>
+                            <option value="">Popularity</option>
+                            <option value="">5 stars</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="flex justify-between w-[350px] mt-60"><p><b>Total:</b>2,798 items</p><p><b> Last update:</b> 3 min ago</p></div>
+
+            <section class="trending-nft">
+                <div class="trending-nft-flex-container">
+                    <div class="trending-nft-flex-items">
+                        <img src="../images/index/my-profile-nft-img1.png" alt="" class="trending-nft-img">
+                        <div class="collection-name">
+                            <p>Collection name</p>
+                            <h3>NFT name Ex Shiba...</h3>
+                        </div>
+                        <div class="current-bid">
+                            <div class="current-bid-price">
+                                <p>Price</p>
+                                <h4>1 ETH</h4>
+                                <h5>$130,729.12</h5>
+                            </div>
+                            <div class="best-offer-timer">
+                                <p>Best offer</p>
+                                <h4>1 ETH</h4>
+                                <h5><i class="fa-regular fa-clock"></i> 4hrs left</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trending-nft-flex-items">
+                        <img src="../images/index/my-profile-nft-img2.png" alt="" class="trending-nft-img">
+                        <div class="collection-name">
+                            <p>Collection name</p>
+                            <h3>NFT name Ex Shiba...</h3>
+                        </div>
+                        <div class="current-bid">
+                            <div class="current-bid-price">
+                                <p>Price</p>
+                                <h4>1 ETH</h4>
+                                <h5>$130,729.12</h5>
+                            </div>
+                            <div class="best-offer-timer">
+                                <p>Best offer</p>
+                                <h4>1 ETH</h4>
+                                <h5><i class="fa-regular fa-clock"></i> 4hrs left</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trending-nft-flex-items">
+                        <img src="../images/index/my-profile-nft-img3.png" alt="" class="trending-nft-img">
+                        <div class="collection-name">
+                            <p>Collection name</p>
+                            <h3>NFT name Ex Shiba...</h3>
+                        </div>
+                        <div class="current-bid">
+                            <div class="current-bid-price">
+                                <p>Price</p>
+                                <h4>1 ETH</h4>
+                                <h5>$130,729.12</h5>
+                            </div>
+                            <div class="best-offer-timer">
+                                <p>Best offer</p>
+                                <h4>1 ETH</h4>
+                                <h5><i class="fa-regular fa-clock"></i> 4hrs left</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trending-nft-flex-items">
+                        <img src="../images/index/my-profile-nft-img4.png" alt="" class="trending-nft-img">
+                        <div class="collection-name">
+                            <p>Collection name</p>
+                            <h3>NFT name Ex Shiba...</h3>
+                        </div>
+                        <div class="current-bid">
+                            <div class="current-bid-price">
+                                <p>Price</p>
+                                <h4>1 ETH</h4>
+                                <h5>$130,729.12</h5>
+                            </div>
+                            <div class="best-offer-timer">
+                                <p>Best offer</p>
+                                <h4>1 ETH</h4>
+                                <h5><i class="fa-regular fa-clock"></i> 4hrs left</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trending-nft-flex-items">
+                        <img src="../images/index/my-profile-nft-img5.png" alt="" class="trending-nft-img">
+                        <div class="collection-name">
+                            <p>Collection name</p>
+                            <h3>NFT name Ex Shiba...</h3>
+                        </div>
+                        <div class="current-bid">
+                            <div class="current-bid-price">
+                                <p>Price</p>
+                                <h4>1 ETH</h4>
+                                <h5>$130,729.12</h5>
+                            </div>
+                            <div class="best-offer-timer">
+                                <p>Best offer</p>
+                                <h4>1 ETH</h4>
+                                <h5><i class="fa-regular fa-clock"></i> 4hrs left</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trending-nft-flex-items">
+                        <img src="../images/index/hot-auction-img4.png" alt="" class="trending-nft-img">
+                        <div class="collection-name">
+                            <p>Collection name</p>
+                            <h3>NFT name Ex Shiba...</h3>
+                        </div>
+                        <div class="current-bid">
+                            <div class="current-bid-price">
+                                <p>Price</p>
+                                <h4>1 ETH</h4>
+                                <h5>$130,729.12</h5>
+                            </div>
+                            <div class="best-offer-timer">
+                                <p>Best offer</p>
+                                <h4>1 ETH</h4>
+                                <h5><i class="fa-regular fa-clock"></i> 4hrs left</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trending-nft-flex-items">
+                        <img src="../images/index/my-profile-nft-img7.png" alt="" class="trending-nft-img">
+                        <div class="collection-name">
+                            <p>Collection name</p>
+                            <h3>NFT name Ex Shiba...</h3>
+                        </div>
+                        <div class="current-bid">
+                            <div class="current-bid-price">
+                                <p>Price</p>
+                                <h4>1 ETH</h4>
+                                <h5>$130,729.12</h5>
+                            </div>
+                            <div class="best-offer-timer">
+                                <p>Best offer</p>
+                                <h4>1 ETH</h4>
+                                <h5><i class="fa-regular fa-clock"></i> 4hrs left</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trending-nft-flex-items">
+                        <img src="../images/index/my-profile-nft-img8.png" alt="" class="trending-nft-img">
+                        <div class="collection-name">
+                            <p>Collection name</p>
+                            <h3>NFT name Ex Shiba...</h3>
+                        </div>
+                        <div class="current-bid">
+                            <div class="current-bid-price">
+                                <p>Price</p>
+                                <h4>1 ETH</h4>
+                                <h5>$130,729.12</h5>
+                            </div>
+                            <div class="best-offer-timer">
+                                <p>Best offer</p>
+                                <h4>1 ETH</h4>
+                                <h5><i class="fa-regular fa-clock"></i> 4hrs left</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trending-nft-flex-items">
+                        <img src="../images/index/my-profile-nft-img9.png" alt="" class="trending-nft-img">
+                        <div class="collection-name">
+                            <p>Collection name</p>
+                            <h3>NFT name Ex Shiba...</h3>
+                        </div>
+                        <div class="current-bid">
+                            <div class="current-bid-price">
+                                <p>Price</p>
+                                <h4>1 ETH</h4>
+                                <h5>$130,729.12</h5>
+                            </div>
+                            <div class="best-offer-timer">
+                                <p>Best offer</p>
+                                <h4>1 ETH</h4>
+                                <h5><i class="fa-regular fa-clock"></i> 4hrs left</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trending-nft-flex-items">
+                        <img src="../images/index/my-profile-nft-img10.png" alt="" class="trending-nft-img">
+                        <div class="collection-name">
+                            <p>Collection name</p>
+                            <h3>NFT name Ex Shiba...</h3>
+                        </div>
+                        <div class="current-bid">
+                            <div class="current-bid-price">
+                                <p>Price</p>
+                                <h4>1 ETH</h4>
+                                <h5>$130,729.12</h5>
+                            </div>
+                            <div class="best-offer-timer">
+                                <p>Best offer</p>
+                                <h4>1 ETH</h4>
+                                <h5><i class="fa-regular fa-clock"></i> 4hrs left</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trending-nft-flex-items">
+                        <img src="../images/index/my-profile-nft-img11.png" alt="" class="trending-nft-img">
+                        <div class="collection-name">
+                            <p>Collection name</p>
+                            <h3>NFT name Ex Shiba...</h3>
+                        </div>
+                        <div class="current-bid">
+                            <div class="current-bid-price">
+                                <p>Price</p>
+                                <h4>1 ETH</h4>
+                                <h5>$130,729.12</h5>
+                            </div>
+                            <div class="best-offer-timer">
+                                <p>Best offer</p>
+                                <h4>1 ETH</h4>
+                                <h5><i class="fa-regular fa-clock"></i> 4hrs left</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trending-nft-flex-items">
+                        <img src="../images/index/my-profile-nft-img12.png" alt="" class="trending-nft-img">
+                        <div class="collection-name">
+                            <p>Collection name</p>
+                            <h3>NFT name Ex Shiba...</h3>
+                        </div>
+                        <div class="current-bid">
+                            <div class="current-bid-price">
+                                <p>Price</p>
+                                <h4>1 ETH</h4>
+                                <h5>$130,729.12</h5>
+                            </div>
+                            <div class="best-offer-timer">
+                                <p>Best offer</p>
+                                <h4>1 ETH</h4>
+                                <h5><i class="fa-regular fa-clock"></i> 4hrs left</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+    </main>
+
+
+    <script>
+
+        function showMarketPlaceMenu() {
+            let showMarketdropdownElem = document.getElementById("marketplace-dropdown-content");
+            showMarketdropdownElem.classList.toggle("showmarket-dropdown")
+        }
+        // This is for the search icon on the nav bar
+
+        function showSearchBar() {
+            let displayNavElem = document.getElementById("overlay");
+            displayNavElem.style.display = "block";
+        }
+
+
+        // for displaying and hiding the search bar
+        let closeButton = document.getElementById("close-btn1");
+        closeButton.addEventListener("click", closeSearchBar);
+
+        function closeSearchBar() {
+            let hideSearchbar = document.getElementById("overlay");
+            hideSearchbar.style.display = "none";
+        }
+        // for  showing mobile side nav
+        function showSideNav() {
+            let showMobNav = document.getElementById("mobile-menu2");
+            showMobNav.style.display = "block";
+        }
+        // for  closing mobile side nav
+        function closeSideNavBar() {
+            let hideSearchbar = document.getElementById("mobile-menu2");
+            hideSearchbar.style.display = "none";
+        }
+
+        // Mobile menu marketplace drop down
+        function showMobileMarketDropdown() {
+            let showMobileMarketElem = document.getElementById("mobile-marketplace-dropdown-content2");
+            showMobileMarketElem.classList.toggle("showMobmarket-dropdown")
+        }
+
+    </script>
 </body>
+
 </html>
