@@ -10,12 +10,13 @@ html {
 }
 html body {
   max-width: 1440px;
+  margin: 0 auto;
   font-family: "poppins", sans-serif;
   font-size: 16rem;
-  background-color: #F0F4FF;
+  background-color: #e0e9f0;
 }
 html body header {
-  background-color: #21204A;
+  background-color: #21204a;
   padding: 0 100px;
   display: flex;
   justify-content: space-between;
@@ -51,49 +52,54 @@ html body header nav div {
 }
 html body main .hero {
   display: flex;
+  padding: 0 80px;
 }
 html body main .hero .hero-left {
   width: 60%;
-  padding: 80px 0 0 80px;
+  padding-top: 80rem;
+  margin-right: 18px;
 }
 html body main .hero .hero-left .hero-img-bckgrnd {
-  width: 50vw;
-  height: 90vh;
+  width: 100%;
   border-radius: 15px;
   background-color: #ffffff;
 }
 html body main .hero .hero-left .hero-img-bckgrnd .hero-img {
-  width: 50vw;
-  height: 90vh;
-  padding: 25px;
+  width: 100%;
+  height: 80%;
+  padding: 20px;
 }
 html body main .hero .hero-left .hero-time {
   width: 150px;
   height: 44px;
   display: flex;
   position: relative;
-  left: 250px;
+  left: 280px;
   bottom: 160px;
   background-color: rgba(0, 0, 0, 0.479);
   border-radius: 10px;
   font-size: 14px;
-  padding: 10px 14px;
+  padding: 8px 6px;
   color: #ffffff;
 }
+html body main .hero .hero-left .hero-time .hero-time-one {
+  padding-top: 4px;
+  margin-left: 12px;
+}
 html body main .hero .hero-left .hero-time .hero-time-two {
-  padding: 4px 4px;
+  padding: 10px 6px;
 }
 html body main .hero .hero-left .list .list-bid {
-  width: 400px;
+  width: 50%;
   height: 50px;
   display: flex;
   justify-content: space-evenly;
   color: #6e84ab;
-  background-color: #CDE2FE;
+  background-color: #cde2fe;
   margin-left: 135px;
   padding-top: 16px;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 14rem;
 }
 html body main .hero .hero-left .list-bid-color:hover {
   background-color: #ffffff;
@@ -104,7 +110,7 @@ html body main .hero .hero-left .list-bid-color:hover {
   border-radius: 8px;
 }
 html body main .hero .hero-left .list-names {
-  width: 50vw;
+  width: 100%;
   height: 500px;
   margin: 28px 0;
   display: flex;
@@ -162,137 +168,139 @@ html body main .hero .hero-left .list-names .radius {
 }
 html body main .hero .hero-right {
   width: 40%;
-  padding: 80px;
+  padding-top: 80rem;
+  padding-right: 60rem;
+  margin-left: 18px;
 }
-html body main .hero .hero-right .shiba {
+html body main .hero .hero-right .shibaa {
+  width: 100%;
+}
+html body main .hero .hero-right .shibaa .shiba {
   display: flex;
-  margin: 10px 0;
+  margin: 10rem 0;
 }
-html body main .hero .hero-right .shiba .shiba-img {
+html body main .hero .hero-right .shibaa .shiba .shiba-img {
   width: 20px;
   height: 20px;
 }
-html body main .hero .hero-right .shiba .shiba-text {
+html body main .hero .hero-right .shibaa .shiba .shiba-text {
   color: #6e84ab;
   padding: 4px 4px;
   font-size: 12px;
 }
-html body main .hero .hero-right .shiba-big-text {
-  font-size: 30px;
-  color: #21204A;
-  padding-bottom: 14px;
+html body main .hero .hero-right .shibaa .shiba-big-text {
+  font-size: 30rem;
+  color: #21204a;
+  padding-bottom: 14rem;
 }
-html body main .hero .hero-right .hero-icons {
+html body main .hero .hero-right .shibaa .hero-icons {
   display: flex;
   color: #6e84ab;
   justify-content: space-between;
 }
-html body main .hero .hero-right .hero-icons .hero-icons-one {
+html body main .hero .hero-right .shibaa .hero-icons .hero-icons-one {
   display: flex;
   padding-bottom: 20px;
 }
-html body main .hero .hero-right .hero-icons .hero-icons-text {
-  font-size: 12px;
-  padding: 3px 8px;
+html body main .hero .hero-right .shibaa .hero-icons .hero-icons-text {
+  font-size: 12rem;
+  padding: 3rem 8rem;
 }
-html body main .hero .hero-right .hero-icons .hero-icons-two {
+html body main .hero .hero-right .shibaa .hero-icons .hero-icons-two {
   width: 18px;
   height: 18px;
 }
-html body main .hero .hero-right .hero-small-text {
+html body main .hero .hero-right .shibaa .hero-small-text {
+  word-spacing: 2rem;
   padding: 20px 0;
   color: #6e84ab;
-  font-size: 14px;
+  font-size: 14rem;
 }
 html body main .hero .hero-right .price {
-  display: flex;
-  justify-content: space-evenly;
   background-color: #ffffff;
-  width: 30vw;
-  height: 40vh;
+  width: 100%;
+  margin: 20rem 0;
   border-radius: 10px;
 }
-html body main .hero .hero-right .price .price-text {
-  width: 120px;
-  height: 70px;
+html body main .hero .hero-right .price .price-up {
+  display: flex;
+}
+html body main .hero .hero-right .price .price-up .price-text {
+  width: 50%;
   background-color: #f0f4f7;
   color: #6e84ab;
-  margin: 28px 12px 10px 12px;
+  margin: 20rem 12rem;
   text-align: center;
   border-radius: 6px;
 }
-html body main .hero .hero-right .price .price-p {
-  font-size: 12px;
-  padding-top: 6px;
+html body main .hero .hero-right .price .price-up .price-p {
+  font-size: 12rem;
+  padding-top: 6rem;
 }
-html body main .hero .hero-right .price .price-h5 {
-  font-size: 15px;
+html body main .hero .hero-right .price .price-up .price-h5 {
+  font-size: 15rem;
   color: black;
-  padding-top: 4px;
+  padding-top: 6rem;
 }
-html body main .hero .hero-right .price .price-digit {
-  font-size: 12px;
-  padding-top: 6px;
+html body main .hero .hero-right .price .price-up .price-digit {
+  font-size: 12rem;
+  padding-top: 6rem;
 }
-html body main .hero .hero-right .price .color {
+html body main .hero .hero-right .price .price-up .color {
   background: linear-gradient(60deg, #f906f9, #0698f9);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
 }
-html body main .hero .hero-right .price-btn {
+html body main .hero .hero-right .price .price-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-  position: relative;
-  bottom: 122px;
-  margin: 10px;
+  padding: 20rem;
 }
-html body main .hero .hero-right .price-btn .price-btn-one {
-  width: 364px;
-  height: 40px;
-  font-size: 14px;
+html body main .hero .hero-right .price .price-btn .price-btn-one {
+  width: 100%;
+  height: 6vh;
+  font-size: 14rem;
   color: #ffffff;
   background: linear-gradient(60deg, #f906f9, #0698f9);
   border-radius: 10px;
   border: none;
 }
-html body main .hero .hero-right .price-btn .price-btn-two {
-  width: 364px;
-  height: 40px;
+html body main .hero .hero-right .price .price-btn .price-btn-two {
+  width: 100%;
+  height: 6vh;
+  font-size: 14rem;
   color: black;
-  margin: 6px;
+  margin-top: 10rem;
   border-radius: 10px;
   border: none;
-  font-size: 18px;
 }
-html body main .hero .hero-right .chart {
-  width: 400px;
-  height: 380px;
-  background-color: #ffffff;
+html body main .hero .hero-right .chart .chart-img {
+  width: 100%;
+  margin-top: 18rem;
   border-radius: 16px;
 }
 html body main .hero .hero-right .creator {
-  width: 400px;
-  height: 100px;
-  margin-top: 14px;
+  width: 100%;
+  margin-top: 16rem;
   border-radius: 16px;
   background-color: #ffffff;
   display: flex;
 }
 html body main .hero .hero-right .creator .creator-one {
-  width: 200px;
+  width: 50%;
 }
 html body main .hero .hero-right .creator .creator-one .creator-h5 {
-  font-size: 16px;
+  font-size: 16rem;
   color: black;
-  padding-top: 26px;
+  padding-top: 20rem;
 }
 html body main .hero .hero-right .creator .creator-one .creator-ptag-one {
-  font-size: 16px;
+  font-size: 16rem;
   color: #6e84ab;
-  padding-top: 26px;
+  padding-top: 10rem;
 }
 html body main .hero .hero-right .creator .creator-one .creator-vf {
   position: relative;
@@ -300,32 +308,30 @@ html body main .hero .hero-right .creator .creator-one .creator-vf {
   right: 38px;
 }
 html body main .hero .hero-right .creator .creator-img {
-  width: 80px;
-  height: 80px;
-  margin: 10px;
+  width: 30%;
+  margin: 10rem;
 }
 html body main .hero .hero-right .creator .creator-two {
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  padding-left: 66px;
+  width: 50%;
+  padding-left: 80rem;
 }
 html body main .hero .hero-right .creator .creator-two .creator-flw {
-  width: 60px;
-  height: 50px;
-  padding-top: 26px;
+  width: 80%;
+  height: 40%;
+  padding-top: 20rem;
 }
 html body main .hero .hero-right .creator .creator-two .creator-ptag-two {
-  font-size: 10px;
+  font-size: 10rem;
   color: #6e84ab;
-  padding-top: 18px;
+  padding: 10rem 0;
+}
+html body main .collection {
+  margin: 0 100px;
 }
 html body main .collection .collection-up {
   display: flex;
   justify-content: space-between;
-  font-size: 30px;
-  color: black;
-  padding: 18px 80px;
+  font-size: 30rem;
 }
 html body main .collection .collection-up .collection-btn .btn-one {
   width: 100px;
@@ -333,36 +339,28 @@ html body main .collection .collection-up .collection-btn .btn-one {
   border-radius: 8px;
   border: none;
   color: #6e84ab;
-}
-html body main .collection .collection-up .collection-btn .btn-two {
-  width: 60px;
-  height: 40px;
-  position: relative;
-  top: 6px;
-  border-radius: 8px;
-  border: none;
+  font-size: 18rem;
 }
 html body main .collection .collection-down {
-  width: 100vw;
-  height: 560px;
   display: flex;
-  justify-content: space-evenly;
+  overflow: hidden;
 }
 html body main .collection .collection-down .collection-images {
-  width: 240px;
-  height: 440px;
+  width: 246px;
+  height: 448px;
   background-color: #ffffff;
-  border-radius: 12px;
+  border-radius: 24px;
+  padding: 10px;
   margin: 6px;
 }
 html body main .collection .collection-down .collection-images .collection-img {
-  width: 230px;
+  width: 220px;
   height: 280px;
-  padding: 12px;
   margin-left: 4px;
 }
 html body main .collection .collection-down .collection-images .border {
-  border-radius: 24px;
+  border-radius: 16px;
+  border: none;
 }
 html body main .collection .collection-down .collection-images .collection-ptag {
   color: #6e84ab;
@@ -378,11 +376,11 @@ html body main .collection .collection-down .collection-images .collection-h5 {
   margin-left: 16px;
 }
 html body main .collection .collection-down .collection-images .collection-price {
-  width: 200px;
+  width: 210px;
   height: 74px;
-  padding: 8px;
-  margin: 18px;
+  margin: 0 8px;
   border-radius: 6px;
+  padding: 6px 8px;
   background-color: #f0f4f7;
 }
 html body main .collection .collection-down .collection-images .collection-price .collection-p {
@@ -390,13 +388,12 @@ html body main .collection .collection-down .collection-images .collection-price
   display: flex;
   justify-content: space-between;
   color: #6e84ab;
-  padding-top: 4px;
 }
 html body main .collection .collection-down .collection-images .collection-price .collection-e {
   display: flex;
   justify-content: space-between;
-  padding: 6px 0;
-  font-size: 14px;
+  padding: 4px 0;
+  font-size: 16px;
 }
 html body main .collection .collection-down .collection-images .collection-price .cprice {
   font-size: 12px;
@@ -418,8 +415,9 @@ html body main .collection .collection-down .collection-images .collection-price
     font-size: 1px;
   }
   html body {
-    max-width: 1024x;
+    max-width: 1024px;
     font-size: 15rem;
+    margin: 0 20px;
   }
   html body header {
     padding: 0 50px;
@@ -434,6 +432,99 @@ html body main .collection .collection-down .collection-images .collection-price
   html body header nav .connect-wallet-btn {
     padding: 8px;
   }
+  html body main .hero .hero-left .hero-time {
+    position: relative;
+    left: 160px;
+    bottom: 100px;
+  }
+  html body main .hero .hero-left .list .list-bid {
+    width: 52%;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    color: #6e84ab;
+    background-color: #cde2fe;
+    padding-top: 16px;
+    border-radius: 10px;
+    font-size: 12rem;
+  }
+  html body main .hero .hero-left .list .list-names .list-btn {
+    width: 64px;
+    height: 25px;
+    position: relative;
+    left: 180px;
+    top: 16px;
+    border-radius: 6px;
+    border: 1px solid gray;
+  }
+  html body main .hero .hero-left .list .list-names .list-btn-one {
+    width: 64px;
+    height: 25px;
+    position: relative;
+    left: 200px;
+    top: 16px;
+    border-radius: 6px;
+    border: 1px solid gray;
+  }
+  html body main .hero .hero-left .list .list-names .color {
+    height: 60px;
+    border-radius: 8px;
+    background-color: #f0f4f7;
+  }
+  html body main .hero .hero-left .list .list-names .radius {
+    border-radius: 80px;
+  }
+  html body main .hero .hero-right .price .price-up .price-text {
+    background-color: #ffffff;
+  }
+  html body main .hero .hero-right .creator {
+    width: 100%;
+    height: 8%;
+    margin-top: 16rem;
+    border-radius: 16px;
+    background-color: #ffffff;
+    display: flex;
+  }
+  html body main .hero .hero-right .creator .creator-one {
+    width: 50%;
+  }
+  html body main .hero .hero-right .creator .creator-one .creator-h5 {
+    font-size: 12rem;
+    color: black;
+    padding-top: 18rem;
+  }
+  html body main .hero .hero-right .creator .creator-one .creator-ptag-one {
+    font-size: 14rem;
+    color: #6e84ab;
+    padding-top: 10rem;
+  }
+  html body main .hero .hero-right .creator .creator-one .creator-vf {
+    position: relative;
+    bottom: 28px;
+    right: 30px;
+  }
+  html body main .hero .hero-right .creator .creator-img {
+    width: 30%;
+    margin: 10rem;
+  }
+  html body main .hero .hero-right .creator .creator-two {
+    width: 50%;
+    padding-left: 60rem;
+  }
+  html body main .hero .hero-right .creator .creator-two .creator-flw {
+    width: 80%;
+    height: 40%;
+    padding-top: 18rem;
+  }
+  html body main .hero .hero-right .creator .creator-two .creator-ptag-two {
+    font-size: 8rem;
+    color: #6e84ab;
+    padding: 6rem 0;
+  }
+  html body main .collection .collection-down {
+    padding-top: 12px;
+    display: flex;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 995px) {
   html {
@@ -441,7 +532,6 @@ html body main .collection .collection-down .collection-images .collection-price
   }
   html body {
     overflow: none;
-    max-width: 995px;
     font-size: 15rem;
   }
   html body header {
@@ -463,6 +553,133 @@ html body main .collection .collection-down .collection-images .collection-price
   html body header nav .fa-bars {
     display: block;
     margin-left: 10px;
+  }
+  html body main .hero .hero-left .hero-time {
+    width: 120px;
+    height: 38px;
+    display: flex;
+    position: relative;
+    left: 100px;
+    bottom: 90px;
+    background-color: rgba(0, 0, 0, 0.479);
+    border-radius: 10px;
+    font-size: 12rem;
+    padding: 8px 6px;
+    color: #ffffff;
+  }
+  html body main .hero .hero-left .list .list-bid {
+    width: 80%;
+    margin-left: 30px;
+  }
+  html body main .hero .hero-left .list .list-names .list-btn {
+    width: 64px;
+    height: 25px;
+    position: relative;
+    left: 60px;
+    top: 16px;
+    border-radius: 6px;
+    border: 1px solid gray;
+  }
+  html body main .hero .hero-left .list .list-names .list-btn-one {
+    width: 64px;
+    height: 25px;
+    position: relative;
+    left: 80px;
+    top: 16px;
+    border-radius: 6px;
+    border: 1px solid gray;
+  }
+  html body main .hero .hero-left .list .list-names .color {
+    height: 60px;
+    border-radius: 8px;
+    background-color: #f0f4f7;
+  }
+  html body main .hero .hero-left .list .list-names .radius {
+    border-radius: 80px;
+  }
+  html body main .hero .hero-right .price .price-up {
+    display: flex;
+  }
+  html body main .hero .hero-right .price .price-up .price-text {
+    width: 50%;
+    background-color: #ffffff;
+    color: #6e84ab;
+    margin: 16rem 12rem;
+    text-align: center;
+    border-radius: 6px;
+  }
+  html body main .hero .hero-right .price .price-up .price-p {
+    font-size: 8rem;
+    padding-top: 4rem;
+  }
+  html body main .hero .hero-right .price .price-up .price-h5 {
+    font-size: 10rem;
+    color: black;
+    padding-top: 4rem;
+  }
+  html body main .hero .hero-right .price .price-up .price-digit {
+    font-size: 8rem;
+    padding-top: 4rem;
+  }
+  html body main .hero .hero-right .price .price-up .price-btn-two {
+    width: 100%;
+    height: 6vh;
+    font-size: 14rem;
+    color: black;
+    margin-top: 10rem;
+    border-radius: 10px;
+    border: none;
+  }
+  html body main .hero .hero-right .creator {
+    width: 100%;
+    height: 6%;
+    margin-top: 12rem;
+    border-radius: 16px;
+    background-color: #ffffff;
+    display: flex;
+  }
+  html body main .hero .hero-right .creator .creator-one {
+    width: 50%;
+  }
+  html body main .hero .hero-right .creator .creator-one .creator-h5 {
+    font-size: 8rem;
+    color: black;
+    padding-top: 14rem;
+  }
+  html body main .hero .hero-right .creator .creator-one .creator-ptag-one {
+    font-size: 10rem;
+    color: #6e84ab;
+    padding-top: 8rem;
+  }
+  html body main .hero .hero-right .creator .creator-one .creator-vf {
+    position: relative;
+    bottom: 20px;
+    right: 30px;
+    width: 22px;
+    height: 22px;
+  }
+  html body main .hero .hero-right .creator .creator-img {
+    width: 18%;
+    height: 40px;
+    margin: 8rem;
+  }
+  html body main .hero .hero-right .creator .creator-two {
+    width: 70%;
+    padding-left: 60rem;
+  }
+  html body main .hero .hero-right .creator .creator-two .creator-flw {
+    width: 80%;
+    height: 40%;
+    padding-top: 14rem;
+  }
+  html body main .hero .hero-right .creator .creator-two .creator-ptag-two {
+    font-size: 6rem;
+    color: #6e84ab;
+    padding: 6rem 0;
+  }
+  html body main .collection .collection-down {
+    padding-top: 12px;
+    display: flex;
   }
 }
 @media screen and (min-width: 591px) and (max-width: 767px) {
@@ -490,14 +707,122 @@ html body main .collection .collection-down .collection-images .collection-price
   html body header nav .fa-bars {
     display: block;
   }
+  html body main .hero {
+    display: block;
+    padding: 0 60px;
+  }
+  html body main .hero .hero-left {
+    width: 100%;
+  }
+  html body main .hero .hero-left .hero-time {
+    left: 160px;
+    bottom: 100px;
+  }
+  html body main .hero .hero-left .hero-time .hero-time-one {
+    padding-top: 5px;
+    margin-left: 14px;
+  }
+  html body main .hero .hero-left .hero-time .hero-time-two {
+    padding: 6px 6px;
+  }
+  html body main .hero .hero-left .list .list-bid {
+    width: 80%;
+    height: 50px;
+    margin-left: 50px;
+  }
+  html body main .hero .hero-left .list .list-names .list-btn {
+    left: 190px;
+  }
+  html body main .hero .hero-left .list .list-names .list-btn-one {
+    left: 210px;
+  }
+  html body main .hero .hero-right {
+    width: 100%;
+    padding: 40px 40px;
+  }
+  html body main .hero .hero-right .price .price-up .price-text {
+    background-color: #ffffff;
+  }
+  html body main .hero .hero-right .creator .creator-one .creator-vf {
+    position: relative;
+    bottom: 8px;
+    right: 40px;
+  }
+  html body main .collection {
+    margin: 40px 40px;
+  }
+  html body main .collection .collection-up {
+    font-size: 42rem;
+  }
+  html body main .collection .collection-up .collection-btn .btn-one {
+    display: none;
+  }
+  html body main .collection .collection-down {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: none;
+  }
+  html body main .collection .collection-down .collection-images {
+    width: 200px;
+    height: 420px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    margin: 24px;
+  }
+  html body main .collection .collection-down .collection-images .collection-img {
+    width: 174px;
+    height: 240px;
+    margin-left: 4px;
+  }
+  html body main .collection .collection-down .collection-images .border {
+    border-radius: 16px;
+    border: none;
+  }
+  html body main .collection .collection-down .collection-images .collection-ptag {
+    color: #6e84ab;
+    font-size: 12px;
+    padding-top: 12px;
+    margin-left: 16px;
+  }
+  html body main .collection .collection-down .collection-images .collection-h5 {
+    color: black;
+    font-size: 16px;
+    padding: 8px 0;
+    margin-left: 16px;
+  }
+  html body main .collection .collection-down .collection-images .collection-price {
+    width: 166px;
+    border-radius: 8px;
+    padding: 10px 8px;
+    background-color: #f0f4f7;
+  }
+  html body main .collection .collection-down .collection-images .collection-price .collection-p {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    color: #6e84ab;
+  }
+  html body main .collection .collection-down .collection-images .collection-price .collection-e {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 14px;
+  }
+  html body main .collection .collection-down .collection-images .collection-price .cprice {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    color: #6e84ab;
+  }
+  html body main .collection .collection-down .collection-images .collection-price .cprice .cprice-time {
+    display: flex;
+  }
 }
-@media screen and (min-width: 180px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 590px) {
   html {
     font-size: 1px;
   }
   html body {
-    overflow: none;
-    max-width: 995px;
     font-size: 15rem;
   }
   html body header {
@@ -519,5 +844,118 @@ html body main .collection .collection-down .collection-images .collection-price
   html body header nav .fa-bars {
     display: block;
     margin-left: 10px;
+  }
+  html body main .hero {
+    display: block;
+    padding: 0 10px;
+  }
+  html body main .hero .hero-left {
+    width: 100%;
+  }
+  html body main .hero .hero-left .hero-time {
+    left: 80px;
+    bottom: 80px;
+  }
+  html body main .hero .hero-left .hero-time .hero-time-one {
+    padding-top: 5px;
+    margin-left: 14px;
+  }
+  html body main .hero .hero-left .hero-time .hero-time-two {
+    padding: 6px 6px;
+  }
+  html body main .hero .hero-left .list .list-bid {
+    width: 86%;
+    height: 50px;
+    margin-left: 22px;
+  }
+  html body main .hero .hero-left .list .list-names .list-btn {
+    left: 30px;
+  }
+  html body main .hero .hero-left .list .list-names .list-btn-one {
+    left: 50px;
+  }
+  html body main .hero .hero-right {
+    width: 94%;
+    padding: 40px 8px;
+  }
+  html body main .hero .hero-right .price .price-up .price-text {
+    background-color: #ffffff;
+  }
+  html body main .hero .hero-right .creator .creator-one .creator-vf {
+    position: relative;
+    bottom: 8px;
+    right: 40px;
+  }
+  html body main .hero .hero-right .creator .creator-two {
+    padding-left: 20rem;
+  }
+  html body main .collection {
+    margin: 20px 14px;
+  }
+  html body main .collection .collection-up {
+    font-size: 24rem;
+  }
+  html body main .collection .collection-up .collection-btn .btn-one {
+    display: none;
+  }
+  html body main .collection .collection-down {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: none;
+  }
+  html body main .collection .collection-down .collection-images {
+    width: 200px;
+    height: 420px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    margin: 24px;
+  }
+  html body main .collection .collection-down .collection-images .collection-img {
+    width: 174px;
+    height: 240px;
+    margin-left: 4px;
+  }
+  html body main .collection .collection-down .collection-images .border {
+    border-radius: 16px;
+    border: none;
+  }
+  html body main .collection .collection-down .collection-images .collection-ptag {
+    color: #6e84ab;
+    font-size: 12px;
+    padding-top: 12px;
+    margin-left: 16px;
+  }
+  html body main .collection .collection-down .collection-images .collection-h5 {
+    color: black;
+    font-size: 16px;
+    padding: 8px 0;
+    margin-left: 16px;
+  }
+  html body main .collection .collection-down .collection-images .collection-price {
+    width: 166px;
+    border-radius: 8px;
+    padding: 10px 8px;
+    background-color: #f0f4f7;
+  }
+  html body main .collection .collection-down .collection-images .collection-price .collection-p {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    color: #6e84ab;
+  }
+  html body main .collection .collection-down .collection-images .collection-price .collection-e {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 14px;
+  }
+  html body main .collection .collection-down .collection-images .collection-price .cprice {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    color: #6e84ab;
+  }
+  html body main .collection .collection-down .collection-images .collection-price .cprice .cprice-time {
+    display: flex;
   }
 }/*# sourceMappingURL=nftDetailsLogedin.css.map */
