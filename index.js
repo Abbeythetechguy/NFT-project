@@ -40,7 +40,7 @@ function closeSideNavBar(){
 
 // Mobile menu marketplace drop down
 function showMobileMarketDropdown(){
-    let showMobileMarketElem = document.getElementById("mobile-marketplace-dropdown-content");
+    let showMobileMarketElem = document.getElementById("mobile-marketplace-dropdown-content2");
     showMobileMarketElem.classList.toggle("showMobmarket-dropdown")
 }
 
@@ -75,4 +75,33 @@ function activeTab(){
 //     tab.classList.remove(`activeTablogin`);
 //     tab.classList.add(`activeTab${id}`);
 
+// }
+
+// let slideIndex = 1;
+// showSlides(slideIndex);
+
+// // Next/previous controls
+// function plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
+
+// // Thumbnail image controls
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
+
+// function showSlides(n) {
+//   let i;
+//   let slides = document.getElementsByClassName("trending-nft-flex-items");
+// //   let dots = document.getElementsByClassName("dot");
+//   if (n > slides.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = slides.length}
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
+// //   for (i = 0; i < dots.length; i++) {
+// //     dots[i].className = dots[i].className.replace(" active", "");
+// //   }
+//   slides[slideIndex-1].style.display = "block";
+// //   dots[slideIndex-1].className += " active";
 // }

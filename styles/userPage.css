@@ -11,7 +11,48 @@ html {
 html body {
   font-size: 16rem;
   color: white;
+  background-color: #e0e9f0;
   font-family: poppins, "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+html body #overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 15;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5764705882);
+  padding: 0 100px;
+}
+html body #overlay form {
+  position: relative;
+  top: 100px;
+}
+html body #overlay form #search-bar {
+  position: absolute;
+  top: 40px;
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+  border: 0;
+  padding: 0 50px;
+  display: block;
+  outline: none;
+}
+html body #overlay form span {
+  position: absolute;
+  font-size: 20px;
+  z-index: 20;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+html body #overlay form span i {
+  margin-right: 10px;
+}
+html body #mobile-menu2 {
+  display: none;
 }
 html body header {
   background-color: #21204A;
@@ -24,7 +65,7 @@ html body header {
   top: 0;
   z-index: 11;
 }
-html body header span {
+html body header .logo {
   font-size: 28rem;
   font-weight: bold;
   border: 3px solid white;
@@ -43,6 +84,9 @@ html body header nav .nav-list {
   display: flex;
   justify-content: space-between;
 }
+html body header nav .nav-list .dropdown #marketplace-dropdown {
+  cursor: pointer;
+}
 html body header nav .nav-list .dropdown .dropdown-content {
   position: absolute;
   top: 100px;
@@ -57,8 +101,12 @@ html body header nav .nav-list .dropdown .dropdown-content li {
   padding: 10px 20px;
 }
 html body header nav .nav-list .dropdown .dropdown-content li a {
+  font-size: 15rem;
   text-decoration: none;
   color: #a6b8cf;
+}
+html body header nav .nav-list .dropdown .dropdown-content li a:hover {
+  color: white;
 }
 html body header nav .nav-list .dropdown .dropdown-content li i {
   margin-right: 10px;
@@ -66,7 +114,7 @@ html body header nav .nav-list .dropdown .dropdown-content li i {
 html body header nav .nav-list .dropdown .dropdown-content .li-bottom {
   border-bottom: 1px solid #a6b8cf;
 }
-html body header nav .nav-list .dropdown:hover .dropdown-content {
+html body header nav .nav-list .dropdown .showmarket-dropdown {
   display: block;
 }
 html body header nav .nav-link {
@@ -87,23 +135,7 @@ html body header nav .toggle-dot {
 }
 html body header nav .fa-magnifying-glass {
   padding: 5px 10px;
-}
-html body header nav #search-menu {
-  display: none;
-  position: relative;
-  left: 0;
-  height: 1200px;
-  width: 1345px;
-  background-color: rgba(0, 0, 0, 0.4235294118);
-}
-html body header nav #search-menu #search-bar {
-  position: absolute;
-  left: 100px;
-  top: 100px;
-  height: 50px;
-  width: 1150px;
-  border-radius: 10px;
-  border: 0;
+  cursor: pointer;
 }
 html body header nav .connect-wallet-btn {
   border: 2px solid white;
@@ -115,6 +147,194 @@ html body header nav .connect-wallet-btn {
 html body header nav .fa-bars {
   font-size: 30rem;
   display: none;
+  cursor: pointer;
+}
+html body main {
+  padding: 50px 100px;
+  color: #21204A;
+}
+html body main .display-photo-section {
+  border-radius: 20px;
+  position: relative;
+  height: 194px;
+  width: 100%;
+  color: white;
+}
+html body main .display-photo-section .cover-photo {
+  position: absolute;
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+}
+html body main .display-photo-section .profile-img-info {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 20px;
+}
+html body main .display-photo-section .profile-img-info .profile-left {
+  display: flex;
+  align-items: center;
+}
+html body main .display-photo-section .profile-img-info .profile-left h1 {
+  font-size: 25rem;
+  font-weight: bold;
+}
+html body main .display-photo-section .profile-img-info .profile-left img {
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-right: 20px;
+}
+html body main .display-photo-section .profile-img-info .profile-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+html body main .display-photo-section .black-background {
+  height: 100%;
+  position: relative;
+  border-radius: 20px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.185), rgba(0, 0, 0, 0.712));
+}
+html body main .followed {
+  padding: 36px 0 24px;
+}
+html body main .followed button {
+  border: 0;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: #21204A;
+  background-color: #CDE2FE;
+  font-weight: 700;
+  font-family: poppins, "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+html body main .followed button i {
+  margin: 0 5px;
+}
+html body main .display-items .onsale-group {
+  margin-bottom: 28px;
+  border-bottom: 2px solid #a6b8cf;
+  padding: 0;
+}
+html body main .display-items .onsale-group button {
+  margin-right: 20px;
+  border: 0;
+  background-color: transparent;
+  font-family: poppins, "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 16rem;
+}
+html body main .display-items .onsale-group button:hover {
+  color: #15152b;
+  font-weight: bold;
+}
+html body main .display-items .sort-group {
+  display: flex;
+  justify-content: space-between;
+}
+html body main .display-items .sort-group button {
+  height: 48px;
+  background-color: white;
+  padding: 0 20px;
+  border-radius: 15px;
+  border: 1px solid #a6b8cf;
+  font-family: poppins, "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+html body main .display-items .sort-group form {
+  width: 83%;
+  display: flex;
+  justify-content: space-between;
+}
+html body main .display-items .sort-group form input {
+  height: 48px;
+  width: 459px;
+  background-color: white;
+  padding: 0 20px;
+  border-radius: 15px;
+  border: 1px solid #a6b8cf;
+  outline: 0;
+}
+html body main .display-items .sort-group form #outside-select {
+  height: 48px;
+  background-color: white;
+  padding: 0 20px;
+  border-radius: 15px;
+  border: 1px solid #a6b8cf;
+  outline: 0;
+  font-family: poppins, "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+html body main .display-items .sort-group form .recent-sort {
+  position: relative;
+  height: 48px;
+  width: 240px;
+  background-color: white;
+  padding: 0 20px;
+  border-radius: 15px;
+  border: 1px solid #a6b8cf;
+  display: flex;
+  align-items: center;
+}
+html body main .display-items .sort-group form .recent-sort select {
+  font-family: poppins, "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border: 0;
+  height: 45px;
+  background-color: white;
+  padding: 0 20px;
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  outline: 0;
+}
+html body main .display-items .trending-nft .trending-nft-flex-container {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+html body main .display-items .trending-nft .trending-nft-flex-container .trending-nft-flex-items {
+  margin-bottom: 30px;
+  flex-shrink: 0;
+  width: 244px;
+  padding: 10px;
+  background-color: #f0f4f7;
+  border-radius: 20px;
+}
+html body main .display-items .trending-nft .trending-nft-flex-container .trending-nft-flex-items .trending-nft-img {
+  width: 224px;
+  height: 264px;
+  border-radius: 20px;
+}
+html body main .display-items .trending-nft .trending-nft-flex-container .trending-nft-flex-items .collection-name p {
+  color: #a6b8cf;
+  font-size: 14rem;
+}
+html body main .display-items .trending-nft .trending-nft-flex-container .trending-nft-flex-items .collection-name h3 {
+  font-size: 15rem;
+}
+html body main .display-items .trending-nft .trending-nft-flex-container .trending-nft-flex-items .current-bid {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  background-color: #e0e9f0;
+  border-radius: 10px;
+  padding: 10px;
+}
+html body main .display-items .trending-nft .trending-nft-flex-container .trending-nft-flex-items .current-bid p {
+  color: #a6b8cf;
+  font-size: 14rem;
+}
+html body main .display-items .trending-nft .trending-nft-flex-container .trending-nft-flex-items .current-bid h4 {
+  font-size: 15rem;
+}
+html body main .display-items .trending-nft .trending-nft-flex-container .trending-nft-flex-items .current-bid h5 {
+  color: #a6b8cf;
+  font-size: 14rem;
+  font-weight: 200;
 }
 
 @media screen and (min-width: 996px) and (max-width: 1200px) {
@@ -148,6 +368,70 @@ html body header nav .fa-bars {
     max-width: 995px;
     font-size: 15rem;
   }
+  html body #mobile-menu2 {
+    height: 100vh;
+    width: 300px;
+    background-color: #e0e9f0;
+    position: fixed;
+    z-index: 29;
+    right: 0;
+    display: none;
+  }
+  html body #mobile-menu2 #close-btn {
+    font-size: 20rem;
+    color: red;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+  html body #mobile-menu2 #close-btn .fa-close {
+    margin-right: 5px;
+  }
+  html body #mobile-menu2 .mobile-menu-content {
+    padding-top: 30px;
+    list-style-type: none;
+  }
+  html body #mobile-menu2 .mobile-menu-content .mobile-menu-links {
+    font-size: 20rem;
+    text-decoration: none;
+    color: #21204a;
+    width: 100%;
+    height: 70px;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  html body #mobile-menu2 .mobile-menu-content .mobile-menu-links:hover {
+    background-color: rgba(71, 98, 133, 0.7411764706);
+    color: white;
+  }
+  html body #mobile-menu2 .mobile-menu-content .dropdown {
+    cursor: pointer;
+  }
+  html body #mobile-menu2 .mobile-menu-content .dropdown .dropdown-content {
+    display: none;
+    list-style: none;
+  }
+  html body #mobile-menu2 .mobile-menu-content .dropdown .dropdown-content a {
+    text-decoration: none;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #21204a;
+    width: 100%;
+  }
+  html body #mobile-menu2 .mobile-menu-content .dropdown .dropdown-content a i {
+    margin-right: 15px;
+  }
+  html body #mobile-menu2 .mobile-menu-content .dropdown .dropdown-content a:hover {
+    background-color: rgba(71, 98, 133, 0.7411764706);
+    color: white;
+  }
+  html body #mobile-menu2 .mobile-menu-content .dropdown .showMobmarket-dropdown {
+    display: block;
+  }
   html body header {
     padding: 0 30px;
     height: 80px;
@@ -155,7 +439,7 @@ html body header nav .fa-bars {
   html body header nav {
     width: 250px;
   }
-  html body header nav div {
+  html body header nav .nav-list {
     display: none;
   }
   html body header nav .connect-wallet-btn {
@@ -164,32 +448,51 @@ html body header nav .fa-bars {
   html body header nav .fa-bars {
     display: block;
   }
-}
-@media screen and (min-width: 180px) and (max-width: 768px) {
-  html {
-    font-size: 1px;
+  html body main {
+    padding: 50px 30px;
+    color: #21204A;
   }
-  html body {
-    overflow: none;
-    max-width: 995px;
-    font-size: 15rem;
+  html body main .display-items .sort-group {
+    display: flex;
+    justify-content: space-between;
   }
-  html body header {
-    padding: 0 20px;
-    height: 80px;
-  }
-  html body header nav {
-    width: 100px;
-  }
-  html body header nav div {
+  html body main .display-items .sort-group .f5-btn {
     display: none;
   }
-  html body header nav .connect-wallet-btn {
-    padding: 8px;
+  html body main .display-items .sort-group button {
+    height: 40px;
+    padding: 0 8px;
+    border-radius: 10px;
+  }
+  html body main .display-items .sort-group form {
+    width: 90%;
+  }
+  html body main .display-items .sort-group form input {
+    height: 40px;
+    border-radius: 10px;
+    width: 60%;
+  }
+  html body main .display-items .sort-group form #outside-select {
+    height: 40px;
+    padding: 0 5px;
+    border-radius: 10px;
+  }
+  html body main .display-items .sort-group form .recent-sort {
+    height: 40px;
+    width: 120px;
+    border-radius: 10px;
+    padding: 0 5px;
+  }
+  html body main .display-items .sort-group form .recent-sort p {
     display: none;
   }
-  html body header nav .fa-bars {
-    display: block;
+  html body main .display-items .sort-group form .recent-sort select {
+    height: 38px;
+    padding: 0 5px;
+    border-radius: 10px;
+  }
+  html body main .display-items .trending-nft .trending-nft-flex-container {
+    justify-content: space-around;
   }
 }
 @media screen and (min-width: 591px) and (max-width: 767px) {
@@ -201,6 +504,73 @@ html body header nav .fa-bars {
     max-width: 995px;
     font-size: 15rem;
   }
+  html body #overlay {
+    padding: 0 50px;
+  }
+  html body #mobile-menu2 {
+    height: 100vh;
+    width: 300px;
+    background-color: #e0e9f0;
+    position: fixed;
+    z-index: 29;
+    right: 0;
+    display: none;
+  }
+  html body #mobile-menu2 #close-btn {
+    font-size: 20rem;
+    color: red;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+  html body #mobile-menu2 #close-btn .fa-close {
+    margin-right: 5px;
+  }
+  html body #mobile-menu2 .mobile-menu-content {
+    padding-top: 30px;
+    list-style-type: none;
+  }
+  html body #mobile-menu2 .mobile-menu-content .mobile-menu-links {
+    font-size: 20rem;
+    text-decoration: none;
+    color: #21204a;
+    width: 100%;
+    height: 70px;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  html body #mobile-menu2 .mobile-menu-content .mobile-menu-links:hover {
+    background-color: rgba(71, 98, 133, 0.7411764706);
+    color: white;
+  }
+  html body #mobile-menu2 .mobile-menu-content .dropdown {
+    cursor: pointer;
+  }
+  html body #mobile-menu2 .mobile-menu-content .dropdown .dropdown-content {
+    display: none;
+    list-style: none;
+  }
+  html body #mobile-menu2 .mobile-menu-content .dropdown .dropdown-content a {
+    text-decoration: none;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #21204a;
+    width: 100%;
+  }
+  html body #mobile-menu2 .mobile-menu-content .dropdown .dropdown-content a i {
+    margin-right: 15px;
+  }
+  html body #mobile-menu2 .mobile-menu-content .dropdown .dropdown-content a:hover {
+    background-color: rgba(71, 98, 133, 0.7411764706);
+    color: white;
+  }
+  html body #mobile-menu2 .mobile-menu-content .dropdown .showMobmarket-dropdown {
+    display: block;
+  }
   html body header {
     padding: 0 20px;
     height: 80px;
@@ -208,7 +578,7 @@ html body header nav .fa-bars {
   html body header nav {
     width: 250px;
   }
-  html body header nav div {
+  html body header nav .nav-list {
     display: none;
   }
   html body header nav .connect-wallet-btn {
@@ -216,5 +586,256 @@ html body header nav .fa-bars {
   }
   html body header nav .fa-bars {
     display: block;
+  }
+  html body main {
+    padding: 20px;
+    color: #21204A;
+  }
+  html body main .display-photo-section .profile-img-info .profile-left h1 {
+    font-size: 20rem;
+  }
+  html body main .display-photo-section .profile-img-info .profile-left p {
+    font-size: 13rem;
+  }
+  html body main .display-photo-section .profile-img-info .profile-left img {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+  }
+  html body main .display-photo-section .profile-img-info .profile-right p {
+    font-size: 13rem;
+  }
+  html body main .display-photo-section .black-background {
+    height: 100%;
+    position: relative;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.185), rgba(0, 0, 0, 0.712));
+  }
+  html body main .display-items .sort-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  html body main .display-items .sort-group .f5-btn {
+    display: none;
+  }
+  html body main .display-items .sort-group button {
+    height: 35px;
+    padding: 0 2px;
+    border-radius: 10px;
+    font-size: 13rem;
+  }
+  html body main .display-items .sort-group form {
+    width: 90%;
+  }
+  html body main .display-items .sort-group form input {
+    height: 35px;
+    border-radius: 10px;
+    width: 50%;
+    font-size: 13rem;
+    padding: 0 10px;
+  }
+  html body main .display-items .sort-group form #outside-select {
+    height: 35px;
+    padding: 0 5px;
+    border-radius: 10px;
+    font-size: 13rem;
+  }
+  html body main .display-items .sort-group form .recent-sort {
+    height: 35px;
+    width: 120px;
+    border-radius: 10px;
+    padding: 0 5px;
+  }
+  html body main .display-items .sort-group form .recent-sort p {
+    display: none;
+  }
+  html body main .display-items .sort-group form .recent-sort select {
+    font-size: 13rem;
+    height: 33px;
+    padding: 0 5px;
+    border-radius: 10px;
+  }
+  html body main .display-items .trending-nft .trending-nft-flex-container {
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 180px) and (max-width: 590px) {
+  html {
+    font-size: 1px;
+  }
+  html body {
+    overflow: none;
+    max-width: 995px;
+    font-size: 15rem;
+  }
+  html body #overlay {
+    padding: 0 20px;
+  }
+  html body #mobile-menu2 {
+    height: 100vh;
+    width: 300px;
+    background-color: #e0e9f0;
+    position: fixed;
+    z-index: 29;
+    right: 0;
+    display: none;
+  }
+  html body #mobile-menu2 #close-btn {
+    font-size: 20rem;
+    color: red;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+  html body #mobile-menu2 #close-btn .fa-close {
+    margin-right: 5px;
+  }
+  html body #mobile-menu2 .mobile-menu-content {
+    padding-top: 30px;
+    list-style-type: none;
+  }
+  html body #mobile-menu2 .mobile-menu-content .mobile-menu-links {
+    font-size: 20rem;
+    text-decoration: none;
+    color: #21204a;
+    width: 100%;
+    height: 70px;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  html body #mobile-menu2 .mobile-menu-content .mobile-menu-links:hover {
+    background-color: rgba(71, 98, 133, 0.7411764706);
+    color: white;
+  }
+  html body #mobile-menu2 .mobile-menu-content .dropdown {
+    cursor: pointer;
+  }
+  html body #mobile-menu2 .mobile-menu-content .dropdown .dropdown-content {
+    display: none;
+    list-style: none;
+  }
+  html body #mobile-menu2 .mobile-menu-content .dropdown .dropdown-content a {
+    text-decoration: none;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #21204a;
+    width: 100%;
+  }
+  html body #mobile-menu2 .mobile-menu-content .dropdown .dropdown-content a i {
+    margin-right: 15px;
+  }
+  html body #mobile-menu2 .mobile-menu-content .dropdown .dropdown-content a:hover {
+    background-color: rgba(71, 98, 133, 0.7411764706);
+    color: white;
+  }
+  html body #mobile-menu2 .mobile-menu-content .dropdown .showMobmarket-dropdown {
+    display: block;
+  }
+  html body header {
+    padding: 0 10px;
+    height: 80px;
+  }
+  html body header nav {
+    width: 250px;
+  }
+  html body header nav .nav-list {
+    display: none;
+  }
+  html body header nav .connect-wallet-btn {
+    padding: 8px;
+  }
+  html body header nav .fa-bars {
+    display: block;
+  }
+  html body main {
+    padding: 10px;
+    color: #21204A;
+  }
+  html body main .display-photo-section {
+    height: 130px;
+  }
+  html body main .display-photo-section .profile-img-info {
+    padding: 10px;
+  }
+  html body main .display-photo-section .profile-img-info .profile-left h1 {
+    font-size: 18rem;
+  }
+  html body main .display-photo-section .profile-img-info .profile-left p {
+    font-size: 11rem;
+  }
+  html body main .display-photo-section .profile-img-info .profile-left img {
+    width: 55px;
+    height: 55px;
+    margin-right: 10px;
+  }
+  html body main .display-photo-section .profile-img-info .profile-right {
+    display: none;
+  }
+  html body main .display-photo-section .profile-img-info .profile-right p {
+    font-size: 13rem;
+  }
+  html body main .display-photo-section .black-background {
+    height: 100%;
+    position: relative;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.185), rgba(0, 0, 0, 0.712));
+  }
+  html body main .followed {
+    padding: 20px 0;
+  }
+  html body main .display-items .onsale-group {
+    display: none;
+  }
+  html body main .display-items .sort-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  html body main .display-items .sort-group .f5-btn {
+    display: none;
+  }
+  html body main .display-items .sort-group button {
+    height: 35px;
+    padding: 0 10px;
+    border-radius: 10px;
+    font-size: 13rem;
+  }
+  html body main .display-items .sort-group form {
+    width: 75%;
+  }
+  html body main .display-items .sort-group form input {
+    height: 35px;
+    border-radius: 10px;
+    width: 50%;
+    font-size: 13rem;
+    padding: 0 10px;
+    display: none;
+  }
+  html body main .display-items .sort-group form #outside-select {
+    height: 35px;
+    padding: 0 5px;
+    border-radius: 10px;
+    font-size: 13rem;
+  }
+  html body main .display-items .sort-group form .recent-sort {
+    height: 35px;
+    width: 120px;
+    border-radius: 10px;
+    padding: 0 5px;
+  }
+  html body main .display-items .sort-group form .recent-sort p {
+    display: none;
+  }
+  html body main .display-items .sort-group form .recent-sort select {
+    font-size: 13rem;
+    height: 33px;
+    padding: 0 5px;
+    border-radius: 10px;
+  }
+  html body main .display-items .trending-nft .trending-nft-flex-container {
+    justify-content: space-around;
   }
 }/*# sourceMappingURL=userPage.css.map */

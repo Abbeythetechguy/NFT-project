@@ -15,6 +15,14 @@ html body {
   color: white;
   font-family: poppins, "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
+html body input {
+  outline: 0;
+  font-family: poppins, "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+html body select {
+  outline: 0;
+  font-family: poppins, "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
 html body #overlay {
   display: none;
   position: fixed;
@@ -79,9 +87,6 @@ html body header nav {
   justify-content: space-between;
   align-items: center;
 }
-html body header nav .active-tab {
-  background-color: rgba(71, 98, 133, 0.7411764706);
-}
 html body header nav .nav-list {
   list-style-type: none;
   width: 500px;
@@ -128,9 +133,6 @@ html body header nav .nav-link {
   padding: 5px 20px;
 }
 html body header nav .nav-link:hover {
-  background-color: rgba(71, 98, 133, 0.7411764706);
-}
-html body header nav .nav-link:active {
   background-color: rgba(71, 98, 133, 0.7411764706);
 }
 html body header nav .toggle-dot {
@@ -302,31 +304,35 @@ html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items 
 html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .hot-section-img {
   border-radius: 20px;
 }
-html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .collection-name p {
+html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items a {
+  text-decoration: none;
+  color: #21204a;
+}
+html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items a .collection-name p {
   color: #a6b8cf;
   font-size: 14rem;
 }
-html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .collection-name h3 {
+html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items a .collection-name h3 {
   font-size: 15rem;
 }
-html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .current-bid {
+html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items a .current-bid {
   display: flex;
   justify-content: space-between;
   margin: 15px 0;
 }
-html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .current-bid p {
+html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items a .current-bid p {
   color: #a6b8cf;
   font-size: 14rem;
 }
-html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .current-bid h4 {
+html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items a .current-bid h4 {
   font-size: 15rem;
 }
-html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .current-bid h5 {
+html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items a .current-bid h5 {
   color: #a6b8cf;
   font-size: 14rem;
   font-weight: 200;
 }
-html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .profile-avatar {
+html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items a .profile-avatar {
   display: flex;
   justify-content: space-between;
   border-top: 2px solid;
@@ -335,26 +341,26 @@ html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items 
   border-image-slice: 1;
   padding: 10px 0;
 }
-html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .profile-avatar .profile-avatar-left {
+html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items a .profile-avatar .profile-avatar-left {
   display: flex;
   align-items: center;
 }
-html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .profile-avatar .profile-avatar-left p {
+html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items a .profile-avatar .profile-avatar-left p {
   color: #a6b8cf;
   margin-left: 10px;
 }
-html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .profile-avatar .profile-avatar-right {
+html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items a .profile-avatar .profile-avatar-right {
   display: flex;
   align-items: center;
 }
-html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .profile-avatar .profile-avatar-right i {
+html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items a .profile-avatar .profile-avatar-right i {
   font-size: 25rem;
   background-image: linear-gradient(to right, #f53df5, #0698f9);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .profile-avatar .profile-avatar-right p {
+html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items a .profile-avatar .profile-avatar-right p {
   letter-spacing: 0;
   font-size: 14rem;
   color: #a6b8cf;
@@ -463,44 +469,48 @@ html body main .popular-collection .popular-collection-flex-container .popular-c
 html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items img {
   border-radius: 10px;
 }
-html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section {
+html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items a {
+  text-decoration: none;
+  color: #21204a;
+}
+html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items a .img-section {
   display: flex;
 }
-html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section .img-section-left {
+html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items a .img-section .img-section-left {
   margin-right: 10px;
 }
-html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section .img-section-right {
+html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items a .img-section .img-section-right {
   display: grid;
 }
-html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section .img-section-right .img-section-small-img {
+html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items a .img-section .img-section-right .img-section-small-img {
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 4;
 }
-html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section .img-section-right span {
+html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items a .img-section .img-section-right span {
   position: relative;
 }
-html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section .img-section-right span .more-img {
+html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items a .img-section .img-section-right span .more-img {
   -webkit-filter: blur(1px);
   margin-left: 8px;
 }
-html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section .img-section-right span h3 {
+html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items a .img-section .img-section-right span h3 {
   position: absolute;
   z-index: 1;
   left: 30%;
   top: 30%;
   color: white;
 }
-html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .info-section {
+html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items a .info-section {
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
 }
-html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .info-section h2 {
+html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items a .info-section h2 {
   font-size: 17rem;
 }
-html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .info-section p {
+html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items a .info-section p {
   color: #a6b8cf;
   font-size: 15rem;
 }
@@ -1232,15 +1242,76 @@ html body footer .footer-right .newsletter-section span i {
   html body #overlay form #search-bar {
     width: 100%;
   }
+  html body #mobile-menu {
+    height: 100vh;
+    width: 300px;
+    background-color: #e0e9f0;
+    position: fixed;
+    z-index: 29;
+    right: 0;
+    display: none;
+  }
+  html body #mobile-menu #close-btn {
+    font-size: 20rem;
+    color: red;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+  html body #mobile-menu #close-btn .fa-close {
+    margin-right: 5px;
+  }
+  html body #mobile-menu .mobile-menu-content {
+    padding-top: 30px;
+    list-style-type: none;
+  }
+  html body #mobile-menu .mobile-menu-content .mobile-menu-links {
+    font-size: 20rem;
+    text-decoration: none;
+    color: #21204a;
+    width: 100%;
+    height: 70px;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  html body #mobile-menu .mobile-menu-content .mobile-menu-links:hover {
+    background-color: rgba(71, 98, 133, 0.7411764706);
+    color: white;
+  }
+  html body #mobile-menu .mobile-menu-content .dropdown {
+    cursor: pointer;
+  }
+  html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content {
+    display: none;
+    list-style: none;
+  }
+  html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content a {
+    text-decoration: none;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #21204a;
+    width: 100%;
+  }
+  html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content a i {
+    margin-right: 15px;
+  }
+  html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content a:hover {
+    background-color: rgba(71, 98, 133, 0.7411764706);
+    color: white;
+  }
+  html body #mobile-menu .mobile-menu-content .dropdown .showMobmarket-dropdown {
+    display: block;
+  }
   html body header {
     padding: 0 50px;
     height: 80px;
   }
   html body header nav {
     width: 700px;
-  }
-  html body header nav div {
-    width: 400px;
   }
   html body header nav .connect-wallet-btn {
     padding: 8px;
@@ -1724,7 +1795,6 @@ html body footer .footer-right .newsletter-section span i {
     position: fixed;
     z-index: 29;
     right: 0;
-    display: none;
   }
   html body #mobile-menu #close-btn {
     font-size: 20rem;
@@ -1760,6 +1830,7 @@ html body footer .footer-right .newsletter-section span i {
   }
   html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content {
     display: none;
+    list-style: none;
   }
   html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content a {
     text-decoration: none;
@@ -1909,7 +1980,7 @@ html body footer .footer-right .newsletter-section span i {
     padding: 0 30px;
   }
   html body main .popular-collection .popular-collection-title-row .title-row-left h1 {
-    margin-right: 10px;
+    margin-right: 5px;
     font-size: 20rem;
   }
   html body main .popular-collection .popular-collection-title-row .title-row-left .title-row-days {
@@ -2321,6 +2392,7 @@ html body footer .footer-right .newsletter-section span i {
   }
   html body #mobile-menu .mobile-menu-content {
     padding-top: 30px;
+    list-style: none;
   }
   html body #mobile-menu .mobile-menu-content .mobile-menu-links {
     font-size: 20rem;
@@ -2345,6 +2417,7 @@ html body footer .footer-right .newsletter-section span i {
   }
   html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content {
     display: none;
+    list-style: none;
   }
   html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content a {
     text-decoration: none;
@@ -3030,6 +3103,7 @@ html body footer .footer-right .newsletter-section span i {
   }
   html body #mobile-menu .mobile-menu-content {
     padding-top: 30px;
+    list-style: none;
   }
   html body #mobile-menu .mobile-menu-content .mobile-menu-links {
     font-size: 20rem;
@@ -3054,6 +3128,7 @@ html body footer .footer-right .newsletter-section span i {
   }
   html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content {
     display: none;
+    list-style: none;
   }
   html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content a {
     text-decoration: none;

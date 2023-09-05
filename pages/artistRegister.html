@@ -1,42 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artist Register</title>
     <link rel="stylesheet" href="../styles/artistRegister.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
+
+    <!-- This is for the overlay search bar -->
+    <div id="overlay">
+        <form action="">
+            <span id="close-btn1">
+                <i class="fa-solid fa-close "></i>Close
+            </span>
+            <input type="search" name="" placeholder="Input text" id="search-bar">
+        </form>
+    </div>
+    <!-- This is for the mobile menu -->
+    <section id="mobile-menu2">
+        <span id="close-btn" onclick="closeSideNavBar()">
+            <i class="fa-solid fa-close "></i>Close
+        </span>
+        <ul class="mobile-menu-content">
+            <li><a href="../index.html" class="mobile-menu-links">Home</a></li>
+            <li class="dropdown">
+                <span class="mobile-menu-links" id="marketplace-dropdown2" onclick="showMobileMarketDropdown()">Market
+                    Place</span>
+                <ul class="dropdown-content" id="mobile-marketplace-dropdown-content2">
+                    <li class="li-bottom"><a href="./collection.html"><i class="fa-solid fa-layer-group"></i>
+                            Collections</a></li>
+                    <li><a href="./artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
+                </ul>
+            </li>
+            <li><a href="./nftList1.html" class="mobile-menu-links">All NFTs</a></li>
+            <li><a href="./Activities.html" class="mobile-menu-links">Activities</a></li>
+            <li><a href="" class="mobile-menu-links">Sign Up</a></li>
+        </ul>
+    </section>
+
     <header>
-        <span class="logo">M</span>
+        <div class="logo">M</div>
         <nav>
             <ul class="nav-list">
-                <li><a href="./index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html" class="nav-link">Home</a></li>
                 <li class="dropdown">
-                    <a href="./pages/collection.html" class="nav-link">Market Place</a>
-                    <ul class="dropdown-content">
-                        <li class="li-bottom"><a href="./pages/collection.html"><i class="fa-solid fa-layer-group"></i> Collections</a></li>
-                        <li><a href="./pages/artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
+                    <span class="nav-link" id="marketplace-dropdown" onclick="showMarketPlaceMenu()">Market Place</span>
+                    <ul class="dropdown-content" id="marketplace-dropdown-content">
+                        <li class="li-bottom"><a href="./collection.html"><i class="fa-solid fa-layer-group"></i>
+                                Collections</a></li>
+                        <li><a href="./artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
                     </ul>
                 </li>
-                <li><a href="./pages/" class="nav-link">All NFTs</a></li>
-                <li><a href="./pages/Activities.html" class="nav-link">Activities</a></li>
+                <li><a href="./nftList1.html" class="nav-link">All NFTs</a></li>
+                <li><a href="./Activities.html" class="nav-link">Activities</a></li>
 
             </ul>
             <a href="" class="toggle-dot">...</a>
-            <i class="fa-solid fa-magnifying-glass" onclick="hideNavBar()"></i>
-            <form action="" id="search-menu">
-                <input type="search" name="" placeholder="Input text" id="search-bar">
-            </form>
-            <div>
-                <a href="./userPage.html"><img src="../images/nftDetailsloggedin/ava.png" alt=""
-                        class="profile-img"></a>
-                <a href="./pages/connectWallet.html" class="connect-wallet-btn">Create</a>
-                <i class="fa-solid fa-bars"></i>
-            </div>
+            <i class="fa-solid fa-magnifying-glass" onclick="showSearchBar()"></i>
+            <a href="./connectWallet.html" class="connect-wallet-btn">Create</a>
+            <i class="fa-solid fa-bars" onclick="showSideNav()"></i>
         </nav>
     </header>
-    
+    <main>
+        <form action="" method="post">
+            <section class="dp-cat">
+                <div class="info">
+                    <h3>Introduce yourself to the world</h3>
+                    <p>Add a profile image belows - show and tell us a little about yourself!</p>
+                </div>
+                <div class="profile-photo-upload">
+                    <h1>Join our artist community</h1>
+                    <h3>Your profile image</h3>
+                    <div>
+                        <span class="dp-placeholder"></span>
+                        <span>
+                            <p>We recommend an image of at least 300x300. Gifs work too. Max 5mb.</p>
+                            <input type="file" name="" id="">
+                        </span>
+                    </div>
+                    <textarea name="" id="" cols="30" rows="5"
+                        placeholder="Write a few lines for your bio here"></textarea>
+                </div>
+            </section>
+            <section class="details-cat">
+                <div class="info">
+                    <h3>How can we recognize you</h3>
+                    <p>Add your personal information</p>
+                </div>
+                <div class="details">
+                    <label for="fullname-input">Your Fullname</label>
+                    <input type="text" name="" id="fullname-input" placeholder="Input your name">
+                    <label for="email-input">Your Email</label>
+                    <input type="email" name="" id="email-input" placeholder="Input your email">
+                    <label for="">Attack your portfolio</label>
+                    <p>Please provide link to both social media hands and your porfolio </p>
+                    <input type="text" name="" id="">
+                </div>
+            </section>
+            <section class="share-car">
+                <div class="info">
+                    <h3>Share us about your career</h3>
+                    <p>Add a profile image below - show and tell us a little about yourself!</p>
+                </div>
+                <div class="details">
+                    <label for="">Your short term of your art career <span>(optional)</span></label>
+                    <textarea name="" id="" cols="30" rows="3"
+                        placeholder="Write a few lines for your bio here"></textarea>
+                    <label for="">Your long term of your art career <span>(optional)</span></label>
+                    <textarea name="" id="" cols="30" rows="3"
+                        placeholder="Write a few lines for your bio here"></textarea>
+
+                </div>
+            </section>
+            <section class="almost-done">
+                <div class="info">
+                    <h3>You are almost done!</h3>
+                    <p>Please provide link to a video introducing yourself pesonally and as an artist. </p>
+                </div>
+                <div class="details">
+                    <label for="">Video link</label>
+                    <input type="text">
+                    <button>Complete register</button>
+                </div>
+            </section>
+        </form>
+    </main>
+
+    <script>
+
+        function showMarketPlaceMenu() {
+            let showMarketdropdownElem = document.getElementById("marketplace-dropdown-content");
+            showMarketdropdownElem.classList.toggle("showmarket-dropdown")
+        }
+        // This is for the search icon on the nav bar
+
+        function showSearchBar() {
+            let displayNavElem = document.getElementById("overlay");
+            displayNavElem.style.display = "block";
+        }
+
+
+        // for displaying and hiding the search bar
+        let closeButton = document.getElementById("close-btn1");
+        closeButton.addEventListener("click", closeSearchBar);
+
+        function closeSearchBar() {
+            let hideSearchbar = document.getElementById("overlay");
+            hideSearchbar.style.display = "none";
+        }
+        // for  showing mobile side nav
+        function showSideNav() {
+            let showMobNav = document.getElementById("mobile-menu2");
+            showMobNav.style.display = "block";
+        }
+        // for  closing mobile side nav
+        function closeSideNavBar() {
+            let hideSearchbar = document.getElementById("mobile-menu2");
+            hideSearchbar.style.display = "none";
+        }
+
+        // Mobile menu marketplace drop down
+        function showMobileMarketDropdown() {
+            let showMobileMarketElem = document.getElementById("mobile-marketplace-dropdown-content2");
+            showMobileMarketElem.classList.toggle("showMobmarket-dropdown")
+        }
+
+    </script>
+
 </body>
+
 </html>
