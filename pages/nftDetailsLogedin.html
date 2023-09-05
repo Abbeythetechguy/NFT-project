@@ -155,10 +155,11 @@
                         </span>
                     </div>
                     <div class="price-btn">
-                        <button class="price-btn-one">Buy now for 1 ETH</button>
-                        <button class="price-btn-two">Place a bid</button>
+                        <button class="price-btn-one" id="priceBtnOne">Buy now for 1 ETH</button>
+                        <button class="price-btn-two" id="priceBtnTwo">Place a bid</button>
                     </div>
                 </div>
+               
                 <div class="chart">
                    <img src="../images/nftDetails/chart.png" alt="" class="chart-img">
                 </div>
@@ -299,6 +300,41 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="formOne" id="overlayOne">
+            <form action="post" class="form-one" id="formOne">
+                <i class="fa fa-close fa-1x" id="close" ></i>
+                <h2 class="form-h2">Make an Offer</h2>
+                <img src="../images/nftDetails/hero.png" alt="" class="form-img">
+                <p class="form-stext"> You are about to make an offfer for NFT name from Collection Name. This nft is listed on a 3rd party marketplace, this sale will no contribute to community.</p>
+                <p class="form-offer"><b>Your offer</b></p>
+                <input type="text" placeholder="Enter amount" class="form-offer">
+                <p class="form-offer"><b>Offer expiration</b></p>
+                <input type="date" placeholder="7 days">
+                <label for="">
+                    <input type="checkbox"class="form-check">
+                    <p class="checktext">By checking this, I agree to have a new thing without my brain</p>
+                </label>
+                <button class="price-btn-one">Make an Offer</button>
+                <p class="form-help">Need help? Support</p>
+            </form>
+        </section>
+        <section class="formTwo" id="overlayTwo">
+            <form action="post" class="form-two" id="formTwo">
+                <i class="fa fa-close fa-1x" id="close" ></i>
+                <h2 class="form-h2">Place a bid</h2>
+                <img src="../images/nftDetails/hero.png" alt="" class="form-img">
+                <p class="form-stext">You are about to plce a bid for NFT name from Collection Name. This nft is listed on a 3rd party marketplace, this sale will no contribute to community.</p>
+                <p class="form-offer"><b>Your bid</b></p>
+                <p class="form-avail">Available 0.0001 ETH</p>
+                <input type="text" placeholder="Enter amount">
+                <label for="">
+                    <input type="checkbox" class="form-check">
+                    <p class="checktext">By checking this, I agree to have a new thing without my brain</p>
+                </label>
+                <button class="price-btn-one">Place a Bid</button>
+                <p class="form-help">Need help? Support</p>
+            </form>
         </section>
     </main>
 </body>

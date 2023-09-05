@@ -83,11 +83,11 @@ html body main .hero .hero-left .hero-time {
   color: #ffffff;
 }
 html body main .hero .hero-left .hero-time .hero-time-one {
-  padding-top: 4px;
+  padding-top: 8px;
   margin-left: 12px;
 }
 html body main .hero .hero-left .hero-time .hero-time-two {
-  padding: 10px 6px;
+  padding: 9px 6px;
 }
 html body main .hero .hero-left .list .list-bid {
   width: 50%;
@@ -408,6 +408,180 @@ html body main .collection .collection-down .collection-images .collection-price
   display: flex;
   width: 15px;
   height: 15px;
+}
+html body main .formOne .form-one {
+  width: 26%;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+}
+html body main .formOne .form-one .form-h2 {
+  text-align: center;
+  font-size: 14rem;
+}
+html body main .formOne .form-one .form-img {
+  width: 100%;
+  height: 180rem;
+  padding: 10rem 16rem;
+  border-radius: 40px;
+}
+html body main .formOne .form-one .form-stext {
+  text-align: center;
+  font-size: 12rem;
+  padding: 4rem 16rem;
+  color: #6e84ab;
+}
+html body main .formOne .form-one .form-offer {
+  font-size: 13rem;
+}
+html body main .formOne .form-one input {
+  width: 90%;
+  height: 5vh;
+  font-size: 14rem;
+  margin: 8rem 10rem;
+  color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #6e84ab;
+}
+html body main .formOne .form-one input::-moz-placeholder {
+  padding-left: 16rem;
+  color: 112;
+  font-size: 12rem;
+}
+html body main .formOne .form-one input::placeholder {
+  padding-left: 16rem;
+  color: 112;
+  font-size: 12rem;
+}
+html body main .formOne .form-one .price-btn-one {
+  width: 90%;
+  height: 5vh;
+  font-size: 14rem;
+  margin: 14rem 10rem;
+  color: #ffffff;
+  background: linear-gradient(60deg, #f906f9, #0698f9);
+  border-radius: 10px;
+  border: none;
+}
+html body main .formOne .form-one label {
+  display: flex;
+  padding: 10rem 6rem;
+}
+html body main .formOne .form-one label .form-check {
+  display: inline;
+  width: 22rem;
+}
+html body main .formOne .form-one label .checktext {
+  font-size: 13rem;
+  padding: 14rem 4rem;
+  color: #6e84ab;
+}
+html body main .formOne .form-one .form-help {
+  text-align: center;
+  font-size: 12rem;
+  color: #6e84ab;
+  margin: 14rem 0;
+}
+html body main .formOne .form-one .fa-close {
+  position: relative;
+  left: 340px;
+}
+html body main .formTwo .form-two {
+  width: 26%;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+}
+html body main .formTwo .form-two .form-h2 {
+  text-align: center;
+  font-size: 14rem;
+}
+html body main .formTwo .form-two .form-img {
+  width: 100%;
+  height: 180rem;
+  padding: 10rem 16rem;
+  border-radius: 40px;
+}
+html body main .formTwo .form-two .form-stext {
+  text-align: center;
+  font-size: 12rem;
+  padding: 4rem 16rem;
+  color: #6e84ab;
+}
+html body main .formTwo .form-two .form-offer {
+  font-size: 13rem;
+  padding: 10rem 0;
+}
+html body main .formTwo .form-two .form-avail {
+  font-size: 12rem;
+}
+html body main .formTwo .form-two input {
+  width: 90%;
+  height: 5vh;
+  font-size: 14rem;
+  margin: 8rem 10rem;
+  color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #6e84ab;
+}
+html body main .formTwo .form-two input::-moz-placeholder {
+  padding-left: 16rem;
+  color: 112;
+  font-size: 12rem;
+}
+html body main .formTwo .form-two input::placeholder {
+  padding-left: 16rem;
+  color: 112;
+  font-size: 12rem;
+}
+html body main .formTwo .form-two .price-btn-one {
+  width: 90%;
+  height: 5vh;
+  font-size: 14rem;
+  margin: 14rem 10rem;
+  color: #ffffff;
+  background: linear-gradient(60deg, #f906f9, #0698f9);
+  border-radius: 10px;
+  border: none;
+}
+html body main .formTwo .form-two label {
+  display: flex;
+  padding: 10rem 6rem;
+}
+html body main .formTwo .form-two label .form-check {
+  display: inline;
+  width: 22rem;
+}
+html body main .formTwo .form-two label .checktext {
+  font-size: 13rem;
+  padding: 14rem 4rem;
+  color: #6e84ab;
+}
+html body main .formTwo .form-two .form-help {
+  text-align: center;
+  font-size: 12rem;
+  color: #6e84ab;
+  margin: 14rem 0;
+}
+html body main .formTwo .form-two .fa-close {
+  position: relative;
+  left: 340px;
+}
+html body main #overlayOne {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 20px;
+  left: 340px;
+  display: none;
+}
+html body main #overlayTwo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 20px;
+  left: 380px;
+  display: none;
 }
 
 @media screen and (min-width: 996px) and (max-width: 1200px) {
