@@ -6,6 +6,7 @@
     <title>Activities</title>
     <link rel="stylesheet" href="../styles/Activities.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script src="https://cdn.tailwindcss.com"> </script>
 </head>
 <body>
     <header>
@@ -14,29 +15,46 @@
             <ul class="nav-list">
                 <li><a href="./index.html" class="nav-link">Home</a></li>
                 <li class="dropdown">
-                    <a href="./pages/collection.html" class="nav-link">Market Place</a>
-                    <ul class="dropdown-content">
-                        <li class="li-bottom"><a href="./pages/collection.html"><i class="fa-solid fa-layer-group"></i> Collections</a></li>
+                    <span class="nav-link" id="marketplace-dropdown" onclick="showMarketPlaceMenu()">Market Place</span>
+                    <ul class="dropdown-content" id="marketplace-dropdown-content">
+                        <li class="li-bottom"><a href="./pages/collection.html"><i class="fa-solid fa-layer-group"></i>
+                                Collections</a></li>
                         <li><a href="./pages/artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
                     </ul>
                 </li>
-                <li><a href="./pages/" class="nav-link">All NFTs</a></li>
+                <li><a href="./pages/nftList1.html" class="nav-link">All NFTs</a></li>
                 <li><a href="./pages/Activities.html" class="nav-link">Activities</a></li>
 
             </ul>
             <a href="" class="toggle-dot">...</a>
-            <i class="fa-solid fa-magnifying-glass" onclick="hideNavBar()"></i>
-            <form action="" id="search-menu">
-                <input type="search" name="" placeholder="Input text" id="search-bar">
-            </form>
-            <div>
-                <a href="./userPage.html"><img src="../images/nftDetailsloggedin/ava.png" alt=""
-                        class="profile-img"></a>
-                <a href="./pages/connectWallet.html" class="connect-wallet-btn">Create</a>
-                <i class="fa-solid fa-bars"></i>
-            </div>
+            <i class="fa-solid fa-magnifying-glass" id="fa-magnifying-glass"></i>
+            <a href="./pages/connectWallet.html" class="connect-wallet-btn">Connect wallet</a>
+            <i class="fa-solid fa-bars" onclick="showSideNav()"></i>
         </nav>
     </header>
+    <main>
+        <div class="activities">
+            <p class="active"><b>Activities</b></p>
+           <select name="" id="" class="active-select">
+            <option value="Right now">Right now</option>
+            <option value="Later">Later</option>
+            <option value="Next time">Next time</option>
+           </select>
+        </div>
+        <br>
+        <hr>
+        <section class="hero">
+            <div class="hero-left">
+                <p class="filter"><b>Filter</b></p>
+                <div class="btn">
+            
+                </div>
+                <hr>
+            </div>
+            <div class="hero-right">
+            </div>
+        </section>
+    </main>
     
 </body>
 </html>
