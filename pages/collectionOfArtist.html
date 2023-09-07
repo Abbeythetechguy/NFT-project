@@ -1,38 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collection of Artist</title>
     <link rel="stylesheet" href="../styles/collectionOfArtist.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <span class="logo">M</span>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="./index.html" class="nav-link">Home</a></li>
-                <li class="dropdown">
-                    <a href="./pages/collection.html" class="nav-link">Market Place</a>
-                    <ul class="dropdown-content">
-                        <li class="li-bottom"><a href="./pages/collection.html"><i class="fa-solid fa-layer-group"></i> Collections</a></li>
-                        <li><a href="./pages/artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
-                    </ul>
-                </li>
-                <li><a href="./pages/" class="nav-link">All NFTs</a></li>
-                <li><a href="./pages/Activities.html" class="nav-link">Activities</a></li>
 
-            </ul>
-            <a href="" class="toggle-dot">...</a>
-            <i class="fa-solid fa-magnifying-glass" onclick="hideNavBar()"></i>
-            <form action="" id="search-menu">
-                <input type="search" name="" placeholder="Input text" id="search-bar">
-            </form>
-            <a href="./pages/connectWallet.html" class="connect-wallet-btn">Connect wallet</a>
-            <i class="fa-solid fa-bars"></i>
+<body class="container w-full mx-auto font-poppins bg-slate-200">
+    
+    <!--This is the mobile menu-->
+    <section id="mobile-menu">
+        <span id="close-btn" onclick="closeSideNavBar()">
+            <i class="fa-solid fa-close "></i>Close
+        </span>
+        <ul class="mobile-menu-content">
+            <li><a href="../index.html" class="mobile-menu-links">Home</a></li>
+            <li class="dropdown">
+                <span class="mobile-menu-links" id="marketplace-dropdown2" onclick="showMobileMarketDropdown()">Market Place</span>
+                <ul class="dropdown-content" id="mobile-marketplace-dropdown-content2">
+                    <li class="li-bottom"><a href="./collection.html"><i class="fa-solid fa-layer-group"></i> Collections</a></li>
+                    <li><a href="./artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
+                </ul>
+            </li>
+            <li><a href="./nftOfArtist.html" class="mobile-menu-links">All NFTs</a></li>
+            <li><a href="./Activities.html" class="mobile-menu-links">Activities</a></li>
+            <li><a href="./connectWallet.html" class="mobile-menu-links">Sign Up</a></li>
+        </ul>
+    </section>
+
+    <header class="bg-indigo-950 flex justify-between items-center h-16 px-6 sticky top-0 text-white">
+        <a href="./collectionOfArtist.html"><span class="logo border-2 px-2 py-0.5 text-2xl rounded-xl hover:text-slate-500">M</span></a>
+        <nav class="flex">
+
+            <span class="hidden  lg:block lg-flex text-slate-400">
+                <a href="../index.html" class="px-8 text-xl hover:text-white">Home</a>
+                <a href="./artist.html" class="px-4 px-8 text-xl hover:text-white">Market Place</a>
+                <a href="./nftOfArtist.html" class="px-4 px-8 text-xl hover:text-white">All NFTs</a>
+                <a href="./Activities.html" class="px-4 px-8 text-xl hover:text-white">Activities</a>
+            </span>
+
+            <span class="pl-8 lg:pr-16 flex justify-between items-center text-slate-400">
+                <a href="#" class="px-2"><i
+                        class="fa-solid fa-magnifying-glass search-icon text-xl hidden md:hidden lg:block hover:text-white"></i></a>
+            </span>
+
+            <span class="px-4 flex justify-between items-center text-slate-400">
+                <a href="./pages/connectWallet.html" class="border-2 px-3 py-1 rounded-lg hover:text-white">Connect Wallet</a>
+                <i class="fa-solid fa-bars fa-2x pl-8 lg:hidden" onclick=" showSideNav()"></i>
+            </span>
+
         </nav>
     </header>
-    
+    <main class="p-2 w-full mt-12 md:px-6 :mx-auto lg:px-16">
+        <section class="lg:h-[13rem] bg-indigo-950 rounded-xl flex flex-col justify-between pt-4 pr-4">
+            <div class="w-full flex justify-end">
+                <img src="../images/Artists-icons/page2images/more (2).svg" class="hidden lg:block" width="30px">
+            </div>
+            <div class="flex justify-between flex-wrap text-white">
+                <div class="flex ">
+                    <div>
+                        <img src="../images/Artists-icons/tickprofile.svg" width="90%">
+                    </div>
+                    <div class="">
+                        <h2 class="text-2xl font-bold">A$AP ROCKY</h2>
+                        <p class="py-2">@ogxopassby0xstudio</p>
+                        <div class="text-white flex flex-wrap">
+                            <img src="../images/Artists-icons/followers.svg" alt="">
+                            <p class="ml-2">followed by trina and 1,235 others</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pl-2 pb-2 text-white text-left lg:text-right">
+                    <p class="text-xl">twitter: ascac <br> insta: @agsatdaga</p>
+                    <p class="font-bold text-xl ">view portfolio</p>
+                </div>
+
+            </div>
+        </section>
+        <section class="mt-10 flex flex-wrap justify-between ">
+            <div class="flex flex-wrap">
+                <h2
+                    class="text-xl text-white rounded-xl text-center px-3 py-2 w-[13rem] bg-blue-800 font-bold mr-8 mb-2">
+                    Collections (5)</h2>
+                <a href="./nftOfArtist.html"><h2
+                    class="text-xl text-indigo-900 rounded-xl text-center px-3 py-2 w-[9rem] bg-transparent font-bold border-2 border-indigo-900 hover:text-blue-600">
+                    NFTs (14)</h2></a>
+            </div>
+            <a href="./userPage.html" class="text-xl text-slate-400 hover:text-blue-600">View Artiest's Profile</a>
+        </section>
+        <section class="flex justify-between items-center flex-wrap mt-10">
+
+            <div class=" flex items-center mb-2">
+                <h5 class="text-xl text-blue-900 font-bold pr-2">Total: </h5>
+                <p class="text-l text-slate-600 pr-2">2,978 Artists</p>
+            </div>
+
+            <div class="input-area flex justify-start items-start flex-wrap">
+
+
+                <input type="search"
+                    class="bg-[url('../images/Artists-icons/search-icon.svg')] bg-no-repeat bg-left lg:mx-6 lg:w-[30rem] bg-white pl-10 pr-2 border-2 border-slate-300 text-l h-12 rounded-xl flex justify-between items-center outline-none"
+                    placeholder="Input text" value="search">
+
+                <div
+                    class="w-[11rem] bg-white px-3 border-2 border-slate-300 text-l h-12 rounded-xl flex justify-between items-center mr-6">
+                    <select class="bg-transparent outline-none" id="status">
+                        <option value="" class="">All Blockchains</option>
+                        <option value="">Status: Verified</option>
+                        <option value="">Status: Unverified</option>
+                    </select>
+                </div>
+
+                <div
+                    class="flex justify-around items-center w-[15rem] bg-white px-2 border-2 border-slate-300 text-l h-12 rounded-xl">
+                    <img src="../images/Artists-icons/chart-icon.svg" alt="">
+                    <p>Sort by:</p>
+                    <select class="outline-none" id="">
+                        <option value="">Recent</option>
+                        <option value="">Top</option>
+                        <option value="">Highest</option>
+                        <option value="">Lowest</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="w-full mt-8">
+                <div class="flex justify-between items-center flex-wrap">
+                    <a href="" class="flex">
+                        <h2
+                            class="font-bold text-2xl pr-2 bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text">
+                            ROCKY</h2>
+                        <h2 class="text-indigo-900 text-2xl font-bold">by A$AP Rocky</h2>
+                    </a>
+                    <p class="text-slate-500 text-l font-bold">Friday, September 8th, 2023 at 10:00AM</p>
+                </div>
+                <div class="w-full rounded-2xl mt-4 flex flex-wrap">
+                    <div class="px-2 pt-2 w-full lg:w-1/4 md:w-2/4"><a href="./collectionDetail.html"><img
+                            src="../images/Artists-icons/page2images/frame1.svg" width="100%"></a></div>
+                    <div class="px-2 pt-2 w-full lg:w-1/4 md:w-2/4"><a href="./collectionDetail.html"><img
+                            src="../images/Artists-icons/page2images/frame2.svg" width="100%"></a></div>
+                    <div class="px-2 pt-2 w-full lg:w-1/4 md:w-2/4"><a href="./collectionDetail.html"><img
+                            src="../images/Artists-icons/page2images/frame3.svg" width="100%"></a></div>
+                    <div class="px-2 pt-2 w-full lg:w-1/4 md:w-2/4"><a href="./collectionDetail.html"><img
+                            src="../images/Artists-icons/page2images/frame4.svg" width="100%"></a></div>
+
+                </div>
+            </div>
+
+            <div class="w-full mt-8">
+                <div class="flex justify-between items-center flex-wrap">
+                    <a href="" class="flex">
+                        <h2
+                            class="font-bold text-2xl pr-2 bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text">
+                            ROCKY</h2>
+                        <h2 class="text-indigo-900 text-2xl font-bold">by A$AP Rocky</h2>
+                    </a>
+                    <p class="text-slate-500 text-l font-bold">Friday, September 8th, 2023 at 10:00AM</p>
+                </div>
+                <div class="w-full rounded-2xl mt-4 flex flex-wrap">
+                    <div class="px-2 pt-2 w-full lg:w-1/3 md:w-2/3"><a href="./collectionDetail.html"><img
+                            src="../images/Artists-icons/page2images/frame5.svg" width="100%"></a></div>
+                    <div class="px-2 pt-2 w-full lg:w-1/3 md:w-2/3"><a href="./collectionDetail.html"><img
+                            src="../images/Artists-icons/page2images/frame6.svg" width="100%"></a></div>
+                    <div class="px-2 pt-2 w-full lg:w-1/3 md:w-2/3"><a href="./collectionDetail.html"><img
+                            src="../images/Artists-icons/page2images/frame7.svg" width="100%"></a></div>
+                </div>
+            </div>
+            <div class="w-full mt-8">
+                <div class="flex justify-between items-center flex-wrap">
+                    <a href="" class="flex">
+                        <h2
+                            class="font-bold text-2xl pr-2 bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text">
+                            ROCKY</h2>
+                        <h2 class="text-indigo-900 text-2xl font-bold">by A$AP Rocky</h2>
+                    </a>
+                    <p class="text-slate-500 text-l font-bold">Friday, September 8th, 2023 at 10:00AM</p>
+                </div>
+                <div class="w-full rounded-2xl mt-4 flex flex-wrap">
+                    <div class="px-2 pt-2 w-full lg:w-1/4 md:w-2/4"><a href="./collectionDetail.html"><img
+                            src="../images/Artists-icons/page2images/frame8.svg" width="100%"></a></div>
+                    <div class="px-2 pt-2 w-full lg:w-1/4 md:w-2/4"><a href="./collectionDetail.html"><img
+                            src="../images/Artists-icons/page2images/frame9.svg" width="100%"></a></div>
+                    <div class="px-2 pt-2 w-full lg:w-1/4 md:w-2/4"><a href="./collectionDetail.html"><img
+                            src="../images/Artists-icons/page2images/frame10.svg" width="100%"></a></div>
+                    <div class="px-2 pt-2 w-full lg:w-1/4 md:w-2/4"><a href="./collectionDetail.html"><img
+                            src="../images/Artists-icons/page2images/Frame11.svg" width="100%"></a></div>
+                </div>
+            </div>
+
+            <div class="w-full mt-8">
+                <div class="flex justify-between items-center flex-wrap">
+                    <a href="" class="flex">
+                        <h2
+                            class="font-bold text-2xl pr-2 bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text">
+                            ROCKY</h2>
+                        <h2 class="text-indigo-900 text-2xl font-bold">by A$AP Rocky</h2>
+                    </a>
+                    <p class="text-slate-500 text-l font-bold">Friday, September 8th, 2023 at 10:00AM</p>
+                </div>
+                <div class="w-full rounded-2xl mt-4 flex flex-wrap">
+                    <div class="px-2 pt-2 w-full lg:w-1/2 "><a href="./collectionDetail.html"><img src="../images/Artists-icons/page2images/frame12.svg"
+                            width="100%"></a></div>
+                    <div class="px-2 pt-2 w-full lg:w-1/2 "><a href="./collectionDetail.html"><img src="../images/Artists-icons/page2images/frame13.svg"
+                            width="100%"></a></div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="./artist.js"></script>
 </body>
+
 </html>
