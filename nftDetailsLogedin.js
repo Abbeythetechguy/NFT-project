@@ -8,9 +8,8 @@ function showForm () {
     overlayElem.style.display = "block";
 }
 
+//This is to close to overlay
 let closeIcon = document.getElementById("fa-close");
-
-//This is to close te overlay
 function closeform() {
     let overlayElem = document.getElementById ("overlayOne");
     overlayElem.style.display = "none";
@@ -25,6 +24,7 @@ function showForm2 () {
     let overlayElem2 = document.getElementById ("overlayTwo");
     overlayElem2.style.display = "block";
 }
+//This is to close to second overlay
 function closeform2() {
     let overlayElem2 = document.getElementById ("overlayTwo");
     overlayElem2.style.display = "none";

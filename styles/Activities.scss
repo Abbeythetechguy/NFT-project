@@ -346,7 +346,8 @@ html {
     }
 }
 
-@media screen {
+@media screen and (min-width: 996px) and (max-width: 1200px){
+   html {
     body {
         max-width: 1024x;
         font-size: 15rem;
@@ -368,7 +369,143 @@ html {
                 }
             }
         }
+        main {
+            padding: 0 60rem;
+            
+            .activities {
+                display: flex;
+                margin-top: 60rem;
+
+                .active {
+                    color: #11315b;
+                    font-size: 20rem;
+                    margin-right: 40rem;
+                }
+
+                .active-select {
+                    font-size: 10rem;
+                    border-radius: 6px;
+                    background-color: #f0f4f7;
+                    color: #476285;
+                    border: 1px solid #6e8fa6;
+                    width: 10%;
+                    padding: 8rem;
+                }
+            }
+
+            hr {
+                border: 1px solid #a6b8cf;
+            }
+            .hero {
+                display: flex;
+                margin-top: 18rem;
+                .hero-left {
+                    width: 20%;
+                    .filter {
+                        color: #11315b;
+                        font-size: 14rem;
+                        margin: 10rem 0;
+
+                    }
+                    .btn {
+                        .btn-one {
+                            width: 26%;
+                            font-size: 12rem;
+                            padding: 6rem 0;
+                            margin: 10rem 7rem;
+                            border-radius: 10px;
+                            background-color: #ffffff;
+                            color: #476285;
+                            border: 1px solid #6e8fa6;
+                        }
+                    }
+                    label {
+                        display: block;
+                        display: flex;
+                        width: 100%;
+                        height: 5vh;
+                        padding: 4rem;
+                        margin: 12rem 2rem;
+                        border-radius: 10px;
+                        background-color: #ffffff;
+                        color: #476285;
+                        border: 1px solid #6e8fa6;
+                    }
+                        input {
+                        input::placeholder {
+                            font-size: 14rem;
+                            padding: 14rem;
+                        }
+                    }
+                    .input-one {
+                        display: block;
+                        width: 100%;
+                        height: 5vh;
+                        padding: 4rem;
+                        margin: 12rem 2rem;
+                        background-color: #bbd9eb;
+                        color: #6e8fa6;
+                        border-radius: 10px;
+                        border: none;
+                    }
+                }
+
+                .hero-right {
+                    width: 60%;
+                    margin: 0 120rem;
+                    .images {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 10rem 20rem;
+                        .text {
+                            display: flex;
+                            .img {
+                                width: 80rem;
+                                height: 80rem;
+                                padding: 10rem;
+                                // padding-left: 12rem;
+                            }
+                            .border {
+                                border-radius: 18px;
+                                border: none;
+                            }
+                            .small-text {
+                                font-size: 12rem;
+                                margin: 24rem 12rem;
+                                color: #11315b;
+                                .time {
+                                    display: flex;
+                                    font-size: 11rem;
+                                    margin: 6rem 0;
+                                    color: #476285;
+                                    .vector {
+                                        background-color: #a6b8cf;
+                                        border-radius: 18rem;
+                                    }
+                                    .timep {padding-top: 3rem;
+                                    margin: 0 6rem;}
+                                }
+                            }
+                        }
+                    }
+                    .color {
+                        background-color: #ffffff;
+                        border-radius: 16rem;
+                    }
+                    button {
+                        width: 12%;
+                        height: 10%;
+                        border-radius: 8rem;
+                        background-color: #f0f4f7;
+                        color: #6e8fa6;
+                        border: 1px solid #6e8fa6;
+                        margin: 30rem 30rem;
+                    }
+                }
+            }
+        }
     }
+   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 995px) {

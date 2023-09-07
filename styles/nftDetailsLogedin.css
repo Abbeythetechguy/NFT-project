@@ -557,18 +557,18 @@ html body main .overlay form input {
   height: 5vh;
   font-size: 14rem;
   margin: 8rem 10rem;
-  color: #ffffff;
+  color: #6e84ab;
   border-radius: 10px;
   border: 1px solid #6e84ab;
 }
 html body main .overlay form input::-moz-placeholder {
   padding-left: 16rem;
-  color: 112;
+  color: rgba(189, 39, 39, 0.527);
   font-size: 12rem;
 }
 html body main .overlay form input::placeholder {
   padding-left: 16rem;
-  color: 112;
+  color: rgba(189, 39, 39, 0.527);
   font-size: 12rem;
 }
 html body main .overlay form .price-btn-one {
@@ -655,18 +655,18 @@ html body main .overlay-two form input {
   height: 5vh;
   font-size: 14rem;
   margin: 8rem 10rem;
-  color: #ffffff;
+  color: #6e84ab;
   border-radius: 10px;
   border: 1px solid #6e84ab;
 }
 html body main .overlay-two form input::-moz-placeholder {
   padding-left: 16rem;
-  color: 112;
+  color: rgba(189, 39, 39, 0.527);
   font-size: 12rem;
 }
 html body main .overlay-two form input::placeholder {
   padding-left: 16rem;
-  color: 112;
+  color: rgba(189, 39, 39, 0.527);
   font-size: 12rem;
 }
 html body main .overlay-two form .price-btn-one {
