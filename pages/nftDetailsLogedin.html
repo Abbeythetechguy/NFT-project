@@ -12,20 +12,48 @@
         <!-- <script src="https://cdn.tailwindcss.com"> </script> -->
 </head>
 <body>
+    <!-- This is for the overlay search bar -->
+    <div id="overlay">
+        <form action="">
+            <span id="close-btn">
+                <i class="fa-solid fa-close "></i>Close
+            </span>
+            <input type="search" name="" placeholder="Input text" id="search-bar">
+        </form>
+    </div>
+    <!-- This is for the mobile menu -->
+    <section id="mobile-menu">
+        <span id="close-btn" onclick="closeSideNavBar()">
+            <i class="fa-solid fa-close "></i>Close
+        </span>
+        <ul class="mobile-menu-content">
+            <li><a href="./index.html" class="mobile-menu-links">Home</a></li>
+            <li class="dropdown">
+                <span class="mobile-menu-links" id="marketplace-dropdown2" onclick="showMobileMarketDropdown()">Market Place</span>
+                <ul class="dropdown-content" id="mobile-marketplace-dropdown-content2">
+                    <li class="li-bottom"><a href="./pages/collection.html"><i class="fa-solid fa-layer-group"></i> Collections</a></li>
+                    <li><a href="./pages/artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
+                </ul>
+            </li>
+            <li><a href="./pages/" class="mobile-menu-links">All NFTs</a></li>
+            <li><a href="./pages/Activities.html" class="mobile-menu-links">Activities</a></li>
+            <li><a href="" class="mobile-menu-links">Sign Up</a></li>
+        </ul>
+    </section>
+
     <header>
         <span class="logo">M</span>
         <nav>
             <ul class="nav-list">
-                <li><a href="./index.html" class="nav-link">Home</a></li>
+                <li><a href="./index.html" class="nav-link home">Home</a></li>
                 <li class="dropdown">
                     <span class="nav-link" id="marketplace-dropdown" onclick="showMarketPlaceMenu()">Market Place</span>
                     <ul class="dropdown-content" id="marketplace-dropdown-content">
-                        <li class="li-bottom"><a href="./pages/collection.html"><i class="fa-solid fa-layer-group"></i>
-                                Collections</a></li>
+                        <li class="li-bottom"><a href="./pages/collection.html"><i class="fa-solid fa-layer-group"></i> Collections</a></li>
                         <li><a href="./pages/artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
                     </ul>
                 </li>
-                <li><a href="./pages/nftList1.html" class="nav-link">All NFTs</a></li>
+                <li><a href="./pages/nftList1.html" class="nav-link all-nfts">All NFTs</a></li>
                 <li><a href="./pages/Activities.html" class="nav-link">Activities</a></li>
 
             </ul>
@@ -301,9 +329,9 @@
                 </div>
             </div>
         </section>
-        <section class="formOne" id="overlayOne">
+        <section class="overlay" id="overlayOne">
             <form action="post" class="form-one" id="formOne">
-                <i class="fa fa-close fa-1x" id="close" ></i>
+                <i class="fa fa-close fa-1x" id="close" onclick="closeform()"></i>
                 <h2 class="form-h2">Make an Offer</h2>
                 <img src="../images/nftDetails/hero.png" alt="" class="form-img">
                 <p class="form-stext"> You are about to make an offfer for NFT name from Collection Name. This nft is listed on a 3rd party marketplace, this sale will no contribute to community.</p>
@@ -319,9 +347,9 @@
                 <p class="form-help">Need help? Support</p>
             </form>
         </section>
-        <section class="formTwo" id="overlayTwo">
+        <section class="overlay-two" id="overlayTwo">
             <form action="post" class="form-two" id="formTwo">
-                <i class="fa fa-close fa-1x" id="close" ></i>
+                <i class="fa fa-close fa-1x" id="close" onclick="closeform2()"></i>
                 <h2 class="form-h2">Place a bid</h2>
                 <img src="../images/nftDetails/hero.png" alt="" class="form-img">
                 <p class="form-stext">You are about to plce a bid for NFT name from Collection Name. This nft is listed on a 3rd party marketplace, this sale will no contribute to community.</p>
@@ -336,7 +364,9 @@
                 <p class="form-help">Need help? Support</p>
             </form>
         </section>
+       
     </main>
 </body>
 <script src="../nftDetailsLogedin.js"></script>
+<script src="../index.js"></script>
 </html>

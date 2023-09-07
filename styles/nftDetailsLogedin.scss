@@ -25,45 +25,187 @@ html {
     font-family: "poppins", sans-serif;
     font-size: 16rem;
     background-color: $main-bg-color;
-    header {
+    input{
+      outline: 0;
+      font-family: $font-type;
+  }
+  select{
+      outline: 0;
+      font-family: $font-type;
+  }
+
+  #overlay {
+      display: none;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 15;
+      height: 100vh;
+      width: 100vw;
+      background-color: #00000093;
+      padding: 0 100px;
+
+      form {
+          position: relative;
+          top: 100px;
+
+          #search-bar {
+              position: absolute;
+              top: 40px;
+              height: 50px;
+              width: 100%;
+              border-radius: 10px;
+              border: 0;
+              padding: 0 50px;
+              display: block;
+              outline: none;
+              // background-image: url("../images/index/search-icon.png");
+              // background-repeat: no-repeat;
+          }
+
+          span {
+              position: absolute;
+              font-size: 20px;
+              z-index: 20;
+              right: 0;
+              top: 0;
+              cursor: pointer;
+
+              i {
+                  margin-right: 10px;
+              }
+          }
+      }
+  }
+
+  #mobile-menu{
+      display: none;
+  }
+
+  header {
       background-color: $bg-color;
       padding: 0 100px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       height: 80px;
-      span {
-        font-size: 28rem;
-        font-weight: bold;
-        border: 3px solid white;
-        border-radius: 10px;
-        padding: 0 10px;
+      position: sticky;
+      top: 0;
+      z-index: 11;
+
+      .logo {
+          font-size: 28rem;
+          font-weight: bold;
+          border: 3px solid white;
+          border-radius: 10px;
+          padding: 0 10px;
       }
 
       nav {
-        // border: 1px solid white;
-        width: 900px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .nav-link {
-          text-decoration: none;
-          color: $font-color2;
-        }
-
-        .connect-wallet-btn {
-          border: 2px solid white;
-          border-radius: 10px;
-          padding: 10px 20px;
-          margin-left: 30px;
-        }
-        div {
+          // position: relative;
+          // border: 1px solid white;
+          width: 900px;
           display: flex;
+          justify-content: space-between;
           align-items: center;
-        }
+
+          .nav-list {
+              list-style-type: none;
+              width: 500px;
+              display: flex;
+              justify-content: space-between;
+
+              .dropdown {
+
+                  #marketplace-dropdown {
+                      cursor: pointer;
+                  }
+
+                  .dropdown-content {
+                      position: absolute;
+                      top: 100px;
+                      list-style-type: none;
+                      display: none;
+                      border: 1px solid $font-color2;
+                      border-radius: 15px;
+                      background-color: #000000bd;
+                      padding: 5px;
+
+
+                      li {
+                          padding: 10px 20px;
+
+                          a {
+                              font-size: 15rem;
+                              text-decoration: none;
+                              color: $font-color2;
+
+                              &:hover{
+                                  color: white;
+                              }
+                          }
+
+                          i {
+                              margin-right: 10px;
+                          }
+
+                      }
+
+                      .li-bottom {
+                          border-bottom: 1px solid $font-color2;
+
+                      }
+                  }
+
+                  .showmarket-dropdown {
+                      display: block;
+                  }
+
+              }
+          }
+
+          .nav-link {
+              text-decoration: none;
+              color: $font-color2;
+              border-radius: 10px;
+              padding: 5px 20px;
+
+              &:hover {
+                  background-color: #476285bd;
+                  // border: 1px solid #8897ac;
+              }
+          }
+
+          .toggle-dot {
+              text-decoration: none;
+              color: $font-color2;
+              height: 30px;
+              font-size: 30rem;
+              padding-bottom: 60px;
+              // border: 1px solid white;
+          }
+
+          .fa-magnifying-glass {
+              padding: 5px 10px;
+              cursor: pointer;
+          }
+
+          .connect-wallet-btn {
+              border: 2px solid white;
+              border-radius: 10px;
+              padding: 10px;
+              text-decoration: none;
+              color: $font-color2;
+          }
+
+          .fa-bars {
+              font-size: 30rem;
+              display: none;
+              cursor: pointer;
+          }
       }
-    }
+  }
+
     main {
       .hero {
         display: flex;
@@ -101,7 +243,7 @@ html {
             }
             .hero-time-two {
               // font-size: 16rem;
-              padding: 9px 6px;
+              padding: 8px 6px;
             }
           }
           .list {
@@ -446,12 +588,22 @@ html {
           }
         }
       }
-      .formOne {
-        .form-one {
-          width: 26%;
+      .overlay {
+        background-color: rgba(0, 0, 0, 0.548);
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        z-index: 20;
+        
+        form{
+          width: 30%;
           background-color: #ffffff;
           border-radius: 12px;
           padding: 16px;
+          position: relative;
+          margin: 0 auto;
+
           .form-h2 {
             text-align: center;
             font-size: 14rem;
@@ -515,17 +667,35 @@ html {
             margin: 14rem 0;
           }
           .fa-close {
-            position: relative;
-            left: 340px;
+            position: absolute;
+            right: 20px;
+            font-size: 20px;
+
+            &:hover{
+              color: red;
+            }
           }
         }
       }
-      .formTwo {
-        .form-two {
-          width: 26%;
+      #overlayOne{
+        display: none ;
+      }
+      .overlay-two {
+        background-color: rgba(0, 0, 0, 0.548);
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        z-index: 20;
+
+        form {
+          width: 30%;
           background-color: #ffffff;
           border-radius: 12px;
           padding: 16px;
+          position: relative;
+          margin: 0 auto;
+
           .form-h2 {
             text-align: center;
             font-size: 14rem;
@@ -593,25 +763,17 @@ html {
             margin: 14rem 0;
           }
           .fa-close {
-            position: relative;
-            left: 340px;
+            position: absolute;
+            right: 20px;
+            font-size: 20px;
+
+            &:hover{
+              color: red;
+            }
           }
         }
       }
-      #overlayOne {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 20px;
-        left: 340px;
-        display: none;
-      }
       #overlayTwo {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 20px;
-        left: 380px;
         display: none;
       }
     }

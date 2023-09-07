@@ -15,6 +15,54 @@ html body {
   font-size: 16rem;
   background-color: #e0e9f0;
 }
+html body input {
+  outline: 0;
+  font-family: "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+html body select {
+  outline: 0;
+  font-family: "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+html body #overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 15;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5764705882);
+  padding: 0 100px;
+}
+html body #overlay form {
+  position: relative;
+  top: 100px;
+}
+html body #overlay form #search-bar {
+  position: absolute;
+  top: 40px;
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+  border: 0;
+  padding: 0 50px;
+  display: block;
+  outline: none;
+}
+html body #overlay form span {
+  position: absolute;
+  font-size: 20px;
+  z-index: 20;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+html body #overlay form span i {
+  margin-right: 10px;
+}
+html body #mobile-menu {
+  display: none;
+}
 html body header {
   background-color: #21204a;
   padding: 0 100px;
@@ -22,8 +70,11 @@ html body header {
   justify-content: space-between;
   align-items: center;
   height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 11;
 }
-html body header span {
+html body header .logo {
   font-size: 28rem;
   font-weight: bold;
   border: 3px solid white;
@@ -36,19 +87,76 @@ html body header nav {
   justify-content: space-between;
   align-items: center;
 }
+html body header nav .nav-list {
+  list-style-type: none;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+html body header nav .nav-list .dropdown #marketplace-dropdown {
+  cursor: pointer;
+}
+html body header nav .nav-list .dropdown .dropdown-content {
+  position: absolute;
+  top: 100px;
+  list-style-type: none;
+  display: none;
+  border: 1px solid #a6b8cf;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.7411764706);
+  padding: 5px;
+}
+html body header nav .nav-list .dropdown .dropdown-content li {
+  padding: 10px 20px;
+}
+html body header nav .nav-list .dropdown .dropdown-content li a {
+  font-size: 15rem;
+  text-decoration: none;
+  color: #a6b8cf;
+}
+html body header nav .nav-list .dropdown .dropdown-content li a:hover {
+  color: white;
+}
+html body header nav .nav-list .dropdown .dropdown-content li i {
+  margin-right: 10px;
+}
+html body header nav .nav-list .dropdown .dropdown-content .li-bottom {
+  border-bottom: 1px solid #a6b8cf;
+}
+html body header nav .nav-list .dropdown .showmarket-dropdown {
+  display: block;
+}
 html body header nav .nav-link {
   text-decoration: none;
   color: #a6b8cf;
+  border-radius: 10px;
+  padding: 5px 20px;
+}
+html body header nav .nav-link:hover {
+  background-color: rgba(71, 98, 133, 0.7411764706);
+}
+html body header nav .toggle-dot {
+  text-decoration: none;
+  color: #a6b8cf;
+  height: 30px;
+  font-size: 30rem;
+  padding-bottom: 60px;
+}
+html body header nav .fa-magnifying-glass {
+  padding: 5px 10px;
+  cursor: pointer;
 }
 html body header nav .connect-wallet-btn {
   border: 2px solid white;
   border-radius: 10px;
-  padding: 10px 20px;
-  margin-left: 30px;
+  padding: 10px;
+  text-decoration: none;
+  color: #a6b8cf;
 }
-html body header nav div {
-  display: flex;
-  align-items: center;
+html body header nav .fa-bars {
+  font-size: 30rem;
+  display: none;
+  cursor: pointer;
 }
 html body main .hero {
   display: flex;
@@ -87,7 +195,7 @@ html body main .hero .hero-left .hero-time .hero-time-one {
   margin-left: 12px;
 }
 html body main .hero .hero-left .hero-time .hero-time-two {
-  padding: 9px 6px;
+  padding: 8px 6px;
 }
 html body main .hero .hero-left .list .list-bid {
   width: 50%;
@@ -409,32 +517,42 @@ html body main .collection .collection-down .collection-images .collection-price
   width: 15px;
   height: 15px;
 }
-html body main .formOne .form-one {
-  width: 26%;
+html body main .overlay {
+  background-color: rgba(0, 0, 0, 0.548);
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  z-index: 20;
+}
+html body main .overlay form {
+  width: 30%;
   background-color: #ffffff;
   border-radius: 12px;
   padding: 16px;
+  position: relative;
+  margin: 0 auto;
 }
-html body main .formOne .form-one .form-h2 {
+html body main .overlay form .form-h2 {
   text-align: center;
   font-size: 14rem;
 }
-html body main .formOne .form-one .form-img {
+html body main .overlay form .form-img {
   width: 100%;
   height: 180rem;
   padding: 10rem 16rem;
   border-radius: 40px;
 }
-html body main .formOne .form-one .form-stext {
+html body main .overlay form .form-stext {
   text-align: center;
   font-size: 12rem;
   padding: 4rem 16rem;
   color: #6e84ab;
 }
-html body main .formOne .form-one .form-offer {
+html body main .overlay form .form-offer {
   font-size: 13rem;
 }
-html body main .formOne .form-one input {
+html body main .overlay form input {
   width: 90%;
   height: 5vh;
   font-size: 14rem;
@@ -443,17 +561,17 @@ html body main .formOne .form-one input {
   border-radius: 10px;
   border: 1px solid #6e84ab;
 }
-html body main .formOne .form-one input::-moz-placeholder {
+html body main .overlay form input::-moz-placeholder {
   padding-left: 16rem;
   color: 112;
   font-size: 12rem;
 }
-html body main .formOne .form-one input::placeholder {
+html body main .overlay form input::placeholder {
   padding-left: 16rem;
   color: 112;
   font-size: 12rem;
 }
-html body main .formOne .form-one .price-btn-one {
+html body main .overlay form .price-btn-one {
   width: 90%;
   height: 5vh;
   font-size: 14rem;
@@ -463,59 +581,76 @@ html body main .formOne .form-one .price-btn-one {
   border-radius: 10px;
   border: none;
 }
-html body main .formOne .form-one label {
+html body main .overlay form label {
   display: flex;
   padding: 10rem 6rem;
 }
-html body main .formOne .form-one label .form-check {
+html body main .overlay form label .form-check {
   display: inline;
   width: 22rem;
 }
-html body main .formOne .form-one label .checktext {
+html body main .overlay form label .checktext {
   font-size: 13rem;
   padding: 14rem 4rem;
   color: #6e84ab;
 }
-html body main .formOne .form-one .form-help {
+html body main .overlay form .form-help {
   text-align: center;
   font-size: 12rem;
   color: #6e84ab;
   margin: 14rem 0;
 }
-html body main .formOne .form-one .fa-close {
-  position: relative;
-  left: 340px;
+html body main .overlay form .fa-close {
+  position: absolute;
+  right: 20px;
+  font-size: 20px;
 }
-html body main .formTwo .form-two {
-  width: 26%;
+html body main .overlay form .fa-close:hover {
+  color: red;
+}
+html body main #overlayOne {
+  display: none;
+}
+html body main .overlay-two {
+  background-color: rgba(0, 0, 0, 0.548);
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  z-index: 20;
+}
+html body main .overlay-two form {
+  width: 30%;
   background-color: #ffffff;
   border-radius: 12px;
   padding: 16px;
+  position: relative;
+  margin: 0 auto;
 }
-html body main .formTwo .form-two .form-h2 {
+html body main .overlay-two form .form-h2 {
   text-align: center;
   font-size: 14rem;
 }
-html body main .formTwo .form-two .form-img {
+html body main .overlay-two form .form-img {
   width: 100%;
   height: 180rem;
   padding: 10rem 16rem;
   border-radius: 40px;
 }
-html body main .formTwo .form-two .form-stext {
+html body main .overlay-two form .form-stext {
   text-align: center;
   font-size: 12rem;
   padding: 4rem 16rem;
   color: #6e84ab;
 }
-html body main .formTwo .form-two .form-offer {
+html body main .overlay-two form .form-offer {
   font-size: 13rem;
   padding: 10rem 0;
 }
-html body main .formTwo .form-two .form-avail {
+html body main .overlay-two form .form-avail {
   font-size: 12rem;
 }
-html body main .formTwo .form-two input {
+html body main .overlay-two form input {
   width: 90%;
   height: 5vh;
   font-size: 14rem;
@@ -524,17 +659,17 @@ html body main .formTwo .form-two input {
   border-radius: 10px;
   border: 1px solid #6e84ab;
 }
-html body main .formTwo .form-two input::-moz-placeholder {
+html body main .overlay-two form input::-moz-placeholder {
   padding-left: 16rem;
   color: 112;
   font-size: 12rem;
 }
-html body main .formTwo .form-two input::placeholder {
+html body main .overlay-two form input::placeholder {
   padding-left: 16rem;
   color: 112;
   font-size: 12rem;
 }
-html body main .formTwo .form-two .price-btn-one {
+html body main .overlay-two form .price-btn-one {
   width: 90%;
   height: 5vh;
   font-size: 14rem;
@@ -544,43 +679,34 @@ html body main .formTwo .form-two .price-btn-one {
   border-radius: 10px;
   border: none;
 }
-html body main .formTwo .form-two label {
+html body main .overlay-two form label {
   display: flex;
   padding: 10rem 6rem;
 }
-html body main .formTwo .form-two label .form-check {
+html body main .overlay-two form label .form-check {
   display: inline;
   width: 22rem;
 }
-html body main .formTwo .form-two label .checktext {
+html body main .overlay-two form label .checktext {
   font-size: 13rem;
   padding: 14rem 4rem;
   color: #6e84ab;
 }
-html body main .formTwo .form-two .form-help {
+html body main .overlay-two form .form-help {
   text-align: center;
   font-size: 12rem;
   color: #6e84ab;
   margin: 14rem 0;
 }
-html body main .formTwo .form-two .fa-close {
-  position: relative;
-  left: 340px;
-}
-html body main #overlayOne {
-  width: 100%;
-  height: 100%;
+html body main .overlay-two form .fa-close {
   position: absolute;
-  top: 20px;
-  left: 340px;
-  display: none;
+  right: 20px;
+  font-size: 20px;
+}
+html body main .overlay-two form .fa-close:hover {
+  color: red;
 }
 html body main #overlayTwo {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 20px;
-  left: 380px;
   display: none;
 }
 
