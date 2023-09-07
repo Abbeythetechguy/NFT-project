@@ -293,6 +293,7 @@ html body main .hot-auction .hot-auction-title-row .hot-auction-title-right butt
 html body main .hot-auction .hot-auction-flex-container {
   margin-top: 50px;
   display: flex;
+  gap: 10px;
   justify-content: space-between;
 }
 html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items {
@@ -404,6 +405,7 @@ html body main .popular-collection {
 html body main .popular-collection .popular-collection-title-row {
   display: flex;
   align-items: center;
+  gap: 10px;
   justify-content: space-between;
 }
 html body main .popular-collection .popular-collection-title-row .title-row-left {
@@ -707,6 +709,7 @@ html body main .trending-nft .trending-nft-flex-container {
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
   padding-left: 100px;
 }
 html body main .trending-nft .trending-nft-flex-container .trending-nft-flex-items {
