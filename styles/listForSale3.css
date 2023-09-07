@@ -10,8 +10,9 @@ html {
 }
 html body {
   font-size: 16rem;
-  color: white;
   font-family: poppins, "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #21204A;
+  background-color: #e0e9f0;
 }
 html body header {
   background-color: #21204A;
@@ -30,6 +31,7 @@ html body header span {
   border: 3px solid white;
   border-radius: 10px;
   padding: 0 10px;
+  color: white;
 }
 html body header nav {
   width: 900px;
@@ -118,8 +120,103 @@ html body header nav .connect-wallet-btn {
   color: #a6b8cf;
 }
 html body header nav .fa-bars {
+  color: white;
   font-size: 30rem;
   display: none;
+}
+html body main .list-source {
+  display: flex;
+  padding: 100px;
+}
+html body main .list-source .list-source-left {
+  width: 30%;
+  margin-top: 80px;
+}
+html body main .list-source .list-source-left .list-source-flex-box {
+  padding: 10px;
+  margin-top: 20px;
+  width: 340px;
+  background-color: #f0f4f7;
+  border-radius: 10px;
+}
+html body main .list-source .list-source-left .list-source-flex-box img {
+  width: 320px;
+  height: 200px;
+  border-radius: 10px;
+}
+html body main .list-source .list-source-left .list-source-flex-box .price-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  background-color: #e0e9f0;
+  border-radius: 10px;
+}
+html body main .list-source .list-source-left .list-source-flex-box h2 {
+  font-size: 20rem;
+}
+html body main .list-source .list-source-left .list-source-flex-box p {
+  color: #a6b8cf;
+}
+html body main .list-source .list-source-right {
+  width: 70%;
+}
+html body main .list-source .list-source-right h1 {
+  margin-bottom: 28px;
+  font-size: 40rem;
+  height: 47px;
+}
+html body main .list-source .list-source-right .fix-price-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+html body main .list-source .list-source-right .fix-price-flex-container .fix-price-flex-item {
+  background-color: #21204A;
+  color: white;
+  width: 164px;
+  height: 126px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-right: 30px;
+}
+html body main .list-source .list-source-right .top-sale-price .top-sale-price-top select {
+  height: 48px;
+  width: 82px;
+  border-radius: 10px;
+  border: 2px solid #a6b8cf;
+}
+html body main .list-source .list-source-right .top-sale-price .top-sale-price-top input[type=text] {
+  width: 466px;
+  height: 48px;
+  border-radius: 10px;
+  outline: 0;
+  border: 2px solid #a6b8cf;
+  padding: 10x;
+}
+html body main .list-source .list-source-right .top-sale-price .top-sale-price-bottom {
+  margin-top: 20px;
+}
+html body main .list-source .list-source-right .top-sale-price .top-sale-price-bottom input {
+  width: 556px;
+  height: 48px;
+  outline: 0;
+  border: 2px solid #a6b8cf;
+  padding: 10px;
+  border-radius: 10px;
+  display: block;
+}
+html body main .list-source .list-source-right .top-sale-price .top-sale-price-bottom button {
+  width: 198px;
+  height: 48px;
+  background-image: linear-gradient(to right, #0698F9, #F906F9);
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  font-size: 20rem;
+  margin-top: 40px;
 }
 
 @media screen and (min-width: 996px) and (max-width: 1200px) {
@@ -142,6 +239,18 @@ html body header nav .fa-bars {
   }
   html body header nav .connect-wallet-btn {
     padding: 8px;
+  }
+  html body main .list-source {
+    padding: 20px;
+  }
+  html body main .list-source .list-source-left {
+    width: 40%;
+  }
+  html body main .list-source .list-source-right {
+    width: 60%;
+  }
+  html body main .list-source .list-source-right .fix-price-flex-container .fix-price-flex-item {
+    margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 995px) {
@@ -173,6 +282,30 @@ html body header nav .fa-bars {
     display: block;
     margin-left: 10px;
   }
+  html body main .list-source {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 30px;
+  }
+  html body main .list-source .list-source-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  html body main .list-source .list-source-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  html body main .list-source .list-source-right .fix-price-flex-container {
+    display: flex;
+    justify-content: center;
+  }
+  html body main .list-source .list-source-right .fix-price-flex-container .fix-price-flex-item {
+    margin-bottom: 20px;
+  }
 }
 @media screen and (min-width: 591px) and (max-width: 767px) {
   html {
@@ -198,6 +331,30 @@ html body header nav .fa-bars {
   }
   html body header nav .fa-bars {
     display: block;
+  }
+  html body main .list-source {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 30px;
+  }
+  html body main .list-source .list-source-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  html body main .list-source .list-source-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  html body main .list-source .list-source-right .fix-price-flex-container {
+    display: flex;
+    justify-content: center;
+  }
+  html body main .list-source .list-source-right .fix-price-flex-container .fix-price-flex-item {
+    margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 180px) and (max-width: 768px) {
@@ -228,5 +385,38 @@ html body header nav .fa-bars {
   html body header nav .fa-bars {
     display: block;
     margin-left: 10px;
+  }
+  html body main .list-source {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 30px;
+  }
+  html body main .list-source .list-source-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  html body main .list-source .list-source-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  html body main .list-source .list-source-right .fix-price-flex-container {
+    display: flex;
+    justify-content: center;
+  }
+  html body main .list-source .list-source-right .fix-price-flex-container .fix-price-flex-item {
+    margin-bottom: 20px;
+  }
+  html body main .list-source .list-source-right .top-sale-price .top-sale-price-top input[type=text] {
+    width: 366px;
+  }
+  html body main .list-source .list-source-right .top-sale-price .top-sale-price-bottom {
+    margin-top: 20px;
+  }
+  html body main .list-source .list-source-right .top-sale-price .top-sale-price-bottom input {
+    width: 456px;
   }
 }/*# sourceMappingURL=listForSale3.css.map */
