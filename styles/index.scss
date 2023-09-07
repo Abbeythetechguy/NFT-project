@@ -370,6 +370,7 @@ html {
                 .hot-auction-flex-container {
                     margin-top: 50px;
                     display: flex;
+                    gap: 10px;
                     justify-content: space-between;
 
                     .hot-auction-flex-items {
@@ -503,6 +504,7 @@ html {
                 .popular-collection-title-row {
                     display: flex;
                     align-items: center;
+                    gap: 10px;
                     justify-content: space-between;
 
                     .title-row-left {
@@ -880,7 +882,7 @@ html {
                     margin-top: 50px;
                     display: flex;
                     justify-content: space-between;
-                    // overflow: hidden;
+                    overflow: hidden;
                     padding-left: 100px;
 
                     .trending-nft-flex-items {
