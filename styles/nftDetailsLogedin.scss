@@ -25,16 +25,16 @@ html {
     font-family: "poppins", sans-serif;
     font-size: 16rem;
     background-color: $main-bg-color;
-    input{
+    input {
       outline: 0;
       font-family: $font-type;
-  }
-  select{
+    }
+    select {
       outline: 0;
       font-family: $font-type;
-  }
+    }
 
-  #overlay {
+    #overlay {
       display: none;
       position: fixed;
       left: 0;
@@ -46,43 +46,43 @@ html {
       padding: 0 100px;
 
       form {
-          position: relative;
-          top: 100px;
+        position: relative;
+        top: 100px;
 
-          #search-bar {
-              position: absolute;
-              top: 40px;
-              height: 50px;
-              width: 100%;
-              border-radius: 10px;
-              border: 0;
-              padding: 0 50px;
-              display: block;
-              outline: none;
-              // background-image: url("../images/index/search-icon.png");
-              // background-repeat: no-repeat;
+        #search-bar {
+          position: absolute;
+          top: 40px;
+          height: 50px;
+          width: 100%;
+          border-radius: 10px;
+          border: 0;
+          padding: 0 50px;
+          display: block;
+          outline: none;
+          // background-image: url("../images/index/search-icon.png");
+          // background-repeat: no-repeat;
+        }
+
+        span {
+          position: absolute;
+          font-size: 20px;
+          z-index: 20;
+          right: 0;
+          top: 0;
+          cursor: pointer;
+
+          i {
+            margin-right: 10px;
           }
-
-          span {
-              position: absolute;
-              font-size: 20px;
-              z-index: 20;
-              right: 0;
-              top: 0;
-              cursor: pointer;
-
-              i {
-                  margin-right: 10px;
-              }
-          }
+        }
       }
-  }
+    }
 
-  #mobile-menu{
+    #mobile-menu {
       display: none;
-  }
+    }
 
-  header {
+    header {
       background-color: $bg-color;
       padding: 0 100px;
       display: flex;
@@ -94,117 +94,112 @@ html {
       z-index: 11;
 
       .logo {
-          font-size: 28rem;
-          font-weight: bold;
-          border: 3px solid white;
-          border-radius: 10px;
-          padding: 0 10px;
+        font-size: 28rem;
+        font-weight: bold;
+        border: 3px solid white;
+        border-radius: 10px;
+        padding: 0 10px;
       }
 
       nav {
-          // position: relative;
-          // border: 1px solid white;
-          width: 900px;
+        // position: relative;
+        // border: 1px solid white;
+        width: 900px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .nav-list {
+          list-style-type: none;
+          width: 500px;
           display: flex;
           justify-content: space-between;
-          align-items: center;
 
-          .nav-list {
+          .dropdown {
+            #marketplace-dropdown {
+              cursor: pointer;
+            }
+
+            .dropdown-content {
+              position: absolute;
+              top: 100px;
               list-style-type: none;
-              width: 500px;
-              display: flex;
-              justify-content: space-between;
-
-              .dropdown {
-
-                  #marketplace-dropdown {
-                      cursor: pointer;
-                  }
-
-                  .dropdown-content {
-                      position: absolute;
-                      top: 100px;
-                      list-style-type: none;
-                      display: none;
-                      border: 1px solid $font-color2;
-                      border-radius: 15px;
-                      background-color: #000000bd;
-                      padding: 5px;
-
-
-                      li {
-                          padding: 10px 20px;
-
-                          a {
-                              font-size: 15rem;
-                              text-decoration: none;
-                              color: $font-color2;
-
-                              &:hover{
-                                  color: white;
-                              }
-                          }
-
-                          i {
-                              margin-right: 10px;
-                          }
-
-                      }
-
-                      .li-bottom {
-                          border-bottom: 1px solid $font-color2;
-
-                      }
-                  }
-
-                  .showmarket-dropdown {
-                      display: block;
-                  }
-
-              }
-          }
-
-          .nav-link {
-              text-decoration: none;
-              color: $font-color2;
-              border-radius: 10px;
-              padding: 5px 20px;
-
-              &:hover {
-                  background-color: #476285bd;
-                  // border: 1px solid #8897ac;
-              }
-          }
-
-          .toggle-dot {
-              text-decoration: none;
-              color: $font-color2;
-              height: 30px;
-              font-size: 30rem;
-              padding-bottom: 60px;
-              // border: 1px solid white;
-          }
-
-          .fa-magnifying-glass {
-              padding: 5px 10px;
-              cursor: pointer;
-          }
-
-          .connect-wallet-btn {
-              border: 2px solid white;
-              border-radius: 10px;
-              padding: 10px;
-              text-decoration: none;
-              color: $font-color2;
-          }
-
-          .fa-bars {
-              font-size: 30rem;
               display: none;
-              cursor: pointer;
+              border: 1px solid $font-color2;
+              border-radius: 15px;
+              background-color: #000000bd;
+              padding: 5px;
+
+              li {
+                padding: 10px 20px;
+
+                a {
+                  font-size: 15rem;
+                  text-decoration: none;
+                  color: $font-color2;
+
+                  &:hover {
+                    color: white;
+                  }
+                }
+
+                i {
+                  margin-right: 10px;
+                }
+              }
+
+              .li-bottom {
+                border-bottom: 1px solid $font-color2;
+              }
+            }
+
+            .showmarket-dropdown {
+              display: block;
+            }
           }
+        }
+
+        .nav-link {
+          text-decoration: none;
+          color: $font-color2;
+          border-radius: 10px;
+          padding: 5px 20px;
+
+          &:hover {
+            background-color: #476285bd;
+            // border: 1px solid #8897ac;
+          }
+        }
+
+        .toggle-dot {
+          text-decoration: none;
+          color: $font-color2;
+          height: 30px;
+          font-size: 30rem;
+          padding-bottom: 60px;
+          // border: 1px solid white;
+        }
+
+        .fa-magnifying-glass {
+          padding: 5px 10px;
+          cursor: pointer;
+        }
+
+        .connect-wallet-btn {
+          border: 2px solid white;
+          border-radius: 10px;
+          padding: 10px;
+          text-decoration: none;
+          color: $font-color2;
+        }
+
+        .fa-bars {
+          font-size: 30rem;
+          display: none;
+          cursor: pointer;
+        }
       }
-  }
+    }
 
     main {
       .hero {
@@ -595,8 +590,8 @@ html {
         height: 100vh;
         top: 0;
         z-index: 20;
-        
-        form{
+
+        form {
           width: 30%;
           background-color: #ffffff;
           border-radius: 12px;
@@ -671,14 +666,14 @@ html {
             right: 20px;
             font-size: 20px;
 
-            &:hover{
+            &:hover {
               color: red;
             }
           }
         }
       }
-      #overlayOne{
-        display: none ;
+      #overlayOne {
+        display: none;
       }
       .overlay-two {
         background-color: rgba(0, 0, 0, 0.548);
@@ -767,7 +762,7 @@ html {
             right: 20px;
             font-size: 20px;
 
-            &:hover{
+            &:hover {
               color: red;
             }
           }
@@ -1142,7 +1137,7 @@ html {
           .hero-left {
             width: 100%;
             .hero-time {
-              left: 160px;
+              left: 180px;
               bottom: 100px;
               .hero-time-one {
                 padding-top: 5px;
@@ -1271,33 +1266,118 @@ html {
     font-size: 1px;
 
     body {
-      font-size: 15rem;
+      overflow: none;
+      max-width: 590px;
+      font-size: 14rem;
+      #mobile-menu {
+        height: 100vh;
+        width: 300px;
+        background-color: $main-bg-color;
+        position: fixed;
+        z-index: 29;
+        right: 0;
+        display: none;
+      }
+      #close-btn {
+        font-size: 20rem;
+        color: red;
+        position: absolute;
+        right: 0;
+        cursor: pointer;
 
-      header {
-        padding: 0 20px;
-        height: 80px;
+        .fa-close {
+          margin-right: 5px;
+        }
+      }
+      .mobile-menu-content {
+        padding-top: 30px;
+        list-style: none;
 
-        nav {
-          width: 300px;
-
-          .nav-link {
-            display: none;
+        .mobile-menu-links {
+          font-size: 20rem;
+          text-decoration: none;
+          // color: $font-color3;
+          width: 100%;
+          height: 70px;
+          // border-radius: 10px;
+          padding: 5px 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &:hover {
+            background-color: #476285bd;
+            color: white;
           }
-
-          div {
-            width: 200px;
+          &:active {
+            color: white;
           }
+          .dropdown {
+            cursor: pointer;
+            .dropdown-content {
+              display: none;
+              list-style: none;
+              a {
+                text-decoration: none;
+                padding: 10px 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // color: $font-color3;
+                width: 100%;
 
-          .connect-wallet-btn {
-            padding: 8px;
-          }
+                i {
+                  margin-right: 15px;
+                }
 
-          .fa-bars {
-            display: block;
-            margin-left: 10px;
+                &:hover {
+                  background-color: #476285bd;
+                  color: white;
+                }
+              }
+            }
+            .showMobmarket-dropdown{
+              display: block;
+            }
           }
         }
       }
+      #overlay {
+        padding: 0 10px;
+
+        form {
+            display: flex;
+            justify-content: center;
+
+            #search-bar {
+                width: 100%;
+                height: 40px;
+                padding: 0 20px;
+            }
+        }
+    }
+    header {
+      padding: 0 10px;
+      height: 80px;
+
+      nav {
+          // border: 1px solid white;
+          width: 250px;
+
+          .nav-list {
+              display: none;
+
+          }
+
+          .connect-wallet-btn {
+              padding: 8px;
+          }
+
+          .fa-bars {
+              display: block;
+          }
+      }
+  }
+
       main {
         .hero {
           display: block;

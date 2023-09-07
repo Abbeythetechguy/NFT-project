@@ -1015,7 +1015,7 @@ html body main #overlayTwo {
     width: 100%;
   }
   html body main .hero .hero-left .hero-time {
-    left: 160px;
+    left: 180px;
     bottom: 100px;
   }
   html body main .hero .hero-left .hero-time .hero-time-one {
@@ -1123,27 +1123,102 @@ html body main #overlayTwo {
     font-size: 1px;
   }
   html body {
-    font-size: 15rem;
+    overflow: none;
+    max-width: 590px;
+    font-size: 14rem;
+  }
+  html body #mobile-menu {
+    height: 100vh;
+    width: 300px;
+    background-color: #e0e9f0;
+    position: fixed;
+    z-index: 29;
+    right: 0;
+    display: none;
+  }
+  html body #close-btn {
+    font-size: 20rem;
+    color: red;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+  html body #close-btn .fa-close {
+    margin-right: 5px;
+  }
+  html body .mobile-menu-content {
+    padding-top: 30px;
+    list-style: none;
+  }
+  html body .mobile-menu-content .mobile-menu-links {
+    font-size: 20rem;
+    text-decoration: none;
+    width: 100%;
+    height: 70px;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  html body .mobile-menu-content .mobile-menu-links:hover {
+    background-color: rgba(71, 98, 133, 0.7411764706);
+    color: white;
+  }
+  html body .mobile-menu-content .mobile-menu-links:active {
+    color: white;
+  }
+  html body .mobile-menu-content .mobile-menu-links .dropdown {
+    cursor: pointer;
+  }
+  html body .mobile-menu-content .mobile-menu-links .dropdown .dropdown-content {
+    display: none;
+    list-style: none;
+  }
+  html body .mobile-menu-content .mobile-menu-links .dropdown .dropdown-content a {
+    text-decoration: none;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  html body .mobile-menu-content .mobile-menu-links .dropdown .dropdown-content a i {
+    margin-right: 15px;
+  }
+  html body .mobile-menu-content .mobile-menu-links .dropdown .dropdown-content a:hover {
+    background-color: rgba(71, 98, 133, 0.7411764706);
+    color: white;
+  }
+  html body .mobile-menu-content .mobile-menu-links .dropdown .showMobmarket-dropdown {
+    display: block;
+  }
+  html body #overlay {
+    padding: 0 10px;
+  }
+  html body #overlay form {
+    display: flex;
+    justify-content: center;
+  }
+  html body #overlay form #search-bar {
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
   }
   html body header {
-    padding: 0 20px;
+    padding: 0 10px;
     height: 80px;
   }
   html body header nav {
-    width: 300px;
+    width: 250px;
   }
-  html body header nav .nav-link {
+  html body header nav .nav-list {
     display: none;
-  }
-  html body header nav div {
-    width: 200px;
   }
   html body header nav .connect-wallet-btn {
     padding: 8px;
   }
   html body header nav .fa-bars {
     display: block;
-    margin-left: 10px;
   }
   html body main .hero {
     display: block;
