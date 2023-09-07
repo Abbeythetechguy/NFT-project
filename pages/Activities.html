@@ -13,56 +13,58 @@
 </head>
 
 <body>
-    <!-- This is for the overlay search bar -->
-    <div id="overlay">
-        <form action="">
-            <span id="close-btn">
-                <i class="fa-solid fa-close "></i>Close
-            </span>
-            <input type="search" name="" placeholder="Input text" id="search-bar">
-        </form>
-    </div>
-    <!-- This is for the mobile menu -->
-    <section id="mobile-menu">
-        <span id="close-btn" onclick="closeSideNavBar()">
+   <!-- This is for the overlay search bar -->
+   <div id="overlay">
+    <form action="">
+        <span id="close-btn">
             <i class="fa-solid fa-close "></i>Close
         </span>
-        <ul class="mobile-menu-content">
-            <li><a href="./index.html" class="mobile-menu-links">Home</a></li>
+        <input type="search" name="" placeholder="Input text" id="search-bar">
+    </form>
+</div>
+<!-- This is for the mobile menu -->
+    <section id="mobile-menu">
+    <span id="close-btn" onclick="closeSideNavBar()">
+        <i class="fa-solid fa-close "></i>Close
+    </span>
+    <ul class="mobile-menu-content">
+        <li><a href="./index.html" class="mobile-menu-links">Home</a></li>
+        <li class="dropdown">
+            <span class="mobile-menu-links" id="marketplace-dropdown2" onclick="showMobileMarketDropdown()">Market Place</span>
+            <ul class="dropdown-content" id="mobile-marketplace-dropdown-content2">
+                <li class="li-bottom"><a href="./pages/collection.html"><i class="fa-solid fa-layer-group"></i> Collections</a></li>
+                <li><a href="./pages/artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
+            </ul>
+        </li>
+        <li><a href="./pages/nftList1.html" class="mobile-menu-links">All NFTs</a></li>
+        <li><a href="./pages/Activities.html" class="mobile-menu-links">Activities</a></li>
+        <li><a href="" class="mobile-menu-links">Sign Up</a></li>
+        <li><a href="./pages/listForSale.html" class="mobile-menu-links">List For Sale</a></li>
+    </ul>
+</section>
+
+<header>
+    <span class="logo">M</span>
+    <nav>
+        <ul class="nav-list">
+            <li><a href="../index.html" class="nav-link home">Home</a></li>
             <li class="dropdown">
-                <span class="mobile-menu-links" id="marketplace-dropdown2" onclick="showMobileMarketDropdown()">Market Place</span>
-                <ul class="dropdown-content" id="mobile-marketplace-dropdown-content2">
-                    <li class="li-bottom"><a href="./pages/collection.html"><i class="fa-solid fa-layer-group"></i> Collections</a></li>
-                    <li><a href="./pages/artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
+                <span class="nav-link" id="marketplace-dropdown" onclick="showMarketPlaceMenu()">Market Place</span>
+                <ul class="dropdown-content" id="marketplace-dropdown-content">
+                    <li class="li-bottom"><a href="./collection.html"><i class="fa-solid fa-layer-group"></i> Collections</a></li>
+                    <li><a href="./artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
                 </ul>
             </li>
-            <li><a href="./pages/" class="mobile-menu-links">All NFTs</a></li>
-            <li><a href="./pages/Activities.html" class="mobile-menu-links">Activities</a></li>
-            <li><a href="" class="mobile-menu-links">Sign Up</a></li>
-        </ul>
-    </section>
-    <header>
-        <span class="logo">M</span>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="./index.html" class="nav-link home">Home</a></li>
-                <li class="dropdown">
-                    <span class="nav-link" id="marketplace-dropdown" onclick="showMarketPlaceMenu()">Market Place</span>
-                    <ul class="dropdown-content" id="marketplace-dropdown-content">
-                        <li class="li-bottom"><a href="./pages/collection.html"><i class="fa-solid fa-layer-group"></i> Collections</a></li>
-                        <li><a href="./pages/artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
-                    </ul>
-                </li>
-                <li><a href="./pages/nftList1.html" class="nav-link all-nfts">All NFTs</a></li>
-                <li><a href="./pages/Activities.html" class="nav-link">Activities</a></li>
+            <li><a href="./nftList1.html" class="nav-link all-nfts">All NFTs</a></li>
+            <li><a href="./Activities.html" class="nav-link">Activities</a></li>
 
-            </ul>
-            <a href="" class="toggle-dot">...</a>
-            <i class="fa-solid fa-magnifying-glass" id="fa-magnifying-glass"></i>
-            <a href="./pages/connectWallet.html" class="connect-wallet-btn">Connect wallet</a>
-            <i class="fa-solid fa-bars" onclick="showSideNav()"></i>
-        </nav>
-    </header>
+        </ul>
+        <a href="" class="toggle-dot">...</a>
+        <i class="fa-solid fa-magnifying-glass" id="fa-magnifying-glass"></i>
+        <a href="./connectWallet.html" class="connect-wallet-btn">Connect wallet</a>
+        <i class="fa-solid fa-bars" onclick="showSideNav()"></i>
+    </nav>
+</header>
     <main>
         <div class="activities">
             <p class="active"><b>Activities</b></p>
@@ -176,5 +178,5 @@
     </main>
 
 </body>
-
+<script src="../index.js"></script>
 </html>

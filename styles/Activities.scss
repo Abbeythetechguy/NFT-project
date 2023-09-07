@@ -294,7 +294,7 @@ html {
                     margin: 0 120rem;
                     .images {
                         display: flex;
-                        justify-content: space-between;margin: 14rem 0;
+                        justify-content: space-between;
                         padding: 10rem 20rem;
                         .text {
                             display: flex;
@@ -302,9 +302,11 @@ html {
                                 width: 80rem;
                                 height: 80rem;
                                 padding: 10rem;
+                                // padding-left: 12rem;
                             }
                             .border {
-                                border-radius: 18rem;
+                                border-radius: 18px;
+                                border: none;
                             }
                             .small-text {
                                 font-size: 12rem;
@@ -336,7 +338,7 @@ html {
                         background-color: #f0f4f7;
                         color: #6e8fa6;
                         border: 1px solid #6e8fa6;
-                        margin: 20rem 30rem;
+                        margin: 30rem 30rem;
                     }
                 }
             }
