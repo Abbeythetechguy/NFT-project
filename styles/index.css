@@ -707,7 +707,6 @@ html body main .trending-nft .trending-nft-flex-container {
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
-  overflow: hidden;
   padding-left: 100px;
 }
 html body main .trending-nft .trending-nft-flex-container .trending-nft-flex-items {
