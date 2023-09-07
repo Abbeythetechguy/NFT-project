@@ -9,12 +9,62 @@ html {
   font-size: 1px;
 }
 html body {
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: "poppins", sans-serif;
   font-size: 16rem;
-  color: white;
-  font-family: poppins, "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #e0e9f0;
+}
+html body input {
+  outline: 0;
+  font-family: "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+html body select {
+  outline: 0;
+  font-family: "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+html body #overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 15;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5764705882);
+  padding: 0 100px;
+}
+html body #overlay form {
+  position: relative;
+  top: 100px;
+}
+html body #overlay form #search-bar {
+  position: absolute;
+  top: 40px;
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+  border: 0;
+  padding: 0 50px;
+  display: block;
+  outline: none;
+}
+html body #overlay form span {
+  position: absolute;
+  font-size: 20px;
+  z-index: 20;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+html body #overlay form span i {
+  margin-right: 10px;
+}
+html body #mobile-menu {
+  display: none;
 }
 html body header {
-  background-color: #21204A;
+  background-color: #21204a;
   padding: 0 100px;
   display: flex;
   justify-content: space-between;
@@ -24,7 +74,7 @@ html body header {
   top: 0;
   z-index: 11;
 }
-html body header span {
+html body header .logo {
   font-size: 28rem;
   font-weight: bold;
   border: 3px solid white;
@@ -37,16 +87,14 @@ html body header nav {
   justify-content: space-between;
   align-items: center;
 }
-html body header nav div {
-  display: flex;
-  justify-content: space-between;
-  width: 170px;
-}
 html body header nav .nav-list {
   list-style-type: none;
   width: 500px;
   display: flex;
   justify-content: space-between;
+}
+html body header nav .nav-list .dropdown #marketplace-dropdown {
+  cursor: pointer;
 }
 html body header nav .nav-list .dropdown .dropdown-content {
   position: absolute;
@@ -62,8 +110,12 @@ html body header nav .nav-list .dropdown .dropdown-content li {
   padding: 10px 20px;
 }
 html body header nav .nav-list .dropdown .dropdown-content li a {
+  font-size: 15rem;
   text-decoration: none;
   color: #a6b8cf;
+}
+html body header nav .nav-list .dropdown .dropdown-content li a:hover {
+  color: white;
 }
 html body header nav .nav-list .dropdown .dropdown-content li i {
   margin-right: 10px;
@@ -71,7 +123,7 @@ html body header nav .nav-list .dropdown .dropdown-content li i {
 html body header nav .nav-list .dropdown .dropdown-content .li-bottom {
   border-bottom: 1px solid #a6b8cf;
 }
-html body header nav .nav-list .dropdown:hover .dropdown-content {
+html body header nav .nav-list .dropdown .showmarket-dropdown {
   display: block;
 }
 html body header nav .nav-link {
@@ -92,23 +144,7 @@ html body header nav .toggle-dot {
 }
 html body header nav .fa-magnifying-glass {
   padding: 5px 10px;
-}
-html body header nav #search-menu {
-  display: none;
-  position: relative;
-  left: 0;
-  height: 1200px;
-  width: 1345px;
-  background-color: rgba(0, 0, 0, 0.4235294118);
-}
-html body header nav #search-menu #search-bar {
-  position: absolute;
-  left: 100px;
-  top: 100px;
-  height: 50px;
-  width: 1150px;
-  border-radius: 10px;
-  border: 0;
+  cursor: pointer;
 }
 html body header nav .connect-wallet-btn {
   border: 2px solid white;
@@ -120,25 +156,158 @@ html body header nav .connect-wallet-btn {
 html body header nav .fa-bars {
   font-size: 30rem;
   display: none;
+  cursor: pointer;
 }
-html body body {
-  max-width: 1024x;
-  font-size: 15rem;
+html body main {
+  padding: 0 100rem;
 }
-html body body header {
-  padding: 0 50px;
-  height: 80px;
+html body main .activities {
+  display: flex;
+  margin-top: 60rem;
 }
-html body body header nav {
-  width: 700px;
+html body main .activities .active {
+  color: #11315b;
+  font-size: 20rem;
+  margin-right: 40rem;
 }
-html body body header nav div {
-  width: 150px;
+html body main .activities .active-select {
+  font-size: 12rem;
+  border-radius: 6px;
+  background-color: #f0f4f7;
+  color: #476285;
+  border: 1px solid #6e8fa6;
+  width: 8%;
+  padding: 8rem;
 }
-html body body header nav .connect-wallet-btn {
-  padding: 8px;
+html body main hr {
+  border: 1px solid #a6b8cf;
+}
+html body main .hero {
+  display: flex;
+  margin-top: 18rem;
+}
+html body main .hero .hero-left {
+  width: 20%;
+}
+html body main .hero .hero-left .filter {
+  color: #11315b;
+  font-size: 14rem;
+  margin: 10rem 0;
+}
+html body main .hero .hero-left .btn .btn-one {
+  width: 26%;
+  font-size: 12rem;
+  padding: 6rem 0;
+  margin: 10rem 7rem;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #476285;
+  border: 1px solid #6e8fa6;
+}
+html body main .hero .hero-left label {
+  display: block;
+  display: flex;
+  width: 100%;
+  height: 5vh;
+  padding: 4rem;
+  margin: 12rem 2rem;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #476285;
+  border: 1px solid #6e8fa6;
+}
+html body main .hero .hero-left input input::-moz-placeholder {
+  font-size: 14rem;
+  padding: 14rem;
+}
+html body main .hero .hero-left input input::placeholder {
+  font-size: 14rem;
+  padding: 14rem;
+}
+html body main .hero .hero-left .input-one {
+  display: block;
+  width: 100%;
+  height: 5vh;
+  padding: 4rem;
+  margin: 12rem 2rem;
+  background-color: #bbd9eb;
+  color: #6e8fa6;
+  border-radius: 10px;
+  border: none;
+}
+html body main .hero .hero-right {
+  width: 60%;
+  margin: 0 120rem;
+}
+html body main .hero .hero-right .images {
+  display: flex;
+  justify-content: space-between;
+  margin: 14rem 0;
+  padding: 10rem 20rem;
+}
+html body main .hero .hero-right .images .text {
+  display: flex;
+}
+html body main .hero .hero-right .images .text .img {
+  width: 80rem;
+  height: 80rem;
+  padding: 10rem;
+}
+html body main .hero .hero-right .images .text .border {
+  border-radius: 18rem;
+}
+html body main .hero .hero-right .images .text .small-text {
+  font-size: 12rem;
+  margin: 24rem 12rem;
+  color: #11315b;
+}
+html body main .hero .hero-right .images .text .small-text .time {
+  display: flex;
+  font-size: 11rem;
+  margin: 6rem 0;
+  color: #476285;
+}
+html body main .hero .hero-right .images .text .small-text .time .vector {
+  background-color: #a6b8cf;
+  border-radius: 18rem;
+}
+html body main .hero .hero-right .images .text .small-text .time .timep {
+  padding-top: 3rem;
+  margin: 0 6rem;
+}
+html body main .hero .hero-right .color {
+  background-color: #ffffff;
+  border-radius: 16rem;
+}
+html body main .hero .hero-right button {
+  width: 12%;
+  height: 10%;
+  border-radius: 8rem;
+  background-color: #f0f4f7;
+  color: #6e8fa6;
+  border: 1px solid #6e8fa6;
+  margin: 20rem 30rem;
 }
 
+@media screen {
+  body {
+    max-width: 1024x;
+    font-size: 15rem;
+  }
+  body header {
+    padding: 0 50px;
+    height: 80px;
+  }
+  body header nav {
+    width: 700px;
+  }
+  body header nav div {
+    width: 150px;
+  }
+  body header nav .connect-wallet-btn {
+    padding: 8px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 995px) {
   html {
     font-size: 1px;

@@ -9,36 +9,58 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- <script src="https://cdn.tailwindcss.com"> </script> -->
 </head>
-
 <body>
+    <!-- This is for the overlay search bar -->
+    <div id="overlay">
+        <form action="">
+            <span id="close-btn">
+                <i class="fa-solid fa-close "></i>Close
+            </span>
+            <input type="search" name="" placeholder="Input text" id="search-bar">
+        </form>
+    </div>
+    <!-- This is for the mobile menu -->
+    <section id="mobile-menu">
+        <span id="close-btn" onclick="closeSideNavBar()">
+            <i class="fa-solid fa-close "></i>Close
+        </span>
+        <ul class="mobile-menu-content">
+            <li><a href="./index.html" class="mobile-menu-links">Home</a></li>
+            <li class="dropdown">
+                <span class="mobile-menu-links" id="marketplace-dropdown2" onclick="showMobileMarketDropdown()">Market Place</span>
+                <ul class="dropdown-content" id="mobile-marketplace-dropdown-content2">
+                    <li class="li-bottom"><a href="./pages/collection.html"><i class="fa-solid fa-layer-group"></i> Collections</a></li>
+                    <li><a href="./pages/artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
+                </ul>
+            </li>
+            <li><a href="./pages/" class="mobile-menu-links">All NFTs</a></li>
+            <li><a href="./pages/Activities.html" class="mobile-menu-links">Activities</a></li>
+            <li><a href="" class="mobile-menu-links">Sign Up</a></li>
+        </ul>
+    </section>
+
     <header>
         <span class="logo">M</span>
         <nav>
             <ul class="nav-list">
-                <li><a href="./index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html" class="nav-link home">Home</a></li>
                 <li class="dropdown">
-                    <a href="./pages/collection.html" class="nav-link">Market Place</a>
-                    <ul class="dropdown-content">
+                    <span class="nav-link" id="marketplace-dropdown" onclick="showMarketPlaceMenu()">Market Place</span>
+                    <ul class="dropdown-content" id="marketplace-dropdown-content">
                         <li class="li-bottom"><a href="./pages/collection.html"><i class="fa-solid fa-layer-group"></i> Collections</a></li>
                         <li><a href="./pages/artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
                     </ul>
                 </li>
-                <li><a href="./pages/" class="nav-link">All NFTs</a></li>
-                <li><a href="./pages/Activities.html" class="nav-link">Activities</a></li>
+                <li><a href="./pages/nftList1.html" class="nav-link all-nfts">All NFTs</a></li>
+                <li><a href="../pages/Activities.html" class="nav-link">Activities</a></li>
 
             </ul>
             <a href="" class="toggle-dot">...</a>
-            <i class="fa-solid fa-magnifying-glass" onclick="hideNavBar()"></i>
-            <form action="" id="search-menu">
-                <input type="search" name="" placeholder="Input text" id="search-bar">
-            </form>
-            <div>
-                <a href="./userPage.html"><img src="../images/nftDetailsloggedin/ava.png" alt=""
-                        class="profile-img"></a>
-                <a href="./pages/connectWallet.html" class="connect-wallet-btn">Create</a>
-                <i class="fa-solid fa-bars"></i>
-            </div>
+            <i class="fa-solid fa-magnifying-glass" id="fa-magnifying-glass"></i>
+            <a href="./pages/connectWallet.html" class="connect-wallet-btn">Connect wallet</a>
+            <i class="fa-solid fa-bars" onclick="showSideNav()"></i>
         </nav>
     </header>
 
@@ -111,57 +133,63 @@
                 </div>
             </div>
             <div class="hero-right">
-                <div class="shiba">
-                    <img src="../images/nftDetails/ex-shiba.png" alt="" class="shiba-img">
-                    <p class="shiba-text">Collection name Ex Shiba Astronaut</p>
-                </div>
-                <h2 class="shiba-big-text">NFT name Ex Shiba Astronaut</h2>
-                <div class="hero-icons">
-                    <div class="hero-icons-one">
-                        <img src="../images/nftDetails/icon/share.png" alt="" class="hero-icons-two">
-                        <p class="hero-icons-text">Share</p>
+                <div class="shibaa">
+                    <div class="shiba">
+                        <img src="../images/nftDetails/ex-shiba.png" alt="" class="shiba-img">
+                        <p class="shiba-text">Collection name Ex Shiba Astronaut</p>
                     </div>
-                    <div class="hero-icons-one">
-                        <img src="../images/nftDetails/icon/heart.png" alt="" class="hero-icons-two">
-                        <p class="hero-icons-text">2,8k</p>
+                    <h2 class="shiba-big-text"><b>NFT name Ex Shiba Astronaut</b></h2>
+                    <div class="hero-icons">
+                        <div class="hero-icons-one">
+                            <img src="../images/nftDetails/icon/share.png" alt="" class="hero-icons-two">
+                            <p class="hero-icons-text">Share</p>
+                        </div>
+                        <div class="hero-icons-one">
+                            <img src="../images/nftDetails/icon/heart.png" alt="" class="hero-icons-two">
+                            <p class="hero-icons-text">2,8k</p>
+                        </div>
+                        <div class="hero-icons-one">
+                            <img src="../images/nftDetails/icon/repeat.png" alt="" class="hero-icons-two">
+                            <p class="hero-icons-text">Refresh</p>
+                        </div>
+                        <div class="hero-icons-one">
+                            <img src="../images/nftDetails/icon/more-horizontal.png" alt="" class="hero-icons-two">
+                        </div>
                     </div>
-                    <div class="hero-icons-one">
-                        <img src="../images/nftDetails/icon/repeat.png" alt="" class="hero-icons-two">
-                        <p class="hero-icons-text">Refresh</p>
+                    <hr>
+                    <div class="hero-small-text">
+                        <p>Thena is a collection of 10,000 unique Bored Ape NFTs— unique digital collectibles living on
+                            the
+                            Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membershipYacht Club ... Show
+                            more</p>
                     </div>
-                    <div class="hero-icons-one">
-                        <img src="../images/nftDetails/icon/more-horizontal.png" alt="" class="hero-icons-two">
-                    </div>
-                </div>
-                <hr>
-                <div class="hero-small-text">
-                    <p>Thena is a collection of 10,000 unique Bored Ape NFTs— unique digital collectibles living on the
-                        Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membershipYacht Club ... Show
-                        more</p>
                 </div>
                 <div class="price">
-                    <span class="price-text">
-                        <p class="price-p">Current price</p>
-                        <h5 class="price-h5">1.0ETH</h5>
-                        <p class="price-digit">$130,729.12</p>
-                    </span>
-                    <span class="price-text">
-                        <p class="price-p">Average</p>
-                        <h5 class="price-h5">1.0ETH</h5>
-                        <p class="price-digit">$130,729.12</p>
-                    </span>
-                    <span class="price-text">
-                        <p class="price-p">Highest bid</p>
-                        <h5 class="price-h5">1.0ETH</h5>
-                        <p class="price-digit color">by phuongpham</p>
-                    </span>
+                    <div class="price-up">
+                        <span class="price-text">
+                            <p class="price-p">Current price</p>
+                            <h5 class="price-h5">1.0ETH</h5>
+                            <p class="price-digit">$130,729.12</p>
+                        </span>
+                        <span class="price-text">
+                            <p class="price-p">Average</p>
+                            <h5 class="price-h5">1.0ETH</h5>
+                            <p class="price-digit">$130,729.12</p>
+                        </span>
+                        <span class="price-text">
+                            <p class="price-p">Highest bid</p>
+                            <h5 class="price-h5">1.0ETH</h5>
+                            <p class="price-digit color">by phuongpham</p>
+                        </span>
+                    </div>
+                    <div class="price-btn">
+                        <button class="price-btn-one" id="priceBtnOne">Buy now for 1 ETH</button>
+                        <button class="price-btn-two" id="priceBtnTwo">Place a bid</button>
+                    </div>
                 </div>
-                <div class="price-btn">
-                    <button class="price-btn-one">Buy now for 1 ETH</button>
-                    <button class="price-btn-two">Place a bid</button>
-                </div>
+               
                 <div class="chart">
-                    chart
+                   <img src="../images/nftDetails/chart.png" alt="" class="chart-img">
                 </div>
                 <div class="creator">
                     <img src="../images/nftDetails/artist/image.png" alt="" class="creator-img">
@@ -180,28 +208,28 @@
         <section class="collection">
             <div class="collection-up">
                 <div class="collection-h2">
-                    More from this collection
+                   <b> More from this collection</b>
                 </div>
                 <diiv class="collection-btn">
                     <button class="btn-one">See all</button>
-                    <button class="btn-two"><img src="../images/nftDetails/icon/arrow-left.png" alt=""></button>
-                    <button class="btn-two"><img src="../images/nftDetails/icon/arrow-right.png" alt=""></button>
+                    <!-- <button class="btn-two"><img src="../images/nftDetails/icon/arrow-left.png" alt=""></button>
+                    <button class="btn-two"><img src="../images/nftDetails/icon/arrow-right.png" alt=""></button> -->
                 </diiv>
             </div>
-            <div class="collection-down">
+            <div class="collection-down" id="slider">
                 <div class="collection-images">
                     <img src="../images/nftDetails/c-img/c-img1.png" alt="" class="collection-img">
                     <p class="collection-ptag">Collection name</p>
                     <h5 class="collection-h5">NFT name Ex Shiba....</h5>
                     <div class="collection-price">
-                        <p class="collection-p">
-                            Price
-                            Best offer
-                        </p>
-                        <h5 class="collection-eth">
-                            1.0ETH
-                            1.0ETH
-                        </h5>
+                        <div class="collection-p">
+                            <p class="p-one">Price</p>
+                            <p class="p-two">Best offer</p>
+                        </div>
+                        <div class="collection-e">
+                            <h5 class="e-one">1.0ETH</h5>
+                            <h5 class="e-two">1.0ETH</h5>
+                        </div>
                         <div class="cprice">
                             <p>$130,729.12</p>
                             <div class="cprice-time">
@@ -301,7 +329,44 @@
                 </div>
             </div>
         </section>
+        <section class="overlay" id="overlayOne">
+            <form action="post" class="form-one" id="formOne">
+                <i class="fa fa-close fa-1x" id="close" onclick="closeform()"></i>
+                <h2 class="form-h2">Make an Offer</h2>
+                <img src="../images/nftDetails/hero.png" alt="" class="form-img">
+                <p class="form-stext"> You are about to make an offfer for NFT name from Collection Name. This nft is listed on a 3rd party marketplace, this sale will no contribute to community.</p>
+                <p class="form-offer"><b>Your offer</b></p>
+                <input type="text" placeholder="Enter amount" class="form-offer">
+                <p class="form-offer"><b>Offer expiration</b></p>
+                <input type="date" placeholder="7 days">
+                <label for="">
+                    <input type="checkbox"class="form-check">
+                    <p class="checktext">By checking this, I agree to have a new thing without my brain</p>
+                </label>
+                <button class="price-btn-one">Make an Offer</button>
+                <p class="form-help">Need help? Support</p>
+            </form>
+        </section>
+        <section class="overlay-two" id="overlayTwo">
+            <form action="post" class="form-two" id="formTwo">
+                <i class="fa fa-close fa-1x" id="close" onclick="closeform2()"></i>
+                <h2 class="form-h2">Place a bid</h2>
+                <img src="../images/nftDetails/hero.png" alt="" class="form-img">
+                <p class="form-stext">You are about to plce a bid for NFT name from Collection Name. This nft is listed on a 3rd party marketplace, this sale will no contribute to community.</p>
+                <p class="form-offer"><b>Your bid</b></p>
+                <p class="form-avail">Available 0.0001 ETH</p>
+                <input type="text" placeholder="Enter amount">
+                <label for="">
+                    <input type="checkbox" class="form-check">
+                    <p class="checktext">By checking this, I agree to have a new thing without my brain</p>
+                </label>
+                <button class="price-btn-one">Place a Bid</button>
+                <p class="form-help">Need help? Support</p>
+            </form>
+        </section>
+       
     </main>
 </body>
-
+<script src="../nftDetailsLogedin.js"></script>
+<script src="../index.js"></script>
 </html>
