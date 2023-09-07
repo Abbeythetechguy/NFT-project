@@ -25,7 +25,7 @@ html body header {
   top: 0;
   z-index: 11;
 }
-html body header span {
+html body header .logo {
   font-size: 28rem;
   font-weight: bold;
   border: 3px solid white;
@@ -73,7 +73,7 @@ html body header nav .nav-list .dropdown .dropdown-content li i {
 html body header nav .nav-list .dropdown .dropdown-content .li-bottom {
   border-bottom: 1px solid #a6b8cf;
 }
-html body header nav .nav-list .dropdown:hover .dropdown-content {
+html body header nav .nav-list .dropdown .showmarket-dropdown {
   display: block;
 }
 html body header nav .nav-link {
@@ -81,6 +81,7 @@ html body header nav .nav-link {
   color: #a6b8cf;
   border-radius: 10px;
   padding: 5px 20px;
+  cursor: pointer;
 }
 html body header nav .nav-link:hover {
   background-color: rgba(71, 98, 133, 0.7411764706);

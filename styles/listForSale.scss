@@ -38,7 +38,7 @@ html {
             top: 0;
             z-index: 11;
 
-            span {
+            .logo {
                 font-size: 28rem;
                 font-weight: bold;
                 border: 3px solid white;
@@ -96,11 +96,10 @@ html {
 
                             }
                         }
-
-                        &:hover .dropdown-content {
+                        .showmarket-dropdown{
                             display: block;
                         }
-                    }
+                    }  
                 }
 
                 .nav-link {
@@ -109,12 +108,15 @@ html {
                     border-radius: 10px;
                     padding: 5px 20px;
                     // position: relative;
+                    cursor: pointer;
 
                     &:hover {
                         background-color: #476285bd;
                         // border: 1px solid #8897ac;
                     }
                 }
+
+                
 
                 .toggle-dot {
                     text-decoration: none;
