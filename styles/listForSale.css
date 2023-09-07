@@ -117,6 +117,7 @@ html body header nav .connect-wallet-btn {
   border-radius: 10px;
   padding: 10px;
   text-decoration: none;
+  margin: 0 20px;
   color: #a6b8cf;
 }
 html body header nav .fa-bars {
@@ -129,7 +130,7 @@ html body main .list-item {
   padding: 100px;
 }
 html body main .list-item .list-item-left {
-  width: 30%;
+  width: 35%;
   margin-top: 80px;
 }
 html body main .list-item .list-item-left .list-item-flex-box {
@@ -158,7 +159,7 @@ html body main .list-item .list-item-left .list-item-flex-box p {
   color: #a6b8cf;
 }
 html body main .list-item .list-item-right {
-  width: 70%;
+  width: 65%;
 }
 html body main .list-item .list-item-right h1 {
   margin-bottom: 28px;
@@ -283,7 +284,7 @@ html body main .list-item .list-item-right .top-sale-price .top-sale-price-botto
     margin-left: 10px;
   }
   html body main .list-item {
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     padding: 30px;
   }
@@ -292,12 +293,21 @@ html body main .list-item .list-item-right .top-sale-price .top-sale-price-botto
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
+  }
+  html body main .list-item .list-item-left h3 {
+    font-size: 30rem;
   }
   html body main .list-item .list-item-right {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
+  }
+  html body main .list-item .list-item-right h1 {
+    font-size: 30rem;
+    margin-bottom: 15px;
   }
   html body main .list-item .list-item-right .fix-price-flex-container {
     display: flex;
@@ -308,56 +318,6 @@ html body main .list-item .list-item-right .top-sale-price .top-sale-price-botto
   }
 }
 @media screen and (min-width: 591px) and (max-width: 767px) {
-  html {
-    font-size: 1px;
-  }
-  html body {
-    overflow: none;
-    max-width: 995px;
-    font-size: 15rem;
-  }
-  html body header {
-    padding: 0 20px;
-    height: 80px;
-  }
-  html body header nav {
-    width: 250px;
-  }
-  html body header nav div {
-    width: 130px;
-  }
-  html body header nav .connect-wallet-btn {
-    padding: 8px;
-  }
-  html body header nav .fa-bars {
-    display: block;
-  }
-  html body main .list-item {
-    flex-direction: column-reverse;
-    align-items: center;
-    padding: 30px;
-  }
-  html body main .list-item .list-item-left {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  html body main .list-item .list-item-right {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  html body main .list-item .list-item-right .fix-price-flex-container {
-    display: flex;
-    justify-content: center;
-  }
-  html body main .list-item .list-item-right .fix-price-flex-container .fix-price-flex-item {
-    margin-bottom: 20px;
-  }
-}
-@media screen and (min-width: 180px) and (max-width: 768px) {
   html {
     font-size: 1px;
   }
@@ -387,7 +347,7 @@ html body main .list-item .list-item-right .top-sale-price .top-sale-price-botto
     margin-left: 10px;
   }
   html body main .list-item {
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     padding: 30px;
   }
@@ -396,12 +356,79 @@ html body main .list-item .list-item-right .top-sale-price .top-sale-price-botto
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
+  }
+  html body main .list-item .list-item-left h3 {
+    font-size: 30rem;
   }
   html body main .list-item .list-item-right {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  html body main .list-item .list-item-right .fix-price-flex-container {
+    display: flex;
+    justify-content: center;
+  }
+  html body main .list-item .list-item-right .fix-price-flex-container .fix-price-flex-item {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 180px) and (max-width: 590px) {
+  html {
+    font-size: 1px;
+  }
+  html body {
+    overflow: none;
+    max-width: 995px;
+    font-size: 15rem;
+  }
+  html body header {
+    padding: 0 20px;
+    height: 80px;
+  }
+  html body header nav {
+    width: 300px;
+  }
+  html body header nav .nav-link {
+    display: none;
+  }
+  html body header nav div {
+    width: 200px;
+  }
+  html body header nav .connect-wallet-btn {
+    padding: 8px;
+  }
+  html body header nav .fa-bars {
+    display: block;
+    margin-left: 10px;
+  }
+  html body main .list-item {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+  html body main .list-item .list-item-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  html body main .list-item .list-item-left h3 {
+    font-size: 30rem;
+  }
+  html body main .list-item .list-item-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  html body main .list-item .list-item-right h1 {
+    font-size: 30rem;
+    margin-bottom: 15px;
   }
   html body main .list-item .list-item-right .fix-price-flex-container {
     display: flex;
