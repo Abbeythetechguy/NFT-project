@@ -172,7 +172,7 @@ html body main .activities .active {
   margin-right: 40rem;
 }
 html body main .activities .active-select {
-  font-size: 12rem;
+  font-size: 11rem;
   border-radius: 6px;
   background-color: #f0f4f7;
   color: #476285;
@@ -185,24 +185,22 @@ html body main hr {
 }
 html body main .hero {
   display: flex;
-  margin-top: 18rem;
+  margin-top: 40rem;
 }
 html body main .hero .hero-left {
-  width: 26%;
+  width: 30%;
 }
 html body main .hero .hero-left .filter {
   color: #11315b;
   font-size: 14rem;
-  margin: 10rem 0;
 }
 html body main .hero .hero-left .btn {
-  padding: 20rem;
+  padding: 16rem;
 }
 html body main .hero .hero-left .btn .btn-one {
-  width: 26%;
   font-size: 12rem;
-  padding: 6rem 0;
-  margin: 10rem 7rem;
+  padding: 6rem 20rem;
+  margin: 6rem 7rem;
   border-radius: 10px;
   background-color: #ffffff;
   color: #476285;
