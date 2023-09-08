@@ -1,8 +1,8 @@
 
+// This for the first overlay
 let priceBtnOne = document.getElementById ( "priceBtnOne");
 priceBtnOne.addEventListener ("click", showForm);
 
-// This for the first overlay
 function showForm () {
     let overlayElem = document.getElementById ("overlayOne");
     overlayElem.style.display = "block";
@@ -16,7 +16,6 @@ function closeform() {
 }
 
 // This for the second overlay
-
 let priceBtnTwo = document.getElementById ( "priceBtnTwo");
 priceBtnTwo.addEventListener ("click", showForm2);
 
@@ -30,18 +29,14 @@ function closeform2() {
     overlayElem2.style.display = "none";
 }
 
+// this function is for collection
+let displayBtn = document.getElementById ( "displayBtn");
+displayBtn.addEventListener ("click", showHidden);
 
-
-
-// let a = document.getElementById(toggle);
-// function toggle() {
-//     if(a==1) {
-//         document.getElementById(slider).style.display="inline";
-//         return a=0;
-//     }
-//     else 
-//     {
-//         document.getElementById(slider).style.display="none";
-//         return a=1;
-//     }
-// }
+function showHidden() {
+    let sliderElem = document.getElementById ("slider");
+    sliderElem.style.overflow = "auto";
+    sliderElem.style.justifyContent = "space-evenly";
+    sliderElem.style.margin = "16rem 100rem";
+    sliderElem.style.flexWrap = "wrap";
+}
