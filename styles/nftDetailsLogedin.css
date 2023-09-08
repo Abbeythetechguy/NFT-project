@@ -191,11 +191,11 @@ html body main .hero .hero-left .hero-time {
   color: #ffffff;
 }
 html body main .hero .hero-left .hero-time .hero-time-one {
-  padding-top: 8px;
+  padding-top: 2px;
   margin-left: 12px;
 }
 html body main .hero .hero-left .hero-time .hero-time-two {
-  padding: 8px 6px;
+  padding: 6px 6px;
 }
 html body main .hero .hero-left .list .list-bid {
   width: 50%;
@@ -366,6 +366,7 @@ html body main .hero .hero-right .price .price-btn {
   align-items: center;
   border-radius: 10px;
   padding: 20rem;
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 }
 html body main .hero .hero-right .price .price-btn .price-btn-one {
   width: 100%;
@@ -458,13 +459,13 @@ html body main .collection .collection-down .collection-images {
   height: 448px;
   background-color: #ffffff;
   border-radius: 24px;
-  padding: 10px;
-  margin: 6px;
+  padding: 10rem;
+  margin: 20rem 20rem;
 }
 html body main .collection .collection-down .collection-images .collection-img {
   width: 220px;
   height: 280px;
-  margin-left: 4px;
+  margin-left: 4rem;
 }
 html body main .collection .collection-down .collection-images .border {
   border-radius: 16px;
@@ -473,26 +474,26 @@ html body main .collection .collection-down .collection-images .border {
 html body main .collection .collection-down .collection-images .collection-ptag {
   color: #6e84ab;
   font-size: 12px;
-  padding-top: 12px;
-  margin-left: 16px;
+  padding-top: 12rem;
+  margin-left: 16rem;
 }
 html body main .collection .collection-down .collection-images .collection-h5 {
   color: black;
   font-weight: 400px;
   font-size: 16px;
-  padding-top: 6px;
-  margin-left: 16px;
+  padding-top: 6rem;
+  margin-left: 16rem;
 }
 html body main .collection .collection-down .collection-images .collection-price {
   width: 210px;
   height: 74px;
-  margin: 0 8px;
+  margin: 0 8rem;
   border-radius: 6px;
-  padding: 6px 8px;
+  padding: 6rem 8rem;
   background-color: #f0f4f7;
 }
 html body main .collection .collection-down .collection-images .collection-price .collection-p {
-  font-size: 12px;
+  font-size: 12rem;
   display: flex;
   justify-content: space-between;
   color: #6e84ab;
@@ -500,11 +501,11 @@ html body main .collection .collection-down .collection-images .collection-price
 html body main .collection .collection-down .collection-images .collection-price .collection-e {
   display: flex;
   justify-content: space-between;
-  padding: 4px 0;
-  font-size: 16px;
+  padding: 4rem 0;
+  font-size: 16rem;
 }
 html body main .collection .collection-down .collection-images .collection-price .cprice {
-  font-size: 12px;
+  font-size: 12rem;
   display: flex;
   justify-content: space-between;
   color: #6e84ab;
@@ -514,8 +515,8 @@ html body main .collection .collection-down .collection-images .collection-price
 }
 html body main .collection .collection-down .collection-images .collection-price .cprice .cprice-img {
   display: flex;
-  width: 15px;
-  height: 15px;
+  width: 15rem;
+  height: 15rem;
 }
 html body main .overlay {
   background-color: rgba(0, 0, 0, 0.548);
@@ -580,6 +581,7 @@ html body main .overlay form .price-btn-one {
   background: linear-gradient(60deg, #f906f9, #0698f9);
   border-radius: 10px;
   border: none;
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 }
 html body main .overlay form label {
   display: flex;
@@ -678,6 +680,7 @@ html body main .overlay-two form .price-btn-one {
   background: linear-gradient(60deg, #f906f9, #0698f9);
   border-radius: 10px;
   border: none;
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 }
 html body main .overlay-two form label {
   display: flex;
@@ -864,7 +867,7 @@ html body main #overlayTwo {
     background-color: rgba(0, 0, 0, 0.479);
     border-radius: 10px;
     font-size: 12rem;
-    padding: 8px 6px;
+    padding: 8px 4px;
     color: #ffffff;
   }
   html body main .hero .hero-left .list .list-bid {
@@ -947,39 +950,40 @@ html body main #overlayTwo {
     padding-top: 14rem;
   }
   html body main .hero .hero-right .creator .creator-one .creator-ptag-one {
-    font-size: 10rem;
+    font-size: 8rem;
     color: #6e84ab;
-    padding-top: 8rem;
+    padding-top: 4rem;
   }
   html body main .hero .hero-right .creator .creator-one .creator-vf {
     position: relative;
-    bottom: 20px;
-    right: 30px;
+    bottom: 28px;
+    right: 26px;
     width: 22px;
     height: 22px;
   }
   html body main .hero .hero-right .creator .creator-img {
-    width: 18%;
+    width: 20%;
     height: 40px;
     margin: 8rem;
   }
   html body main .hero .hero-right .creator .creator-two {
     width: 70%;
-    padding-left: 60rem;
+    padding-left: 30rem;
   }
   html body main .hero .hero-right .creator .creator-two .creator-flw {
-    width: 80%;
+    width: 76%;
     height: 40%;
     padding-top: 14rem;
   }
   html body main .hero .hero-right .creator .creator-two .creator-ptag-two {
     font-size: 6rem;
     color: #6e84ab;
-    padding: 6rem 0;
+    padding: 4rem 0;
   }
   html body main .collection .collection-down {
     padding-top: 12px;
     display: flex;
+    margin: 20rem 8rem;
   }
 }
 @media screen and (min-width: 591px) and (max-width: 767px) {
