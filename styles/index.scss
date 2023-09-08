@@ -616,7 +616,8 @@ html {
 
                 .popular-collection-flex-container {
                     display: flex;
-                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    justify-content: center;
                     padding: 50px 0 0;
                     gap: 10px;
 
