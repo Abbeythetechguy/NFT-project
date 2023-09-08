@@ -34,9 +34,11 @@ let displayBtn = document.getElementById ( "displayBtn");
 displayBtn.addEventListener ("click", showHidden);
 
 function showHidden() {
-    let sliderElem = document.getElementById ("slider");sliderElem.classList.toggle("displayBtn");
-    sliderElem.style.overflow = "auto";
-    sliderElem.style.justifyContent = "space-evenly";
-    sliderElem.style.margin = "16rem 100rem";
-    sliderElem.style.flexWrap = "wrap";
+    let sliderElem = document.getElementById ("slider");
+    sliderElem.classList.toggle("btn");
+    console.log("showHidden");
+    // sliderElem.style.overflow = "auto";
+    // sliderElem.style.justifyContent = "space-evenly";
+    // sliderElem.style.margin = "16rem 100rem";
+    // sliderElem.style.flexWrap = "wrap";
 }
