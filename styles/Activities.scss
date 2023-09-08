@@ -240,7 +240,7 @@ html {
                 display: flex;
                 margin-top: 18rem;
                 .hero-left {
-                    width: 20%;
+                    width: 26%;
                     .filter {
                         color: #11315b;
                         font-size: 14rem;
@@ -248,6 +248,7 @@ html {
 
                     }
                     .btn {
+                        padding: 20rem;
                         .btn-one {
                             width: 26%;
                             font-size: 12rem;
@@ -273,11 +274,8 @@ html {
                     }
                         input {
                         border: none;
-                        input::placeholder {
-                            font-size: 14rem;
-                            padding: 14rem;
-                            width: 80%;
-                        }
+                        font-size: 12rem;
+                        padding: 8rem;
                     }
                     .input-one {
                         display: block;

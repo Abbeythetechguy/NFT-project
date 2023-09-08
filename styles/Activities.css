@@ -188,12 +188,15 @@ html body main .hero {
   margin-top: 18rem;
 }
 html body main .hero .hero-left {
-  width: 20%;
+  width: 26%;
 }
 html body main .hero .hero-left .filter {
   color: #11315b;
   font-size: 14rem;
   margin: 10rem 0;
+}
+html body main .hero .hero-left .btn {
+  padding: 20rem;
 }
 html body main .hero .hero-left .btn .btn-one {
   width: 26%;
@@ -219,16 +222,8 @@ html body main .hero .hero-left label {
 }
 html body main .hero .hero-left input {
   border: none;
-}
-html body main .hero .hero-left input input::-moz-placeholder {
-  font-size: 14rem;
-  padding: 14rem;
-  width: 80%;
-}
-html body main .hero .hero-left input input::placeholder {
-  font-size: 14rem;
-  padding: 14rem;
-  width: 80%;
+  font-size: 12rem;
+  padding: 8rem;
 }
 html body main .hero .hero-left .input-one {
   display: block;
