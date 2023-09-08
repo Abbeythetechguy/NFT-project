@@ -76,11 +76,15 @@ html body main section article .connect-wallet-main .show-more-btn {
 }
 html body main section article .connect-wallet-main .go-back-btn {
   padding: 10px 15px;
-  border-radius: 50%;
+  border-radius: 50px;
+  text-decoration: none;
   position: absolute;
   right: 100px;
   color: white;
   background-color: #21204A;
+}
+html body main section article .connect-wallet-main .go-back-btn .fa-arrow-left {
+  margin-right: 10px;
 }
 html body #sign-up-overlay {
   position: absolute;
