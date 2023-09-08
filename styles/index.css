@@ -462,14 +462,14 @@ html body main .popular-collection .popular-collection-title-row .title-row-left
   background-color: #b5d5ff;
   border: 0;
   border-radius: 10px;
-  margin-left: 60px;
+  margin-left: 10px;
 }
 html body main .popular-collection .popular-collection-title-row .title-row-left .title-row-days p {
   color: black;
   margin: 0 10px;
 }
 html body main .popular-collection .popular-collection-title-row .title-row-right {
-  width: 20%;
+  width: 25%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -480,18 +480,19 @@ html body main .popular-collection .popular-collection-title-row .title-row-righ
   border-radius: 10px;
   text-decoration: none;
   color: #a6b8cf;
-  margin-right: 30px;
+  margin-right: 14px;
 }
 html body main .popular-collection .popular-collection-title-row .title-row-right button {
   padding: 10px;
   border: 2px solid #a6b8cf;
   border-radius: 10px;
   color: #a6b8cf;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 html body main .popular-collection .popular-collection-flex-container {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 50px 0 0;
   gap: 10px;
 }
@@ -710,14 +711,14 @@ html body main .trending-nft .trending-nft-title-row .title-row-left .title-row-
   background-color: #b5d5ff;
   border: 0;
   border-radius: 10px;
-  margin-left: 60px;
+  margin-left: 10px;
 }
 html body main .trending-nft .trending-nft-title-row .title-row-left .title-row-days p {
   color: black;
   margin: 0 10px;
 }
 html body main .trending-nft .trending-nft-title-row .title-row-right {
-  width: 20%;
+  width: 25%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -735,7 +736,7 @@ html body main .trending-nft .trending-nft-title-row .title-row-right button {
   border: 2px solid #a6b8cf;
   border-radius: 10px;
   color: #a6b8cf;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 html body main .trending-nft .trending-nft-flex-container {
   margin-top: 50px;
