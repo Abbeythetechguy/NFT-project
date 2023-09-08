@@ -713,6 +713,9 @@ html body main .overlay-two form .fa-close:hover {
 html body main #overlayTwo {
   display: none;
 }
+html body main #displayBtn {
+  overflow: hidden;
+}
 
 @media screen and (min-width: 996px) and (max-width: 1200px) {
   html {

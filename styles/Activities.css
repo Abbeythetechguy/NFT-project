@@ -177,7 +177,7 @@ html body main .activities .active-select {
   background-color: #f0f4f7;
   color: #476285;
   border: 1px solid #6e8fa6;
-  width: 8%;
+  width: 9%;
   padding: 8rem;
 }
 html body main hr {
@@ -223,10 +223,12 @@ html body main .hero .hero-left input {
 html body main .hero .hero-left input input::-moz-placeholder {
   font-size: 14rem;
   padding: 14rem;
+  width: 80%;
 }
 html body main .hero .hero-left input input::placeholder {
   font-size: 14rem;
   padding: 14rem;
+  width: 80%;
 }
 html body main .hero .hero-left .input-one {
   display: block;
