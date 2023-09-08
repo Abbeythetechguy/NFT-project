@@ -126,6 +126,37 @@ html body header nav .nav-list .dropdown .dropdown-content .li-bottom {
 html body header nav .nav-list .dropdown .showmarket-dropdown {
   display: block;
 }
+html body header nav .extra-dropdown .extra-dropdown-content {
+  position: absolute;
+  top: 100px;
+  right: 350px;
+  list-style-type: none;
+  display: none;
+  border: 1px solid #a6b8cf;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.7411764706);
+  padding: 5px;
+}
+html body header nav .extra-dropdown .extra-dropdown-content li {
+  padding: 10px 20px;
+}
+html body header nav .extra-dropdown .extra-dropdown-content li a {
+  font-size: 15rem;
+  text-decoration: none;
+  color: #a6b8cf;
+}
+html body header nav .extra-dropdown .extra-dropdown-content li a:hover {
+  color: white;
+}
+html body header nav .extra-dropdown .extra-dropdown-content li i {
+  margin-right: 10px;
+}
+html body header nav .extra-dropdown .extra-dropdown-content .li-bottom {
+  border-bottom: 1px solid #a6b8cf;
+}
+html body header nav .extra-dropdown .showextra-dropdown {
+  display: block;
+}
 html body header nav .nav-link {
   text-decoration: none;
   color: #a6b8cf;
@@ -141,6 +172,7 @@ html body header nav .toggle-dot {
   height: 30px;
   font-size: 30rem;
   padding-bottom: 60px;
+  cursor: pointer;
 }
 html body header nav .fa-magnifying-glass {
   padding: 5px 10px;
@@ -405,7 +437,6 @@ html body main .popular-collection {
 html body main .popular-collection .popular-collection-title-row {
   display: flex;
   align-items: center;
-  gap: 10px;
   justify-content: space-between;
 }
 html body main .popular-collection .popular-collection-title-row .title-row-left {
@@ -462,6 +493,7 @@ html body main .popular-collection .popular-collection-flex-container {
   display: flex;
   justify-content: space-between;
   padding: 50px 0 0;
+  gap: 10px;
 }
 html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items {
   padding: 10px;
@@ -1318,6 +1350,10 @@ html body footer .footer-right .newsletter-section span i {
   html body header nav .connect-wallet-btn {
     padding: 8px;
   }
+  html body header nav .extra-dropdown .extra-dropdown-content {
+    top: 100px;
+    right: 150px;
+  }
   html body main {
     padding-bottom: 100px;
   }
@@ -1375,7 +1411,7 @@ html body footer .footer-right .newsletter-section span i {
     padding: 50px;
   }
   html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items {
-    width: 240px;
+    width: 250px;
     padding: 10px;
   }
   html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .hot-section-img {
@@ -1875,6 +1911,10 @@ html body footer .footer-right .newsletter-section span i {
   }
   html body header nav .fa-bars {
     display: block;
+  }
+  html body header nav .extra-dropdown .extra-dropdown-content {
+    top: 100px;
+    right: 200px;
   }
   html body main {
     padding-bottom: 100px;
@@ -2463,6 +2503,10 @@ html body footer .footer-right .newsletter-section span i {
   html body header nav .fa-bars {
     display: block;
   }
+  html body header nav .extra-dropdown .extra-dropdown-content {
+    top: 100px;
+    right: 200px;
+  }
   html body main {
     padding-bottom: 50px;
   }
@@ -2470,7 +2514,7 @@ html body footer .footer-right .newsletter-section span i {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-height: 400px;
+    max-height: 500px;
     padding: 0 50px;
   }
   html body main .hero-section .hero-left {
@@ -2488,7 +2532,7 @@ html body footer .footer-right .newsletter-section span i {
   }
   html body main .hero-section .hero-right .hero-stickers-1 {
     left: -90px;
-    top: -380px;
+    top: -410px;
   }
   html body main .hero-section .hero-right .hero-stickers-2 {
     top: -380px;
@@ -2497,8 +2541,11 @@ html body footer .footer-right .newsletter-section span i {
   }
   html body main .hero-section .hero-right .hero-stickers-3 {
     width: 100px;
-    bottom: -50px;
+    bottom: -150px;
     left: 0;
+  }
+  html body main .hero-section .hero-right .hero-right-img {
+    bottom: -100px;
   }
   html body main .hero-section .hero-right .hero-right-img .collection-name {
     display: none;
@@ -2601,6 +2648,7 @@ html body footer .footer-right .newsletter-section span i {
     width: 100px;
   }
   html body main .popular-collection .popular-collection-title-row .title-row-left .title-row-days {
+    display: none;
     margin-left: 0px;
     height: 30px;
     padding: 5px;
@@ -3075,7 +3123,7 @@ html body footer .footer-right .newsletter-section span i {
     font-size: 25px;
   }
 }
-@media screen and (min-width: 180px) and (max-width: 590px) {
+@media screen and (max-width: 590px) {
   html {
     font-size: 1px;
   }
@@ -3179,6 +3227,10 @@ html body footer .footer-right .newsletter-section span i {
   html body header nav .fa-bars {
     display: block;
   }
+  html body header nav .extra-dropdown .extra-dropdown-content {
+    top: 100px;
+    right: 170px;
+  }
   html body main {
     padding-bottom: 50px;
   }
@@ -3266,47 +3318,47 @@ html body footer .footer-right .newsletter-section span i {
     justify-content: center;
     margin: 20px;
   }
-  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items {
-    width: 240px;
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-git flex-items {
+    width: 310px;
     padding: 10px;
     margin: 10px;
   }
-  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .hot-section-img {
-    width: 220px;
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-git flex-items .hot-section-img {
+    width: 290px;
   }
-  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .collection-name p {
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-git flex-items .collection-name p {
     font-size: 12rem;
   }
-  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .collection-name h3 {
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-git flex-items .collection-name h3 {
     font-size: 14rem;
   }
-  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .current-bid {
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-git flex-items .current-bid {
     margin: 15px 0;
   }
-  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .current-bid .current-bid-timer {
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-git flex-items .current-bid .current-bid-timer {
     text-align: right;
   }
-  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .current-bid p {
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-git flex-items .current-bid p {
     color: #a6b8cf;
     font-size: 12rem;
   }
-  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .current-bid h4 {
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-git flex-items .current-bid h4 {
     font-size: 12rem;
   }
-  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .current-bid h5 {
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-git flex-items .current-bid h5 {
     color: #a6b8cf;
     font-size: 12rem;
     font-weight: 200;
   }
-  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .profile-avatar .profile-avatar-left p {
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-git flex-items .profile-avatar .profile-avatar-left p {
     color: #a6b8cf;
     margin-left: 10px;
     font-size: 14rem;
   }
-  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .profile-avatar .profile-avatar-right i {
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-git flex-items .profile-avatar .profile-avatar-right i {
     font-size: 20rem;
   }
-  html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .profile-avatar .profile-avatar-right p {
+  html body main .hot-auction .hot-auction-flex-container .hot-auction-git flex-items .profile-avatar .profile-avatar-right p {
     font-size: 12rem;
   }
   html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items:hover .hot-auction-hover-item-bid {

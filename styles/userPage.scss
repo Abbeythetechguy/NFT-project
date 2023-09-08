@@ -158,6 +158,50 @@ html {
                     }
                 }
 
+                .extra-dropdown {
+                    .extra-dropdown-content {
+                        position: absolute;
+                        top: 100px;
+                        right: 350px;
+                        list-style-type: none;
+                        display: none;
+                        border: 1px solid $font-color2;
+                        border-radius: 15px;
+                        background-color: #000000bd;
+                        padding: 5px;
+
+
+                        li {
+                            padding: 10px 20px;
+
+                            a {
+                                font-size: 15rem;
+                                text-decoration: none;
+                                color: $font-color2;
+
+                                &:hover{
+                                    color: white;
+                                }
+                            }
+
+                            i {
+                                margin-right: 10px;
+                            }
+
+                        }
+
+                        .li-bottom {
+                            border-bottom: 1px solid $font-color2;
+
+                        }
+                    }
+
+                    .showextra-dropdown {
+                        display: block;
+                    }
+
+                }
+
                 .nav-link {
                     text-decoration: none;
                     color: $font-color2;
@@ -176,6 +220,7 @@ html {
                     height: 30px;
                     font-size: 30rem;
                     padding-bottom: 60px;
+                    cursor: pointer;
                     // border: 1px solid white;
                 }
 
@@ -444,15 +489,18 @@ html {
                 height: 80px;
 
                 nav {
-                    // border: 1px solid white;
-                    width: 700px;
-
-                    div {
-                        width: 400px;
-                    }
+                    width : 700px;
 
                     .connect-wallet-btn {
                         padding: 8px;
+                    }
+                    
+                    .extra-dropdown {
+                        .extra-dropdown-content {
+                            top: 100px;
+                            right: 150px;
+                        }
+    
                     }
                 }
             }
@@ -563,6 +611,14 @@ html {
 
                     .fa-bars {
                         display: block;
+                    }
+
+                    .extra-dropdown {
+                        .extra-dropdown-content {
+                            top: 100px;
+                            right: 200px;
+                        }
+    
                     }
                 }
             }
@@ -741,6 +797,14 @@ html {
                     .fa-bars {
                         display: block;
                     }
+
+                    .extra-dropdown {
+                        .extra-dropdown-content {
+                            top: 100px;
+                            right: 200px;
+                        }
+    
+                    }
                 }
             }
 
@@ -852,7 +916,7 @@ html {
     }
 }
 
-@media screen and (min-width: 180px) and (max-width: 590px) {
+@media screen and (max-width: 590px) {
     html {
         font-size: 1px;
 
@@ -960,6 +1024,14 @@ html {
 
                     .fa-bars {
                         display: block;
+                    }
+
+                    .extra-dropdown {
+                        .extra-dropdown-content {
+                            top: 100px;
+                            right: 150px;
+                        }
+    
                     }
                 }
             }
@@ -1076,6 +1148,14 @@ html {
 
                         .trending-nft-flex-container {
                             justify-content: space-around;
+
+                            .trending-nft-flex-items{
+                                width: 310px;
+
+                                .trending-nft-img{
+                                    width: 290px;
+                                }
+                            }
                         }
                     }
                 }

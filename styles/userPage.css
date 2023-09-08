@@ -117,6 +117,37 @@ html body header nav .nav-list .dropdown .dropdown-content .li-bottom {
 html body header nav .nav-list .dropdown .showmarket-dropdown {
   display: block;
 }
+html body header nav .extra-dropdown .extra-dropdown-content {
+  position: absolute;
+  top: 100px;
+  right: 350px;
+  list-style-type: none;
+  display: none;
+  border: 1px solid #a6b8cf;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.7411764706);
+  padding: 5px;
+}
+html body header nav .extra-dropdown .extra-dropdown-content li {
+  padding: 10px 20px;
+}
+html body header nav .extra-dropdown .extra-dropdown-content li a {
+  font-size: 15rem;
+  text-decoration: none;
+  color: #a6b8cf;
+}
+html body header nav .extra-dropdown .extra-dropdown-content li a:hover {
+  color: white;
+}
+html body header nav .extra-dropdown .extra-dropdown-content li i {
+  margin-right: 10px;
+}
+html body header nav .extra-dropdown .extra-dropdown-content .li-bottom {
+  border-bottom: 1px solid #a6b8cf;
+}
+html body header nav .extra-dropdown .showextra-dropdown {
+  display: block;
+}
 html body header nav .nav-link {
   text-decoration: none;
   color: #a6b8cf;
@@ -132,6 +163,7 @@ html body header nav .toggle-dot {
   height: 30px;
   font-size: 30rem;
   padding-bottom: 60px;
+  cursor: pointer;
 }
 html body header nav .fa-magnifying-glass {
   padding: 5px 10px;
@@ -352,11 +384,12 @@ html body main .display-items .trending-nft .trending-nft-flex-container .trendi
   html body header nav {
     width: 700px;
   }
-  html body header nav div {
-    width: 400px;
-  }
   html body header nav .connect-wallet-btn {
     padding: 8px;
+  }
+  html body header nav .extra-dropdown .extra-dropdown-content {
+    top: 100px;
+    right: 150px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 995px) {
@@ -447,6 +480,10 @@ html body main .display-items .trending-nft .trending-nft-flex-container .trendi
   }
   html body header nav .fa-bars {
     display: block;
+  }
+  html body header nav .extra-dropdown .extra-dropdown-content {
+    top: 100px;
+    right: 200px;
   }
   html body main {
     padding: 50px 30px;
@@ -587,6 +624,10 @@ html body main .display-items .trending-nft .trending-nft-flex-container .trendi
   html body header nav .fa-bars {
     display: block;
   }
+  html body header nav .extra-dropdown .extra-dropdown-content {
+    top: 100px;
+    right: 200px;
+  }
   html body main {
     padding: 20px;
     color: #21204A;
@@ -659,7 +700,7 @@ html body main .display-items .trending-nft .trending-nft-flex-container .trendi
     justify-content: space-around;
   }
 }
-@media screen and (min-width: 180px) and (max-width: 590px) {
+@media screen and (max-width: 590px) {
   html {
     font-size: 1px;
   }
@@ -751,6 +792,10 @@ html body main .display-items .trending-nft .trending-nft-flex-container .trendi
   html body header nav .fa-bars {
     display: block;
   }
+  html body header nav .extra-dropdown .extra-dropdown-content {
+    top: 100px;
+    right: 150px;
+  }
   html body main {
     padding: 10px;
     color: #21204A;
@@ -837,5 +882,11 @@ html body main .display-items .trending-nft .trending-nft-flex-container .trendi
   }
   html body main .display-items .trending-nft .trending-nft-flex-container {
     justify-content: space-around;
+  }
+  html body main .display-items .trending-nft .trending-nft-flex-container .trending-nft-flex-items {
+    width: 310px;
+  }
+  html body main .display-items .trending-nft .trending-nft-flex-container .trending-nft-flex-items .trending-nft-img {
+    width: 290px;
   }
 }/*# sourceMappingURL=userPage.css.map */

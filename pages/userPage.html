@@ -25,7 +25,7 @@
     <!-- This is for the mobile menu -->
     <section id="mobile-menu2">
         <span id="close-btn" onclick="closeSideNavBar()">
-            <i class="fa-solid fa-close "></i>Close
+            <i class="fa-solid fa-close "></i>
         </span>
         <ul class="mobile-menu-content">
             <li><a href="../index.html" class="mobile-menu-links">Home</a></li>
@@ -52,7 +52,8 @@
                 <li class="dropdown">
                     <span class="nav-link" id="marketplace-dropdown" onclick="showMarketPlaceMenu()">Market Place</span>
                     <ul class="dropdown-content" id="marketplace-dropdown-content">
-                        <li class="li-bottom"><a href="./collection.html"><i class="fa-solid fa-layer-group"></i> Collections</a></li>
+                        <li class="li-bottom"><a href="./collection.html"><i class="fa-solid fa-layer-group"></i>
+                                Collections</a></li>
                         <li><a href="./artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
                     </ul>
                 </li>
@@ -60,8 +61,17 @@
                 <li><a href="./Activities.html" class="nav-link">Activities</a></li>
 
             </ul>
-            <a href="" class="toggle-dot">...</a>
-            <i class="fa-solid fa-magnifying-glass" onclick="showSearchBar()"></i>
+            <span href="" class="toggle-dot" onclick="toggleBtnMenu()">...</span>
+            <div class="extra-dropdown">
+                <ul class="extra-dropdown-content" id="extra-dropdown-content">
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href="./artistRegister.html">Artist Register</a></li>
+                    <li><a href="./errorpage.html">Error Page</a></li>
+                    <li><a href="./userPro5.html">Profile settings</a></li>
+                    <li><a href="./userPage.html">Userpage</a></li>
+                </ul>
+            </div> <i class="fa-solid fa-magnifying-glass" onclick="showSearchBar()"></i>
             <a href="./connectWallet.html" class="connect-wallet-btn">Connect wallet</a>
             <i class="fa-solid fa-bars" onclick="showSideNav()"></i>
         </nav>
@@ -121,7 +131,10 @@
                     </div>
                 </form>
             </div>
-            <div class="flex justify-between w-[350px] mt-60"><p><b>Total:</b>2,798 items</p><p><b> Last update:</b> 3 min ago</p></div>
+            <div class="flex justify-between w-[350px] mt-60">
+                <p><b>Total:</b>2,798 items</p>
+                <p><b> Last update:</b> 3 min ago</p>
+            </div>
 
             <section class="trending-nft">
                 <div class="trending-nft-flex-container">
@@ -366,13 +379,20 @@
             let showMarketdropdownElem = document.getElementById("marketplace-dropdown-content");
             showMarketdropdownElem.classList.toggle("showmarket-dropdown")
         }
-        // This is for the search icon on the nav bar
 
+        // to grab that extra three dot for dropdown
+        function toggleBtnMenu() {
+            let showMarketdropdownElem = document.getElementById(
+                "extra-dropdown-content"
+            );
+            showMarketdropdownElem.classList.toggle("showextra-dropdown");
+        }
+
+        // This is for the search icon on the nav bar
         function showSearchBar() {
             let displayNavElem = document.getElementById("overlay");
             displayNavElem.style.display = "block";
         }
-
 
         // for displaying and hiding the search bar
         let closeButton = document.getElementById("close-btn1");

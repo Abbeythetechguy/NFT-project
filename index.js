@@ -25,6 +25,15 @@ function showMarketPlaceMenu() {
     "marketplace-dropdown-content"
   );
   showMarketdropdownElem.classList.toggle("showmarket-dropdown");
+
+}
+
+// to grab that extra three dot for dropdown
+function toggleBtnMenu() {
+  let showMarketdropdownElem = document.getElementById(
+    "extra-dropdown-content"
+  );
+  showMarketdropdownElem.classList.toggle("showextra-dropdown");
 }
 
 // for  showing mobile side nav
