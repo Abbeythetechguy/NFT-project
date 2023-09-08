@@ -167,6 +167,50 @@ html {
                     }
                 }
 
+                .extra-dropdown {
+                    .extra-dropdown-content {
+                        position: absolute;
+                        top: 100px;
+                        right: 350px;
+                        list-style-type: none;
+                        display: none;
+                        border: 1px solid $font-color2;
+                        border-radius: 15px;
+                        background-color: #000000bd;
+                        padding: 5px;
+
+
+                        li {
+                            padding: 10px 20px;
+
+                            a {
+                                font-size: 15rem;
+                                text-decoration: none;
+                                color: $font-color2;
+
+                                &:hover{
+                                    color: white;
+                                }
+                            }
+
+                            i {
+                                margin-right: 10px;
+                            }
+
+                        }
+
+                        .li-bottom {
+                            border-bottom: 1px solid $font-color2;
+
+                        }
+                    }
+
+                    .showextra-dropdown {
+                        display: block;
+                    }
+
+                }
+
                 .nav-link {
                     text-decoration: none;
                     color: $font-color2;
@@ -185,6 +229,7 @@ html {
                     height: 30px;
                     font-size: 30rem;
                     padding-bottom: 60px;
+                    cursor: pointer;
                     // border: 1px solid white;
                 }
 
@@ -504,7 +549,6 @@ html {
                 .popular-collection-title-row {
                     display: flex;
                     align-items: center;
-                    gap: 10px;
                     justify-content: space-between;
 
                     .title-row-left {
@@ -574,6 +618,7 @@ html {
                     display: flex;
                     justify-content: space-between;
                     padding: 50px 0 0;
+                    gap: 10px;
 
                     .popular-collection-flex-items {
                         padding: 10px;
@@ -1613,6 +1658,14 @@ html {
                     .connect-wallet-btn {
                         padding: 8px;
                     }
+
+                    .extra-dropdown {
+                        .extra-dropdown-content {
+                            top: 100px;
+                            right: 150px;
+                        }
+    
+                    }
                 }
             }
 
@@ -1689,7 +1742,7 @@ html {
 
                     .hot-auction-flex-container {
                         .hot-auction-flex-items {
-                            width: 240px;
+                            width: 250px;
                             padding: 10px;
 
                             .hot-section-img {
@@ -2350,6 +2403,13 @@ html {
 
                     .fa-bars {
                         display: block;
+                    }
+                    .extra-dropdown {
+                        .extra-dropdown-content {
+                            top: 100px;
+                            right: 200px;
+                        }
+    
                     }
                 }
             }
@@ -3141,6 +3201,14 @@ html {
                     .fa-bars {
                         display: block;
                     }
+
+                    .extra-dropdown {
+                        .extra-dropdown-content {
+                            top: 100px;
+                            right: 200px;
+                        }
+    
+                    }
                 }
             }
 
@@ -3152,7 +3220,7 @@ html {
                     align-items: center;
                     text-align: center;
                     // height: 410px;
-                    max-height: 400px;
+                    max-height: 500px;
                     padding: 0 50px;
 
                     .hero-left {
@@ -3172,7 +3240,7 @@ html {
 
                         .hero-stickers-1 {
                             left: -90px;
-                            top: -380px;
+                            top: -410px;
                         }
 
                         .hero-stickers-2 {
@@ -3183,11 +3251,12 @@ html {
 
                         .hero-stickers-3 {
                             width: 100px;
-                            bottom: -50px;
+                            bottom: -150px;
                             left: 0;
                         }
 
                         .hero-right-img {
+                            bottom: -100px;
                             .collection-name {
                                 display: none;
                             }
@@ -3335,6 +3404,7 @@ html {
                             }
 
                             .title-row-days {
+                                display: none;
                                 margin-left: 0px;
                                 height: 30px;
                                 padding: 5px;
@@ -3953,7 +4023,7 @@ html {
     }
 }
 
-@media screen and (min-width: 180px) and (max-width: 590px) {
+@media screen and (max-width: 590px) {
     html {
         font-size: 1px;
 
@@ -4077,6 +4147,14 @@ html {
                     .fa-bars {
                         display: block;
                     }
+
+                    .extra-dropdown {
+                        .extra-dropdown-content {
+                            top: 100px;
+                            right: 170px;
+                        }
+    
+                    }
                 }
             }
 
@@ -4192,13 +4270,13 @@ html {
                         justify-content: center;
                         margin: 20px;
 
-                        .hot-auction-flex-items {
-                            width: 240px;
+                        .hot-auction-git flex-items {
+                            width: 310px;
                             padding: 10px;
                             margin: 10px;
 
                             .hot-section-img {
-                                width: 220px;
+                                width: 290px;
                             }
 
                             .collection-name {

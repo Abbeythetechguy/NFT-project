@@ -13,26 +13,16 @@
 
 <body>
 
-    <!-- This is for the overlay search bar -->
-    <div id="overlay">
-        <form action="">
-            <span id="close-btn">
-                <i class="fa-solid fa-close "></i>Close
-            </span>
-            <input type="search" name="" placeholder="Input text" id="search-bar">
-        </form>
-    </div>
-
     <!-- This is for the mobile menu -->
     <section id="mobile-menu">
         <span id="close-btn" onclick="closeSideNavBar()">
-            <i class="fa-solid fa-close "></i>Close
+            <i class="fa-solid fa-close "></i>
         </span>
         <div class="mobile-menu-content">
-            <a href="./index.html" class="mobile-menu-links">Home</a>
+            <a href="../index.html" class="mobile-menu-links">Home</a>
             <a href="" class="mobile-menu-links">Market Place</a>
-            <a href="./pages/" class="mobile-menu-links">All NFTs</a>
-            <a href="./pages/Activities.html" class="mobile-menu-links">Activities</a>
+            <a href="./nftOfArtist.html" class="mobile-menu-links">All NFTs</a>
+            <a href="./Activities.html" class="mobile-menu-links">Activities</a>
             <a href="" class="mobile-menu-links">Sign Up</a>
         </div>
     </section>
@@ -41,20 +31,30 @@
         <span class="logo">M</span>
         <nav>
             <ul class="nav-list">
-                <li><a href="./index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html" class="nav-link">Home</a></li>
                 <li class="dropdown">
                     <span class="nav-link" id="marketplace-dropdown" onclick="showMarketPlaceMenu()">Market Place</span>
                     <ul class="dropdown-content" id="marketplace-dropdown-content">
-                        <li class="li-bottom"><a href="./pages/collection.html"><i class="fa-solid fa-layer-group"></i>
+                        <li class="li-bottom"><a href="./collection.html"><i class="fa-solid fa-layer-group"></i>
                                 Collections</a></li>
-                        <li><a href="./pages/artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
+                        <li><a href="./artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
                     </ul>
                 </li>
-                <li><a href="./pages/" class="nav-link">All NFTs</a></li>
-                <li><a href="./pages/Activities.html" class="nav-link">Activities</a></li>
+                <li><a href="./nftOfArtist.html" class="nav-link">All NFTs</a></li>
+                <li><a href="./Activities.html" class="nav-link">Activities</a></li>
 
             </ul>
-            <a href="" class="toggle-dot">...</a>
+            <span href="" class="toggle-dot" onclick="toggleBtnMenu()">...</span>
+            <div class="extra-dropdown">
+                <ul class="extra-dropdown-content" id="extra-dropdown-content">
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href="./artistRegister.html">Artist Register</a></li>
+                    <li><a href="./errorpage.html">Error Page</a></li>
+                    <li><a href="./userPro5.html">Profile settings</a></li>
+                    <li><a href="./userPage.html">Userpage</a></li>
+                </ul>
+            </div>
             <i class="fa-solid fa-magnifying-glass" id="fa-magnifying-glass"></i>
             <a href="./connectWallet.html" class="connect-wallet-btn">Connect wallet</a>
             <i class="fa-solid fa-bars" onclick="showSideNav()"></i>

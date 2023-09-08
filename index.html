@@ -24,7 +24,7 @@
     <!-- This is for the mobile menu -->
     <section id="mobile-menu">
         <span id="close-btn" onclick="closeSideNavBar()">
-            <i class="fa-solid fa-close "></i>Close
+            <i class="fa-solid fa-close "></i>
         </span>
         <ul class="mobile-menu-content">
             <li><a href="./index.html" class="mobile-menu-links">Home</a></li>
@@ -37,7 +37,7 @@
             </li>
             <li><a href="./pages/nftOfArtist.html" class="mobile-menu-links">All NFTs</a></li>
             <li><a href="./pages/Activities.html" class="mobile-menu-links">Activities</a></li>
-            <li><a href="" class="mobile-menu-links">Sign Up</a></li>
+            <li><a href="./pages/nftDetailsLogedin.html" class="mobile-menu-links">Sign Up</a></li>
             <li><a href="./pages/listForSale.html" class="mobile-menu-links">List For Sale</a></li>
         </ul>
     </section>
@@ -54,11 +54,21 @@
                         <li><a href="./pages/artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
                     </ul>
                 </li>
-                <li><a href="./pages/Artist.html" class="nav-link all-nfts">All NFTs</a></li>
+                <li><a href="./pages/nftOfArtist.html" class="nav-link all-nfts">All NFTs</a></li>
                 <li><a href="./pages/Activities.html" class="nav-link">Activities</a></li>
 
             </ul>
-            <a href="" class="toggle-dot">...</a>
+            <span href="" class="toggle-dot" onclick="toggleBtnMenu()">...</span>
+            <div class="extra-dropdown">
+                <ul class="extra-dropdown-content" id="extra-dropdown-content">
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href="./pages/artistRegister.html">Artist Register</a></li>
+                    <li><a href="./pages/errorpage.html">Error Page</a></li>
+                    <li><a href="./pages/userPro5.html">Profile settings</a></li>
+                    <li><a href="./pages/userPage.html">Userpage</a></li>
+                </ul>
+            </div>
             <i class="fa-solid fa-magnifying-glass" id="fa-magnifying-glass"></i>
             <a href="./pages/connectWallet.html" class="connect-wallet-btn">Connect wallet</a>
             <i class="fa-solid fa-bars" onclick="showSideNav()"></i>
