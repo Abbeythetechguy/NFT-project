@@ -450,6 +450,7 @@ html body main .collection .collection-up .collection-btn .btn-one {
   border: none;
   color: #6e84ab;
   font-size: 18rem;
+  cursor: pointer;
 }
 html body main .collection .collection-down {
   display: flex;
@@ -518,6 +519,13 @@ html body main .collection .collection-down .collection-images .collection-price
   display: flex;
   width: 15rem;
   height: 15rem;
+}
+html body main .collection .btn {
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 16rem 100rem;
 }
 html body main .overlay {
   background-color: rgba(0, 0, 0, 0.548);

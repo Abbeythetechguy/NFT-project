@@ -556,7 +556,9 @@ html {
               border: none;
               color: #6e84ab;
               font-size: 18rem;
+              cursor: pointer;
             }
+            
 
             // .btn-two {
             //   width: 60px;
@@ -647,6 +649,13 @@ html {
               }
             }
           }
+        }
+        .btn {
+          overflow: auto;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          margin: 16rem 100rem;
         }
       }
 
