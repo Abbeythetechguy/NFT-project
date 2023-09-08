@@ -74,6 +74,14 @@ html body main section article .connect-wallet-main .show-more-btn {
   font-weight: 800;
   margin-top: 24px;
 }
+html body main section article .connect-wallet-main .go-back-btn {
+  padding: 10px 15px;
+  border-radius: 50%;
+  position: absolute;
+  right: 100px;
+  color: white;
+  background-color: #21204A;
+}
 html body #sign-up-overlay {
   position: absolute;
   width: 100%;
@@ -332,6 +340,11 @@ html body #wallet-required section #sign-in-btn {
   html body main section article .connect-wallet-main .show-more-btn {
     color: white;
   }
+  html body main section article .connect-wallet-main .go-back-btn {
+    right: 60px;
+    color: #21204A;
+    background-color: white;
+  }
 }
 @media screen and (min-width: 180px) and (max-width: 590px) {
   html body aside {
@@ -399,6 +412,12 @@ html body #wallet-required section #sign-in-btn {
     place-items: center;
     font-weight: 800;
     margin-top: 24px;
+  }
+  html body main section article .connect-wallet-main .go-back-btn {
+    bottom: 30px;
+    right: 10px;
+    color: #21204A;
+    background-color: white;
   }
   html body #sign-up-overlay form {
     width: 380px;

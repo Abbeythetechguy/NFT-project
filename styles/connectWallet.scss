@@ -105,6 +105,15 @@ html {
                             font-weight: 800;
                             margin-top: 24px;
                         }
+
+                        .go-back-btn{
+                            padding: 10px 15px;
+                            border-radius: 50%;
+                            position: absolute;
+                            right: 100px;
+                            color: white;
+                            background-color: $bg-color;
+                        }
                     }
                 }
             }
@@ -440,6 +449,12 @@ html {
                             .show-more-btn {
                                 color: white;
                             }
+                            .go-back-btn{
+                                right: 60px;
+                                color: $bg-color;
+                                background-color: $font-color;
+
+                            }
                         }
                     }
                 }
@@ -533,6 +548,14 @@ html {
                                 place-items: center;
                                 font-weight: 800;
                                 margin-top: 24px;
+                            }
+
+                            .go-back-btn{
+                                bottom: 30px;
+                                right: 10px;
+                                color: $bg-color;
+                                background-color: $font-color;
+
                             }
                         }
                     }
