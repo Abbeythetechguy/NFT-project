@@ -1,0 +1,291 @@
+//reset css
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+
+//variables
+$bg-color: #21204A;
+$font-color: white;
+$font-color2: #a6b8cf;
+$main-bg-color: #e0e9f0;
+$inside-flex-item-bg-color:#f0f4f7;
+$font-type: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+html {
+    font-size: 1px;
+
+    body {
+        font-size: 16rem;
+        color: $font-color;
+        font-family: poppins, "Lucida Sans Regular", "Lucida Grande",
+            "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+        header {
+                background-color: $bg-color;
+                padding: 0 100px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 80px;
+                position: sticky;
+                top: 0;
+                z-index: 11;
+    
+                span {
+                    font-size: 28rem;
+                    font-weight: bold;
+                    border: 3px solid white;
+                    border-radius: 10px;
+                    padding: 0 10px;
+                }
+    
+                nav {
+                    // border: 1px solid white;
+                    width: 900px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+    
+                    .nav-list{
+                        list-style-type: none;
+                        width: 500px;
+                        display: flex;
+                        justify-content: space-between;
+    
+                        .dropdown{
+        
+                            .dropdown-content{
+                                position: absolute;
+                                top: 100px;
+                                list-style-type: none;
+                                display: none;
+                                border: 1px solid $font-color2;
+                                border-radius: 15px;
+                                background-color: #000000bd;
+                                padding: 5px;
+                                
+        
+                                li{
+                                    padding: 10px 20px;
+    
+                                    a{
+                                        text-decoration: none;
+                                        color: $font-color2;
+                                    }
+
+                                    i {
+                                        margin-right: 10px;
+                                    }
+                                }
+                                .li-bottom{
+                                    border-bottom: 1px solid $font-color2;
+    
+                                }
+                            }
+        
+                            &:hover .dropdown-content{
+                                display: block;
+                            }
+                        }
+                    }
+    
+                    .nav-link {
+                        text-decoration: none;
+                        color: $font-color2;
+                        border-radius: 10px;
+                        padding: 5px 20px;
+                        // position: relative;
+    
+                        &:hover {
+                            background-color: #476285bd;
+                            // border: 1px solid #8897ac;
+                        }
+                    }
+    
+                    .toggle-dot {
+                        text-decoration: none;
+                        color: $font-color2;
+                        height: 30px;
+                        font-size: 30rem;
+                        padding-bottom: 60px;
+                        // border: 1px solid white;
+                    }
+    
+                    .fa-magnifying-glass {
+                        padding: 5px 10px;
+                    }
+    
+                    // Need to do work on this later on
+                    #search-menu {
+                        display: none;
+                        position: relative;
+                        left: 0;
+                        height: 1200px;
+                        width: 1345px;
+                        // display: block;
+                        background-color: #0000006c;
+    
+                            #search-bar {
+                                position: absolute;
+                                left: 100px;
+                                top: 100px;
+                                // z-index: 20;
+                                height: 50px;
+                                width: 1150px;
+                                border-radius: 10px;
+                                border: 0;
+                            }
+                    }
+    
+                    .connect-wallet-btn {
+                        border: 2px solid white;
+                        border-radius: 10px;
+                        padding: 10px;
+                        text-decoration: none;
+                        color: $font-color2;
+                    }
+    
+                    .fa-bars {
+                        font-size: 30rem;
+                        display: none;
+                    }
+                }
+        }
+    }
+}
+
+@media screen and (min-width: 996px) and (max-width: 1200px) {
+    html {
+        font-size: 1px;
+
+        body {
+            max-width: 1024x;
+            font-size: 15rem;
+
+            header {
+                padding: 0 50px;
+                height: 80px;
+
+                nav {
+                    // border: 1px solid white;
+                    width: 700px;
+
+                    div {
+                        width: 400px;
+                    }
+
+                    .connect-wallet-btn {
+                        padding: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 995px) {
+    html {
+        font-size: 1px;
+
+        body {
+            overflow: none;
+            max-width: 995px;
+            font-size: 15rem;
+
+            header {
+                padding: 0 30px;
+                height: 80px;
+
+                nav {
+                    // border: 1px solid white;
+                    width: 250px;
+
+                    div {
+                        display: none;
+                    }
+
+                    .connect-wallet-btn {
+                        padding: 8px;
+                    }
+
+                    .fa-bars {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 180px) and (max-width: 768px) {
+    html {
+        font-size: 1px;
+
+        body {
+            overflow: none;
+            max-width: 995px;
+            font-size: 15rem;
+
+            header {
+                padding: 0 20px;
+                height: 80px;
+
+                nav {
+                    // border: 1px solid white;
+                    width: 100px;
+
+                    div {
+                        display: none;
+                    }
+
+                    .connect-wallet-btn {
+                        padding: 8px;
+                        display: none;
+                    }
+
+                    .fa-bars {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 591px) and (max-width: 767px) {
+    html {
+        font-size: 1px;
+
+        body {
+            overflow: none;
+            max-width: 995px;
+            font-size: 15rem;
+
+            header {
+                padding: 0 20px;
+                height: 80px;
+
+                nav {
+                    // border: 1px solid white;
+                    width: 250px;
+
+                    div {
+                        display: none;
+                    }
+
+                    .connect-wallet-btn {
+                        padding: 8px;
+                    }
+
+                    .fa-bars {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
