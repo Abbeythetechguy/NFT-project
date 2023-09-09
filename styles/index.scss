@@ -693,6 +693,11 @@ html {
             .top-artist-collection {
                 padding: 100px 100px 0;
 
+                a{
+                    text-decoration: none;
+                    color: $font-color3;
+                }
+
                 .top-artist-title-row {
                     display: flex;
                     align-items: center;

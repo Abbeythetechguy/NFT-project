@@ -552,6 +552,10 @@ html body main .popular-collection .popular-collection-flex-container .popular-c
 html body main .top-artist-collection {
   padding: 100px 100px 0;
 }
+html body main .top-artist-collection a {
+  text-decoration: none;
+  color: #21204a;
+}
 html body main .top-artist-collection .top-artist-title-row {
   display: flex;
   align-items: center;
