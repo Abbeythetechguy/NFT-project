@@ -234,6 +234,7 @@ html body main .dp-cat .profile-photo-upload textarea {
 html body main .details-cat {
   display: flex;
   margin-top: 80px;
+  color: #21204A;
 }
 html body main .details-cat .info {
   width: 30%;
@@ -266,6 +267,7 @@ html body main .details-cat .details input {
 html body main .share-car {
   display: flex;
   margin-top: 80px;
+  color: #21204A;
 }
 html body main .share-car .info {
   width: 30%;
@@ -300,6 +302,7 @@ html body main .share-car .details span {
 html body main .almost-done {
   display: flex;
   margin-top: 80px;
+  color: #21204A;
 }
 html body main .almost-done .info {
   width: 30%;
