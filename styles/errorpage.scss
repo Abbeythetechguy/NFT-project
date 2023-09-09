@@ -372,7 +372,6 @@ html {
         font-size: 1px;
 
         body {
-            max-width: 1024x;
             font-size: 15rem;
 
             header {
@@ -386,8 +385,6 @@ html {
                         padding: 8px;
                     }
 
-                    
-                    
                     .extra-dropdown {
                         .extra-dropdown-content {
                             top: 100px;
@@ -492,6 +489,86 @@ html {
             overflow: none;
             max-width: 995px;
             font-size: 15rem;
+
+            #mobile-menu {
+                height: 100vh;
+                width: 300px;
+                background-color:$main-bg-color;
+                position: fixed ;
+                z-index: 29;
+                right: 0;
+                display: none;
+    
+                #close-btn{
+                    font-size: 20rem;
+                    color: red;
+                    position: absolute;
+                    right: 0;
+                    cursor: pointer;
+    
+                    .fa-close{
+                        margin-right: 5px;
+                    }
+                }
+    
+                .mobile-menu-content {
+                    padding-top: 30px ;
+                    list-style: none;
+    
+                    .mobile-menu-links {
+                        font-size: 20rem;
+                        text-decoration: none;
+                        color: $bg-color;
+                        width: 100%;
+                        height: 70px;
+                        // border-radius: 10px;
+                        padding: 5px 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        &:hover {
+                            background-color: #476285bd;
+                            color: white;
+                        }
+    
+                        &:active {
+                            color: white;
+                        }
+    
+                    }
+                    .dropdown{
+                        cursor: pointer;
+
+                        .dropdown-content{
+                            display: none;
+                            list-style: none;
+
+                            a{
+                                text-decoration: none;
+                                padding: 10px 0;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                color: $bg-color;
+                                width: 100%;
+
+                                i{
+                                    margin-right: 15px;
+                                }
+
+                                &:hover {
+                                    background-color: #476285bd;
+                                    color: white;
+                                }
+                            }
+                        }
+                        .showMobmarket-dropdown{
+                            display: block;
+                        }
+                    }
+                }
+            }
             
 
             header {
@@ -649,7 +726,7 @@ html {
                     .mobile-menu-links {
                         font-size: 20rem;
                         text-decoration: none;
-                        color: $font-color2;
+                        color: $bg-color;
                         width: 100%;
                         height: 70px;
                         // border-radius: 10px;
@@ -681,7 +758,7 @@ html {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
-                                color: $font-color2;
+                                color: $bg-color;
                                 width: 100%;
 
                                 i{
@@ -930,7 +1007,7 @@ html {
                     .mobile-menu-links {
                         font-size: 20rem;
                         text-decoration: none;
-                        color: $font-color2;
+                        color: $bg-color;
                         width: 100%;
                         height: 70px;
                         // border-radius: 10px;
@@ -962,7 +1039,7 @@ html {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
-                                color: $font-color2;
+                                color: $bg-color;
                                 width: 100%;
 
                                 i{

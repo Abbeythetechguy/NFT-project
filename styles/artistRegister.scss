@@ -72,7 +72,7 @@ html {
         }
 
         //Thos is for the mobile nav
-        #mobile-menu2 {
+        #mobile-menu {
             display: none;
         }
 
@@ -158,6 +158,50 @@ html {
                     }
                 }
 
+                .extra-dropdown {
+                    .extra-dropdown-content {
+                        position: absolute;
+                        top: 100px;
+                        right: 350px;
+                        list-style-type: none;
+                        display: none;
+                        border: 1px solid $font-color2;
+                        border-radius: 15px;
+                        background-color: #000000bd;
+                        padding: 5px;
+
+
+                        li {
+                            padding: 10px 20px;
+
+                            a {
+                                font-size: 15rem;
+                                text-decoration: none;
+                                color: $font-color2;
+
+                                &:hover {
+                                    color: white;
+                                }
+                            }
+
+                            i {
+                                margin-right: 10px;
+                            }
+
+                        }
+
+                        .li-bottom {
+                            border-bottom: 1px solid $font-color2;
+
+                        }
+                    }
+
+                    .showextra-dropdown {
+                        display: block;
+                    }
+
+                }
+
                 .nav-link {
                     text-decoration: none;
                     color: $font-color2;
@@ -176,6 +220,7 @@ html {
                     height: 30px;
                     font-size: 30rem;
                     padding-bottom: 60px;
+                    cursor: pointer;
                     // border: 1px solid white;
                 }
 
@@ -400,10 +445,9 @@ html {
         font-size: 1px;
 
         body {
-            max-width: 1024x;
             font-size: 15rem;
 
-            #mobile-menu2 {
+            #mobile-menu {
                 display: none;
             }
 
@@ -415,12 +459,16 @@ html {
                     // border: 1px solid white;
                     width: 700px;
 
-                    div {
-                        width: 250px;
-                    }
-
                     .connect-wallet-btn {
                         padding: 8px;
+                    }
+
+                    .extra-dropdown {
+                        .extra-dropdown-content {
+                            top: 100px;
+                            right: 150px;
+                        }
+
                     }
                 }
             }
@@ -437,7 +485,7 @@ html {
             max-width: 995px;
             font-size: 15rem;
 
-            #mobile-menu2 {
+            #mobile-menu {
                 height: 100vh;
                 width: 300px;
                 background-color: $main-bg-color;
@@ -460,14 +508,15 @@ html {
 
                 .mobile-menu-content {
                     padding-top: 30px;
-                    list-style-type: none;
+                    list-style: none;
 
                     .mobile-menu-links {
                         font-size: 20rem;
                         text-decoration: none;
-                        color: $font-color3;
+                        color: $bg-color;
                         width: 100%;
                         height: 70px;
+                        // border-radius: 10px;
                         padding: 5px 20px;
                         display: flex;
                         justify-content: center;
@@ -475,6 +524,10 @@ html {
 
                         &:hover {
                             background-color: #476285bd;
+                            color: white;
+                        }
+
+                        &:active {
                             color: white;
                         }
 
@@ -493,7 +546,7 @@ html {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
-                                color: $font-color3;
+                                color: $font-color2;
                                 width: 100%;
 
                                 i {
@@ -539,6 +592,14 @@ html {
                         display: block;
                         cursor: pointer;
                         margin-left: 10px;
+                    }
+
+                    .extra-dropdown {
+                        .extra-dropdown-content {
+                            top: 100px;
+                            right: 200px;
+                        }
+
                     }
                 }
             }
@@ -748,7 +809,7 @@ html {
                 padding: 0 50px;
             }
 
-            #mobile-menu2 {
+            #mobile-menu {
                 height: 100vh;
                 width: 300px;
                 background-color: $main-bg-color;
@@ -771,14 +832,15 @@ html {
 
                 .mobile-menu-content {
                     padding-top: 30px;
-                    list-style-type: none;
+                    list-style: none;
 
                     .mobile-menu-links {
                         font-size: 20rem;
                         text-decoration: none;
-                        color: $font-color3;
+                        color: $bg-color;
                         width: 100%;
                         height: 70px;
+                        // border-radius: 10px;
                         padding: 5px 20px;
                         display: flex;
                         justify-content: center;
@@ -786,6 +848,10 @@ html {
 
                         &:hover {
                             background-color: #476285bd;
+                            color: white;
+                        }
+
+                        &:active {
                             color: white;
                         }
 
@@ -804,7 +870,7 @@ html {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
-                                color: $font-color3;
+                                color: $bg-color;
                                 width: 100%;
 
                                 i {
@@ -830,7 +896,7 @@ html {
                 height: 80px;
 
                 nav {
-                    width: 500px;
+                    width: 300px;
 
                     .nav-link {
                         display: none;
@@ -850,6 +916,14 @@ html {
                         display: block;
                         cursor: pointer;
                         margin-left: 10px;
+                    }
+
+                    .extra-dropdown {
+                        .extra-dropdown-content {
+                            top: 100px;
+                            right: 150px;
+                        }
+
                     }
                 }
             }
@@ -910,7 +984,7 @@ html {
     }
 }
 
-@media screen and (min-width: 180px) and (max-width: 590px) {
+@media screen and (max-width: 590px) {
     html {
         font-size: 1px;
 
@@ -923,7 +997,7 @@ html {
                 padding: 0 20px;
             }
 
-            #mobile-menu2 {
+            #mobile-menu {
                 height: 100vh;
                 width: 300px;
                 background-color: $main-bg-color;
@@ -946,14 +1020,15 @@ html {
 
                 .mobile-menu-content {
                     padding-top: 30px;
-                    list-style-type: none;
+                    list-style: none;
 
                     .mobile-menu-links {
                         font-size: 20rem;
                         text-decoration: none;
-                        color: $font-color3;
+                        color: $bg-color;
                         width: 100%;
                         height: 70px;
+                        // border-radius: 10px;
                         padding: 5px 20px;
                         display: flex;
                         justify-content: center;
@@ -961,6 +1036,10 @@ html {
 
                         &:hover {
                             background-color: #476285bd;
+                            color: white;
+                        }
+
+                        &:active {
                             color: white;
                         }
 
@@ -979,7 +1058,7 @@ html {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
-                                color: $font-color3;
+                                color: $bg-color;
                                 width: 100%;
 
                                 i {
@@ -1021,6 +1100,14 @@ html {
                         cursor: pointer;
                         margin-left: 10px;
                     }
+
+                    .extra-dropdown {
+                        .extra-dropdown-content {
+                            top: 100px;
+                            right: 50px;
+                        }
+
+                    }
                 }
             }
 
@@ -1036,14 +1123,16 @@ html {
 
                 .dp-cat {
                     flex-direction: column;
-                    margin-top: 40px;
+                    margin-top: 0px;
 
                     .info {
+                        margin-top: 10px;
                         width: 100%;
                         padding-right: 0px;
                         margin-bottom: 16px;
 
                         h3 {
+                            font-size: 30px;
                             margin-bottom: 8px;
                         }
 
@@ -1054,6 +1143,10 @@ html {
 
                     .profile-photo-upload {
                         width: 100%;
+
+                        h1 {
+                            font-size: 26rem;
+                        }
 
                         div {
                             display: flex;

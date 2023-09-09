@@ -294,7 +294,6 @@ html body footer .footer-right .newsletter-section span i {
     font-size: 1px;
   }
   html body {
-    max-width: 1024x;
     font-size: 15rem;
   }
   html body header {
@@ -388,6 +387,73 @@ html body footer .footer-right .newsletter-section span i {
     overflow: none;
     max-width: 995px;
     font-size: 15rem;
+  }
+  html body #mobile-menu {
+    height: 100vh;
+    width: 300px;
+    background-color: #e0e9f0;
+    position: fixed;
+    z-index: 29;
+    right: 0;
+    display: none;
+  }
+  html body #mobile-menu #close-btn {
+    font-size: 20rem;
+    color: red;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+  html body #mobile-menu #close-btn .fa-close {
+    margin-right: 5px;
+  }
+  html body #mobile-menu .mobile-menu-content {
+    padding-top: 30px;
+    list-style: none;
+  }
+  html body #mobile-menu .mobile-menu-content .mobile-menu-links {
+    font-size: 20rem;
+    text-decoration: none;
+    color: #21204A;
+    width: 100%;
+    height: 70px;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  html body #mobile-menu .mobile-menu-content .mobile-menu-links:hover {
+    background-color: rgba(71, 98, 133, 0.7411764706);
+    color: white;
+  }
+  html body #mobile-menu .mobile-menu-content .mobile-menu-links:active {
+    color: white;
+  }
+  html body #mobile-menu .mobile-menu-content .dropdown {
+    cursor: pointer;
+  }
+  html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content {
+    display: none;
+    list-style: none;
+  }
+  html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content a {
+    text-decoration: none;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #21204A;
+    width: 100%;
+  }
+  html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content a i {
+    margin-right: 15px;
+  }
+  html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content a:hover {
+    background-color: rgba(71, 98, 133, 0.7411764706);
+    color: white;
+  }
+  html body #mobile-menu .mobile-menu-content .dropdown .showMobmarket-dropdown {
+    display: block;
   }
   html body header {
     padding: 0 30px;
@@ -507,7 +573,7 @@ html body footer .footer-right .newsletter-section span i {
   html body #mobile-menu .mobile-menu-content .mobile-menu-links {
     font-size: 20rem;
     text-decoration: none;
-    color: #a6b8cf;
+    color: #21204A;
     width: 100%;
     height: 70px;
     padding: 5px 20px;
@@ -535,7 +601,7 @@ html body footer .footer-right .newsletter-section span i {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #a6b8cf;
+    color: #21204A;
     width: 100%;
   }
   html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content a i {
@@ -730,7 +796,7 @@ html body footer .footer-right .newsletter-section span i {
   html body #mobile-menu .mobile-menu-content .mobile-menu-links {
     font-size: 20rem;
     text-decoration: none;
-    color: #a6b8cf;
+    color: #21204A;
     width: 100%;
     height: 70px;
     padding: 5px 20px;
@@ -758,7 +824,7 @@ html body footer .footer-right .newsletter-section span i {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #a6b8cf;
+    color: #21204A;
     width: 100%;
   }
   html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content a i {

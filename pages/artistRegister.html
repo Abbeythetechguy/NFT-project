@@ -22,8 +22,9 @@
             <input type="search" name="" placeholder="Input text" id="search-bar">
         </form>
     </div>
+    
     <!-- This is for the mobile menu -->
-    <section id="mobile-menu2">
+    <section id="mobile-menu">
         <span id="close-btn" onclick="closeSideNavBar()">
             <i class="fa-solid fa-close "></i>
         </span>
@@ -61,7 +62,16 @@
                 <li><a href="./Activities.html" class="nav-link">Activities</a></li>
 
             </ul>
-            <a href="" class="toggle-dot">...</a>
+            <span href="" class="toggle-dot" onclick="toggleBtnMenu()">...</span>
+            <div class="extra-dropdown">
+                <ul class="extra-dropdown-content" id="extra-dropdown-content">
+                    
+                    <li><a href="./artistRegister.html">Artist Register</a></li>
+                    <li><a href="./errorpage.html">Error Page</a></li>
+                    <li><a href="./userPro5.html">Profile settings</a></li>
+                    <li><a href="./userPage.html">Userpage</a></li>
+                </ul>
+            </div>
             <i class="fa-solid fa-magnifying-glass" onclick="showSearchBar()"></i>
             <a href="./connectWallet.html" class="connect-wallet-btn">Create</a>
             <i class="fa-solid fa-bars" onclick="showSideNav()"></i>
@@ -132,9 +142,9 @@
         </form>
     </main>
 
-    <script>
-
-        function showMarketPlaceMenu() {
+    <script src="../index.js"></script>
+    <!-- <script>
+         function showMarketPlaceMenu() {
             let showMarketdropdownElem = document.getElementById("marketplace-dropdown-content");
             showMarketdropdownElem.classList.toggle("showmarket-dropdown")
         }
@@ -171,7 +181,7 @@
             showMobileMarketElem.classList.toggle("showMobmarket-dropdown")
         }
 
-    </script>
+    </script> -->
 
 </body>
 
