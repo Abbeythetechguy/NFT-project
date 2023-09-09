@@ -51,7 +51,7 @@ html body #overlay form span {
 html body #overlay form span i {
   margin-right: 10px;
 }
-html body #mobile-menu2 {
+html body #mobile-menu {
   display: none;
 }
 html body header {
@@ -117,6 +117,37 @@ html body header nav .nav-list .dropdown .dropdown-content .li-bottom {
 html body header nav .nav-list .dropdown .showmarket-dropdown {
   display: block;
 }
+html body header nav .extra-dropdown .extra-dropdown-content {
+  position: absolute;
+  top: 100px;
+  right: 350px;
+  list-style-type: none;
+  display: none;
+  border: 1px solid #8ca0b9;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.7411764706);
+  padding: 5px;
+}
+html body header nav .extra-dropdown .extra-dropdown-content li {
+  padding: 10px 20px;
+}
+html body header nav .extra-dropdown .extra-dropdown-content li a {
+  font-size: 15rem;
+  text-decoration: none;
+  color: #8ca0b9;
+}
+html body header nav .extra-dropdown .extra-dropdown-content li a:hover {
+  color: white;
+}
+html body header nav .extra-dropdown .extra-dropdown-content li i {
+  margin-right: 10px;
+}
+html body header nav .extra-dropdown .extra-dropdown-content .li-bottom {
+  border-bottom: 1px solid #8ca0b9;
+}
+html body header nav .extra-dropdown .showextra-dropdown {
+  display: block;
+}
 html body header nav .nav-link {
   text-decoration: none;
   color: #8ca0b9;
@@ -132,6 +163,7 @@ html body header nav .toggle-dot {
   height: 30px;
   font-size: 30rem;
   padding-bottom: 60px;
+  cursor: pointer;
 }
 html body header nav .fa-magnifying-glass {
   padding: 5px 10px;
@@ -313,10 +345,9 @@ html body main .almost-done .details button {
     font-size: 1px;
   }
   html body {
-    max-width: 1024x;
     font-size: 15rem;
   }
-  html body #mobile-menu2 {
+  html body #mobile-menu {
     display: none;
   }
   html body header {
@@ -326,11 +357,12 @@ html body main .almost-done .details button {
   html body header nav {
     width: 700px;
   }
-  html body header nav div {
-    width: 250px;
-  }
   html body header nav .connect-wallet-btn {
     padding: 8px;
+  }
+  html body header nav .extra-dropdown .extra-dropdown-content {
+    top: 100px;
+    right: 150px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 995px) {
@@ -342,7 +374,7 @@ html body main .almost-done .details button {
     max-width: 995px;
     font-size: 15rem;
   }
-  html body #mobile-menu2 {
+  html body #mobile-menu {
     height: 100vh;
     width: 300px;
     background-color: #e0e9f0;
@@ -351,24 +383,24 @@ html body main .almost-done .details button {
     right: 0;
     display: none;
   }
-  html body #mobile-menu2 #close-btn {
+  html body #mobile-menu #close-btn {
     font-size: 20rem;
     color: red;
     position: absolute;
     right: 0;
     cursor: pointer;
   }
-  html body #mobile-menu2 #close-btn .fa-close {
+  html body #mobile-menu #close-btn .fa-close {
     margin-right: 5px;
   }
-  html body #mobile-menu2 .mobile-menu-content {
+  html body #mobile-menu .mobile-menu-content {
     padding-top: 30px;
-    list-style-type: none;
+    list-style: none;
   }
-  html body #mobile-menu2 .mobile-menu-content .mobile-menu-links {
+  html body #mobile-menu .mobile-menu-content .mobile-menu-links {
     font-size: 20rem;
     text-decoration: none;
-    color: #21204a;
+    color: #21204A;
     width: 100%;
     height: 70px;
     padding: 5px 20px;
@@ -376,34 +408,37 @@ html body main .almost-done .details button {
     justify-content: center;
     align-items: center;
   }
-  html body #mobile-menu2 .mobile-menu-content .mobile-menu-links:hover {
+  html body #mobile-menu .mobile-menu-content .mobile-menu-links:hover {
     background-color: rgba(71, 98, 133, 0.7411764706);
     color: white;
   }
-  html body #mobile-menu2 .mobile-menu-content .dropdown {
+  html body #mobile-menu .mobile-menu-content .mobile-menu-links:active {
+    color: white;
+  }
+  html body #mobile-menu .mobile-menu-content .dropdown {
     cursor: pointer;
   }
-  html body #mobile-menu2 .mobile-menu-content .dropdown .dropdown-content {
+  html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content {
     display: none;
     list-style: none;
   }
-  html body #mobile-menu2 .mobile-menu-content .dropdown .dropdown-content a {
+  html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content a {
     text-decoration: none;
     padding: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #21204a;
+    color: #8ca0b9;
     width: 100%;
   }
-  html body #mobile-menu2 .mobile-menu-content .dropdown .dropdown-content a i {
+  html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content a i {
     margin-right: 15px;
   }
-  html body #mobile-menu2 .mobile-menu-content .dropdown .dropdown-content a:hover {
+  html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content a:hover {
     background-color: rgba(71, 98, 133, 0.7411764706);
     color: white;
   }
-  html body #mobile-menu2 .mobile-menu-content .dropdown .showMobmarket-dropdown {
+  html body #mobile-menu .mobile-menu-content .dropdown .showMobmarket-dropdown {
     display: block;
   }
   html body header {
@@ -428,6 +463,10 @@ html body main .almost-done .details button {
     display: block;
     cursor: pointer;
     margin-left: 10px;
+  }
+  html body header nav .extra-dropdown .extra-dropdown-content {
+    top: 100px;
+    right: 200px;
   }
   html body main {
     padding: 40px;
@@ -592,7 +631,7 @@ html body main .almost-done .details button {
   html body #overlay {
     padding: 0 50px;
   }
-  html body #mobile-menu2 {
+  html body #mobile-menu {
     height: 100vh;
     width: 300px;
     background-color: #e0e9f0;
@@ -601,24 +640,24 @@ html body main .almost-done .details button {
     right: 0;
     display: none;
   }
-  html body #mobile-menu2 #close-btn {
+  html body #mobile-menu #close-btn {
     font-size: 20rem;
     color: red;
     position: absolute;
     right: 0;
     cursor: pointer;
   }
-  html body #mobile-menu2 #close-btn .fa-close {
+  html body #mobile-menu #close-btn .fa-close {
     margin-right: 5px;
   }
-  html body #mobile-menu2 .mobile-menu-content {
+  html body #mobile-menu .mobile-menu-content {
     padding-top: 30px;
-    list-style-type: none;
+    list-style: none;
   }
-  html body #mobile-menu2 .mobile-menu-content .mobile-menu-links {
+  html body #mobile-menu .mobile-menu-content .mobile-menu-links {
     font-size: 20rem;
     text-decoration: none;
-    color: #21204a;
+    color: #21204A;
     width: 100%;
     height: 70px;
     padding: 5px 20px;
@@ -626,34 +665,37 @@ html body main .almost-done .details button {
     justify-content: center;
     align-items: center;
   }
-  html body #mobile-menu2 .mobile-menu-content .mobile-menu-links:hover {
+  html body #mobile-menu .mobile-menu-content .mobile-menu-links:hover {
     background-color: rgba(71, 98, 133, 0.7411764706);
     color: white;
   }
-  html body #mobile-menu2 .mobile-menu-content .dropdown {
+  html body #mobile-menu .mobile-menu-content .mobile-menu-links:active {
+    color: white;
+  }
+  html body #mobile-menu .mobile-menu-content .dropdown {
     cursor: pointer;
   }
-  html body #mobile-menu2 .mobile-menu-content .dropdown .dropdown-content {
+  html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content {
     display: none;
     list-style: none;
   }
-  html body #mobile-menu2 .mobile-menu-content .dropdown .dropdown-content a {
+  html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content a {
     text-decoration: none;
     padding: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #21204a;
+    color: #21204A;
     width: 100%;
   }
-  html body #mobile-menu2 .mobile-menu-content .dropdown .dropdown-content a i {
+  html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content a i {
     margin-right: 15px;
   }
-  html body #mobile-menu2 .mobile-menu-content .dropdown .dropdown-content a:hover {
+  html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content a:hover {
     background-color: rgba(71, 98, 133, 0.7411764706);
     color: white;
   }
-  html body #mobile-menu2 .mobile-menu-content .dropdown .showMobmarket-dropdown {
+  html body #mobile-menu .mobile-menu-content .dropdown .showMobmarket-dropdown {
     display: block;
   }
   html body header {
@@ -661,7 +703,7 @@ html body main .almost-done .details button {
     height: 80px;
   }
   html body header nav {
-    width: 500px;
+    width: 300px;
   }
   html body header nav .nav-link {
     display: none;
@@ -678,6 +720,10 @@ html body main .almost-done .details button {
     display: block;
     cursor: pointer;
     margin-left: 10px;
+  }
+  html body header nav .extra-dropdown .extra-dropdown-content {
+    top: 100px;
+    right: 150px;
   }
   html body main {
     padding: 40px;
@@ -706,7 +752,7 @@ html body main .almost-done .details button {
     width: 400px;
   }
 }
-@media screen and (min-width: 180px) and (max-width: 590px) {
+@media screen and (max-width: 590px) {
   html {
     font-size: 1px;
   }
@@ -717,7 +763,7 @@ html body main .almost-done .details button {
   html body #overlay {
     padding: 0 20px;
   }
-  html body #mobile-menu2 {
+  html body #mobile-menu {
     height: 100vh;
     width: 300px;
     background-color: #e0e9f0;
@@ -726,24 +772,24 @@ html body main .almost-done .details button {
     right: 0;
     display: none;
   }
-  html body #mobile-menu2 #close-btn {
+  html body #mobile-menu #close-btn {
     font-size: 20rem;
     color: red;
     position: absolute;
     right: 0;
     cursor: pointer;
   }
-  html body #mobile-menu2 #close-btn .fa-close {
+  html body #mobile-menu #close-btn .fa-close {
     margin-right: 5px;
   }
-  html body #mobile-menu2 .mobile-menu-content {
+  html body #mobile-menu .mobile-menu-content {
     padding-top: 30px;
-    list-style-type: none;
+    list-style: none;
   }
-  html body #mobile-menu2 .mobile-menu-content .mobile-menu-links {
+  html body #mobile-menu .mobile-menu-content .mobile-menu-links {
     font-size: 20rem;
     text-decoration: none;
-    color: #21204a;
+    color: #21204A;
     width: 100%;
     height: 70px;
     padding: 5px 20px;
@@ -751,34 +797,37 @@ html body main .almost-done .details button {
     justify-content: center;
     align-items: center;
   }
-  html body #mobile-menu2 .mobile-menu-content .mobile-menu-links:hover {
+  html body #mobile-menu .mobile-menu-content .mobile-menu-links:hover {
     background-color: rgba(71, 98, 133, 0.7411764706);
     color: white;
   }
-  html body #mobile-menu2 .mobile-menu-content .dropdown {
+  html body #mobile-menu .mobile-menu-content .mobile-menu-links:active {
+    color: white;
+  }
+  html body #mobile-menu .mobile-menu-content .dropdown {
     cursor: pointer;
   }
-  html body #mobile-menu2 .mobile-menu-content .dropdown .dropdown-content {
+  html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content {
     display: none;
     list-style: none;
   }
-  html body #mobile-menu2 .mobile-menu-content .dropdown .dropdown-content a {
+  html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content a {
     text-decoration: none;
     padding: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #21204a;
+    color: #21204A;
     width: 100%;
   }
-  html body #mobile-menu2 .mobile-menu-content .dropdown .dropdown-content a i {
+  html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content a i {
     margin-right: 15px;
   }
-  html body #mobile-menu2 .mobile-menu-content .dropdown .dropdown-content a:hover {
+  html body #mobile-menu .mobile-menu-content .dropdown .dropdown-content a:hover {
     background-color: rgba(71, 98, 133, 0.7411764706);
     color: white;
   }
-  html body #mobile-menu2 .mobile-menu-content .dropdown .showMobmarket-dropdown {
+  html body #mobile-menu .mobile-menu-content .dropdown .showMobmarket-dropdown {
     display: block;
   }
   html body header {
@@ -800,6 +849,10 @@ html body main .almost-done .details button {
     cursor: pointer;
     margin-left: 10px;
   }
+  html body header nav .extra-dropdown .extra-dropdown-content {
+    top: 100px;
+    right: 50px;
+  }
   html body main {
     padding: 10px;
     color: #21204A;
@@ -810,14 +863,16 @@ html body main .almost-done .details button {
   }
   html body main .dp-cat {
     flex-direction: column;
-    margin-top: 40px;
+    margin-top: 0px;
   }
   html body main .dp-cat .info {
+    margin-top: 10px;
     width: 100%;
     padding-right: 0px;
     margin-bottom: 16px;
   }
   html body main .dp-cat .info h3 {
+    font-size: 30px;
     margin-bottom: 8px;
   }
   html body main .dp-cat .info p {
@@ -825,6 +880,9 @@ html body main .almost-done .details button {
   }
   html body main .dp-cat .profile-photo-upload {
     width: 100%;
+  }
+  html body main .dp-cat .profile-photo-upload h1 {
+    font-size: 26rem;
   }
   html body main .dp-cat .profile-photo-upload div {
     display: flex;

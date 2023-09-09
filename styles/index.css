@@ -3272,7 +3272,7 @@ html body footer .footer-right .newsletter-section span i {
   }
   html body main .hero-section .hero-right .hero-stickers-3 {
     width: 100px;
-    bottom: -50px;
+    bottom: -120px;
     left: 0;
   }
   html body main .hero-section .hero-right .hero-right-img .collection-name {
@@ -3394,11 +3394,11 @@ html body footer .footer-right .newsletter-section span i {
     height: 30px;
   }
   html body main .popular-collection .popular-collection-title-row .title-row-right {
-    width: 40%;
+    width: 30%;
   }
   html body main .popular-collection .popular-collection-title-row .title-row-right .auction-see-all-link {
     margin-right: 5px;
-    padding: 2px 5px;
+    padding: 2px 10px;
   }
   html body main .popular-collection .popular-collection-title-row .title-row-right button {
     border-radius: 8px;
@@ -3447,8 +3447,16 @@ html body footer .footer-right .newsletter-section span i {
   html body main .top-artist-collection .top-artist-title-row .top-artist-left h1 {
     margin-right: 5px;
   }
+  html body main .top-artist-collection .top-artist-title-row .top-artist-left select {
+    padding: 0px;
+    height: 30px;
+  }
   html body main .top-artist-collection .top-artist-title-row .top-artist-right {
     width: 30%;
+  }
+  html body main .top-artist-collection .top-artist-title-row .top-artist-right .auction-see-all-link {
+    margin-right: 5px;
+    padding: 2px 10px;
   }
   html body main .top-artist-collection .top-artist-container {
     padding: 20px 0;
@@ -3517,7 +3525,7 @@ html body footer .footer-right .newsletter-section span i {
   }
   html body main .trending-nft .trending-nft-title-row .title-row-right .auction-see-all-link {
     margin-right: 5px;
-    padding: 2px 5px;
+    padding: 2px 10px;
   }
   html body main .trending-nft .trending-nft-title-row .title-row-right button {
     border-radius: 8px;

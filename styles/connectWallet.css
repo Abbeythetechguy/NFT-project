@@ -350,7 +350,7 @@ html body #wallet-required section #sign-in-btn {
     background-color: white;
   }
 }
-@media screen and (min-width: 180px) and (max-width: 590px) {
+@media screen and (max-width: 590px) {
   html body aside {
     width: 100%;
     position: absolute;
@@ -424,9 +424,9 @@ html body #wallet-required section #sign-in-btn {
     background-color: white;
   }
   html body #sign-up-overlay form {
-    width: 380px;
+    width: 320px;
   }
   html body #wallet-required section {
-    width: 380px;
+    width: 320px;
   }
 }/*# sourceMappingURL=connectWallet.css.map */

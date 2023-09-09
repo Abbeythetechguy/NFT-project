@@ -4205,7 +4205,7 @@ html {
 
                         .hero-stickers-3 {
                             width: 100px;
-                            bottom: -50px;
+                            bottom: -120px;
                             left: 0;
                         }
 
@@ -4377,13 +4377,13 @@ html {
                         }
 
                         .title-row-right {
-                            width: 40%;
+                            width: 30%;
                             // border: 1px solid red;
 
 
                             .auction-see-all-link {
                                 margin-right: 5px;
-                                padding: 2px 5px;
+                                padding: 2px 10px;
                             }
 
                             button {
@@ -4454,10 +4454,20 @@ html {
                             h1 {
                                 margin-right: 5px;
                             }
+
+                            select {
+                                padding: 0px;
+                                height: 30px;
+                            }
                         }
 
                         .top-artist-right {
                             width: 30%;
+
+                            .auction-see-all-link {
+                                margin-right: 5px;
+                                padding: 2px 10px;
+                            }
                         }
 
                     }
@@ -4549,7 +4559,7 @@ html {
 
                             .auction-see-all-link {
                                 margin-right: 5px;
-                                padding: 2px 5px;
+                                padding: 2px 10px;
                             }
 
                             button {
