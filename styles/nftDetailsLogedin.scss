@@ -461,6 +461,7 @@ html {
                 background: linear-gradient(60deg, #f906f9, #0698f9);
                 border-radius: 10px;
                 border: none;
+                cursor: pointer;
               }
 
               .price-btn-two {
@@ -471,22 +472,38 @@ html {
                 margin-top: 10rem;
                 border-radius: 10px;
                 border: none;
+                cursor: pointer;
               }
             }
           }
 
           .chart {
+            background-color: #ffffff;
+            width: 100%;
+            margin: 40rem 0;
+            border-radius: 16px;
+            padding: 28rem;
+            .chart-text {
+              display: flex;
+              justify-content: space-between;
+              color: #6e84ab;
+              font-size: 22rem;
+              select {
+                border: 1px solid #a6b8cf;
+                border-radius: 8rem;
+                color: #6e84ab;
+                padding: 8rem 14rem;
+              }
+            }
             .chart-img {
-              width: 100%;
-              //   height: 68vh;
-              margin-top: 18rem;
-              border-radius: 16px;
+             width: 100%;
+             padding: 8rem;
             }
           }
 
           .creator {
             width: 100%;
-            // height: 200px;
+            height: 110px;
             margin-top: 16rem;
             border-radius: 16px;
             background-color: #ffffff;
@@ -498,19 +515,19 @@ html {
               .creator-h5 {
                 font-size: 16rem;
                 color: black;
-                padding-top: 20rem;
+                padding-top: 26rem;
               }
 
               .creator-ptag-one {
                 font-size: 16rem;
                 color: #6e84ab;
-                padding-top: 10rem;
+                padding-top: 20rem;
               }
 
               .creator-vf {
                 position: relative;
-                bottom: 30px;
-                right: 38px;
+                bottom: 10px;
+                right: 44px;
               }
             }
 
@@ -521,7 +538,7 @@ html {
             }
 
             .creator-two {
-              width: 50%;
+              width: 40%;
               padding-left: 80rem;
 
               .creator-flw {
@@ -723,6 +740,7 @@ html {
             background: linear-gradient(60deg, #f906f9, #0698f9);
             border-radius: 10px;
             border: none;
+            cursor: pointer;
             @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
           }
@@ -834,7 +852,8 @@ html {
             color: #ffffff;
             background: linear-gradient(60deg, #f906f9, #0698f9);
             border-radius: 10px;
-            border: none;
+            border: none; 
+            cursor: pointer;
             @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
           }
@@ -970,6 +989,30 @@ html {
                 .price-text {
                   background-color: #ffffff;
                 }
+              }
+            }
+            .chart {
+              background-color: #ffffff;
+              width: 100%;
+              margin: 40rem 0;
+              border-radius: 16px;
+              padding: 20rem;
+              .chart-text {
+                display: flex;
+                justify-content: space-between;
+                color: #6e84ab;
+                font-size: 16rem;
+                select {
+                  border: 1px solid #a6b8cf;
+                  border-radius: 8rem;
+                  color: #6e84ab;
+                  padding: 4rem 8rem;
+                  font-size: 12rem;
+                }
+              }
+              .chart-img {
+               padding: 8rem;
+               width: 100%;
               }
             }
 
@@ -1172,6 +1215,30 @@ html {
                 }
               }
             }
+            .chart {
+              background-color: #ffffff;
+              width: 100%;
+              margin: 40rem 0;
+              border-radius: 16px;
+              padding: 16rem;
+              .chart-text {
+                display: flex;
+                justify-content: space-between;
+                color: #6e84ab;
+                font-size: 16rem;
+                select {
+                  border: 1px solid #a6b8cf;
+                  border-radius: 8rem;
+                  color: #6e84ab;
+                  // padding: 4rem 8rem;
+                  font-size: 12rem;
+                }
+              }
+              .chart-img {
+               padding: 8rem;
+               width: 100%;
+              }
+            }
 
             .creator {
               width: 100%;
@@ -1328,7 +1395,30 @@ html {
                 }
               }
             }
-
+            .chart {
+              background-color: #ffffff;
+              width: 100%;
+              margin: 40rem 0;
+              border-radius: 16px;
+              padding: 16rem;
+              .chart-text {
+                display: flex;
+                justify-content: space-between;
+                color: #6e84ab;
+                font-size: 16rem;
+                select {
+                  border: 1px solid #a6b8cf;
+                  border-radius: 8rem;
+                  color: #6e84ab;
+                  // padding: 4rem 8rem;
+                  font-size: 12rem;
+                }
+              }
+              .chart-img {
+               padding: 8rem;
+               width: 100%;
+              }
+            }
             .creator {
               .creator-one {
                 .creator-vf {
@@ -1609,7 +1699,30 @@ html {
                 }
               }
             }
-
+            .chart {
+              background-color: #ffffff;
+              width: 100%;
+              margin: 40rem 0;
+              border-radius: 16px;
+              padding: 16rem;
+              .chart-text {
+                display: flex;
+                justify-content: space-between;
+                color: #6e84ab;
+                font-size: 16rem;
+                select {
+                  border: 1px solid #a6b8cf;
+                  border-radius: 8rem;
+                  color: #6e84ab;
+                  // padding: 4rem 8rem;
+                  font-size: 12rem;
+                }
+              }
+              .chart-img {
+               padding: 8rem;
+               width: 100%;
+              }
+            }
             .creator {
               .creator-one {
                 .creator-vf {
