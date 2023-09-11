@@ -435,7 +435,7 @@ html body main .hero .hero-right .creator .creator-one .creator-ptag-one {
 }
 html body main .hero .hero-right .creator .creator-one .creator-vf {
   position: relative;
-  bottom: 10px;
+  bottom: 24px;
   right: 44px;
 }
 html body main .hero .hero-right .creator .creator-img {
@@ -443,7 +443,7 @@ html body main .hero .hero-right .creator .creator-img {
   margin: 10rem;
 }
 html body main .hero .hero-right .creator .creator-two {
-  width: 40%;
+  width: 50%;
   padding-left: 80rem;
 }
 html body main .hero .hero-right .creator .creator-two .creator-flw {
