@@ -495,7 +495,7 @@ html {
     }
 }
 
-@media screen and (min-width: 180px) and (max-width: 768px) {
+@media screen and (min-width: 180px) and (max-width: 590px) {
     html {
         font-size: 1px;
 
@@ -534,7 +534,7 @@ html {
             main {
 
                 .list-source {
-                    flex-direction: column-reverse;
+                    flex-direction: column;
                     align-items: center;
                     padding: 30px;
 
@@ -543,6 +543,7 @@ html {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
+                        margin-top: 30px;
 
                     }
 
