@@ -1,38 +1,582 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collection Details</title>
-    <link rel="stylesheet" href="../styles/collectionDetail.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="../styles/collectionDetail.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <span class="logo">M</span>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="./index.html" class="nav-link">Home</a></li>
-                <li class="dropdown">
-                    <a href="./pages/collection.html" class="nav-link">Market Place</a>
-                    <ul class="dropdown-content">
-                        <li class="li-bottom"><a href="./pages/collection.html"><i class="fa-solid fa-layer-group"></i> Collections</a></li>
-                        <li><a href="./pages/artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
-                    </ul>
-                </li>
-                <li><a href="./pages/" class="nav-link">All NFTs</a></li>
-                <li><a href="./pages/Activities.html" class="nav-link">Activities</a></li>
 
-            </ul>
-            <a href="" class="toggle-dot">...</a>
-            <i class="fa-solid fa-magnifying-glass" onclick="hideNavBar()"></i>
-            <form action="" id="search-menu">
-                <input type="search" name="" placeholder="Input text" id="search-bar">
-            </form>
-            <a href="./pages/connectWallet.html" class="connect-wallet-btn">Connect wallet</a>
-            <i class="fa-solid fa-bars"></i>
+<body class=" w-full container mx-auto font-poppins bg-slate-200">
+
+    <section id="mobile-menu" class="hidden fixed right-0 bg-slate-200 w-1/2 z-10 h-full text-center">
+        <span id="close-btn" onclick="closeSideNavBar()">
+            <i class="fa-solid fa-close float-right text-red-600"></i>
+        </span>
+        <ul class="mobile-menu-content">
+            <li class="py-4 hover:bg-blue-200 w-full"><a href="../index.html" class="mobile-menu-links">Home</a></li>
+            <li class="dropdown py-4 hover:bg-blue-200 w-full">
+                <span class="mobile-menu-links cursor-pointer" id="marketplace-dropdown2"
+                    onclick="showMobileMarketDropdown()">Market
+                    Place</span>
+                <ul class="dropdown-content hidden" id="mobile-marketplace-dropdown-content2">
+                    <li class="li-bottom"><a href="./collection.html"><i class="fa-solid fa-layer-group"></i>
+                            Collections</a></li>
+                    <li><a href="./artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
+                </ul>
+            </li>
+            <li class="py-4 hover:bg-blue-200 w-full"><a href="./connectWallet.html" class="mobile-menu-links">All
+                    NFTs</a></li>
+            <li class="py-4 hover:bg-blue-200 w-full"><a href="./Activities.html"
+                    class="mobile-menu-links">Activities</a></li>
+            <li class="py-4 hover:bg-blue-200 w-full"><a href="" class="mobile-menu-links">Sign Up</a></li>
+        </ul>
+    </section>
+    
+    <header class="bg-indigo-950 flex justify-between items-center h-16 px-6 sticky top-0 text-white">
+        <span class="logo border-2 px-2 py-0.5 text-2xl rounded-xl">M</span>
+        <nav class="flex">
+
+            <span class="hidden  lg:block lg-flex text-slate-400">
+                <a href="../index.html" class="px-8 text-xl hover:text-white">Home</a>
+                <a href="./collection.html" class="px-4 px-8 text-xl hover:text-white">Market Place</a>
+                <a href="./nftList1.html" class="px-4 px-8 text-xl hover:text-white">All NFTs</a>
+                <a href="./Activities.html" class="px-4 px-8 text-xl hover:text-white">Activities</a>
+            </span>
+
+            <span class="pl-8 lg:pr-16 flex justify-between items-center text-slate-400">
+                <a href="#" class="px-2"><i
+                        class="fa-solid fa-magnifying-glass search-icon text-xl hidden md:hidden lg:block"></i></a>
+            </span>
+
+            <span class="px-4 flex justify-between items-center text-slate-400">
+                <a href="./pages/connectWallet.html" class="border-2 px-3 py-1 rounded-lg">Connect Wallet</a>
+                <i class="fa-solid fa-bars fa-2x pl-8 lg:hidden " onclick="showSideNav()"></i>
+            </span>
+
         </nav>
     </header>
-    
+
+    <main class="p-2 w-full mt-12 md:px-4 :mx-auto lg:px-12">
+
+      <img src="../images/collectionsdetailspics/header img.png" alt="">
+
+        <!-- <section class="lg:h-[13rem] bg-indigo-950 rounded-xl flex flex-col justify-between pt-4 pr-4">
+            <div class="w-full flex justify-end">
+                <img src="../images/Artists-icons/page2images/more (2).svg" class="hidden lg:block" width="30px">
+            </div>
+            <div class="flex justify-between flex-wrap text-white">
+                <div class="flex ">
+                    <div>
+                        <img src="../images/Artists-icons/tickprofile.svg" width="90%">
+                    </div>
+                    <div class="">
+                        <h2 class="text-2xl font-bold">Thena</h2>
+                        <span class="flex w-full">
+                            <p class="pr-1 text-slate-400">by</p>
+                            <p class="text-white">@someone</p>
+                        </span>
+                        <div class="text-white flex flex-wrap">
+                            <img src="../images/Artists-icons/page3images/clock.svg" alt="">
+                            <p class="ml-2 text-slate-400">Listed on Thursday, April 22nd, 2021</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pl-2 pb-2 text-white text-left lg:text-right">
+                    <p class="text-xl">twitter: ascac <br> insta: @agsatdaga</p>
+                    <p class="font-bold text-xl ">view portfolio</p>
+                </div>
+
+            </div>
+        </section> -->
+
+        <section class="mt-10 flex flex-wrap justify-end  ">
+            <div class="flex flex-wrap">
+                <a href="./collectionOfArtist.html"><h2
+                    class="text-xl text-white rounded-xl text-center px-3 py-2 w-[13rem] bg-blue-800 font-bold mr-8 mb-2 ">
+                    Collections (5)</h2></a>
+                <a href="./nftOfArtist.html"><h2
+                    class="text-xl text-indigo-900 rounded-xl text-center px-3 py-2 w-[9rem] bg-transparent font-bold border-2 border-indigo-900 hover:text-blue-600 mr-6">
+                    NFTs (14)</h2></a>
+            </div>
+
+            <!-- <a href="./userPage.html" class="text-xl text-slate-400 hover:text-blue-600">View Artiest's Profile</a> -->
+            <a href="./nftOfArtist.html">
+                <h2
+                    class="text-xl text-indigo-900 rounded-xl text-center px-3 py-2 w-[9rem] bg-transparent font-bold border-2 border-slate-400 hover:text-blue-600">
+                    + watchlist</h2>
+            </a>
+        </section>
+
+
+        <section class="mt-10 flex  justify-between ">
+
+            <span class="flex w-full">
+                <h1
+                    class="font-bold bg-gradient-to-r from-pink-600 via-purple-700 text-transparent bg-clip-text pr-2 text-4xl">
+                    Thena</h1>
+                <h1 class="font-bold text-indigo-900 text-4xl ">by A$AP Rocky</h1>
+            </span>
+            
+        </section>
+
+        <div class="flex mt-10">
+            <p class=" pr-1 text-slate-400">Thena is a collection of 10,000 unique Bored Ape NFTs— unique digital
+                collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership
+                card, and grants access to... <a href="" class="font-bold text-indigo-900 inline-block">Show more</a></p>
+        </div>
+        <section class="flex justify-between items-center flex-wrap mt-10">
+
+            <div class="input-area flex justify-start items-start w-full    :justify-between flex-wrap">
+
+                <div
+                    class="flex justify-around items-center w-[7rem] bg-white px-2 border-2 border-slate-300 text-l h-12 rounded-xl">
+                    <img src="../images/Artists-icons/page3images/filter.svg" alt="">
+                    <p>Filter</p>
+                </div>
+
+                <p
+                    class="flex justify-around items-center w-[4rem] bg-white px-2 border-2 border-slate-300 text-l h-12 rounded-xl lg:ml-6">
+                    F5</p>
+
+                <input type="search"
+                    class="bg-[url('../images/Artists-icons/search-icon.svg')] bg-no-repeat bg-left lg:mx-6 lg:w-[21rem] bg-white pl-10 pr-2 border-2 border-slate-300 text-l h-12 rounded-xl flex justify-between items-center outline-none"
+                    placeholder="Input text" value="search">
+
+                <div
+                    class="w-[11rem] bg-white px-3 border-2 border-slate-300 text-l h-12 rounded-xl flex justify-between items-center mr-6">
+                    <select class="bg-transparent outline-none" id="status">
+                        <option value="" class="">Sort Price: </option>
+                        <option value="">Price: Low to high</option>
+                        <option value="">Price: High to low</option>
+                    </select>
+                </div>
+
+                <div
+                    class="flex justify-around items-center w-[12rem] bg-white px-2 border-2 border-slate-300 text-l h-12 rounded-xl">
+                    <img src="../images/Artists-icons/chart-icon.svg" alt="">
+                    <p>Sort by:</p>
+                    <select class="outline-none" id="">
+                        <option value="">Recent</option>
+                        <option value="">Latest</option>
+                        <option value="">Old</option>
+                        <option value="">Top</option>
+                    </select>
+                </div>
+
+                <div
+                    class=" lg:ml-6 flex justify-around items-center w-[7rem] bg-sky-200 px-2 border-2 border-slate-300 text-l h-12 rounded-xl">
+                    <button><img src="../images/Artists-icons/page3images/view.svg" alt=""></button>
+                    <button><img src="../images/Artists-icons/page3images/view2.svg" alt=""></button>
+                </div>
+
+            </div>
+
+        </section>
+<!-- 
+        <section class="mt-8 flex flex-wrap">
+            <div class=" flex items-center mb-2 mr-6">
+                <h5 class="text-xl text-blue-900 font-bold pr-2">Total: </h5>
+                <p class="text-l text-slate-600 pr-2">2,978 Items</p>
+            </div>
+            <div class=" flex items-center mb-2">
+                <h5 class="text-xl text-blue-900 font-bold pr-2">Last update: </h5>
+                <p class="text-l text-slate-600 pr-2">3 min ago</p>
+            </div>
+        </section>
+        <section class="w-full flex flex-col mt-6"> -->
+
+
+            <div class="w-full flex flex-wrap justify-between mt-14 gap-y-4">
+
+                <div class="w-full px-2 lg:w-1/4 md:w-2/4">
+                    <div class="bg-white flex-col flex p-3 rounded-2xl w-full">
+                        <a href="" class=""><img src="../images/collectionsdetailspics/profile12.svg"
+                                class="rounded-2xl w-full" alt=""></a>
+                        <div class="mt-4 mb-4 ">
+                            <p class="text-slate-500 pb-2">Collection name</p>
+                            <p class="font-bold text-indigo-900">NFT name Ex Shiba Astronaut</p>
+                        </div>
+                        <div class="w-full p-2 bg-slate-200 rounded-2xl">
+                            <div class="w-full flex justify-between text-slate-500">
+                                <p>Price</p>
+                                <p>Best offer</p>
+                            </div>
+                            <div class="w-full flex flex justify-between text-indigo-900 font-bold">
+                                <p>1.0 ETH</p>
+                                <p>1.0 ETH</p>
+                            </div>
+                            <div class="w-full flex justify-between text-slate-500">
+                                <p>$139,257.12</p>
+                                <div class="flex"><img src="../images/Artists-icons/page3images/clock.svg" class="pr-2"
+                                        alt="">
+                                    <p>4hrs left</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full px-2 lg:w-1/4 md:w-2/4">
+                    <div class="bg-white flex-col flex p-3 rounded-2xl w-full">
+                        <a href="" class=""><img src="../images/collectionsdetailspics/profile11.svg"
+                                class="rounded-2xl w-full" alt=""></a>
+                        <div class="mt-4 mb-4 ">
+                            <p class="text-slate-500 pb-2">Collection name</p>
+                            <p class="font-bold text-indigo-900">NFT name Ex Shiba Astronaut</p>
+                        </div>
+                        <div class="w-full p-2 bg-slate-200 rounded-2xl">
+                            <div class="w-full flex justify-between text-slate-500">
+                                <p>Price</p>
+                                <p>Best offer</p>
+                            </div>
+                            <div class="w-full flex flex justify-between text-indigo-900 font-bold">
+                                <p>1.0 ETH</p>
+                                <p>1.0 ETH</p>
+                            </div>
+                            <div class="w-full flex justify-between text-slate-500">
+                                <p>$139,257.12</p>
+                                <div class="flex"><img src="../images/Artists-icons/page3images/clock.svg" class="pr-2"
+                                        alt="">
+                                    <p>4hrs left</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full px-2 lg:w-1/4 md:w-2/4">
+                    <div class="bg-white flex-col flex p-3 rounded-2xl w-full">
+                        <a href="" class=""><img src="../images/collectionsdetailspics/profile10.svg"
+                                class="rounded-2xl w-full" alt=""></a>
+                        <div class="mt-4 mb-4 ">
+                            <p class="text-slate-500 pb-2">Collection name</p>
+                            <p class="font-bold text-indigo-900">NFT name Ex Shiba Astronaut</p>
+                        </div>
+                        <div class="w-full p-2 bg-slate-200 rounded-2xl">
+                            <div class="w-full flex justify-between text-slate-500">
+                                <p>Price</p>
+                                <p>Best offer</p>
+                            </div>
+                            <div class="w-full flex flex justify-between text-indigo-900 font-bold">
+                                <p>1.0 ETH</p>
+                                <p>1.0 ETH</p>
+                            </div>
+                            <div class="w-full flex justify-between text-slate-500">
+                                <p>$139,257.12</p>
+                                <div class="flex"><img src="../images/Artists-icons/page3images/clock.svg" class="pr-2"
+                                        alt="">
+                                    <p>4hrs left</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full px-2 lg:w-1/4 md:w-2/4">
+                    <div class="bg-white flex-col flex p-3 rounded-2xl w-full">
+                        <a href="" class=""><img src="../images/collectionsdetailspics/profile9.svg"
+                                class="rounded-2xl w-full" alt=""></a>
+                        <div class="mt-4 mb-4 ">
+                            <p class="text-slate-500 pb-2">Collection name</p>
+                            <p class="font-bold text-indigo-900">NFT name Ex Shiba Astronaut</p>
+                        </div>
+                        <div class="w-full p-2 bg-slate-200 rounded-2xl">
+                            <div class="w-full flex justify-between text-slate-500">
+                                <p>Price</p>
+                                <p>Best offer</p>
+                            </div>
+                            <div class="w-full flex flex justify-between text-indigo-900 font-bold">
+                                <p>1.0 ETH</p>
+                                <p>1.0 ETH</p>
+                            </div>
+                            <div class="w-full flex justify-between text-slate-500">
+                                <p>$139,257.12</p>
+                                <div class="flex"><img src="../images/Artists-icons/page3images/clock.svg" class="pr-2"
+                                        alt="">
+                                    <p>4hrs left</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="w-full flex flex-wrap justify-between mt-4 gap-y-4">
+
+                <div class="w-full px-2 lg:w-1/4 md:w-2/4">
+                    <div class="bg-white flex-col flex p-3 rounded-2xl w-full">
+                        <a href="" class=""><img src="../images/collectionsdetailspics/profile8.svg"
+                                class="rounded-2xl w-full" alt=""></a>
+                        <div class="mt-4 mb-4 ">
+                            <p class="text-slate-500 pb-2">Collection name</p>
+                            <p class="font-bold text-indigo-900">NFT name Ex Shiba Astronaut</p>
+                        </div>
+                        <div class="w-full p-2 bg-slate-200 rounded-2xl">
+                            <div class="w-full flex justify-between text-slate-500">
+                                <p>Price</p>
+                                <p>Best offer</p>
+                            </div>
+                            <div class="w-full flex flex justify-between text-indigo-900 font-bold">
+                                <p>1.0 ETH</p>
+                                <p>1.0 ETH</p>
+                            </div>
+                            <div class="w-full flex justify-between text-slate-500">
+                                <p>$139,257.12</p>
+                                <div class="flex"><img src="../images/Artists-icons/page3images/clock.svg" class="pr-2"
+                                        alt="">
+                                    <p>4hrs left</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full px-2 lg:w-1/4 md:w-2/4">
+                    <div class="bg-white flex-col flex p-3 rounded-2xl w-full">
+                        <a href="" class=""><img src="../images/Artists-icons/page3images/profile6.svg"
+                                class="rounded-2xl w-full" alt=""></a>
+                        <div class="mt-4 mb-4 ">
+                            <p class="text-slate-500 pb-2">Collection name</p>
+                            <p class="font-bold text-indigo-900">NFT name Ex Shiba Astronaut</p>
+                        </div>
+                        <div class="w-full p-2 bg-slate-200 rounded-2xl">
+                            <div class="w-full flex justify-between text-slate-500">
+                                <p>Price</p>
+                                <p>Best offer</p>
+                            </div>
+                            <div class="w-full flex flex justify-between text-indigo-900 font-bold">
+                                <p>1.0 ETH</p>
+                                <p>1.0 ETH</p>
+                            </div>
+                            <div class="w-full flex justify-between text-slate-500">
+                                <p>$139,257.12</p>
+                                <div class="flex"><img src="../images/Artists-icons/page3images/clock.svg" class="pr-2"
+                                        alt="">
+                                    <p>4hrs left</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full px-2 lg:w-1/4 md:w-2/4">
+                    <div class="bg-white flex-col flex p-3 rounded-2xl w-full">
+                        <a href="" class=""><img src="../images/collectionsdetailspics/profile5.svg"
+                                class="rounded-2xl w-full" alt=""></a>
+                        <div class="mt-4 mb-4 ">
+                            <p class="text-slate-500 pb-2">Collection name</p>
+                            <p class="font-bold text-indigo-900">NFT name Ex Shiba Astronaut</p>
+                        </div>
+                        <div class="w-full p-2 bg-slate-200 rounded-2xl">
+                            <div class="w-full flex justify-between text-slate-500">
+                                <p>Price</p>
+                                <p>Best offer</p>
+                            </div>
+                            <div class="w-full flex flex justify-between text-indigo-900 font-bold">
+                                <p>1.0 ETH</p>
+                                <p>1.0 ETH</p>
+                            </div>
+                            <div class="w-full flex justify-between text-slate-500">
+                                <p>$139,257.12</p>
+                                <div class="flex"><img src="../images/Artists-icons/page3images/clock.svg" class="pr-2"
+                                        alt="">
+                                    <p>4hrs left</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full px-2 lg:w-1/4 md:w-2/4">
+                    <div class="bg-white flex-col flex p-3 rounded-2xl w-full">
+                        <a href="" class=""><img src="../images/collectionsdetailspics/profile4.svg"
+                                class="rounded-2xl w-full" alt=""></a>
+                        <div class="mt-4 mb-4 ">
+                            <p class="text-slate-500 pb-2">Collection name</p>
+                            <p class="font-bold text-indigo-900">NFT name Ex Shiba Astronaut</p>
+                        </div>
+                        <div class="w-full p-2 bg-slate-200 rounded-2xl">
+                            <div class="w-full flex justify-between text-slate-500">
+                                <p>Price</p>
+                                <p>Best offer</p>
+                            </div>
+                            <div class="w-full flex flex justify-between text-indigo-900 font-bold">
+                                <p>1.0 ETH</p>
+                                <p>1.0 ETH</p>
+                            </div>
+                            <div class="w-full flex justify-between text-slate-500">
+                                <p>$139,257.12</p>
+                                <div class="flex"><img src="../images/Artists-icons/page3images/clock.svg" class="pr-2"
+                                        alt="">
+                                    <p>4hrs left</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="w-full flex flex-wrap justify-between mt-4 gap-y-4">
+
+                <div class="w-full px-2 lg:w-1/4 md:w-2/4">
+                    <div class="bg-white flex-col flex p-3 rounded-2xl w-full">
+                        <a href="" class=""><img src="../images/collectionsdetailspics/profile3.svg"
+                                class="rounded-2xl w-full" alt=""></a>
+                        <div class="mt-4 mb-4 ">
+                            <p class="text-slate-500 pb-2">Collection name</p>
+                            <p class="font-bold text-indigo-900">NFT name Ex Shiba Astronaut</p>
+                        </div>
+                        <div class="w-full p-2 bg-slate-200 rounded-2xl">
+                            <div class="w-full flex justify-between text-slate-500">
+                                <p>Price</p>
+                                <p>Best offer</p>
+                            </div>
+                            <div class="w-full flex flex justify-between text-indigo-900 font-bold">
+                                <p>1.0 ETH</p>
+                                <p>1.0 ETH</p>
+                            </div>
+                            <div class="w-full flex justify-between text-slate-500">
+                                <p>$139,257.12</p>
+                                <div class="flex"><img src="../images/Artists-icons/page3images/clock.svg" class="pr-2"
+                                        alt="">
+                                    <p>4hrs left</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full px-2 lg:w-1/4 md:w-2/4">
+                    <div class="bg-white flex-col flex p-3 rounded-2xl w-full">
+                        <a href="" class=""><img src="../images/collectionsdetailspics/profile2.svg"
+                                class="rounded-2xl w-full" alt=""></a>
+                        <div class="mt-4 mb-4 ">
+                            <p class="text-slate-500 pb-2">Collection name</p>
+                            <p class="font-bold text-indigo-900">NFT name Ex Shiba Astronaut</p>
+                        </div>
+                        <div class="w-full p-2 bg-slate-200 rounded-2xl">
+                            <div class="w-full flex justify-between text-slate-500">
+                                <p>Price</p>
+                                <p>Best offer</p>
+                            </div>
+                            <div class="w-full flex flex justify-between text-indigo-900 font-bold">
+                                <p>1.0 ETH</p>
+                                <p>1.0 ETH</p>
+                            </div>
+                            <div class="w-full flex justify-between text-slate-500">
+                                <p>$139,257.12</p>
+                                <div class="flex"><img src="../images/Artists-icons/page3images/clock.svg" class="pr-2"
+                                        alt="">
+                                    <p>4hrs left</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full px-2 lg:w-1/4 md:w-2/4">
+                    <div class="bg-white flex-col flex p-3 rounded-2xl w-full">
+                        <a href="" class=""><img src="../images/collectionsdetailspics/profile1.svg"
+                                class="rounded-2xl w-full" alt=""></a>
+                        <div class="mt-4 mb-4 ">
+                            <p class="text-slate-500 pb-2">Collection name</p>
+                            <p class="font-bold text-indigo-900">NFT name Ex Shiba Astronaut</p>
+                        </div>
+                        <div class="w-full p-2 bg-slate-200 rounded-2xl">
+                            <div class="w-full flex justify-between text-slate-500">
+                                <p>Price</p>
+                                <p>Best offer</p>
+                            </div>
+                            <div class="w-full flex flex justify-between text-indigo-900 font-bold">
+                                <p>1.0 ETH</p>
+                                <p>1.0 ETH</p>
+                            </div>
+                            <div class="w-full flex justify-between text-slate-500">
+                                <p>$139,257.12</p>
+                                <div class="flex"><img src="../images/Artists-icons/page3images/clock.svg" class="pr-2"
+                                        alt="">
+                                    <p>4hrs left</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full px-2 lg:w-1/4 md:w-2/4">
+                    <div class="bg-white flex-col flex p-3 rounded-2xl w-full">
+                        <a href="" class=""><img src="../images/collectionsdetailspics/profile7.svg"
+                                class="rounded-2xl w-full" alt=""></a>
+                        <div class="mt-4 mb-4 ">
+                            <p class="text-slate-500 pb-2">Collection name</p>
+                            <p class="font-bold text-indigo-900">NFT name Ex Shiba Astronaut</p>
+                        </div>
+                        <div class="w-full p-2 bg-slate-200 rounded-2xl">
+                            <div class="w-full flex justify-between text-slate-500">
+                                <p>Price</p>
+                                <p>Best offer</p>
+                            </div>
+                            <div class="w-full flex flex justify-between text-indigo-900 font-bold">
+                                <p>1.0 ETH</p>
+                                <p>1.0 ETH</p>
+                            </div>
+                            <div class="w-full flex justify-between text-slate-500">
+                                <p>$139,257.12</p>
+                                <div class="flex"><img src="../images/Artists-icons/page3images/clock.svg" class="pr-2"
+                                        alt="">
+                                    <p>4hrs left</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+
+
+    <script>
+        //Grab the hamburger element
+        let hamElem = document.getElementById("hamburger");
+        // Adding a click event listener to the hamburger menu
+
+        hamElem.addEventListener("click", toggleMenu);
+
+        //Creating the toggleMenu function
+
+        // for  showing mobile side nav
+        function showSideNav() {
+            let showMobNav = document.getElementById("mobile-menu");
+            showMobNav.style.display = "block";
+        }
+        // for  closing mobile side nav
+        function closeSideNavBar() {
+            let hideSearchbar = document.getElementById("mobile-menu");
+            hideSearchbar.style.display = "none";
+
+        }
+
+        // Mobile menu marketplace drop down
+        function showMobileMarketDropdown() {
+            let showMobileMarketElem = document.getElementById("mobile-marketplace-dropdown-content2");
+            showMobileMarketElem.classList.toggle("showMobmarket-dropdown")
+        }
+
+    </script>
+
 </body>
+
 </html>
